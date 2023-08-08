@@ -135,7 +135,7 @@
   "Privacy.view.Cookies.Accept": "Aceitar",
   "Privacy.view.Cookies.Modal.DescriptionUse.Topic1": "Este site usa cookies para preservar sua sessão, para entender o seu comportamento de navegação e melhorar sua experiência na web, com conteúdos ou publicidade nossa e de nossos parceiros, adequados ao seu perfil.",
   "Privacy.view.Cookies.Modal.DescriptionUse.Topic2": "Para mais informações, visite nossa Política de Privacidade.",
-  "Privacy.view.Cookies.Modal.DescriptionUse.Topic3": "Para aceitar, clique no botão 'Aceitar', ou, caso não concorde, marque aqui suas preferências.",
+  "Privacy.view.Cookies.Modal.DescriptionUse.Topic3": "Para aceitar, clique no botão \u0027Aceitar\u0027, ou, caso não concorde, marque aqui suas preferências.",
   "Privacy.view.Cookies.Modal.Preferences": "Preferências",
   "Privacy.view.Cookies.Modal.Essentials": "Essencial",
   "Privacy.view.Cookies.Modal.Mandatory": "Obrigatório",
@@ -179,7 +179,8 @@
   "EnterYourPassword": "Digite sua senha",
   "EnterYourConfirmPassword": "Digite sua confirmação de senha",
   "ResetPasswordConfirmation-placeholder": "Confirme sua senha",
-  "ResetPasswordNew-placeholder": "Digite sua senha nova" ,
+  "ResetPasswordNew-placeholder": "Digite sua senha nova",
   "WelcomeToCRONAPP": "Bem vindo ao CRONAPP",
-  "WelcomeToCRONAPP-description": "O Cronapp revolucionou a maneira de desenvolver softwares para que você seja livre para criar e implementar soluções rapidamente no ritmo da transformação do seu negócio."
+  "WelcomeToCRONAPP-description": "O Cronapp revolucionou a maneira de desenvolver softwares para que você seja livre para criar e implementar soluções rapidamente no ritmo da transformação do seu negócio.",
+  "Nome": "Nome"
 }

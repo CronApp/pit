@@ -6,21 +6,19 @@
                     <form class="form-validation ng-pristine ng-valid ng-valid-required" autocomplete="off" name="form" ng-submit="signup()" role="form">
                         <h1 class="text-center title titulo_card" xattr-position="h1 text-center" xattr-type="h1" data-component="crn-text-component" id="crn-text-component-signup">{{'Signup.view.Signup' | translate}}</h1>
 
-                        <div class="component-holder ng-binding ng-scope col-xs-12 col-md-12" data-component="crn-textinput" id="crn-textinput-signupemail">
+                        
+
+                        <div class="component-holder ng-binding ng-scope col-xs-12 col-md-12" data-component="crn-textinput" id="crn-textinput-signupusername">
+                            <div class="form-group">
+                                <label for="signupUsername" class="ng-binding">{{'Nome' | translate}}</label>
+                                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="signupUsername.value" id="signupUsername" class="form-control k-textbox ng-pristine ng-untouched ng-valid ng-empty ng-valid-required" placeholder="" autocomplete="username" autocorrect="off" autocapitalize="off">
+                            </div>
+                        </div><div class="component-holder ng-binding ng-scope col-xs-12 col-md-12" data-component="crn-textinput" id="crn-textinput-signupemail">
                             <div class="form-group">
                                 <label for="signupEmail" class="ng-binding">
                                     {{'Signup.view.Email' | translate}}
                                 </label>
                                 <input type="email" mask="" mask-placeholder="" ng-required="false" ng-model="signupEmail.value" id="signupEmail" class="form-control k-textbox ng-pristine ng-untouched ng-valid ng-empty ng-valid-required" placeholder="" autocomplete="email" autocorrect="off" autocapitalize="off">
-                            </div>
-                        </div>
-
-                        <div class="component-holder ng-binding ng-scope col-xs-12 col-md-12" data-component="crn-textinput" id="crn-textinput-signupusername">
-                            <div class="form-group">
-                                <label for="signupUsername" class="ng-binding">
-                                    {{'Signup.view.Username' | translate}}
-                                </label>
-                                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="signupUsername.value" id="signupUsername" class="form-control k-textbox ng-pristine ng-untouched ng-valid ng-empty ng-valid-required" placeholder="" autocomplete="username" autocorrect="off" autocapitalize="off">
                             </div>
                         </div>
 
@@ -47,7 +45,7 @@
                                 <div ng-show="message.error" class="help-block ng-binding ng-hide" data-container="true"> </div>
                             </div>
                             <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-signup-register"> 
-                                <button class="btn k-button btn-block btn-default crn-button-signup-register" role="button" aria-label="{{'Signup.view.Register' | translate}}"type="submit" ng-disabled="form.$invalid || vm.dataLoading" ng-click="cronapi.client('js.blockly.UserControl.signUp').names('ec5dbe32', '62cce53e', 'd42229ad', 'a49023f3').run(signupUsername.value, signupEmail.value, signupPassword.value, signupConfirmPassword.value)" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
+                                <button class="btn k-button btn-block btn-default crn-button-signup-register" role="button" aria-label="{{'Signup.view.Register' | translate}}" type="submit" ng-disabled="form.$invalid || vm.dataLoading" ng-click="cronapi.client('js.blockly.UserControl.signUp').names('ec5dbe32', '62cce53e', 'd42229ad', 'a49023f3').run(signupUsername.value, signupEmail.value, signupPassword.value, signupConfirmPassword.value)" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
                                     <span class="" text-theme="">{{'Signup.view.Register' | translate}}</span>
                                 </button> 
                             </div>
