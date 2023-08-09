@@ -20,13 +20,13 @@
       <div id="navbar2" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown component-holder open" data-component="crn-menu-item">
-                    <a href="" class="dropdown-toggle" style="min-width: 123px;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <a href="" class="dropdown-toggle" style="min-width: 123px;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" ng-click="">
                         <img class="user-avatar" alt="Icon user" src="{{ session.user.picture || 'node_modules/cronapp-framework-js/dist/img/img-user.svg'}}" data-component="crn-image-menu" id="crn-image-menu">
-                        <span>{{"Home.view.Perfil" | translate}}</span> <span class="caret"></span>
+                        <span>{{'EditarPerfil' | translate}}</span> <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="" class="component-holder" ng-click="cronapi.client('js.blockly.EditarPerfil.EditarPerfil.IniciarModalEditar').run()" data-component="crn-anchor">Editar Nome</a><a href="" class="component-holder" ng-click="cronapi.client('js.blockly.EditarPerfil.EditarPerfil.IniciarModalEditarSenha').run()" data-component="crn-anchor">Trocar Senha</a></li>
-                        <li><a ng-click="logout()" href="" data-component="crn-anchor">{{"Home.view.Logout" | translate}}</a></li>
+                        
+                        <li></li><li><a ng-click="cronapi.client('js.blockly.EditarPerfil.EditarPerfil.IniciarModalEditar').run()" href="" data-component="crn-anchor">Editar Perfil</a><a ng-click="logout()" href="" data-component="crn-anchor">{{"Home.view.Logout" | translate}}</a></li>
                     </ul>
                 </li>
             </ul>
@@ -35,7 +35,7 @@
   </nav>
 </div>
 <div ui-view="" id="main-view" tabindex="-1" role="main" class="container-fluid main-view main-view-horizontal">
-    <h1 class="component-holder text-left h3 title">{{'Home.view.Home' | translate}}<div class="component-holder ng-scope" data-component="crn-button" id="crn-button-297468"><button class="btn k-button btn-block btn-default" ng-click="cronapi.server('blockly.Airtable.Airtable.GetApi').run()" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled=""><i class="glyphicon glyphicon-home" icon-theme=""></i> <span class="" text-theme="">Button</span></button></div></h1>
+    <h1 class="component-holder text-left h3 title">{{'Home.view.Home' | translate}}</h1>
 </div>
 <div class="modal fade" id="modalPassword" style="">
   <div class="modal-dialog">
@@ -50,9 +50,9 @@
           <div class="text-danger wrapper text-center" ng-show="authError">
           </div>
           <div class="list-group list-group-sm">
-              <div class="list-group-item">
-                  <label for="oldPassword">{{"Home.view.Old Password" | translate}}</label>
-                  <input type="password" class="form-control k-textbox" id="oldPassword" placeholder="{{'Home.view.Old Password' | translate}}" aria-label="{{'Home.view.Old Password' | translate}}" ng-required="true">
+              <div class="component-holder ng-scope" data-component="crn-textinput" id="crn-textinput-381142"></div><div class="list-group-item">
+                  <label for="oldPassword22301">{{"Home.view.Old Password" | translate}}</label>
+                  <input type="password" class="form-control k-textbox" id="oldPassword22301" placeholder="{{'Home.view.Old Password' | translate}}" aria-label="{{'Home.view.Old Password' | translate}}" ng-required="true">
               </div>
               <div class="list-group-item">
                   <label for="newPassword">{{"Home.view.New Password" | translate}}</label>
@@ -67,7 +67,7 @@
       </div>
       <div class="modal-footer">
         <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-save-logged-home"> 
-          <button class="btn k-button btn-block btn-success btn-fab" ng-click="changePassword()" onclick="cronapi.client('js.blockly.EditarPerfil.EditarPerfil.IniciarModalEditar').run()" ng-disabled="form.$invalid || vm.dataLoading" aria-label="{{'Save' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-success" xattr-disabled="">
+          <button class="btn k-button btn-block btn-success btn-fab" ng-click="changePassword()" ng-disabled="form.$invalid || vm.dataLoading" aria-label="{{'Save' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-success" xattr-disabled="">
             <i class="k-icon k-i-check" icon-theme=""></i>
           </button> 
         </div>
@@ -79,29 +79,4 @@
       </div>
     </div>
   </div>
-</div>
-<div class="modal fade" id="modalEdicaoPerfil" style="">
- <div class="modal-dialog">
-   <div class="modal-content">
-     <div class="component-holder modal-header">
-       <div class="list-group list-group-sm row">
-         <div data-container="true" data-replace="false"><h1 class="title h1 text-left" xattr-position="text-left" xattr-type="h1" data-component="crn-text-component" id="crn-text-component-623914">Editar Nome</h1></div>
-       </div>
-      </div>
-      <div class="modal-body">
-       <div class="list-group list-group-sm row">
-         <div data-container="true" data-replace="false"><div class="component-holder ng-scope col-md-12" data-component="crn-textinput" id="crn-textinput-87979" maxlength=""><div class="form-group"><label for="input1048">Nome *</label><input type="text" mask="" mask-placeholder="" ng-required="true" ng-model="vars.nomeUsuarioEdicao" class="form-control k-textbox" id="input1048" placeholder="" ng-init="cronapi.callFunction('cronapi.util.getUserName').call()" maxlength="100"></div></div>
-
-
-</div>
-       </div>
-     </div>
-     <div class="modal-footer">
-       <div style="display: flex; justify-content: right; align-items: center;">
-           <div class="component-holder ng-scope col-md-12" data-component="crn-button" id="crn-button-388011" style="margin-right: 20px;"><button class="btn k-button btn-block btn-danger" ng-click="cronapi.client('js.blockly.EditarPerfil.EditarPerfil.FecharModalEditarPerfil').run()" xattr-fullsize="btn-block" xattr-theme="btn-danger" xattr-disabled=""><i class="" icon-theme=""></i> <span class="" text-theme="">Cancelar</span></button></div><div class="component-holder ng-scope" data-component="crn-button" id="crn-button-731870" style=""><button class="btn k-button btn-block btn-default" ng-click="cronapi.server('blockly.Usuario.EditarPerfil.SalvarAlteracoes').names('aa4ae81c').run(vars.nomeUsuarioEdicao)" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled=""><i class="" icon-theme=""></i> <span class="" text-theme="">Salvar Alterações</span></button></div>
-           
-       </div>
-     </div>
-   </div>
- </div>
 </div>

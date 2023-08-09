@@ -182,5 +182,6 @@
   "ResetPasswordConfirmation-placeholder": "Confirm your password",
   "WelcomeToCRONAPP": "Welcome to CRONAPP",
   "WelcomeToCRONAPP-description": "Cronapp has revolutionized the way you develop software so you are free to quickly create and implement solutions at the pace of your business transformation.",
-  "Nome": "Name"
+  "Nome": "Name",
+  "EditarPerfil": "Edit Profile"
 }
