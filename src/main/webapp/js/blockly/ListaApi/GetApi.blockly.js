@@ -11,7 +11,7 @@ window.blockly.js.blockly.ListaApi.GetApi = window.blockly.js.blockly.ListaApi.G
  *
  *
  * @author Wesley Miranda De Oliveira
- * @since 10/08/2023, 08:20:04
+ * @since 10/08/2023, 08:29:14
  *
  */
 window.blockly.js.blockly.ListaApi.GetApi.GetApiArgs = [];
@@ -22,5 +22,7 @@ window.blockly.js.blockly.ListaApi.GetApi.GetApi = async function() {
       item = sender_item;
     //
     console.log(item);
+    //
+    this.cronapi.screen.changeValueOfField("vars.listaIdeias", this.cronapi.json.getProperty(item, 'records'));
   }.bind(this));
 }
