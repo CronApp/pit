@@ -11,7 +11,7 @@ window.blockly.js.blockly.ListaApi.GetApi = window.blockly.js.blockly.ListaApi.G
  *
  *
  * @author Wesley Miranda De Oliveira
- * @since 10/08/2023, 08:29:14
+ * @since 10/08/2023, 09:02:45
  *
  */
 window.blockly.js.blockly.ListaApi.GetApi.GetApiArgs = [];
