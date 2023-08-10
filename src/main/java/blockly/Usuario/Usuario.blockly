@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="JAVA" bpmnAble="false" formTarget="" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JAVA" ruleDescription="Usuario" ruleName="Usuario" ruleSecurity="{&quot;post&quot;:&quot;Public&quot;,&quot;get&quot;:&quot;Public&quot;,&quot;execute&quot;:&quot;Public&quot;,&quot;delete&quot;:&quot;Public&quot;,&quot;put&quot;:&quot;Public&quot;}" ruleSynchronous="false" ruleTimeout="300" ruleType="I" showAsFunction="false" soap="false" swagger="false">
-  <metadata scale="1" scrollx="280.9000000000068" scrolly="-84.5" target="Lb8b*z%8862D8*J.O=yZ"/>
-  <block asynccall="false" colour="#fca03b" datasourcetype="" id="Lb8b*z%8862D8*J.O=yZ" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-212" y="148">
+  <metadata scale="1" scrollx="343.5468749999958" scrolly="-523.500000000001" target="Lb8b*z%8862D8*J.O=yZ"/>
+  <block asynccall="false" colour="#fca03b" datasourcetype="" id="Lb8b*z%8862D8*J.O=yZ" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-194" y="162">
     <mutation>
       <arg id="53b42e7f" name="email"/>
       <arg id="2bc04d37" name="senha"/>
@@ -20,7 +20,7 @@
             </value>
             <next>
               <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id=";W|Hhyk{iyAYPc{@acZ0" origintype="controls_if" output="false" tooltip="function () { [native code] }" type="controls_if">
-                <mutation else="1" elseif="2"/>
+                <mutation else="1" elseif="4"/>
                 <value name="IF0">
                   <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="@^@SA+Q4LJ]?w?:+n;_@" origintype="logic_operation" output="true" tooltip="Retorna verdadeiro se ambas as entradas forem iguais." type="logic_operation">
                     <mutation items="1"/>
@@ -277,6 +277,86 @@
                     </value>
                   </block>
                 </statement>
+                <value name="IF3">
+                  <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="k3o/*!:Dq[lN.~X4^0k7" inline="true" multilayer="false" namespace="cronapi.logic.Operations.isNullOrEmpty" origintype="procedures_callreturn" output="true" returntype="ObjectType.BOOLEAN" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3E%C3%A9%20nulo%20ou%20vazio?%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20verifica%20se%20a%20var%C3%ADavel%20%C3%A9%20nula%20ou%20vazia%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Par%C3%A2metro%20:%20Objeto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20L%C3%B3gico%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.logic.Operations.isNullOrEmpty','cronapi.logic.Operations.isNullOrEmpty')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                    <mutation name="{{cronapi.logic.Operations.isNullOrEmpty}}" return-raw-type="cronapi.Var">
+                      <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.OBJECT" name="Parâmetro"/>
+                    </mutation>
+                    <value name="ARG0">
+                      <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="QqnBnoeSN~7UpEInf2Y!" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field customattributes="" name="VAR">senha</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO3">
+                  <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id=":9`BaCbZQ{SE^O4n,DZ/" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+                    <field customattributes="" name="VAR">response</field>
+                    <value name="VALUE">
+                      <block asynccall="false" colour="#917731" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="v2+bYfu0LcS:mDu8T_ZU" multilayer="false" namespace="cronapi.map.Operations.createObjectMapWith" origintype="maps_create_with" output="true" returntype="ObjectType.MAP" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3ECriar%20objeto%20mapa%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20cria%20um%20objeto%20mapa%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Valor(es)%20:%20Objeto%3C/span%3E%3Cdiv%3E%20Valores%20a%20serem%20adicionados%20na%20cria%C3%A7%C3%A3o%20do%20mapa%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Mapa%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.map.Operations.createObjectMapWith%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="maps_create_with">
+                        <mutation name="{{cronapi.map.Operations.createObjectMapWith}}">
+                          <arg name="sucesso"/>
+                          <arg name="mensagem"/>
+                        </mutation>
+                        <value name="ARG0">
+                          <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="8}}V7b!=rto]5~~!:+D|" origintype="logic_boolean" output="true" tooltip="Retorna verdadeiro ou falso." type="logic_boolean">
+                            <field customattributes="" name="BOOL">FALSE</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="=#*uKlNAFyKhRB%QStpo" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field customattributes="" name="TEXT">Digite uma senha</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <value name="IF4">
+                  <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="s?(~c8zgt8nfb6}};xH2" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                    <field customattributes="" name="OP">LT</field>
+                    <value name="A">
+                      <block asynccall="false" colour="#5ba58c" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="!+k*=3l1CD,*G`)|lHSt" origintype="text_length" output="true" tooltip="Retorna o número de letras (incluindo espaços) no texto fornecido." type="text_length">
+                        <value name="VALUE">
+                          <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="PYKCKI`7!j#[NvXE^.]}" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field customattributes="" name="TEXT">abc</field>
+                          </shadow>
+                          <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="]Tjf75}^-Y-FLukYc~04" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                            <field customattributes="" name="VAR">senha</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block asynccall="false" colour="#5b67a5" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="dpqGA!Xpm@Bx#JX;;h(T" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                        <field customattributes="" name="NUM">8</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO4">
+                  <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="T75OY~G-`;iHd1^R(TYV" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+                    <field customattributes="" name="VAR">response</field>
+                    <value name="VALUE">
+                      <block asynccall="false" colour="#917731" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="=ARXi}26l*}=pXNl7=IK" multilayer="false" namespace="cronapi.map.Operations.createObjectMapWith" origintype="maps_create_with" output="true" returntype="ObjectType.MAP" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3ECriar%20objeto%20mapa%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20cria%20um%20objeto%20mapa%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Valor(es)%20:%20Objeto%3C/span%3E%3Cdiv%3E%20Valores%20a%20serem%20adicionados%20na%20cria%C3%A7%C3%A3o%20do%20mapa%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Mapa%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.map.Operations.createObjectMapWith%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="maps_create_with">
+                        <mutation name="{{cronapi.map.Operations.createObjectMapWith}}">
+                          <arg name="sucesso"/>
+                          <arg name="mensagem"/>
+                        </mutation>
+                        <value name="ARG0">
+                          <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="!8BjmM7;seBt;pU;CO(!" origintype="logic_boolean" output="true" tooltip="Retorna verdadeiro ou falso." type="logic_boolean">
+                            <field customattributes="" name="BOOL">FALSE</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="QubU+FA_z1?8%A0FuZbO" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field customattributes="" name="TEXT">O tamanho mínimo da senha deve ser 8 caracteres</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
                 <statement name="ELSE">
                   <block asynccall="false" colour="#aa2f00" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="GsA^|7|qZV6n^;1(s8Ae" multilayer="false" namespace="cronapi.database.Operations.beginTransaction" origintype="procedures_setentity_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EIniciar%20Transa%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EIniciar%20Transa%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Entidade%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.database.Operations.beginTransaction%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_setentity_callnoreturn">
                     <mutation data="%7B%22entity%22:%22app%22,%22entityFullName%22:%22app%22,%22type%22:%22F%22%7D" name="{{cronapi.database.Operations.beginTransaction}}"/>
@@ -459,6 +539,62 @@
       </block>
     </value>
   </block>
+  <block asynccall="false" colour="#fca03b" datasourcetype="" id="ol%Nr3#)VY.OcuA/Z7Oa" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-397" y="173">
+    <mutation>
+      <arg id="ae582bec" name="email"/>
+    </mutation>
+    <field customattributes="" name="NAME">ResetSenha</field>
+    <statement name="STACK">
+      <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="ol%Nr3#)VY.OcuA/Z7Oa" id="J{R^WCURBVKvu^o/U7aL" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+        <field customattributes="" name="VAR">item</field>
+        <value name="VALUE">
+          <block asynccall="false" colour="#913487" datasourcetype="" dependencyby="ol%Nr3#)VY.OcuA/Z7Oa" id="ca.Jg-e}+fT)lS/@[N5W" multilayer="false" namespace="cronapi.authentication.Operations.defaultResetPassword" origintype="procedures_callreturn" output="true" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EResetar%20Senha%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20os%20usu%C3%A1rios%20resetarem%20sua%20senha%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20E-mail%20do%20Usu%C3%A1rio%20registrado%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Imagem%20Topo%20do%20E-mail%20:%20Texto%3C/span%3E%3Cdiv%3E%20Endere%C3%A7o%20da%20imagem,%20ex%20-&amp;gt;%20https://acesso.cronapp.io/img/header.png%3C/div%3E%3Cspan%3E%20-%20Imagem%20Rodap%C3%A9%20do%20E-mail%20:%20Texto%3C/span%3E%3Cdiv%3E%20Endere%C3%A7o%20da%20imagem,%20ex%20-&amp;gt;%20https://acesso.cronapp.io/img/footer.png%3C/div%3E%3Cspan%3E%20-%20arg3%20:%20L%C3%B3gico%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Sem%20retorno%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.authentication.Operations.defaultResetPassword','cronapi.authentication.Operations.defaultResetPassword')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+            <mutation name="{{cronapi.authentication.Operations.defaultResetPassword}}" return-raw-type="cronapi.Var">
+              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="E-mail do Usuário registrado"/>
+              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Imagem Topo do E-mail"/>
+              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Imagem Rodapé do E-mail"/>
+              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.BOOLEAN" name="arg3"/>
+            </mutation>
+            <value name="ARG0">
+              <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="ol%Nr3#)VY.OcuA/Z7Oa" id="jkD5kS`^,^}8lFx?03Pd" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field customattributes="" name="TEXT"/>
+              </shadow>
+              <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="ol%Nr3#)VY.OcuA/Z7Oa" id="%/?jo*%nVx6K*i_TBC|a" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                <field customattributes="" name="VAR">email</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="ol%Nr3#)VY.OcuA/Z7Oa" id="eQs]?``1nw!%/W(i3(E!" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field customattributes="" name="TEXT">https://acesso.cronapp.io/img/layers.png</field>
+              </shadow>
+            </value>
+            <value name="ARG2">
+              <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="ol%Nr3#)VY.OcuA/Z7Oa" id="Ao~4X:_$HMGKcJiz0lQP" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field customattributes="" name="TEXT">https://acesso.cronapp.io/img/layers.png</field>
+              </shadow>
+            </value>
+            <value name="ARG3">
+              <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="ol%Nr3#)VY.OcuA/Z7Oa" id="k[LL7A_0yE;v(KSP`1w/" origintype="logic_boolean" output="true" tooltip="Retorna verdadeiro ou falso." type="logic_boolean">
+                <field customattributes="" name="BOOL">FALSE</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block asynccall="false" colour="#5ba58c" datasourcetype="" dependencyby="ol%Nr3#)VY.OcuA/Z7Oa" id="BW#5H);doeV.|sj$76Fa" origintype="text_print" output="false" tooltip="Imprime o texto, número ou valor especificado." type="text_print">
+            <value name="TEXT">
+              <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="ol%Nr3#)VY.OcuA/Z7Oa" id="lhk_on/?f(/`sLS*f)B/" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field customattributes="" name="TEXT">abc</field>
+              </shadow>
+              <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="ol%Nr3#)VY.OcuA/Z7Oa" id="f2M%Yqyo=gLxhkVIJ^};" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                <field customattributes="" name="VAR">item</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
   <block asynccall="false" colour="#fca03b" datasourcetype="" id="0zYeqX2u5Ejsox*%5Q[9" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-337" y="203">
     <mutation>
       <arg id="eb4f9fa9" name="username"/>
@@ -614,4 +750,95 @@
       </block>
     </value>
   </block>
+  <block asynccall="false" colour="#995ba5" datasourcetype="" dependencyby="ol%Nr3#)VY.OcuA/Z7Oa" id="NwO{I3vIm|G#}PNdDvEd" multilayer="false" namespace="cronapi.email.Operations.sendEmail" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EEnvia%20e-mail%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20envia%20e-mail%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20De%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Para%20:%20Texto%3C/span%3E%3Cdiv%3E%20Pode%20receber%20um%20%C3%BAnico%20ou%20uma%20lista%20de%20destinat%C3%A1rios%3C/div%3E%3Cspan%3E%20-%20Com%20c%C3%B3pia%20:%20Texto%3C/span%3E%3Cdiv%3E%20Um%20%C3%BAnico%20campo%20texto%20ou%20uma%20lista%20de%20destinat%C3%A1rios%3C/div%3E%3Cspan%3E%20-%20Com%20c%C3%B3pia%20oculta%20:%20Texto%3C/span%3E%3Cdiv%3E%20Um%20%C3%BAnico%20campo%20texto%20ou%20uma%20lista%20de%20textos%3C/div%3E%3Cspan%3E%20-%20Assunto%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Conte%C3%BAdo%20HTML%20:%20Texto%3C/span%3E%3Cdiv%3EEnvia%20mensagem%20com%20o%20conte%C3%BAdo%20do%20HTML%3C/div%3E%3Cspan%3E%20-%20Anexo(s)%20:%20Texto%3C/span%3E%3Cdiv%3E%20Caminho%20absoluto%20do%20anexo,%20ou%20lista%20com%20caminhos%20dos%20anexos%3C/div%3E%3Cspan%3E%20-%20Hospedeiro%20SMTP%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Porta%20SMTP%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Login%20:%20Texto%3C/span%3E%3Cdiv%3E%20Login%20para%20autentica%C3%A7%C3%A3o%20no%20hospedeiro%20SMTP%3C/div%3E%3Cspan%3E%20-%20Senha%20:%20Texto%3C/span%3E%3Cdiv%3E%20Senha%20para%20autentica%C3%A7%C3%A3o%20no%20hospedeiro%20SMTP%3C/div%3E%3Cspan%3E%20-%20Protocolo%20:%20Texto%3C/span%3E%3Cdiv%3ETipo%20de%20protocolo%20para%20envio%20de%20e-mail%20no%20SMTP.%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.email.Operations.sendEmail','cronapi.email.Operations.sendEmail')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn" x="-322" y="443">
+    <mutation name="{{cronapi.email.Operations.sendEmail}}" return-raw-type="void">
+      <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="De"/>
+      <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Para"/>
+      <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Com cópia"/>
+      <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Com cópia oculta"/>
+      <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Assunto"/>
+      <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Mensagem"/>
+      <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Conteúdo HTML"/>
+      <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Anexo(s)"/>
+      <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Hospedeiro SMTP"/>
+      <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Porta SMTP"/>
+      <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Login"/>
+      <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Senha"/>
+      <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Protocolo"/>
+    </mutation>
+    <value name="ARG0">
+      <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="ol%Nr3#)VY.OcuA/Z7Oa" id="j6j%t?Vi.:ID]k3@AfJ{" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+        <field customattributes="" name="TEXT">email@techne.com.br</field>
+      </shadow>
+    </value>
+    <value name="ARG1">
+      <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="ol%Nr3#)VY.OcuA/Z7Oa" id="3Ex4Bj^lfZt:^|#`tZqu" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+        <field customattributes="" name="TEXT"/>
+      </shadow>
+    </value>
+    <value name="ARG2">
+      <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="ol%Nr3#)VY.OcuA/Z7Oa" id="1m1wdM;YXI1(Y|/_Cg8U" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+        <field customattributes="" name="TEXT"/>
+      </shadow>
+    </value>
+    <value name="ARG3">
+      <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="ol%Nr3#)VY.OcuA/Z7Oa" id="{JN*Xt6*s=1sVX:mlZ99" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+        <field customattributes="" name="TEXT"/>
+      </shadow>
+    </value>
+    <value name="ARG4">
+      <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="ol%Nr3#)VY.OcuA/Z7Oa" id="1.KNeo^1+N,84},c;yw-" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+        <field customattributes="" name="TEXT"/>
+      </shadow>
+    </value>
+    <value name="ARG5">
+      <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="ol%Nr3#)VY.OcuA/Z7Oa" id="w:Qu4|w6E5A@p)Xa@Plk" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+        <field customattributes="" name="TEXT"/>
+      </shadow>
+    </value>
+    <value name="ARG6">
+      <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="ol%Nr3#)VY.OcuA/Z7Oa" id="DPH+z*``wTui{8Qz^4%i" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+        <field customattributes="" name="TEXT"/>
+      </shadow>
+    </value>
+    <value name="ARG7">
+      <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="ol%Nr3#)VY.OcuA/Z7Oa" id="(h[5kJNR.Q=$qr6^M|%," origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+        <field customattributes="" name="TEXT"/>
+      </shadow>
+    </value>
+    <value name="ARG8">
+      <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="ol%Nr3#)VY.OcuA/Z7Oa" id="$A6Dn%Lu}MWV[OaM@i$C" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+        <field customattributes="" name="TEXT">smtp.office365.com</field>
+      </shadow>
+    </value>
+    <value name="ARG9">
+      <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="ol%Nr3#)VY.OcuA/Z7Oa" id="9Zcmj.+pH%m_y;U}i=i@" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+        <field customattributes="" name="TEXT">587</field>
+      </shadow>
+    </value>
+    <value name="ARG10">
+      <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="ol%Nr3#)VY.OcuA/Z7Oa" id="H8Pmp)1r.2(p0z$u=i54" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+        <field customattributes="" name="TEXT">email@techne.com.br</field>
+      </shadow>
+    </value>
+    <value name="ARG11">
+      <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="ol%Nr3#)VY.OcuA/Z7Oa" id="h(HXOBNwnMp$.Gpn7W#J" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+        <field customattributes="" name="TEXT"/>
+      </shadow>
+    </value>
+    <value name="ARG12">
+      <block asynccall="false" colour="#995ba5" datasourcetype="" dependencyby="ol%Nr3#)VY.OcuA/Z7Oa" id="ifzzrTq80gB:PaFu60m:" origintype="util_dropdown" output="true" type="util_dropdown">
+        <mutation>
+          <arg name="SSL" value="SSL"/>
+          <arg name="TLS" value="TLS"/>
+          <arg name="TLSv1" value="TLS v1.0"/>
+          <arg name="TLSv1.1" value="TLS v1.1"/>
+          <arg name="TLSv1.2" value="TLS v1.2"/>
+          <arg name="PLAIN" value="PLAIN"/>
+        </mutation>
+        <field customattributes="" name="SELECT">SSL</field>
+      </block>
+    </value>
+  </block>
+  <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="@J_%Wq01([dkz$L%v59d" origintype="logic_null" output="true" tooltip="Retorna nulo." type="logic_null" x="668" y="743"/>
 </blockly>

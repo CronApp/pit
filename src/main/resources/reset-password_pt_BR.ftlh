@@ -84,7 +84,7 @@
     <tr class="content" bgcolor="#DCF0F1">
         <td>
             <p class="titulo">
-                Uma solicitação de redefinição de senha foi gerada para ${email}.
+                Uma solicitação de redefinição de senha foi gerada para ${email} ${name}.
             </p>
             <p>
                 <#if oneTimePassword?has_content>

@@ -403,7 +403,7 @@
         "id:java.lang.Integer",
         "type:java.lang.String",
         "command:java.lang.String",
-        "date:java.sql.Timestamp",
+        "date:java.sql.Date",
         "objectData:java.lang.StringBuffer",
         "user:java.lang.String",
         "host:java.lang.String",
@@ -1338,7 +1338,7 @@
         "user"
       ],
       "position": {
-        "x": 684,
+        "x": 656,
         "y": 26
       },
       "primaryKeys": [
@@ -4404,10 +4404,24 @@
       ],
       "groupPositions": [
         {
-          "idCell": "e35a650f-29ee-4683-8c1c-5cc61a955ddf",
+          "idCell": "b194a533-61d6-4661-b9da-ff80ce2835f9",
           "position": {
-            "x": 668,
-            "y": 594
+            "x": 70,
+            "y": 240
+          }
+        },
+        {
+          "idCell": "dcc00b32-aa33-47bd-bc4d-91da88f25cbc",
+          "position": {
+            "x": 656,
+            "y": 312
+          }
+        },
+        {
+          "idCell": "2016ad54-a0f9-4337-ad10-694a48f0435c",
+          "position": {
+            "x": 656,
+            "y": 26
           }
         },
         {
@@ -4418,20 +4432,6 @@
           }
         },
         {
-          "idCell": "53b97115-f8a3-4221-9ce6-bad2672b8bd5",
-          "position": {
-            "x": 418,
-            "y": 594
-          }
-        },
-        {
-          "idCell": "b194a533-61d6-4661-b9da-ff80ce2835f9",
-          "position": {
-            "x": 70,
-            "y": 240
-          }
-        },
-        {
           "idCell": "fbe4a477-8332-4235-a9a2-5db4a56fa3d0",
           "position": {
             "x": 984,
@@ -4439,10 +4439,24 @@
           }
         },
         {
-          "idCell": "dcc00b32-aa33-47bd-bc4d-91da88f25cbc",
+          "idCell": "2b76b50a-bb57-4354-a653-b71b1450ebff",
           "position": {
-            "x": 656,
-            "y": 312
+            "x": 144,
+            "y": 530
+          }
+        },
+        {
+          "idCell": "e35a650f-29ee-4683-8c1c-5cc61a955ddf",
+          "position": {
+            "x": 668,
+            "y": 594
+          }
+        },
+        {
+          "idCell": "53b97115-f8a3-4221-9ce6-bad2672b8bd5",
+          "position": {
+            "x": 418,
+            "y": 594
           }
         },
         {
@@ -4471,20 +4485,6 @@
           "position": {
             "x": 404,
             "y": 342
-          }
-        },
-        {
-          "idCell": "2b76b50a-bb57-4354-a653-b71b1450ebff",
-          "position": {
-            "x": 144,
-            "y": 530
-          }
-        },
-        {
-          "idCell": "2016ad54-a0f9-4337-ad10-694a48f0435c",
-          "position": {
-            "x": 684,
-            "y": 26
           }
         }
       ]
