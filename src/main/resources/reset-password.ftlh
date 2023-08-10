@@ -84,7 +84,7 @@
     <tr class="content" bgcolor="#DCF0F1">
         <td>
             <p class="titulo">
-              A password reset request was generated for ${email}.
+              A password reset request was generated for ${email} ${name}.
             </p>
             <p>
                 <#if oneTimePassword?has_content>

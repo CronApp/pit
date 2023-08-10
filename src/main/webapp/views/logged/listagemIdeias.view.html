@@ -1,0 +1,40 @@
+<div ng-init="cronapi.client('js.blockly.ListaApi.GetApi.GetApi').run()">
+    <div class="component-holder ng-scope" data-component="crn-textinput" id="crn-textinput-545907"> 
+      <div class="form-group"> 
+        <label for="input158">Label</label> 
+        <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input158" class="form-control k-textbox" id="input158" placeholder="Placeholder text"> 
+      </div> 
+    </div> 
+    <div class="component-holder ng-scope" data-component="crn-accordion" id="crn-accordion-325904" ng-repeat="ideia in vars.listaIdeias"> 
+      <div class="panel-group" id="accordion-1372" role="tablist" aria-multiselectable="true"> 
+        <div class="panel panel-default in"> 
+          <div class="panel-heading heading-arrow" role="tab" id="headingOne" data-toggle="collapse" data-parent="#accordion-1372" href="#collapseOne-1372" aria-expanded="true" aria-controls="collapseOne-1372" heading-arrow="heading-arrow"> 
+            <div class="lead text-center" data-component="crn-title" xattr-position="text-center"> 
+              <h1 class="text-center title component-holder h3" xattr-position="h1 text-center" xattr-type="h3" data-component="crn-text-component">{{ideia.records.fields.Projeto}}</h1> 
+              <div> 
+                <span>Link de defesa: </span> 
+                <p>{{ideia.records.fields.Link}}</p> 
+              </div> 
+              <div> 
+                <div> 
+                  <span>Responsável: </span> 
+                  <p>{{ideia.records.fields.Responsável}}</p> 
+                </div> 
+                <div> 
+                  <span>Linha de negócio: </span> 
+                  <p>{{ideia.records.fields.LN}}</p> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+          <div id="collapseOne-1372" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne"> 
+            <div class="panel-body" data-container="true"> 
+              <div class="lead text-center" data-component="crn-subtitle" xattr-position="text-center"> 
+                <p></p> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+    </div>
+</div>

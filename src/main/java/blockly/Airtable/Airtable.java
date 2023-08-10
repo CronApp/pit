@@ -14,7 +14,7 @@ public static final int TIMEOUT = 300;
 /**
  *
  * @author Wesley Miranda De Oliveira
- * @since 09/08/2023, 10:34:35
+ * @since 10/08/2023, 08:17:04
  *
  */
 public static Var GetApi() throws Exception {
@@ -47,9 +47,11 @@ public static Var GetApi() throws Exception {
     Var.valueOf(""),
     Var.valueOf("ALL"));
     System.out.println(
-    cronapi.util.Operations.getItemFromHttpResponse(retorno,
-    Var.valueOf("BODY")).getObjectAsString());
-    return Var.VAR_NULL;
+    Var.valueOf("abc").getObjectAsString());
+    return
+cronapi.json.Operations.toJson(
+cronapi.util.Operations.getItemFromHttpResponse(retorno,
+Var.valueOf("BODY")));
    }
  }.call();
 }
@@ -57,7 +59,7 @@ public static Var GetApi() throws Exception {
 /**
  *
  * @author Wesley Miranda De Oliveira
- * @since 09/08/2023, 10:34:35
+ * @since 10/08/2023, 08:17:04
  *
  */
 public static Var airtableApi() throws Exception {

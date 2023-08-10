@@ -18,12 +18,15 @@ public static final int TIMEOUT = 300;
  * @param nome
  *
  * @author Wesley Miranda De Oliveira
- * @since 08/08/2023, 09:01:29
+ * @since 09/08/2023, 13:58:51
  *
  */
-public static Var CadastrarUsuario(@ParamMetaData(description = "email", id = "53b42e7f") Var email, @ParamMetaData(description = "senha", id = "2bc04d37") Var senha, @ParamMetaData(description = "nome", id = "fca923a9") Var nome) throws Exception {
+public static Var CadastrarUsuario(@ParamMetaData(description = "email", id = "53b42e7f") Var email, @ParamMetaData(description = "param_senha", id = "2bc04d37") Var param_senha, @ParamMetaData(description = "nome", id = "fca923a9") Var nome) throws Exception {
  return new Callable<Var>() {
 
+   // param
+   private Var senha = param_senha;
+   // end
    private Var id_usuario = Var.VAR_NULL;
    private Var response = Var.VAR_NULL;
    private Var usr = Var.VAR_NULL;
@@ -77,6 +80,20 @@ public static Var CadastrarUsuario(@ParamMetaData(description = "email", id = "5
             cronapi.map.Operations.createObjectMapWith(Var.valueOf("sucesso",
             Var.VAR_FALSE) , Var.valueOf("mensagem",
             Var.valueOf("E-mail já cadastrado")));
+        } else if (
+        cronapi.logic.Operations.isNullOrEmpty(senha).getObjectAsBoolean()) {
+            response =
+            cronapi.map.Operations.createObjectMapWith(Var.valueOf("sucesso",
+            Var.VAR_FALSE) , Var.valueOf("mensagem",
+            Var.valueOf("Digite uma senha")));
+        } else if (
+        Var.valueOf(
+        Var.valueOf(senha.length()).compareTo(
+        Var.valueOf(8)) < 0).getObjectAsBoolean()) {
+            response =
+            cronapi.map.Operations.createObjectMapWith(Var.valueOf("sucesso",
+            Var.VAR_FALSE) , Var.valueOf("mensagem",
+            Var.valueOf("O tamanho mínimo da senha deve ser 8 caracteres")));
         } else {
             cronapi.database.Operations.beginTransaction(Var.valueOf("app"));
             usr =
@@ -108,11 +125,36 @@ public static Var CadastrarUsuario(@ParamMetaData(description = "email", id = "5
 
 /**
  *
+ * @param email
+ *
+ * @author Wesley Miranda De Oliveira
+ * @since 09/08/2023, 13:58:51
+ *
+ */
+public static void ResetSenha(@ParamMetaData(description = "email", id = "ae582bec") Var email) throws Exception {
+  new Callable<Var>() {
+
+   private Var item = Var.VAR_NULL;
+
+   public Var call() throws Exception {
+    item =
+    cronapi.authentication.Operations.defaultResetPassword(email,
+    Var.valueOf("https://acesso.cronapp.io/img/layers.png"),
+    Var.valueOf("https://acesso.cronapp.io/img/layers.png"),
+    Var.VAR_FALSE);
+    System.out.println(item.getObjectAsString());
+   return Var.VAR_NULL;
+   }
+ }.call();
+}
+
+/**
+ *
  * @param username
  * @param password
  *
  * @author Wesley Miranda De Oliveira
- * @since 08/08/2023, 09:01:29
+ * @since 09/08/2023, 13:58:51
  *
  */
 public static Var login(@ParamMetaData(description = "username", id = "eb4f9fa9") Var username, @ParamMetaData(description = "password", id = "59713897") Var password) throws Exception {
