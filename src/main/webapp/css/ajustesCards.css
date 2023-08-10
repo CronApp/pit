@@ -1,0 +1,22 @@
+.campoDadosProjeto span{
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.cardsRetorno {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-left: 10px;
+    z-index: 3;
+}
+
+.campoDadosProjeto {
+    display:flex;
+    align-items: center;
+}
+
+.cardsRetorno a{
+    z-index: 3;
+}

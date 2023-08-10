@@ -19,7 +19,7 @@
       </div>
       <div id="navbar2" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown component-holder open" data-component="crn-menu-item">
+                <li class="dropdown component-holder" data-component="crn-menu-item">
                     <a href="" class="dropdown-toggle" style="min-width: 123px;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         <img class="user-avatar" alt="Icon user" src="{{ session.user.picture || 'node_modules/cronapp-framework-js/dist/img/img-user.svg'}}" data-component="crn-image-menu" id="crn-image-menu">
                         <span>{{"Home.view.Perfil" | translate}}</span> <span class="caret"></span>
@@ -35,7 +35,7 @@
   </nav>
 </div>
 <div ui-view="" id="main-view" tabindex="-1" role="main" class="container-fluid main-view main-view-horizontal">
-    <h1 class="component-holder text-left h3 title">{{'Home.view.Home' | translate}}<div class="component-holder ng-scope" data-component="crn-button" id="crn-button-297468"><button class="btn k-button btn-block btn-default" ng-click="cronapi.server('blockly.Airtable.Airtable.GetApi').run()" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled=""><i class="glyphicon glyphicon-home" icon-theme=""></i> <span class="" text-theme="">Button</span></button></div></h1>
+    <h1 class="component-holder text-left h3 title">{{'Home.view.Home' | translate}}<div class="component-holder ng-scope" data-component="crn-button" id="crn-button-297468"><button class="btn k-button btn-block btn-default" ng-click="cronapi.client('js.blockly.ListaApi.GetApi.GetApi').run()" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled=""><i class="glyphicon glyphicon-home" icon-theme=""></i> <span class="" text-theme="">Button</span></button></div></h1>
 </div>
 <div class="modal fade" id="modalPassword" style="">
   <div class="modal-dialog">
