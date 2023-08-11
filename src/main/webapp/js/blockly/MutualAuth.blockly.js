@@ -9,15 +9,17 @@ window.blockly.js.blockly.MutualAuth = window.blockly.js.blockly.MutualAuth || {
  * MutualAuth
  *
  *
- * @author Root
- * @since 24/05/2022 12:50:35
+ * @author Wesley Miranda De Oliveira
+ * @since 11/08/2023, 08:56:52
  *
  */
 window.blockly.js.blockly.MutualAuth.loginArgs = [];
 window.blockly.js.blockly.MutualAuth.login = async function() {
 
-    //
-    (await this.cronapi.authentication.mutualLogin());
+  //
+  (await this.cronapi.client('cronapi.authentication.mutualLogin').run());
+  //
+  this.cronapi.screen.notify('success','aaaaaaa');
 }
 
 /**
@@ -26,13 +28,13 @@ window.blockly.js.blockly.MutualAuth.login = async function() {
  * Descreva esta função...
  *
  *
- * @author Root
- * @since 24/05/2022 12:50:35
+ * @author Wesley Miranda De Oliveira
+ * @since 11/08/2023, 08:56:52
  *
  */
 window.blockly.js.blockly.MutualAuth.signupArgs = [];
 window.blockly.js.blockly.MutualAuth.signup = async function() {
 
-    //
-    (await this.cronapi.authentication.mutualSignup());
+  //
+  (await this.cronapi.client('cronapi.authentication.mutualSignup').run());
 }
