@@ -3,8 +3,10 @@ package blockly.Usuario;
 import cronapi.*;
 import cronapi.rest.security.CronappSecurity;
 import java.util.concurrent.Callable;
+import org.springframework.web.bind.annotation.*;
 
 
+@RestController
 @CronapiMetaData(type = "blockly")
 @CronappSecurity
 public class EditarPerfil {
@@ -16,9 +18,10 @@ public static final int TIMEOUT = 300;
  * @param nome
  *
  * @author Wesley Miranda De Oliveira
- * @since 08/08/2023, 11:14:32
+ * @since 11/08/2023, 08:44:12
  *
  */
+@RequestMapping(path = "/api/cronapi/rest/Usuario.EditarPerfil:SalvarAlteracoes", method = RequestMethod.GET, consumes = "*/*")
 public static Var SalvarAlteracoes(@ParamMetaData(description = "param_nome", id = "aa4ae81c") Var param_nome) throws Exception {
  return new Callable<Var>() {
 
@@ -42,6 +45,8 @@ public static Var SalvarAlteracoes(@ParamMetaData(description = "param_nome", id
         cronapi.util.Operations.getCurrentUserName()));
         cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.hideModal"),
         Var.valueOf("modalEdicaoPerfil"));
+        cronapi.util.Operations.callClientFunction( Var.valueOf("cronapi.screen.notify"), Var.valueOf("success"),
+        Var.valueOf("Nome alterado com sucesso!"));
     }
     return Var.VAR_NULL;
    }

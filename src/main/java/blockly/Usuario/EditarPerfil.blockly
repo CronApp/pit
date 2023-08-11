@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="JAVA" bpmnAble="false" formTarget="src/main/webapp/views/logged/home.view.html" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JAVA" ruleDescription="EditarPerfil" ruleName="EditarPerfil" ruleSynchronous="false" ruleTimeout="300" ruleType="I" showAsFunction="false" soap="false" swagger="false">
-  <metadata scale="1" scrollx="480.9" scrolly="-56.60000000000008" target="Anb:u5+^,0vLkL9QIqn5"/>
-  <block asynccall="false" colour="#995ba5" datasourcetype="" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" rest-consumes="*/*" rest-method="GET" rest-path="/api/cronapi/rest/Usuario.EditarPerfil:SalvarAlteracoes" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-350" y="130">
+  <metadata scale="1" scrollx="480.9" scrolly="-56.60000000000019" target="Anb:u5+^,0vLkL9QIqn5"/>
+  <block asynccall="false" colour="#995ba5" datasourcetype="" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" rest-consumes="*/*" rest-method="GET" rest-path="/api/cronapi/rest/Usuario.EditarPerfil:SalvarAlteracoes" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-412" y="83">
     <mutation>
       <arg id="aa4ae81c" name="nome"/>
     </mutation>
@@ -90,6 +90,17 @@
                     <field customattributes="" name="SELECT">modalEdicaoPerfil</field>
                   </block>
                 </value>
+                <next>
+                  <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="15bpSo%E4zUK$oph+.X%" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.screen.notify','cronapi.screen.notify')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                    <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                    <field customattributes="" name="SELECT">success</field>
+                    <value name="MESSAGE">
+                      <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="gkTX.5_GZADdSY-[oSX#" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                        <field customattributes="" name="TEXT">Nome alterado com sucesso!</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
               </block>
             </next>
           </block>
