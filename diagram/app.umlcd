@@ -999,8 +999,8 @@
       "modelType": "Table",
       "name": "ControleVotacao",
       "position": {
-        "x": 760,
-        "y": 208
+        "x": 1206,
+        "y": 216
       },
       "queries": [],
       "realName": "",
@@ -4599,16 +4599,16 @@
           }
         },
         {
-          "idCell": "56d9e678-741d-41e6-9b24-bccc58de1598",
+          "idCell": "4cbe47fe-4f4b-43e9-960b-4b5cc2633aef",
           "position": {
-            "x": 1106,
-            "y": 406
+            "x": 404,
+            "y": 342
           }
         },
         {
-          "idCell": "36b875ac-204a-4346-82e4-aabbd2c6b202",
+          "idCell": "e35a650f-29ee-4683-8c1c-5cc61a955ddf",
           "position": {
-            "x": 940,
+            "x": 668,
             "y": 594
           }
         },
@@ -4620,17 +4620,10 @@
           }
         },
         {
-          "idCell": "2016ad54-a0f9-4337-ad10-694a48f0435c",
+          "idCell": "dcc00b32-aa33-47bd-bc4d-91da88f25cbc",
           "position": {
             "x": 656,
-            "y": 26
-          }
-        },
-        {
-          "idCell": "4cbe47fe-4f4b-43e9-960b-4b5cc2633aef",
-          "position": {
-            "x": 404,
-            "y": 342
+            "y": 312
           }
         },
         {
@@ -4641,10 +4634,38 @@
           }
         },
         {
-          "idCell": "7b634f81-4cd6-42d5-bd93-ed38201da7b8",
+          "idCell": "2b76b50a-bb57-4354-a653-b71b1450ebff",
           "position": {
-            "x": 760,
-            "y": 208
+            "x": 144,
+            "y": 530
+          }
+        },
+        {
+          "idCell": "36b875ac-204a-4346-82e4-aabbd2c6b202",
+          "position": {
+            "x": 940,
+            "y": 594
+          }
+        },
+        {
+          "idCell": "fbe4a477-8332-4235-a9a2-5db4a56fa3d0",
+          "position": {
+            "x": 984,
+            "y": 38
+          }
+        },
+        {
+          "idCell": "2016ad54-a0f9-4337-ad10-694a48f0435c",
+          "position": {
+            "x": 656,
+            "y": 26
+          }
+        },
+        {
+          "idCell": "56d9e678-741d-41e6-9b24-bccc58de1598",
+          "position": {
+            "x": 1106,
+            "y": 406
           }
         },
         {
@@ -4655,31 +4676,10 @@
           }
         },
         {
-          "idCell": "dcc00b32-aa33-47bd-bc4d-91da88f25cbc",
+          "idCell": "7b634f81-4cd6-42d5-bd93-ed38201da7b8",
           "position": {
-            "x": 656,
-            "y": 312
-          }
-        },
-        {
-          "idCell": "2b76b50a-bb57-4354-a653-b71b1450ebff",
-          "position": {
-            "x": 144,
-            "y": 530
-          }
-        },
-        {
-          "idCell": "e35a650f-29ee-4683-8c1c-5cc61a955ddf",
-          "position": {
-            "x": 668,
-            "y": 594
-          }
-        },
-        {
-          "idCell": "fbe4a477-8332-4235-a9a2-5db4a56fa3d0",
-          "position": {
-            "x": 984,
-            "y": 38
+            "x": 1206,
+            "y": 216
           }
         }
       ]
