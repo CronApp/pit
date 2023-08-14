@@ -10,7 +10,7 @@ window.blockly.js.blockly.MutualAuth = window.blockly.js.blockly.MutualAuth || {
  *
  *
  * @author Wesley Miranda De Oliveira
- * @since 11/08/2023, 08:56:52
+ * @since 14/08/2023, 09:18:26
  *
  */
 window.blockly.js.blockly.MutualAuth.loginArgs = [];
@@ -18,8 +18,6 @@ window.blockly.js.blockly.MutualAuth.login = async function() {
 
   //
   (await this.cronapi.client('cronapi.authentication.mutualLogin').run());
-  //
-  this.cronapi.screen.notify('success','aaaaaaa');
 }
 
 /**
@@ -29,7 +27,7 @@ window.blockly.js.blockly.MutualAuth.login = async function() {
  *
  *
  * @author Wesley Miranda De Oliveira
- * @since 11/08/2023, 08:56:52
+ * @since 14/08/2023, 09:18:26
  *
  */
 window.blockly.js.blockly.MutualAuth.signupArgs = [];
