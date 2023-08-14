@@ -20,3 +20,8 @@
 .cardsRetorno a{
     z-index: 3;
 }
+
+/*Tela Login*/
+.bg-login2 {
+    grid-template-columns: 2fr 1fr !important;
+}
