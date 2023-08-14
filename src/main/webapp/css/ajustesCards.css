@@ -25,3 +25,7 @@
 .bg-login2 {
     grid-template-columns: 2fr 1fr !important;
 }
+
+.panel {
+    border: none;
+}
