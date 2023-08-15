@@ -13,7 +13,7 @@ window.blockly.js.blockly.Votacao.Voto = window.blockly.js.blockly.Votacao.Voto 
  * @param checado
  *
  * @author Wesley Miranda De Oliveira
- * @since 15/08/2023, 14:17:29
+ * @since 15/08/2023, 16:25:27
  *
  */
 window.blockly.js.blockly.Votacao.Voto.ObtemVotoArgs = [{ description: 'idIdeiaVotada', id: '66436263' }, { description: 'checado', id: '7b36cee4' }];
@@ -50,4 +50,6 @@ window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada,
     //
     this.cronapi.screen.changeValueOfField("vars.listaVotos", lista);
   }
+  //
+  console.log(lista);
 }
