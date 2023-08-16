@@ -10,7 +10,7 @@
         <div class="panel-group" id="accordion-1372{{$index}}" role="tablist" aria-multiselectable="true"> 
           <div class="panel panel-default" ng-repeat="ideia in vars.listaIdeias track by $index"> 
           <div style="display: flex; flex-direction: row;">
-            <div class="hidden" style="margin-top: 46px; margin-right: 20px; margin-left: 12px;"> 
+            <div class="hidden" id="div-check-voto-{{$index}}" style="margin-top: 46px; margin-right: 20px; margin-left: 12px;"> 
                 <input class="check-voto-selecao" onclick="checkCount(this)" type="checkbox" id="checkbox1233[$index]" ng-model="vars.checkbox[$index]" ng-initial-value="false" crn-allow-null-values="false" ng-false-value="true" ng-true-value="false" ng-click="cronapi.client('js.blockly.Votacao.Voto.ObtemVoto').names('66436263', '7b36cee4').run(ideia.id, vars.checkbox[$index])"> 
             </div> 
             <div style="width: 100%;">
