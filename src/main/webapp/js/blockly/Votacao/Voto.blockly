@@ -3,27 +3,22 @@
   <block asynccall="false" colour="#fca03b" datasourcetype="" id=":Tnds-9Z:~Q_57/2.?{*" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-322" y="-22">
     <mutation>
       <arg id="b8644fae" name="checkAceitarRegras"/>
-      <arg id="77b0ad38" name="checkbox"/>
     </mutation>
     <field customattributes="" name="NAME">IniciarVotacao</field>
     <statement name="STACK">
       <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby=":Tnds-9Z:~Q_57/2.?{*" id="FBwjv#?l?*dfX9_4iXOQ" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
         <field customattributes="" name="VAR">checkAceitarRegras</field>
         <value name="VALUE">
-          <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby=":Tnds-9Z:~Q_57/2.?{*" id="q!LS8JJV.p3T2=~-~yD@" origintype="logic_negate" output="true" tooltip="Retorna verdadeiro se a entrada for falsa.  Retorna falsa se a entrada for verdadeira." type="logic_negate">
-            <value name="BOOL">
-              <block asynccall="false" colour="#0e9a6c" datasourcetype="" dependencyby=":Tnds-9Z:~Q_57/2.?{*" id="FRM~Q@:13IXiAUYj1*)e" multilayer="false" namespace="cronapi.conversion.toBoolean" origintype="procedures_callreturn" output="true" returntype="ObjectType.BOOLEAN" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EPara%20l%C3%B3gico%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20converter%20para%20l%C3%B3gico%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Conte%C3%BAdo%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20L%C3%B3gico%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.conversion.toBoolean','cronapi.conversion.toBoolean')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
-                <mutation name="{{cronapi.conversion.toBoolean}}" return-raw-type="undefined">
-                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Conteúdo"/>
-                </mutation>
-                <value name="ARG0">
-                  <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby=":Tnds-9Z:~Q_57/2.?{*" id="c60Ew.@sy%!$u_9X.xTn" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                    <field customattributes="" name="TEXT"/>
-                  </shadow>
-                  <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby=":Tnds-9Z:~Q_57/2.?{*" id="V5W}$kyHKWi[J~)U.k=h" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
-                    <field customattributes="" name="VAR">checkAceitarRegras</field>
-                  </block>
-                </value>
+          <block asynccall="false" colour="#0e9a6c" datasourcetype="" dependencyby=":Tnds-9Z:~Q_57/2.?{*" id="FRM~Q@:13IXiAUYj1*)e" multilayer="false" namespace="cronapi.conversion.toBoolean" origintype="procedures_callreturn" output="true" returntype="ObjectType.BOOLEAN" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EPara%20l%C3%B3gico%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20converter%20para%20l%C3%B3gico%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Conte%C3%BAdo%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20L%C3%B3gico%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.conversion.toBoolean','cronapi.conversion.toBoolean')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+            <mutation name="{{cronapi.conversion.toBoolean}}" return-raw-type="undefined">
+              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Conteúdo"/>
+            </mutation>
+            <value name="ARG0">
+              <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby=":Tnds-9Z:~Q_57/2.?{*" id="c60Ew.@sy%!$u_9X.xTn" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field customattributes="" name="TEXT"/>
+              </shadow>
+              <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby=":Tnds-9Z:~Q_57/2.?{*" id="V5W}$kyHKWi[J~)U.k=h" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                <field customattributes="" name="VAR">checkAceitarRegras</field>
               </block>
             </value>
           </block>

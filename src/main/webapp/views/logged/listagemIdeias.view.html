@@ -91,7 +91,7 @@
       </div> 
       <!--DEIXAR CLICAR EM INICIAR VOTAÇÃO APENAS SE O CHECK ACIMA ESTIVER MARCADO--> 
       <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-477481"> 
-        <button class="btn k-button btn-block btn-default" ng-click="conteudoVisivel = vars.checkAceitarRegras === 'true'"> <i class="glyphicon glyphicon-pencil" icon-theme=""></i> <span class="" text-theme="">Iniciar Votação</span> </button> 
+        <button class="btn k-button btn-block btn-default" ng-click="conteudoVisivel = vars.checkAceitarRegras === 'true'; cronapi.client('js.blockly.Votacao.Voto.IniciarVotacao').names('b8644fae').run(vars.checkAceitarRegras)"> <i class="glyphicon glyphicon-pencil" icon-theme=""></i> <span class="" text-theme="">Iniciar Votação</span> </button> 
       </div> 
     </div> 
     <!--tela 2 -- EXIBIR SOMENTE APÓS INICIAR VOTAÇÃO TIVER SIDO CLICADA--> 
