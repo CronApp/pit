@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="WEB" bpmnAble="false" formTarget="" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JS" ruleDescription="Voto" ruleName="Voto" ruleSynchronous="false" ruleTimeout="" ruleType="I" showAsFunction="false" soap="false" swagger="false">
-  <metadata scale="1" scrollx="374.9000000000017" scrolly="-505.49999999999955" target="Anb:u5+^,0vLkL9QIqn5"/>
+  <metadata scale="1" scrollx="140.76562499999898" scrolly="-275.39999999999986" target=":Tnds-9Z:~Q_57/2.?{*"/>
   <block asynccall="false" colour="#995ba5" datasourcetype="" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-337" y="143">
     <mutation>
       <arg id="66436263" name="idIdeiaVotada"/>
@@ -266,6 +266,64 @@
                 </next>
               </block>
             </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block asynccall="false" colour="#fca03b" datasourcetype="" id=":Tnds-9Z:~Q_57/2.?{*" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="143" y="353">
+    <mutation>
+      <arg id="b8644fae" name="checkAceitarRegras"/>
+    </mutation>
+    <field customattributes="" name="NAME">IniciarVotacao</field>
+    <statement name="STACK">
+      <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby=":Tnds-9Z:~Q_57/2.?{*" id="wZl@OjLx/W:hB@G8Sf#*" origintype="controls_if" output="false" tooltip="function () { [native code] }" type="controls_if">
+        <mutation else="1"/>
+        <value name="IF0">
+          <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby=":Tnds-9Z:~Q_57/2.?{*" id="Lft,pFG;d68i6n%k(;)(" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+            <field customattributes="" name="OP">EQ</field>
+            <value name="A">
+              <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby=":Tnds-9Z:~Q_57/2.?{*" id="V5W}$kyHKWi[J~)U.k=h" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                <field customattributes="" name="VAR">checkAceitarRegras</field>
+              </block>
+            </value>
+            <value name="B">
+              <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby=":Tnds-9Z:~Q_57/2.?{*" id="a9~Cw/?~8o.B:@Is32D0" origintype="logic_boolean" output="true" tooltip="Retorna verdadeiro ou falso." type="logic_boolean">
+                <field customattributes="" name="BOOL">FALSE</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby=":Tnds-9Z:~Q_57/2.?{*" id="FBwjv#?l?*dfX9_4iXOQ" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+            <field customattributes="" name="VAR">checkAceitarRegras</field>
+            <value name="VALUE">
+              <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby=":Tnds-9Z:~Q_57/2.?{*" id="|Anx`O8=~+CmMey,VS@f" origintype="logic_boolean" output="true" tooltip="Retorna verdadeiro ou falso." type="logic_boolean">
+                <field customattributes="" name="BOOL">TRUE</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby=":Tnds-9Z:~Q_57/2.?{*" id="ZK$o%f?M=*fuP(qm[I2{" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+            <field customattributes="" name="VAR">checkAceitarRegras</field>
+            <value name="VALUE">
+              <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby=":Tnds-9Z:~Q_57/2.?{*" id="i24uizbRA)~w{$1RK;:q" origintype="logic_boolean" output="true" tooltip="Retorna verdadeiro ou falso." type="logic_boolean">
+                <field customattributes="" name="BOOL">FALSE</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <next>
+          <block asynccall="false" colour="#5ba58c" datasourcetype="" dependencyby=":Tnds-9Z:~Q_57/2.?{*" id="IEk%M]~aUVjg|:S-o/[a" origintype="text_print" output="false" tooltip="Imprime o texto, número ou valor especificado." type="text_print">
+            <value name="TEXT">
+              <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby=":Tnds-9Z:~Q_57/2.?{*" id="o#.++V-50O4fZ{]Iw7{]" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field customattributes="" name="TEXT">abc</field>
+              </shadow>
+              <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby=":Tnds-9Z:~Q_57/2.?{*" id=",=D!quPNQ;nre!zeEA@/" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                <field customattributes="" name="VAR">checkAceitarRegras</field>
+              </block>
+            </value>
           </block>
         </next>
       </block>

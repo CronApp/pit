@@ -12,13 +12,13 @@ window.blockly.js.blockly.Votacao.Voto = window.blockly.js.blockly.Votacao.Voto 
  * @param idIdeiaVotada
  * @param checado
  *
- * @author Wesley Miranda De Oliveira
- * @since 15/08/2023, 16:25:27
+ * @author José Zay
+ * @since 16/08/2023, 13:42:51
  *
  */
 window.blockly.js.blockly.Votacao.Voto.ObtemVotoArgs = [{ description: 'idIdeiaVotada', id: '66436263' }, { description: 'checado', id: '7b36cee4' }];
 window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada, checado) {
- var hecado, i, x, lista;
+
   //
   lista = this.cronapi.screen.getValueOfField("vars.listaVotos");
   //
@@ -52,4 +52,30 @@ window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada,
   }
   //
   console.log(lista);
+}
+
+/**
+ * @function IniciarVotacao
+ *
+ *
+ *
+ * @param checkAceitarRegras
+ *
+ * @author José Zay
+ * @since 16/08/2023, 13:42:51
+ *
+ */
+window.blockly.js.blockly.Votacao.Voto.IniciarVotacaoArgs = [{ description: 'checkAceitarRegras', id: 'b8644fae' }];
+window.blockly.js.blockly.Votacao.Voto.IniciarVotacao = async function(checkAceitarRegras) {
+
+  //
+  if (checkAceitarRegras == false) {
+    //
+    checkAceitarRegras = true;
+  } else {
+    //
+    checkAceitarRegras = false;
+  }
+  //
+  console.log(checkAceitarRegras);
 }
