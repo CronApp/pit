@@ -10,7 +10,7 @@
         <div class="panel-group" id="accordion-1372{{$index}}" role="tablist" aria-multiselectable="true"> 
           <div class="panel panel-default" ng-repeat="ideia in vars.listaIdeias track by $index"> 
           <div style="display: flex; flex-direction: row;">
-            <div style="margin-top: 46px; margin-right: 20px; margin-left: 12px;"> 
+            <div class="hidden" style="margin-top: 46px; margin-right: 20px; margin-left: 12px;"> 
                 <input class="check-voto-selecao" onclick="checkCount(this)" type="checkbox" id="checkbox1233[$index]" ng-model="vars.checkbox[$index]" ng-initial-value="false" crn-allow-null-values="false" ng-false-value="true" ng-true-value="false" ng-click="cronapi.client('js.blockly.Votacao.Voto.ObtemVoto').names('66436263', '7b36cee4').run(ideia.id, vars.checkbox[$index])"> 
             </div> 
             <div style="width: 100%;">
@@ -83,7 +83,7 @@
         </div>
         
         <!--tela 1-->
-        <div style="text-align: left; padding-left: 2rem; padding-right: 2rem;">
+        <div id="div-tela1-id" style="text-align: left; padding-left: 2rem; padding-right: 2rem;">
             <div>
                 REGRAS Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
             </div>
@@ -94,7 +94,7 @@
             
             <!--DEIXAR CLICAR EM INICIAR VOTAÇÃO APENAS SE O CHECK ACIMA ESTIVER MARCADO-->
             <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-477481">
-                <button class="btn k-button btn-block btn-default" ng-click="" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
+                <button class="btn k-button btn-block btn-default" ng-click="cronapi.client('js.blockly.Votacao.Voto.IniciarVotacao').names('b8644fae').run(vars.checkAceitarRegras)" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
                     <i class="glyphicon glyphicon-pencil" icon-theme=""></i> 
                     <span class="" text-theme="">Iniciar Votação</span>
                 </button>
@@ -102,7 +102,7 @@
         </div>
         
         <!--tela 2 -- EXIBIR SOMENTE APÓS INICIAR VOTAÇÃO TIVER SIDO CLICADA-->
-        <div class="hidden" style="text-align: left; padding-left: 2rem; padding-right: 2rem;">
+        <div class="hidden" id="div-tela2-id" style="text-align: left; padding-left: 2rem; padding-right: 2rem;">
             <div>
                 Escolha até 2 projetos
             </div>
