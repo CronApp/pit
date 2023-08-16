@@ -12,20 +12,20 @@ window.blockly.js.blockly.Votacao.Voto = window.blockly.js.blockly.Votacao.Voto 
  * @param checkAceitarRegras
  *
  * @author José Zay
- * @since 16/08/2023, 15:33:46
+ * @since 16/08/2023, 16:00:58
  *
  */
 window.blockly.js.blockly.Votacao.Voto.IniciarVotacaoArgs = [{ description: 'checkAceitarRegras', id: 'b8644fae' }];
 window.blockly.js.blockly.Votacao.Voto.IniciarVotacao = async function(checkAceitarRegras) {
- var checkbox, x, lista, i;
+ var checkbox, x, idIdeiaVotada, checado;
   //
   checkAceitarRegras = this.cronapi.conversion.toBoolean(checkAceitarRegras);
   //
   if (checkAceitarRegras) {
     //
-    this.cronapi.screen.toggleClass("div-tela1-id", 'hidden');
+    this.cronapi.screen.toggleClass("check-aceitar-regras", 'hidden');
     //
-    this.cronapi.screen.toggleClass("div-tela2-id", 'hidden');
+    this.cronapi.screen.toggleClass("div-tela-espera-voto-id", 'hidden');
   } else {
     //
     this.cronapi.screen.notify('error','É necessário aceitar as Regras');
@@ -41,12 +41,12 @@ window.blockly.js.blockly.Votacao.Voto.IniciarVotacao = async function(checkAcei
  * @param checado
  *
  * @author José Zay
- * @since 16/08/2023, 15:33:46
+ * @since 16/08/2023, 16:00:58
  *
  */
 window.blockly.js.blockly.Votacao.Voto.ObtemVotoArgs = [{ description: 'idIdeiaVotada', id: '66436263' }, { description: 'checado', id: '7b36cee4' }];
 window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada, checado) {
- var checkbox, x, checkAceitarRegras;
+ var checkbox, x, lista;
   //
   lista = this.cronapi.screen.getValueOfField("vars.listaVotos");
   //
@@ -61,6 +61,10 @@ window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada,
       lista.unshift(idIdeiaVotada);
       //
       this.cronapi.screen.changeValueOfField("vars.listaVotos", lista);
+      //
+      this.cronapi.screen.toggleClass("div-tela-espera-voto-id", 'hidden');
+      //
+      this.cronapi.screen.toggleClass("div-tela-votados-id", 'hidden');
     } else if (lista.length < 2) {
       //
       lista.push(idIdeiaVotada);
