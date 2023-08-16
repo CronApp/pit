@@ -10,7 +10,7 @@
       <div class="panel-group" id="accordion-1372{{$index}}" role="tablist" aria-multiselectable="true"> 
         <div class="panel panel-default" ng-repeat="ideia in vars.listaIdeias track by $index"> 
           <div style="display: flex; flex-direction: row;"> 
-            <div style="margin-top: 46px; margin-right: 20px; margin-left: 12px;" ng-if="conteudoVisivel"> 
+            <div class="div-voto-selecao-class" style="margin-top: 46px; margin-right: 20px; margin-left: 12px;" ng-if="conteudoVisivel"> 
               <input class="check-voto-selecao" onclick="checkCount(this)" type="checkbox" id="checkbox1233[$index]" ng-model="vars.checkbox[$index]" ng-initial-value="false" crn-allow-null-values="false" ng-false-value="true" ng-true-value="false" ng-click="cronapi.client('js.blockly.Votacao.Voto.ObtemVoto').names('66436263', '7b36cee4').run(ideia.id, vars.checkbox[$index])"> 
             </div> 
             <div style="width: 100%;"> 
@@ -94,6 +94,7 @@
         <button class="btn k-button btn-block btn-default" ng-click="conteudoVisivel = vars.checkAceitarRegras === 'true'; cronapi.client('js.blockly.Votacao.Voto.IniciarVotacao').names('b8644fae').run(vars.checkAceitarRegras)"> <i class="glyphicon glyphicon-pencil" icon-theme=""></i> <span class="" text-theme="">Iniciar Votação</span> </button> 
       </div> 
     </div> 
+
     <!--tela 2 -- EXIBIR SOMENTE APÓS INICIAR VOTAÇÃO TIVER SIDO CLICADA--> 
     <div class="hidden" id="div-tela2-id" style="text-align: left; padding-left: 2rem; padding-right: 2rem;"> 
       <div>
@@ -128,26 +129,27 @@
       </div> 
     </div> 
     <script>
-            function checkCount(checkbox) {
-                var checkboxes = document.querySelectorAll('input[type=checkbox]');
-                var checkedCount = 0;
-                for (var i = 0; i < checkboxes.length; i++) {
-                    if (checkboxes[i].checked) {
-                        checkedCount++;
-                    }
-                }
-                if (checkedCount >= 2) {
-                    for (var i = 0; i < checkboxes.length; i++) {
-                        if (!checkboxes[i].checked) {
-                            checkboxes[i].disabled = true;
-                        }
-                    }
-                } else {
-                    for (var i = 0; i < checkboxes.length; i++) {
-                        checkboxes[i].disabled = false;
-                    }
+        function checkCount(checkbox) {
+            var checkboxes = document.querySelectorAll(".div-voto-selecao-class .check-voto-selecao");
+            var checkedCount = 0;
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    checkedCount++;
                 }
             }
-        </script> 
+
+            if (checkedCount >= 2) {
+                for (var i = 0; i < checkboxes.length; i++) {
+                    if (!checkboxes[i].checked) {
+                        checkboxes[i].disabled = true;
+                    }
+                }
+            } else {
+                for (var i = 0; i < checkboxes.length; i++) {
+                    checkboxes[i].disabled = false;
+                }
+            }
+        }
+    </script> 
   </div> 
 </div>
