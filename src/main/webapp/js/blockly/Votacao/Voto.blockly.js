@@ -12,18 +12,18 @@ window.blockly.js.blockly.Votacao.Voto = window.blockly.js.blockly.Votacao.Voto 
  * @param checkAceitarRegras
  *
  * @author José Zay
- * @since 16/08/2023, 16:00:58
+ * @since 17/08/2023, 10:43:08
  *
  */
 window.blockly.js.blockly.Votacao.Voto.IniciarVotacaoArgs = [{ description: 'checkAceitarRegras', id: 'b8644fae' }];
 window.blockly.js.blockly.Votacao.Voto.IniciarVotacao = async function(checkAceitarRegras) {
- var checkbox, x, idIdeiaVotada, checado;
+ var idIdeiaVotada, checado;
   //
   checkAceitarRegras = this.cronapi.conversion.toBoolean(checkAceitarRegras);
   //
   if (checkAceitarRegras) {
     //
-    this.cronapi.screen.toggleClass("check-aceitar-regras", 'hidden');
+    this.cronapi.screen.toggleClass("div-tela-regras-id", 'hidden');
     //
     this.cronapi.screen.toggleClass("div-tela-espera-voto-id", 'hidden');
   } else {
@@ -41,12 +41,12 @@ window.blockly.js.blockly.Votacao.Voto.IniciarVotacao = async function(checkAcei
  * @param checado
  *
  * @author José Zay
- * @since 16/08/2023, 16:00:58
+ * @since 17/08/2023, 10:43:08
  *
  */
 window.blockly.js.blockly.Votacao.Voto.ObtemVotoArgs = [{ description: 'idIdeiaVotada', id: '66436263' }, { description: 'checado', id: '7b36cee4' }];
 window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada, checado) {
- var checkbox, x, lista;
+ var lista;
   //
   lista = this.cronapi.screen.getValueOfField("vars.listaVotos");
   //

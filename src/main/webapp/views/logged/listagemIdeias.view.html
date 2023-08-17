@@ -80,7 +80,7 @@
     <div> 
       <p style="font-weight: bold; text-align: left; padding-left: 2rem; padding-top:2rem;">Meus Votos</p> 
     </div> 
-    <!--tela 1--> 
+    <!--tela-regras--> 
     <div id="div-tela-regras-id" style="text-align: left; padding-left: 2rem; padding-right: 2rem;"> 
       <div>
          REGRAS Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. 
@@ -95,19 +95,19 @@
       </div> 
     </div> 
 
-    <!--tela 2 -- EXIBIR SOMENTE APÓS INICIAR VOTAÇÃO TIVER SIDO CLICADA--> 
+    tela-espera-voto 
     <div class="hidden" id="div-tela-espera-voto-id" style="text-align: left; padding-left: 2rem; padding-right: 2rem;"> 
       <div>
          Escolha até 2 projetos 
       </div> 
     </div> 
-    <!--tela 3 e 4--> 
+    <!--tela-votados--> 
     <div class="hidden" id="div-tela-votados-id" style="text-align: left; padding-left: 2rem; padding-right: 2rem;"> 
-      <!--tela 3 e 4--> 
       <div style="padding-bottom: 2rem;">
          Vote em até 2 projetos 
       </div> 
-      <!--tela 3 e 4 -- LISTAGEM DE PROJETO MARCADOS NO CHECKBOX--> 
+      
+      <!--LISTAGEM DE PROJETO MARCADOS NO CHECKBOX--> 
       <div> 
         <div style="background: rgb(255, 255, 255); border-radius: 6px; border: 1px solid rgb(140, 140, 140); padding:1rem"> 
           <div style="font-size: 2rem; text-height: bold">
@@ -118,12 +118,12 @@
           </div> 
         </div> 
       </div> 
-      <!--tela 4 -- SE TIVER APENAS UM PROJETO E ESTE ESTIVER MARCADO, DEVERÁ DEIXAR FINALIZAR--> 
+      <!--SE TIVER APENAS UM PROJETO E ESTE ESTIVER MARCADO, DEVERÁ DEIXAR FINALIZAR--> 
       <div style="padding-top: 2rem; padding-bottom: 2rem;"> 
         <input class="check-voto-selecao" type="checkbox" id="check-unico-voto" ng-model="vars.checkUnicoVoto" ng-initial-value="false" crn-allow-null-values="false" ng-false-value="true" ng-true-value="false" ng-click=""> 
         <label for="check-unico-voto">meu voto será em apenas 1 projeto</label> 
       </div> 
-      <!--tela 3 e 4--> 
+ 
       <div class="component-holder ng-scope col-md-12" data-component="crn-button" id="crn-button-71994"> 
         <button class="btn k-button btn-block btn-default" ng-click="" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled=""> <i class="glyphicon glyphicon-ok" icon-theme=""></i> <span class="" text-theme="">Finalizar</span> </button> 
       </div> 
