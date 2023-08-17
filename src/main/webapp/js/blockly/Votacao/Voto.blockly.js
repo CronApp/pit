@@ -12,7 +12,7 @@ window.blockly.js.blockly.Votacao.Voto = window.blockly.js.blockly.Votacao.Voto 
  * @param checkAceitarRegras
  *
  * @author José Zay
- * @since 17/08/2023, 11:20:28
+ * @since 17/08/2023, 11:32:02
  *
  */
 window.blockly.js.blockly.Votacao.Voto.IniciarVotacaoArgs = [{ description: 'checkAceitarRegras', id: 'b8644fae' }];
@@ -41,7 +41,7 @@ window.blockly.js.blockly.Votacao.Voto.IniciarVotacao = async function(checkAcei
  * @param checado
  *
  * @author José Zay
- * @since 17/08/2023, 11:20:28
+ * @since 17/08/2023, 11:32:02
  *
  */
 window.blockly.js.blockly.Votacao.Voto.ObtemVotoArgs = [{ description: 'idIdeiaVotada', id: '66436263' }, { description: 'checado', id: '7b36cee4' }];
@@ -52,36 +52,33 @@ window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada,
   //
   if (this.cronapi.conversion.toBoolean(checado)) {
     //
-    if (this.cronapi.logic.isNullOrEmpty(lista) || lista.length <= 0) {
+    if (this.cronapi.logic.isNullOrEmpty(lista)) {
       //
       lista = [];
-      //
-      console.log(lista.length);
+    }
+    //
+    this.cronapi.screen.changeValueOfField("vars.listaVotos", lista);
+    //
+    if (lista.length <= 0) {
       //
       lista.unshift(idIdeiaVotada);
-      //
-      this.cronapi.screen.changeValueOfField("vars.listaVotos", lista);
       //
       this.cronapi.screen.addClass("div-tela-espera-voto-id", 'hidden');
       //
       this.cronapi.screen.removeClass("div-tela-votados-id", 'hidden');
-    } else if (lista.length == 1) {
       //
-      console.log(lista.length);
+      this.cronapi.screen.removeClass("div-unico-voto", 'hidden');
+    } else if (lista.length == 1) {
       //
       lista.push(idIdeiaVotada);
       //
-      this.cronapi.screen.changeValueOfField("vars.listaVotos", lista);
-      //
-      this.cronapi.screen.removeClass("div-unico-voto", 'hidden');
+      this.cronapi.screen.addClass("div-unico-voto", 'hidden');
     } else {
       //
-      console.log(lista.length);
-      //
       this.cronapi.screen.notify('success','Selecione no máximo 2 caixas de seleção');
-      //
-      this.cronapi.screen.addClass("div-unico-voto", 'hidden');
     }
+    //
+    console.log(lista.length);
   } else {
     //
     lista.splice(((lista.indexOf(idIdeiaVotada) + 1) - 1), 1);
@@ -98,7 +95,6 @@ window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada,
     } else if (lista.length == 1) {
       //
       this.cronapi.screen.removeClass("div-unico-voto", 'hidden');
-    } else {
     }
     //
     console.log(lista.length);
