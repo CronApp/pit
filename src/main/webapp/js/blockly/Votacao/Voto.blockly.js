@@ -12,12 +12,12 @@ window.blockly.js.blockly.Votacao.Voto = window.blockly.js.blockly.Votacao.Voto 
  * @param checkAceitarRegras
  *
  * @author José Zay
- * @since 17/08/2023, 14:20:09
+ * @since 17/08/2023, 14:25:31
  *
  */
 window.blockly.js.blockly.Votacao.Voto.IniciarVotacaoArgs = [{ description: 'checkAceitarRegras', id: 'b8644fae' }];
 window.blockly.js.blockly.Votacao.Voto.IniciarVotacao = async function(checkAceitarRegras) {
- var id, idI, idId, idIde, idIdei, idIdeia, l, li, lis, list, listaI, listaId, listaIde, listaIdei, listaIdeia, listaIdeias, x, lista, i;
+ var c, ch, che, chec, check, checkU, checkUn, checkUni, checkUnic, checkUnico, checkUnicoV, checkUnicoVo, checkUnicoVot;
   //
   checkAceitarRegras = this.cronapi.conversion.toBoolean(checkAceitarRegras);
   //
@@ -41,12 +41,12 @@ window.blockly.js.blockly.Votacao.Voto.IniciarVotacao = async function(checkAcei
  * @param checado
  *
  * @author José Zay
- * @since 17/08/2023, 14:20:09
+ * @since 17/08/2023, 14:25:31
  *
  */
 window.blockly.js.blockly.Votacao.Voto.ObtemVotoArgs = [{ description: 'idIdeiaVotada', id: '66436263' }, { description: 'checado', id: '7b36cee4' }];
 window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada, checado) {
- var id, idI, idId, idIde, idIdei, idIdeia, l, li, lis, list, listaI, listaId, listaIde, listaIdei, listaIdeia, listaIdeias, x, checkAceitarRegras;
+ var c, ch, che, chec, check, checkU, checkUn, checkUni, checkUnic, checkUnico, checkUnicoV, checkUnicoVo;
   //
   lista = this.cronapi.screen.getValueOfField("vars.listaVotos");
   //
@@ -100,12 +100,21 @@ window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada,
  *
  *
  *
+ * @param checkUnicoVoto
  *
  * @author José Zay
- * @since 17/08/2023, 14:20:09
+ * @since 17/08/2023, 14:25:31
  *
  */
-window.blockly.js.blockly.Votacao.Voto.FinalizarVotacaoArgs = [];
-window.blockly.js.blockly.Votacao.Voto.FinalizarVotacao = async function() {
- var id, idI, idId, idIde, idIdei, idIdeia, l, li, lis, list, listaI, listaId, listaIde, listaIdei, listaIdeia, listaIdeias, x, checkAceitarRegras, lista, i;
+window.blockly.js.blockly.Votacao.Voto.FinalizarVotacaoArgs = [{ description: 'checkUnicoVoto', id: '8e5f7fd0' }];
+window.blockly.js.blockly.Votacao.Voto.FinalizarVotacao = async function(checkUnicoVoto) {
+ var c, ch, che, chec, check, checkU, checkUn, checkUni, checkUnic, checkUnico, checkUnicoV, checkUnicoVo, checkUnicoVot;
+  //
+  if (this.cronapi.conversion.toBoolean(checkUnicoVoto)) {
+    //
+    console.log('true');
+  } else {
+    //
+    console.log('false');
+  }
 }
