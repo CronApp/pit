@@ -12,12 +12,12 @@ window.blockly.js.blockly.Votacao.Voto = window.blockly.js.blockly.Votacao.Voto 
  * @param checkAceitarRegras
  *
  * @author José Zay
- * @since 17/08/2023, 14:12:57
+ * @since 17/08/2023, 14:20:09
  *
  */
 window.blockly.js.blockly.Votacao.Voto.IniciarVotacaoArgs = [{ description: 'checkAceitarRegras', id: 'b8644fae' }];
 window.blockly.js.blockly.Votacao.Voto.IniciarVotacao = async function(checkAceitarRegras) {
- var id, idI, idId, idIde, idIdei, idIdeia, l, li, lis, list, listaI, listaId, listaIde, listaIdei, listaIdeia, listaIdeias, x, idIdeiaVotada, checado;
+ var id, idI, idId, idIde, idIdei, idIdeia, l, li, lis, list, listaI, listaId, listaIde, listaIdei, listaIdeia, listaIdeias, x, lista, i;
   //
   checkAceitarRegras = this.cronapi.conversion.toBoolean(checkAceitarRegras);
   //
@@ -41,12 +41,12 @@ window.blockly.js.blockly.Votacao.Voto.IniciarVotacao = async function(checkAcei
  * @param checado
  *
  * @author José Zay
- * @since 17/08/2023, 14:12:57
+ * @since 17/08/2023, 14:20:09
  *
  */
 window.blockly.js.blockly.Votacao.Voto.ObtemVotoArgs = [{ description: 'idIdeiaVotada', id: '66436263' }, { description: 'checado', id: '7b36cee4' }];
 window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada, checado) {
- var id, idI, idId, idIde, idIdei, idIdeia, l, li, lis, list, listaI, listaId, listaIde, listaIdei, listaIdeia, listaIdeias, x, lista;
+ var id, idI, idId, idIde, idIdei, idIdeia, l, li, lis, list, listaI, listaId, listaIde, listaIdei, listaIdeia, listaIdeias, x, checkAceitarRegras;
   //
   lista = this.cronapi.screen.getValueOfField("vars.listaVotos");
   //
@@ -102,12 +102,10 @@ window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada,
  *
  *
  * @author José Zay
- * @since 17/08/2023, 14:12:57
+ * @since 17/08/2023, 14:20:09
  *
  */
 window.blockly.js.blockly.Votacao.Voto.FinalizarVotacaoArgs = [];
 window.blockly.js.blockly.Votacao.Voto.FinalizarVotacao = async function() {
- var id, idI, idId, idIde, idIdei, idIdeia, l, li, lis, list, listaI, listaId, listaIde, listaIdei, listaIdeia, listaIdeias, x, idIdeiaVotada, checado, lista;
-  //
-  console.log(this.cronapi.screen.getValueOfField("vars.checkUnicoVoto"));
+ var id, idI, idId, idIde, idIdei, idIdeia, l, li, lis, list, listaI, listaId, listaIde, listaIdei, listaIdeia, listaIdeias, x, checkAceitarRegras, lista, i;
 }

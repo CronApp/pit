@@ -87,13 +87,13 @@
          REGRAS Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. 
       </div> 
       <div style="padding-top: 2rem; padding-bottom: 2rem;"> 
-        <input class="check-voto-selecao" type="checkbox" id="check-aceitar-regras" ng-model="vars.checkAceitarRegras" ng-initial-value="false" crn-allow-null-values="false" ng-false-value="false" ng-true-value="true"> 
+        <input class="check-voto-selecao" type="checkbox" id="check-aceitar-regras" ng-model="vars.checkAceitarRegras"> 
         <label for="check-aceitar-regras">aceito regras</label> 
       </div> 
       
       <!--DEIXAR CLICAR EM INICIAR VOTAÇÃO APENAS SE O CHECK ACIMA ESTIVER MARCADO--> 
       <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-477481"> 
-        <button class="btn k-button btn-block btn-default" ng-click="conteudoVisivel = vars.checkAceitarRegras === 'true'; cronapi.client('js.blockly.Votacao.Voto.IniciarVotacao').names('b8644fae').run(vars.checkAceitarRegras)"> <i class="glyphicon glyphicon-pencil" icon-theme=""></i> <span class="" text-theme="">Iniciar Votação</span> </button> 
+        <button class="btn k-button btn-block btn-default" ng-click="conteudoVisivel = vars.checkAceitarRegras == true; cronapi.client('js.blockly.Votacao.Voto.IniciarVotacao').names('b8644fae').run(vars.checkAceitarRegras)"> <i class="glyphicon glyphicon-pencil" icon-theme=""></i> <span class="" text-theme="">Iniciar Votação</span> </button> 
       </div> 
     </div> 
 
@@ -128,7 +128,7 @@
       
       <!--SE TIVER APENAS UM PROJETO E ESTE ESTIVER MARCADO, DEVERÁ DEIXAR FINALIZAR--> 
       <div id="div-unico-voto" style="padding-top: 2rem"> 
-        <input class="check-voto-selecao" type="checkbox" id="check-unico-voto" ng-model="vars.checkUnicoVoto" ng-initial-value="false" crn-allow-null-values="false" ng-false-value="true" ng-true-value="false" ng-click=""> 
+        <input class="check-voto-selecao" type="checkbox" id="check-unico-voto" ng-model="vars.checkUnicoVoto"> 
         <label for="check-unico-voto">meu voto será em apenas 1 projeto</label> 
       </div> 
  
