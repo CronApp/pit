@@ -12,7 +12,7 @@ window.blockly.js.blockly.Votacao.Voto = window.blockly.js.blockly.Votacao.Voto 
  * @param checkAceitarRegras
  *
  * @author José Zay
- * @since 17/08/2023, 10:43:08
+ * @since 17/08/2023, 11:12:17
  *
  */
 window.blockly.js.blockly.Votacao.Voto.IniciarVotacaoArgs = [{ description: 'checkAceitarRegras', id: 'b8644fae' }];
@@ -41,7 +41,7 @@ window.blockly.js.blockly.Votacao.Voto.IniciarVotacao = async function(checkAcei
  * @param checado
  *
  * @author José Zay
- * @since 17/08/2023, 10:43:08
+ * @since 17/08/2023, 11:12:17
  *
  */
 window.blockly.js.blockly.Votacao.Voto.ObtemVotoArgs = [{ description: 'idIdeiaVotada', id: '66436263' }, { description: 'checado', id: '7b36cee4' }];
@@ -50,27 +50,31 @@ window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada,
   //
   lista = this.cronapi.screen.getValueOfField("vars.listaVotos");
   //
-  console.log(checado);
-  //
   if (this.cronapi.conversion.toBoolean(checado)) {
     //
-    if (this.cronapi.logic.isNullOrEmpty(lista)) {
+    if (this.cronapi.logic.isNullOrEmpty(lista) || lista.length <= 0) {
       //
       lista = [];
+      //
+      console.log(lista.length);
       //
       lista.unshift(idIdeiaVotada);
       //
       this.cronapi.screen.changeValueOfField("vars.listaVotos", lista);
       //
-      this.cronapi.screen.toggleClass("div-tela-espera-voto-id", 'hidden');
+      this.cronapi.screen.addClass("div-tela-espera-voto-id", 'hidden');
       //
-      this.cronapi.screen.toggleClass("div-tela-votados-id", 'hidden');
+      this.cronapi.screen.removeClass("div-tela-votados-id", 'hidden');
     } else if (lista.length < 2) {
+      //
+      console.log(lista.length);
       //
       lista.push(idIdeiaVotada);
       //
       this.cronapi.screen.changeValueOfField("vars.listaVotos", lista);
     } else {
+      //
+      console.log(lista.length);
       //
       this.cronapi.screen.notify('success','Selecione no máximo 2 caixas de seleção');
     }
@@ -78,10 +82,17 @@ window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada,
     //
     lista.splice(((lista.indexOf(idIdeiaVotada) + 1) - 1), 1);
     //
-    console.log(lista.indexOf(idIdeiaVotada) + 1);
-    //
     this.cronapi.screen.changeValueOfField("vars.listaVotos", lista);
+    //
+    if (lista.length <= 0) {
+      //
+      this.cronapi.screen.removeClass("div-tela-espera-voto-id", 'hidden');
+      //
+      this.cronapi.screen.addClass("div-tela-votados-id", 'hidden');
+    } else if (lista.length == 1) {
+    } else {
+    }
+    //
+    console.log(lista.length);
   }
-  //
-  console.log(lista);
 }
