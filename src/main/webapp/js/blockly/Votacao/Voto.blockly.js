@@ -5,6 +5,34 @@ window.blockly.js.blockly.Votacao = window.blockly.js.blockly.Votacao || {};
 window.blockly.js.blockly.Votacao.Voto = window.blockly.js.blockly.Votacao.Voto || {};
 
 /**
+ * @function IniciarVotacao
+ *
+ *
+ *
+ * @param checkAceitarRegras
+ *
+ * @author José Zay
+ * @since 16/08/2023, 16:00:58
+ *
+ */
+window.blockly.js.blockly.Votacao.Voto.IniciarVotacaoArgs = [{ description: 'checkAceitarRegras', id: 'b8644fae' }];
+window.blockly.js.blockly.Votacao.Voto.IniciarVotacao = async function(checkAceitarRegras) {
+ var checkbox, x, idIdeiaVotada, checado;
+  //
+  checkAceitarRegras = this.cronapi.conversion.toBoolean(checkAceitarRegras);
+  //
+  if (checkAceitarRegras) {
+    //
+    this.cronapi.screen.toggleClass("check-aceitar-regras", 'hidden');
+    //
+    this.cronapi.screen.toggleClass("div-tela-espera-voto-id", 'hidden');
+  } else {
+    //
+    this.cronapi.screen.notify('error','É necessário aceitar as Regras');
+  }
+}
+
+/**
  * @function ObtemVoto
  *
  *
@@ -12,13 +40,13 @@ window.blockly.js.blockly.Votacao.Voto = window.blockly.js.blockly.Votacao.Voto 
  * @param idIdeiaVotada
  * @param checado
  *
- * @author Wesley Miranda De Oliveira
- * @since 15/08/2023, 16:25:27
+ * @author José Zay
+ * @since 16/08/2023, 16:00:58
  *
  */
 window.blockly.js.blockly.Votacao.Voto.ObtemVotoArgs = [{ description: 'idIdeiaVotada', id: '66436263' }, { description: 'checado', id: '7b36cee4' }];
 window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada, checado) {
- var hecado, i, x, lista;
+ var checkbox, x, lista;
   //
   lista = this.cronapi.screen.getValueOfField("vars.listaVotos");
   //
@@ -33,6 +61,10 @@ window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada,
       lista.unshift(idIdeiaVotada);
       //
       this.cronapi.screen.changeValueOfField("vars.listaVotos", lista);
+      //
+      this.cronapi.screen.toggleClass("div-tela-espera-voto-id", 'hidden');
+      //
+      this.cronapi.screen.toggleClass("div-tela-votados-id", 'hidden');
     } else if (lista.length < 2) {
       //
       lista.push(idIdeiaVotada);
