@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="WEB" bpmnAble="false" formTarget="src/main/webapp/views/logged/listagemIdeias.view.html" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JS" ruleDescription="Voto" ruleName="Voto" ruleSynchronous="false" ruleTimeout="" ruleType="I" showAsFunction="false" soap="false" swagger="false">
-  <metadata scale="1" scrollx="690.722393822394" scrolly="-386.50000000000944" target="Anb:u5+^,0vLkL9QIqn5"/>
+  <metadata scale="1" scrollx="690.722393822394" scrolly="-1186.50000000001" target="Anb:u5+^,0vLkL9QIqn5"/>
   <block asynccall="false" colour="#fca03b" datasourcetype="" id=":Tnds-9Z:~Q_57/2.?{*" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-177" y="37">
     <mutation>
       <arg id="b8644fae" name="checkAceitarRegras"/>
@@ -304,22 +304,6 @@
                                 </value>
                               </block>
                             </statement>
-                            <next>
-                              <block asynccall="false" colour="#5ba58c" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="TMwnDlqKfD)E9ywe7D7M" origintype="text_print" output="false" tooltip="Imprime o texto, número ou valor especificado." type="text_print">
-                                <value name="TEXT">
-                                  <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=",yrw9LR@M7O9]p|):Q{$" origintype="text" output="true" tooltip="function () { [native code] }" type="text" xmlns="">
-                                    <field customattributes="" name="TEXT">abc</field>
-                                  </shadow>
-                                  <block asynccall="false" colour="#745ba5" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="hz%jiOUN}w@u#Hor1S{x" origintype="lists_length" output="true" tooltip="Retorna o tamanho de uma lista." type="lists_length">
-                                    <value name="VALUE">
-                                      <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=")bKp8(j69Z!k[47vf/pU" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
-                                        <field customattributes="" name="VAR">lista</field>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </value>
-                              </block>
-                            </next>
                           </block>
                         </next>
                       </block>
@@ -485,28 +469,40 @@
                             </value>
                           </block>
                         </statement>
-                        <next>
-                          <block asynccall="false" colour="#5ba58c" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=".je:P,-^JLen3!E7u_ne" origintype="text_print" output="false" tooltip="Imprime o texto, número ou valor especificado." type="text_print">
-                            <value name="TEXT">
-                              <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=",yrw9LR@M7O9]p|):Q{$" origintype="text" output="true" tooltip="function () { [native code] }" type="text" xmlns="">
-                                <field customattributes="" name="TEXT">abc</field>
-                              </shadow>
-                              <block asynccall="false" colour="#745ba5" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="nP9Sr6qX21z[6+Nm1.@y" origintype="lists_length" output="true" tooltip="Retorna o tamanho de uma lista." type="lists_length">
-                                <value name="VALUE">
-                                  <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Z;*zi`Iw3Y?C_Fg6$(P7" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
-                                    <field customattributes="" name="VAR">lista</field>
-                                  </block>
-                                </value>
-                              </block>
-                            </value>
-                          </block>
-                        </next>
                       </block>
                     </next>
                   </block>
                 </next>
               </block>
             </statement>
+            <next>
+              <block asynccall="false" colour="#5ba58c" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=".je:P,-^JLen3!E7u_ne" origintype="text_print" output="false" tooltip="Imprime o texto, número ou valor especificado." type="text_print">
+                <value name="TEXT">
+                  <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=",yrw9LR@M7O9]p|):Q{$" origintype="text" output="true" tooltip="function () { [native code] }" type="text" xmlns="">
+                    <field customattributes="" name="TEXT">abc</field>
+                  </shadow>
+                  <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Z;*zi`Iw3Y?C_Fg6$(P7" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                    <field customattributes="" name="VAR">lista</field>
+                  </block>
+                </value>
+                <next>
+                  <block asynccall="false" colour="#5ba58c" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="+$]zkD_Lu$I8Tf~N94a1" origintype="text_print" output="false" tooltip="Imprime o texto, número ou valor especificado." type="text_print">
+                    <value name="TEXT">
+                      <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=",yrw9LR@M7O9]p|):Q{$" origintype="text" output="true" tooltip="function () { [native code] }" type="text" xmlns="">
+                        <field customattributes="" name="TEXT">abc</field>
+                      </shadow>
+                      <block asynccall="false" colour="#745ba5" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="95t(O0u~_w%.DLo#!A%`" origintype="lists_length" output="true" tooltip="Retorna o tamanho de uma lista." type="lists_length">
+                        <value name="VALUE">
+                          <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="{v`OJxa$^AZE(0.L7-P." origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                            <field customattributes="" name="VAR">lista</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
           </block>
         </next>
       </block>
