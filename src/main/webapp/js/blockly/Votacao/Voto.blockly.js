@@ -11,13 +11,13 @@ window.blockly.js.blockly.Votacao.Voto = window.blockly.js.blockly.Votacao.Voto 
  *
  * @param checkAceitarRegras
  *
- * @author José Zay
- * @since 17/08/2023, 14:58:20
+ * @author Wesley Miranda De Oliveira
+ * @since 18/08/2023, 08:50:08
  *
  */
 window.blockly.js.blockly.Votacao.Voto.IniciarVotacaoArgs = [{ description: 'checkAceitarRegras', id: 'b8644fae' }];
 window.blockly.js.blockly.Votacao.Voto.IniciarVotacao = async function(checkAceitarRegras) {
- var x, checkUnicoVoto;
+ var checkUnicoVoto, lista;
   //
   checkAceitarRegras = this.cronapi.conversion.toBoolean(checkAceitarRegras);
   //
@@ -41,13 +41,13 @@ window.blockly.js.blockly.Votacao.Voto.IniciarVotacao = async function(checkAcei
  * @param idIdeiaVotada
  * @param checado
  *
- * @author José Zay
- * @since 17/08/2023, 14:58:20
+ * @author Wesley Miranda De Oliveira
+ * @since 18/08/2023, 08:50:08
  *
  */
 window.blockly.js.blockly.Votacao.Voto.ObtemVotoArgs = [{ description: 'idIdeiaVotada', id: '66436263' }, { description: 'checado', id: '7b36cee4' }];
 window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada, checado) {
- var x;
+ var checkUnicoVoto;
   //
   lista = this.cronapi.screen.getValueOfField("vars.listaVotos");
   //
@@ -114,13 +114,13 @@ window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada,
  *
  * @param checkUnicoVoto
  *
- * @author José Zay
- * @since 17/08/2023, 14:58:20
+ * @author Wesley Miranda De Oliveira
+ * @since 18/08/2023, 08:50:08
  *
  */
 window.blockly.js.blockly.Votacao.Voto.FinalizarVotacaoArgs = [{ description: 'checkUnicoVoto', id: '8e5f7fd0' }];
 window.blockly.js.blockly.Votacao.Voto.FinalizarVotacao = async function(checkUnicoVoto) {
- var x, lista;
+ var lista, item;
   //
   lista = this.cronapi.screen.getValueOfField("vars.listaVotos");
   //
@@ -131,5 +131,9 @@ window.blockly.js.blockly.Votacao.Voto.FinalizarVotacao = async function(checkUn
     //
     this.cronapi.screen.notify('error','É necessário confirmar que deseja votar em apenas um projeto!');
   } else {
+    //
+    this.cronapi.util.callServerBlocklyAsynchronous('', async function(sender_item) {
+        item = sender_item;
+    }.bind(this));
   }
 }
