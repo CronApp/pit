@@ -12,6 +12,10 @@
     border-radius: 24px;
 }
 
+/*Remocao Padding Padrao da Main Cronapp*/
+.main-view.container-fluid {
+    padding: 0px !important;
+}
 
 /* .btn-primary::after {
      content: "";
@@ -24,3 +28,4 @@
     z-index: -1; /* Coloca a sombra atrás do botão */
 /*} */
 
+/*@media ()*/
