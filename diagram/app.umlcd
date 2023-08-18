@@ -837,230 +837,6 @@
       "angle": 0,
       "attributes": [
         "id:java.lang.String",
-        "votos:java.lang.String",
-        "user:User",
-        "votou:java.lang.Boolean"
-      ],
-      "attrs": {
-        ".uml-class-attrs-rect": {
-          "fill": "#F0F0F0",
-          "font-family": "\u0027Fira Sans\u0027, sans-serif",
-          "height": 100,
-          "stroke": "#C2C2C2",
-          "transform": "translate(0,40)"
-        },
-        ".uml-class-attrs-text": {
-          "font-family": "\u0027Fira Sans\u0027, sans-serif",
-          "font-size": 11,
-          "text": "* id\nvotos\nuser\nvotou\n"
-        },
-        ".uml-class-attrs-value": {
-          "font-family": "\u0027Fira Sans\u0027, sans-serif",
-          "font-size": 11,
-          "ref-x": 149,
-          "text": "Texto\nTexto\nUser\nLógico\n"
-        },
-        ".uml-class-methods-rect": {
-          "fill": "#F0F0F0",
-          "height": 20,
-          "stroke": "#C2C2C2",
-          "stroke-width": 1,
-          "transform": "translate(0,140)"
-        },
-        ".uml-class-methods-text": {
-          "font-family": "\u0027Fira Sans\u0027, sans-serif",
-          "font-size": 11,
-          "text": ""
-        },
-        ".uml-class-name-rect": {
-          "fill": "#F0F0F0",
-          "font-family": "\u0027Fira Sans\u0027, sans-serif",
-          "height": 40,
-          "stroke": "#C2C2C2",
-          "transform": "translate(0,0)"
-        },
-        ".uml-class-name-text": {
-          "font-family": "\u0027Fira Sans\u0027, sans-serif",
-          "text": "ControleVotacao"
-        }
-      },
-      "audit": false,
-      "fields": [
-        {
-          "name": "id",
-          "type": "java.lang.String",
-          "dbName": "id",
-          "dbLength": "",
-          "dbPrecision": "",
-          "dbScale": "",
-          "dbDefaultValue": "UUID.randomUUID().toString().toUpperCase()",
-          "label": "Id",
-          "mask": "",
-          "isPrimaryKey": true,
-          "isUniqueKey": false,
-          "isNullable": false,
-          "pkType": "UUID",
-          "multitenantContext": "",
-          "jsonIgnore": false,
-          "isTransient": false,
-          "isInsertable": true,
-          "isUpdatable": true,
-          "isEncryption": false,
-          "passwordPolicy": "none",
-          "referencedColumnName": "",
-          "isSearchable": false,
-          "sequence": "",
-          "isCascade": false,
-          "isVersion": false,
-          "storageId": "",
-          "storageKey": "",
-          "storageType": "",
-          "storageSecret": "",
-          "foreignKeyName": "",
-          "joins": "",
-          "isIndex": false,
-          "useOuterJoin": false,
-          "regionAWS": ""
-        },
-        {
-          "name": "votos",
-          "type": "java.lang.String",
-          "dbName": "votos",
-          "dbLength": "",
-          "dbPrecision": "",
-          "dbScale": "",
-          "dbDefaultValue": "",
-          "label": "Votos",
-          "mask": "",
-          "isPrimaryKey": false,
-          "isUniqueKey": false,
-          "isNullable": true,
-          "pkType": "",
-          "multitenantContext": "",
-          "jsonIgnore": false,
-          "isTransient": false,
-          "isInsertable": true,
-          "isUpdatable": true,
-          "isEncryption": false,
-          "passwordPolicy": "none",
-          "referencedColumnName": "",
-          "isSearchable": false,
-          "sequence": "",
-          "isCascade": false,
-          "isVersion": false,
-          "storageId": "",
-          "storageKey": "",
-          "storageType": "",
-          "storageSecret": "",
-          "foreignKeyName": "",
-          "joins": "",
-          "isIndex": false,
-          "useOuterJoin": false,
-          "regionAWS": ""
-        },
-        {
-          "name": "user",
-          "type": "User",
-          "dbName": "fk_user",
-          "dbLength": "",
-          "dbPrecision": "",
-          "dbScale": "",
-          "dbDefaultValue": "",
-          "label": "User",
-          "mask": "",
-          "isPrimaryKey": false,
-          "isUniqueKey": false,
-          "isNullable": true,
-          "pkType": "",
-          "multitenantContext": "",
-          "jsonIgnore": false,
-          "isTransient": false,
-          "isInsertable": true,
-          "isUpdatable": true,
-          "isEncryption": false,
-          "passwordPolicy": "none",
-          "referencedColumnName": "",
-          "isSearchable": false,
-          "sequence": "",
-          "isCascade": false,
-          "isVersion": false,
-          "storageId": "",
-          "storageKey": "",
-          "storageType": "",
-          "storageSecret": "",
-          "foreignKeyName": "",
-          "joins": "",
-          "isIndex": false,
-          "useOuterJoin": false,
-          "regionAWS": ""
-        },
-        {
-          "name": "votou",
-          "type": "java.lang.Boolean",
-          "dbName": "votou",
-          "dbLength": "",
-          "dbPrecision": "",
-          "dbScale": "",
-          "dbDefaultValue": "",
-          "label": "Votou",
-          "mask": "",
-          "isPrimaryKey": false,
-          "isUniqueKey": false,
-          "isNullable": true,
-          "pkType": "",
-          "multitenantContext": "",
-          "jsonIgnore": false,
-          "isTransient": false,
-          "isInsertable": true,
-          "isUpdatable": true,
-          "isEncryption": false,
-          "passwordPolicy": "none",
-          "referencedColumnName": "",
-          "isSearchable": false,
-          "sequence": "",
-          "isCascade": false,
-          "isVersion": false,
-          "storageId": "",
-          "storageKey": "",
-          "storageType": "",
-          "storageSecret": "",
-          "foreignKeyName": "",
-          "joins": "",
-          "isIndex": false,
-          "useOuterJoin": false,
-          "regionAWS": ""
-        }
-      ],
-      "generateView": "Auto",
-      "id": "7b634f81-4cd6-42d5-bd93-ed38201da7b8",
-      "isRest": "true",
-      "methods": [],
-      "modelType": "Table",
-      "name": "ControleVotacao",
-      "position": {
-        "x": 1332,
-        "y": 104
-      },
-      "queries": [],
-      "realName": "",
-      "restSecurity": null,
-      "role": "Class",
-      "runtimeClass": "cronos.widgets.joint.uml.Class",
-      "size": {
-        "height": 140,
-        "width": 195
-      },
-      "swagger": false,
-      "tableName": "",
-      "tableScheme": null,
-      "type": "uml.Class",
-      "usePhysicalNames": false,
-      "z": 24
-    },
-    {
-      "angle": 0,
-      "attributes": [
-        "id:java.lang.String",
         "token:java.lang.String",
         "platform:java.lang.String",
         "model:java.lang.String",
@@ -2384,33 +2160,34 @@
         "twoFactorEnabled:java.lang.Boolean",
         "userName:java.lang.String",
         "theme:java.lang.String",
-        "picture:Image Upload (to Database)"
+        "picture:Image Upload (to Database)",
+        "votou:java.lang.Boolean"
       ],
       "attrs": {
         ".uml-class-attrs-rect": {
           "fill": "#F0F0F0",
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
-          "height": 360,
+          "height": 380,
           "stroke": "#C2C2C2",
           "transform": "translate(0,40)"
         },
         ".uml-class-attrs-text": {
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
           "font-size": 11,
-          "text": "* id\naccessFailedCount\nemail\nemailConfirmed\nlockoutEnabled\nlockoutEnd\nname\nnormalizedEmail\nnormalizedUserName\npassword\nphoneNumber\nphoneNumberConfirmed\nsecurityStamp\ntwoFactorEnabled\nuserName\ntheme\npicture\n"
+          "text": "* id\naccessFailedCount\nemail\nemailConfirmed\nlockoutEnabled\nlockoutEnd\nname\nnormalizedEmail\nnormalizedUserName\npassword\nphoneNumber\nphoneNumberConfirmed\nsecurityStamp\ntwoFactorEnabled\nuserName\ntheme\npicture\nvotou\n"
         },
         ".uml-class-attrs-value": {
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
           "font-size": 11,
           "ref-x": 123,
-          "text": "Texto\nInteiro\nTexto\nLógico\nLógico\nData e Hora\nTexto\nTexto\nTexto\nTexto\nTexto\nLógico\nTexto\nLógico\nTexto\nTexto\nImagem no Banco\n"
+          "text": "Texto\nInteiro\nTexto\nLógico\nLógico\nData e Hora\nTexto\nTexto\nTexto\nTexto\nTexto\nLógico\nTexto\nLógico\nTexto\nTexto\nImagem no Banco\nLógico\n"
         },
         ".uml-class-methods-rect": {
           "fill": "#F0F0F0",
           "height": 20,
           "stroke": "#C2C2C2",
           "stroke-width": 1,
-          "transform": "translate(0,400)"
+          "transform": "translate(0,420)"
         },
         ".uml-class-methods-text": {
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
@@ -2523,6 +2300,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -2532,7 +2310,11 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": ""
         },
         {
           "name": "accessFailedCount",
@@ -2554,6 +2336,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -2563,7 +2346,11 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": ""
         },
         {
           "name": "email",
@@ -2585,6 +2372,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -2594,7 +2382,11 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": ""
         },
         {
           "name": "emailConfirmed",
@@ -2616,6 +2408,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -2625,7 +2418,11 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": ""
         },
         {
           "name": "lockoutEnabled",
@@ -2647,6 +2444,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -2656,7 +2454,11 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": ""
         },
         {
           "name": "lockoutEnd",
@@ -2678,6 +2480,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -2687,7 +2490,11 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": ""
         },
         {
           "name": "name",
@@ -2709,6 +2516,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -2718,7 +2526,11 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": ""
         },
         {
           "name": "normalizedEmail",
@@ -2740,6 +2552,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -2749,7 +2562,11 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": ""
         },
         {
           "name": "normalizedUserName",
@@ -2771,6 +2588,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -2780,7 +2598,11 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": ""
         },
         {
           "name": "password",
@@ -2802,6 +2624,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": true,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -2811,7 +2634,11 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": ""
         },
         {
           "name": "phoneNumber",
@@ -2833,6 +2660,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -2842,7 +2670,11 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": ""
         },
         {
           "name": "phoneNumberConfirmed",
@@ -2864,6 +2696,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -2873,7 +2706,11 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": ""
         },
         {
           "name": "securityStamp",
@@ -2895,6 +2732,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -2904,7 +2742,11 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": ""
         },
         {
           "name": "twoFactorEnabled",
@@ -2926,6 +2768,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -2935,7 +2778,11 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": ""
         },
         {
           "name": "userName",
@@ -2957,6 +2804,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -2966,7 +2814,11 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": ""
         },
         {
           "name": "theme",
@@ -2988,6 +2840,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -2997,7 +2850,11 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": ""
         },
         {
           "name": "picture",
@@ -3019,6 +2876,7 @@
           "isInsertable": true,
           "isUpdatable": true,
           "isEncryption": false,
+          "passwordPolicy": "none",
           "referencedColumnName": "",
           "isSearchable": false,
           "sequence": "",
@@ -3028,7 +2886,47 @@
           "storageKey": "",
           "storageType": "",
           "storageSecret": "",
-          "foreignKeyName": ""
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": ""
+        },
+        {
+          "name": "votou",
+          "type": "java.lang.Boolean",
+          "dbName": "votou",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Votou",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "passwordPolicy": "none",
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": ""
         }
       ],
       "id": "fbe4a477-8332-4235-a9a2-5db4a56fa3d0",
@@ -3121,12 +3019,14 @@
         ""
       ],
       "size": {
-        "height": 270,
+        "height": 280,
         "width": 231
       },
+      "swagger": false,
       "tableName": "USER",
       "type": "uml.Class",
       "uniqueKeys": [],
+      "usePhysicalNames": false,
       "z": 2
     },
     {
@@ -4012,6 +3912,238 @@
       "z": 15
     },
     {
+      "angle": 0,
+      "attributes": [
+        "id:java.lang.String",
+        "voto:java.lang.String",
+        "user:User"
+      ],
+      "attrs": {
+        ".uml-class-attrs-rect": {
+          "fill": "#F0F0F0",
+          "font-family": "\u0027Fira Sans\u0027, sans-serif",
+          "height": 80,
+          "stroke": "#C2C2C2",
+          "transform": "translate(0,40)"
+        },
+        ".uml-class-attrs-text": {
+          "font-family": "\u0027Fira Sans\u0027, sans-serif",
+          "font-size": 11,
+          "text": "* id\nvoto\nuser\n"
+        },
+        ".uml-class-attrs-value": {
+          "font-family": "\u0027Fira Sans\u0027, sans-serif",
+          "font-size": 11,
+          "ref-x": 156,
+          "text": "Texto\nTexto\nUser\n"
+        },
+        ".uml-class-methods-rect": {
+          "fill": "#F0F0F0",
+          "height": 20,
+          "stroke": "#C2C2C2",
+          "stroke-width": 1,
+          "transform": "translate(0,120)"
+        },
+        ".uml-class-methods-text": {
+          "font-family": "\u0027Fira Sans\u0027, sans-serif",
+          "font-size": 11,
+          "text": ""
+        },
+        ".uml-class-name-rect": {
+          "fill": "#F0F0F0",
+          "font-family": "\u0027Fira Sans\u0027, sans-serif",
+          "height": 40,
+          "stroke": "#C2C2C2",
+          "transform": "translate(0,0)"
+        },
+        ".uml-class-name-text": {
+          "font-family": "\u0027Fira Sans\u0027, sans-serif",
+          "text": "Votos"
+        }
+      },
+      "audit": false,
+      "fields": [
+        {
+          "name": "id",
+          "type": "java.lang.String",
+          "dbName": "id",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "UUID.randomUUID().toString().toUpperCase()",
+          "label": "Id",
+          "mask": "",
+          "isPrimaryKey": true,
+          "isUniqueKey": false,
+          "isNullable": false,
+          "pkType": "UUID",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "passwordPolicy": "none",
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": ""
+        },
+        {
+          "name": "voto",
+          "type": "java.lang.String",
+          "dbName": "voto",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Voto",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "passwordPolicy": "none",
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": ""
+        },
+        {
+          "name": "user",
+          "type": "User",
+          "dbName": "fk_user",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "User",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "passwordPolicy": "none",
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": ""
+        }
+      ],
+      "generateView": "Auto",
+      "id": "e0ca2f60-f48d-4b7c-9af5-8b6eea4c1d92",
+      "isRest": "true",
+      "methods": [],
+      "modelType": "Table",
+      "name": "Votos",
+      "position": {
+        "x": 1434,
+        "y": -38
+      },
+      "queries": [],
+      "realName": "",
+      "restSecurity": null,
+      "role": "Auto",
+      "runtimeClass": "cronos.widgets.joint.uml.Class",
+      "size": {
+        "height": 130,
+        "width": 195
+      },
+      "swagger": false,
+      "tableName": "",
+      "tableScheme": null,
+      "type": "uml.Class",
+      "usePhysicalNames": false,
+      "z": 26
+    },
+    {
+      "associationType": "Association",
+      "attrs": {
+        ".marker-source": {
+          "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
+          "fill": "#cecece"
+        },
+        ".marker-target": {
+          "d": "",
+          "fill": ""
+        }
+      },
+      "id": "18ec63fd-4120-41ac-80aa-8eabdfa1a23c",
+      "labels": [
+        {
+          "position": 0.9,
+          "attrs": {
+            "rect": {
+              "fill": "transparent"
+            },
+            "text": {
+              "text": "*",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "fill": "#cecece"
+            }
+          }
+        }
+      ],
+      "name": null,
+      "queries": [],
+      "relationFields": [
+        "user:target"
+      ],
+      "runtimeClass": "cronos.widgets.joint.arrow.OneToMany",
+      "source": {
+        "id": "fbe4a477-8332-4235-a9a2-5db4a56fa3d0"
+      },
+      "target": {
+        "id": "e0ca2f60-f48d-4b7c-9af5-8b6eea4c1d92"
+      },
+      "type": "uml.Composition",
+      "vertices": [],
+      "z": 27
+    },
+    {
       "associationType": "Association",
       "attrs": {
         ".marker-source": {
@@ -4472,51 +4604,6 @@
       "z": "4"
     },
     {
-      "associationType": "Association",
-      "attrs": {
-        ".marker-source": {
-          "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
-          "fill": "#cecece"
-        },
-        ".marker-target": {
-          "d": "",
-          "fill": ""
-        }
-      },
-      "id": "d52bdf35-0708-4479-92e2-c8850d973545",
-      "labels": [
-        {
-          "position": 0.9,
-          "attrs": {
-            "rect": {
-              "fill": "transparent"
-            },
-            "text": {
-              "text": "*",
-              "font-family": "Arial",
-              "font-size": "12px",
-              "fill": "#cecece"
-            }
-          }
-        }
-      ],
-      "name": null,
-      "queries": [],
-      "relationFields": [
-        "user:target"
-      ],
-      "runtimeClass": "cronos.widgets.joint.arrow.OneToMany",
-      "source": {
-        "id": "fbe4a477-8332-4235-a9a2-5db4a56fa3d0"
-      },
-      "target": {
-        "id": "7b634f81-4cd6-42d5-bd93-ed38201da7b8"
-      },
-      "type": "uml.Composition",
-      "vertices": [],
-      "z": 25
-    },
-    {
       "attrs": {
         ".marker-source": {
           "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
@@ -4665,7 +4752,7 @@
         "2016ad54-a0f9-4337-ad10-694a48f0435c",
         "dcc00b32-aa33-47bd-bc4d-91da88f25cbc",
         "4cbe47fe-4f4b-43e9-960b-4b5cc2633aef",
-        "7b634f81-4cd6-42d5-bd93-ed38201da7b8",
+        "e0ca2f60-f48d-4b7c-9af5-8b6eea4c1d92",
         "56d9e678-741d-41e6-9b24-bccc58de1598",
         "53b97115-f8a3-4221-9ce6-bad2672b8bd5",
         "b194a533-61d6-4661-b9da-ff80ce2835f9",
@@ -4675,6 +4762,13 @@
         "fabe0aea-c05d-44a4-a87c-2e2c0a97e994"
       ],
       "groupPositions": [
+        {
+          "idCell": "e0ca2f60-f48d-4b7c-9af5-8b6eea4c1d92",
+          "position": {
+            "x": 1434,
+            "y": -38
+          }
+        },
         {
           "idCell": "fabe0aea-c05d-44a4-a87c-2e2c0a97e994",
           "position": {
@@ -4746,10 +4840,17 @@
           }
         },
         {
+          "idCell": "46edc30a-2648-4702-95a2-fe4bc37082eb",
+          "position": {
+            "x": 1998,
+            "y": -144
+          }
+        },
+        {
           "idCell": "7b634f81-4cd6-42d5-bd93-ed38201da7b8",
           "position": {
-            "x": 1332,
-            "y": 104
+            "x": 1366,
+            "y": 134
           }
         },
         {

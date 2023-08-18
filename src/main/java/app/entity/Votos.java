@@ -12,15 +12,15 @@ import cronapi.swagger.CronappSwagger;
 
 
 /**
-* Classe que representa a tabela CONTROLEVOTACAO
+* Classe que representa a tabela VOTOS
 * @generated
 */
 @javax.persistence.Entity
-@javax.persistence.Table(name = "\"CONTROLEVOTACAO\"")
+@javax.persistence.Table(name = "\"VOTOS\"")
 @XmlRootElement
 @CronappSecurity
-@JsonFilter("app.entity.ControleVotacao")
-public class ControleVotacao implements Serializable {
+@JsonFilter("app.entity.Votos")
+public class Votos implements Serializable {
     /**
     * UID da classe, necessário na serialização
     * @generated
@@ -38,9 +38,9 @@ public class ControleVotacao implements Serializable {
     /**
     * @generated
     */
-    @Column(name = "votos", nullable = true, unique = false, insertable=true, updatable=true)
+    @Column(name = "voto", nullable = true, unique = false, insertable=true, updatable=true)
         
-        private java.lang.String votos;
+        private java.lang.String voto;
 
 
     /**
@@ -53,18 +53,10 @@ public class ControleVotacao implements Serializable {
 
 
     /**
-    * @generated
-    */
-    @Column(name = "votou", nullable = true, unique = false, insertable=true, updatable=true)
-        
-        private java.lang.Boolean votou;
-
-
-    /**
     * Construtor
     * @generated
     */
-    public ControleVotacao(){
+    public Votos(){
     }
 
     /**
@@ -81,26 +73,26 @@ public class ControleVotacao implements Serializable {
     * @param id id
     * @generated
     */
-    public ControleVotacao setId(java.lang.String id) {
+    public Votos setId(java.lang.String id) {
         this.id = id;
         return this;
     }
     /**
-    * Obtém votos
-    * return votos
+    * Obtém voto
+    * return voto
     * @generated
     */
-    public java.lang.String getVotos() {
-        return this.votos;
+    public java.lang.String getVoto() {
+        return this.voto;
     }
 
     /**
-    * Define votos
-    * @param votos votos
+    * Define voto
+    * @param voto voto
     * @generated
     */
-    public ControleVotacao setVotos(java.lang.String votos) {
-        this.votos = votos;
+    public Votos setVoto(java.lang.String voto) {
+        this.voto = voto;
         return this;
     }
     /**
@@ -117,26 +109,8 @@ public class ControleVotacao implements Serializable {
     * @param user user
     * @generated
     */
-    public ControleVotacao setUser(User user) {
+    public Votos setUser(User user) {
         this.user = user;
-        return this;
-    }
-    /**
-    * Obtém votou
-    * return votou
-    * @generated
-    */
-    public java.lang.Boolean getVotou() {
-        return this.votou;
-    }
-
-    /**
-    * Define votou
-    * @param votou votou
-    * @generated
-    */
-    public ControleVotacao setVotou(java.lang.Boolean votou) {
-        this.votou = votou;
         return this;
     }
 
@@ -147,7 +121,7 @@ public class ControleVotacao implements Serializable {
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
-ControleVotacao object = (ControleVotacao)obj;
+Votos object = (Votos)obj;
         if (id != null ? !id.equals(object.id) : object.id != null) return false;
         return true;
     }

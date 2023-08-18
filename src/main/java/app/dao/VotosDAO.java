@@ -17,8 +17,8 @@ import org.springframework.transaction.annotation.*;
  * 
  * @generated
  */
-@Repository("app-ControleVotacaoDAO")
+@Repository("app-VotosDAO")
 @Transactional(transactionManager="app-TransactionManager")
-public interface ControleVotacaoDAO extends JpaRepository<ControleVotacao, java.lang.String> {
+public interface VotosDAO extends JpaRepository<Votos, java.lang.String> {
 
 }

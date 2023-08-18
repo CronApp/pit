@@ -12,10 +12,10 @@
         <class>app.entity.RoleSecurable</class>
         <class>app.entity.Securable</class>
         <class>app.entity.UserSecurable</class>
+        <class>app.entity.Votos</class>
         <class>app.entity.Device</class>
         <class>app.entity.Role</class>
         <class>app.entity.Application</class>
-        <class>app.entity.ControleVotacao</class>
         <properties>
             <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
             <property name="cronapp.diagram.namespace" value="app"/>
