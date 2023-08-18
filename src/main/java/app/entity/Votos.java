@@ -12,15 +12,15 @@ import cronapi.swagger.CronappSwagger;
 
 
 /**
-* Classe que representa a tabela APPLICATION_USER
+* Classe que representa a tabela VOTOS
 * @generated
 */
 @javax.persistence.Entity
-@javax.persistence.Table(name = "\"APPLICATION_USER\"")
+@javax.persistence.Table(name = "\"VOTOS\"")
 @XmlRootElement
-@CronappSecurity(post = "Administrators", get = "Administrators", delete = "Administrators", put = "Administrators")
-@JsonFilter("app.entity.ApplicationUser")
-public class ApplicationUser implements Serializable {
+@CronappSecurity
+@JsonFilter("app.entity.Votos")
+public class Votos implements Serializable {
     /**
     * UID da classe, necessário na serialização
     * @generated
@@ -38,17 +38,16 @@ public class ApplicationUser implements Serializable {
     /**
     * @generated
     */
-    @ManyToOne
-    @JoinColumn(name="application_id", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
+    @Column(name = "voto", nullable = true, unique = false, insertable=true, updatable=true)
         
-        private Application application;
+        private java.lang.String voto;
 
 
     /**
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="user_id", nullable = true, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "APPLICATION_USER_USER_ID_USER_ID", foreignKeyDefinition = "FOREIGN KEY (user_id) REFERENCES USER (id) ON DELETE CASCADE"))
+    @JoinColumn(name="fk_user", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
         
         private User user;
 
@@ -57,7 +56,7 @@ public class ApplicationUser implements Serializable {
     * Construtor
     * @generated
     */
-    public ApplicationUser(){
+    public Votos(){
     }
 
     /**
@@ -74,26 +73,26 @@ public class ApplicationUser implements Serializable {
     * @param id id
     * @generated
     */
-    public ApplicationUser setId(java.lang.String id) {
+    public Votos setId(java.lang.String id) {
         this.id = id;
         return this;
     }
     /**
-    * Obtém application
-    * return application
+    * Obtém voto
+    * return voto
     * @generated
     */
-    public Application getApplication() {
-        return this.application;
+    public java.lang.String getVoto() {
+        return this.voto;
     }
 
     /**
-    * Define application
-    * @param application application
+    * Define voto
+    * @param voto voto
     * @generated
     */
-    public ApplicationUser setApplication(Application application) {
-        this.application = application;
+    public Votos setVoto(java.lang.String voto) {
+        this.voto = voto;
         return this;
     }
     /**
@@ -110,7 +109,7 @@ public class ApplicationUser implements Serializable {
     * @param user user
     * @generated
     */
-    public ApplicationUser setUser(User user) {
+    public Votos setUser(User user) {
         this.user = user;
         return this;
     }
@@ -122,7 +121,7 @@ public class ApplicationUser implements Serializable {
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
-ApplicationUser object = (ApplicationUser)obj;
+Votos object = (Votos)obj;
         if (id != null ? !id.equals(object.id) : object.id != null) return false;
         return true;
     }

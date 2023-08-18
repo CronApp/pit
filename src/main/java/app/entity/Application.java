@@ -1,3 +1,4 @@
+
 package app.entity;
 
 import java.io.*;
@@ -7,6 +8,7 @@ import javax.xml.bind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import cronapi.rest.security.CronappSecurity;
+import cronapi.swagger.CronappSwagger;
 
 
 /**
@@ -16,10 +18,9 @@ import cronapi.rest.security.CronappSecurity;
 @javax.persistence.Entity
 @javax.persistence.Table(name = "\"APPLICATION\"")
 @XmlRootElement
-@CronappSecurity
+@CronappSecurity(post = "Administrators", get = "Administrators", delete = "Administrators", put = "Administrators")
 @JsonFilter("app.entity.Application")
 public class Application implements Serializable {
-
     /**
     * UID da classe, necessário na serialização
     * @generated
@@ -33,12 +34,14 @@ public class Application implements Serializable {
     @Column(name = "id", nullable = false, insertable=true, updatable=true)
         private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
 
+
     /**
     * @generated
     */
     @Column(name = "name", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.String name;
+
 
     /**
     * Construtor
@@ -52,8 +55,7 @@ public class Application implements Serializable {
     * return id
     * @generated
     */
-    
-    public java.lang.String getId(){
+    public java.lang.String getId() {
         return this.id;
     }
 
@@ -62,7 +64,7 @@ public class Application implements Serializable {
     * @param id id
     * @generated
     */
-    public Application setId(java.lang.String id){
+    public Application setId(java.lang.String id) {
         this.id = id;
         return this;
     }
@@ -71,8 +73,7 @@ public class Application implements Serializable {
     * return name
     * @generated
     */
-    
-    public java.lang.String getName(){
+    public java.lang.String getName() {
         return this.name;
     }
 
@@ -81,7 +82,7 @@ public class Application implements Serializable {
     * @param name name
     * @generated
     */
-    public Application setName(java.lang.String name){
+    public Application setName(java.lang.String name) {
         this.name = name;
         return this;
     }
