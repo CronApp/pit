@@ -172,6 +172,14 @@ public class User implements Serializable {
 
 
     /**
+    * @generated
+    */
+    @Column(name = "votou", nullable = true, unique = false, insertable=true, updatable=true)
+        
+        private java.lang.Boolean votou;
+
+
+    /**
     * Construtor
     * @generated
     */
@@ -482,6 +490,24 @@ public class User implements Serializable {
     */
     public User setPicture(byte[] picture) {
         this.picture = picture;
+        return this;
+    }
+    /**
+    * Obtém votou
+    * return votou
+    * @generated
+    */
+    public java.lang.Boolean getVotou() {
+        return this.votou;
+    }
+
+    /**
+    * Define votou
+    * @param votou votou
+    * @generated
+    */
+    public User setVotou(java.lang.Boolean votou) {
+        this.votou = votou;
         return this;
     }
 
