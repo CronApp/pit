@@ -17,7 +17,7 @@ public static final int TIMEOUT = 300;
  * @param listaIdItemVoto
  *
  * @author José Zay
- * @since 18/08/2023, 14:10:09
+ * @since 18/08/2023, 14:25:57
  *
  */
 public static Var FinalizarVoto(@ParamMetaData(description = "listaIdItemVoto", id = "fb0d967d") Var listaIdItemVoto) throws Exception {
@@ -28,8 +28,6 @@ public static Var FinalizarVoto(@ParamMetaData(description = "listaIdItemVoto", 
    private Var item = Var.VAR_NULL;
 
    public Var call() throws Exception {
-    System.out.println(
-    Var.valueOf("abc").getObjectAsString());
     user =
     cronapi.database.Operations.query(Var.valueOf("app.entity.User"),Var.valueOf("select \n	u.id, \n	u.votou \nfrom \n	User u  \nwhere \n	u.normalizedUserName = :normalizedUserName"),Var.valueOf("normalizedUserName",
     cronapi.util.Operations.getCurrentUserName()));
