@@ -1,6 +1,7 @@
 {
   "cells": [
     {
+      "allowConfiguration": false,
       "angle": 0,
       "apiPath": "src/main/webapp/raml/app/api.raml",
       "attrs": {
@@ -66,6 +67,7 @@
         "height": 0,
         "width": 0
       },
+      "sqlDebugging": false,
       "type": "basic.Rect",
       "visionLikePackage": false,
       "z": 1
@@ -835,34 +837,35 @@
       "angle": 0,
       "attributes": [
         "id:java.lang.String",
-        "testeUser:java.lang.String",
-        "attribute02:java.lang.String"
+        "votos:java.lang.String",
+        "user:User",
+        "votou:java.lang.Boolean"
       ],
       "attrs": {
         ".uml-class-attrs-rect": {
           "fill": "#F0F0F0",
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
-          "height": 80,
+          "height": 100,
           "stroke": "#C2C2C2",
           "transform": "translate(0,40)"
         },
         ".uml-class-attrs-text": {
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
           "font-size": 11,
-          "text": "* id\ntesteUser\nattribute02\n"
+          "text": "* id\nvotos\nuser\nvotou\n"
         },
         ".uml-class-attrs-value": {
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
           "font-size": 11,
-          "ref-x": 162,
-          "text": "Texto\nTexto\nTexto\n"
+          "ref-x": 149,
+          "text": "Texto\nTexto\nUser\nLógico\n"
         },
         ".uml-class-methods-rect": {
           "fill": "#F0F0F0",
           "height": 20,
           "stroke": "#C2C2C2",
           "stroke-width": 1,
-          "transform": "translate(0,120)"
+          "transform": "translate(0,140)"
         },
         ".uml-class-methods-text": {
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
@@ -920,14 +923,14 @@
           "regionAWS": ""
         },
         {
-          "name": "testeUser",
+          "name": "votos",
           "type": "java.lang.String",
-          "dbName": "testeUser",
+          "dbName": "votos",
           "dbLength": "",
           "dbPrecision": "",
           "dbScale": "",
           "dbDefaultValue": "",
-          "label": "Teste User",
+          "label": "Votos",
           "mask": "",
           "isPrimaryKey": false,
           "isUniqueKey": false,
@@ -956,14 +959,50 @@
           "regionAWS": ""
         },
         {
-          "name": "attribute02",
-          "type": "java.lang.String",
-          "dbName": "attribute02",
+          "name": "user",
+          "type": "User",
+          "dbName": "fk_user",
           "dbLength": "",
           "dbPrecision": "",
           "dbScale": "",
           "dbDefaultValue": "",
-          "label": "Attribute 02",
+          "label": "User",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "passwordPolicy": "none",
+          "referencedColumnName": "",
+          "isSearchable": false,
+          "sequence": "",
+          "isCascade": false,
+          "isVersion": false,
+          "storageId": "",
+          "storageKey": "",
+          "storageType": "",
+          "storageSecret": "",
+          "foreignKeyName": "",
+          "joins": "",
+          "isIndex": false,
+          "useOuterJoin": false,
+          "regionAWS": ""
+        },
+        {
+          "name": "votou",
+          "type": "java.lang.Boolean",
+          "dbName": "votou",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Votou",
           "mask": "",
           "isPrimaryKey": false,
           "isUniqueKey": false,
@@ -999,8 +1038,8 @@
       "modelType": "Table",
       "name": "ControleVotacao",
       "position": {
-        "x": 1206,
-        "y": 216
+        "x": 1332,
+        "y": 104
       },
       "queries": [],
       "realName": "",
@@ -1008,8 +1047,8 @@
       "role": "Class",
       "runtimeClass": "cronos.widgets.joint.uml.Class",
       "size": {
-        "height": 130,
-        "width": 201
+        "height": 140,
+        "width": 195
       },
       "swagger": false,
       "tableName": "",
@@ -4433,6 +4472,51 @@
       "z": "4"
     },
     {
+      "associationType": "Association",
+      "attrs": {
+        ".marker-source": {
+          "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
+          "fill": "#cecece"
+        },
+        ".marker-target": {
+          "d": "",
+          "fill": ""
+        }
+      },
+      "id": "d52bdf35-0708-4479-92e2-c8850d973545",
+      "labels": [
+        {
+          "position": 0.9,
+          "attrs": {
+            "rect": {
+              "fill": "transparent"
+            },
+            "text": {
+              "text": "*",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "fill": "#cecece"
+            }
+          }
+        }
+      ],
+      "name": null,
+      "queries": [],
+      "relationFields": [
+        "user:target"
+      ],
+      "runtimeClass": "cronos.widgets.joint.arrow.OneToMany",
+      "source": {
+        "id": "fbe4a477-8332-4235-a9a2-5db4a56fa3d0"
+      },
+      "target": {
+        "id": "7b634f81-4cd6-42d5-bd93-ed38201da7b8"
+      },
+      "type": "uml.Composition",
+      "vertices": [],
+      "z": 25
+    },
+    {
       "attrs": {
         ".marker-source": {
           "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
@@ -4592,27 +4676,6 @@
       ],
       "groupPositions": [
         {
-          "idCell": "53b97115-f8a3-4221-9ce6-bad2672b8bd5",
-          "position": {
-            "x": 418,
-            "y": 594
-          }
-        },
-        {
-          "idCell": "4cbe47fe-4f4b-43e9-960b-4b5cc2633aef",
-          "position": {
-            "x": 404,
-            "y": 342
-          }
-        },
-        {
-          "idCell": "e35a650f-29ee-4683-8c1c-5cc61a955ddf",
-          "position": {
-            "x": 668,
-            "y": 594
-          }
-        },
-        {
           "idCell": "fabe0aea-c05d-44a4-a87c-2e2c0a97e994",
           "position": {
             "x": 382,
@@ -4641,9 +4704,16 @@
           }
         },
         {
-          "idCell": "36b875ac-204a-4346-82e4-aabbd2c6b202",
+          "idCell": "4cbe47fe-4f4b-43e9-960b-4b5cc2633aef",
           "position": {
-            "x": 940,
+            "x": 404,
+            "y": 342
+          }
+        },
+        {
+          "idCell": "e35a650f-29ee-4683-8c1c-5cc61a955ddf",
+          "position": {
+            "x": 668,
             "y": 594
           }
         },
@@ -4655,13 +4725,6 @@
           }
         },
         {
-          "idCell": "2016ad54-a0f9-4337-ad10-694a48f0435c",
-          "position": {
-            "x": 656,
-            "y": 26
-          }
-        },
-        {
           "idCell": "56d9e678-741d-41e6-9b24-bccc58de1598",
           "position": {
             "x": 1106,
@@ -4669,17 +4732,38 @@
           }
         },
         {
-          "idCell": "b194a533-61d6-4661-b9da-ff80ce2835f9",
+          "idCell": "2016ad54-a0f9-4337-ad10-694a48f0435c",
           "position": {
-            "x": 70,
-            "y": 240
+            "x": 656,
+            "y": 26
+          }
+        },
+        {
+          "idCell": "36b875ac-204a-4346-82e4-aabbd2c6b202",
+          "position": {
+            "x": 940,
+            "y": 594
           }
         },
         {
           "idCell": "7b634f81-4cd6-42d5-bd93-ed38201da7b8",
           "position": {
-            "x": 1206,
-            "y": 216
+            "x": 1332,
+            "y": 104
+          }
+        },
+        {
+          "idCell": "53b97115-f8a3-4221-9ce6-bad2672b8bd5",
+          "position": {
+            "x": 418,
+            "y": 594
+          }
+        },
+        {
+          "idCell": "b194a533-61d6-4661-b9da-ff80ce2835f9",
+          "position": {
+            "x": 70,
+            "y": 240
           }
         }
       ]

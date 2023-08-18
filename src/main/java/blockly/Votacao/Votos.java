@@ -13,11 +13,36 @@ public static final int TIMEOUT = 300;
 
 /**
  *
+ * @param idItemVoto
+ *
+ * @author Wesley Miranda De Oliveira
+ * @since 18/08/2023, 09:37:11
+ *
+ */
+public static Var FinalizarVoto(@ParamMetaData(description = "idItemVoto", id = "fb0d967d") Var idItemVoto) throws Exception {
+ return new Callable<Var>() {
+
+   private Var item = Var.VAR_NULL;
+
+   public Var call() throws Exception {
+    if (
+    cronapi.database.Operations.query(Var.VAR_NULL,Var.VAR_NULL).getObjectAsBoolean()) {
+        item =
+        cronapi.database.Operations.insert(Var.valueOf("app.entity.ControleVotacao"),Var.valueOf("user",
+        cronapi.util.Operations.getCurrentUserName()),Var.valueOf("votos",Var.VAR_NULL));
+    }
+    return Var.VAR_NULL;
+   }
+ }.call();
+}
+
+/**
+ *
  * @param idProjetoVotado
  * @param checado
  *
- * @author José Zay
- * @since 14/08/2023, 14:50:50
+ * @author Wesley Miranda De Oliveira
+ * @since 18/08/2023, 09:37:11
  *
  */
 public static Var ObtemVoto(@ParamMetaData(description = "idProjetoVotado", id = "2a202a21") Var idProjetoVotado, @ParamMetaData(description = "checado", id = "68bd3e97") Var checado) throws Exception {

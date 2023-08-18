@@ -1,3 +1,4 @@
+
 package app.entity;
 
 import java.io.*;
@@ -7,6 +8,7 @@ import javax.xml.bind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import cronapi.rest.security.CronappSecurity;
+import cronapi.swagger.CronappSwagger;
 
 
 /**
@@ -19,7 +21,6 @@ import cronapi.rest.security.CronappSecurity;
 @CronappSecurity(post = "Administrators", get = "Administrators", delete = "Administrators", put = "Administrators")
 @JsonFilter("app.entity.Role")
 public class Role implements Serializable {
-
     /**
     * UID da classe, necessário na serialização
     * @generated
@@ -33,12 +34,14 @@ public class Role implements Serializable {
     @Column(name = "id", nullable = false, length=255, insertable=true, updatable=true)
         private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
 
+
     /**
     * @generated
     */
     @Column(name = "builtin", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.Boolean builtIn = false;
+
 
     /**
     * @generated
@@ -47,12 +50,14 @@ public class Role implements Serializable {
         
         private java.lang.Boolean membershipEnabled = true;
 
+
     /**
     * @generated
     */
     @Column(name = "name", nullable = false, unique = false, length=255, insertable=true, updatable=true)
         
         private java.lang.String name;
+
 
     /**
     * @generated
@@ -70,6 +75,7 @@ public class Role implements Serializable {
         
         private Application application;
 
+
     /**
     * Construtor
     * @generated
@@ -82,8 +88,7 @@ public class Role implements Serializable {
     * return id
     * @generated
     */
-    
-    public java.lang.String getId(){
+    public java.lang.String getId() {
         return this.id;
     }
 
@@ -92,7 +97,7 @@ public class Role implements Serializable {
     * @param id id
     * @generated
     */
-    public Role setId(java.lang.String id){
+    public Role setId(java.lang.String id) {
         this.id = id;
         return this;
     }
@@ -101,8 +106,7 @@ public class Role implements Serializable {
     * return builtIn
     * @generated
     */
-    
-    public java.lang.Boolean getBuiltIn(){
+    public java.lang.Boolean getBuiltIn() {
         return this.builtIn;
     }
 
@@ -111,7 +115,7 @@ public class Role implements Serializable {
     * @param builtIn builtIn
     * @generated
     */
-    public Role setBuiltIn(java.lang.Boolean builtIn){
+    public Role setBuiltIn(java.lang.Boolean builtIn) {
         this.builtIn = builtIn;
         return this;
     }
@@ -120,8 +124,7 @@ public class Role implements Serializable {
     * return membershipEnabled
     * @generated
     */
-    
-    public java.lang.Boolean getMembershipEnabled(){
+    public java.lang.Boolean getMembershipEnabled() {
         return this.membershipEnabled;
     }
 
@@ -130,7 +133,7 @@ public class Role implements Serializable {
     * @param membershipEnabled membershipEnabled
     * @generated
     */
-    public Role setMembershipEnabled(java.lang.Boolean membershipEnabled){
+    public Role setMembershipEnabled(java.lang.Boolean membershipEnabled) {
         this.membershipEnabled = membershipEnabled;
         return this;
     }
@@ -139,8 +142,7 @@ public class Role implements Serializable {
     * return name
     * @generated
     */
-    
-    public java.lang.String getName(){
+    public java.lang.String getName() {
         return this.name;
     }
 
@@ -149,7 +151,7 @@ public class Role implements Serializable {
     * @param name name
     * @generated
     */
-    public Role setName(java.lang.String name){
+    public Role setName(java.lang.String name) {
         this.name = name;
         return this;
     }
@@ -158,8 +160,7 @@ public class Role implements Serializable {
     * return normalizedName
     * @generated
     */
-    
-    public java.lang.String getNormalizedName(){
+    public java.lang.String getNormalizedName() {
         return this.normalizedName;
     }
 
@@ -168,18 +169,16 @@ public class Role implements Serializable {
     * @param normalizedName normalizedName
     * @generated
     */
-    public Role setNormalizedName(java.lang.String normalizedName){
+    public Role setNormalizedName(java.lang.String normalizedName) {
         this.normalizedName = normalizedName;
         return this;
     }
-
     /**
     * Obtém application
     * return application
     * @generated
     */
-    
-    public Application getApplication(){
+    public Application getApplication() {
         return this.application;
     }
 
@@ -188,7 +187,7 @@ public class Role implements Serializable {
     * @param application application
     * @generated
     */
-    public Role setApplication(Application application){
+    public Role setApplication(Application application) {
         this.application = application;
         return this;
     }

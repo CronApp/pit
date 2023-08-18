@@ -1,3 +1,4 @@
+
 package app.entity;
 
 import java.io.*;
@@ -7,6 +8,7 @@ import javax.xml.bind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import cronapi.rest.security.CronappSecurity;
+import cronapi.swagger.CronappSwagger;
 
 
 /**
@@ -19,7 +21,6 @@ import cronapi.rest.security.CronappSecurity;
 @CronappSecurity(post = "Administrators", get = "Administrators", delete = "Administrators", put = "Administrators")
 @JsonFilter("app.entity.Login")
 public class Login implements Serializable {
-
     /**
     * UID da classe, necessário na serialização
     * @generated
@@ -33,12 +34,14 @@ public class Login implements Serializable {
     @Column(name = "id", nullable = false, length=255, insertable=true, updatable=true)
         private java.lang.String id;
 
+
     /**
     * @generated
     */
     @Column(name = "login_provider", nullable = false, unique = false, length=255, insertable=true, updatable=true)
         
         private java.lang.String loginProvider;
+
 
     /**
     * @generated
@@ -47,6 +50,7 @@ public class Login implements Serializable {
         
         private java.lang.String providerDisplayName;
 
+
     /**
     * @generated
     */
@@ -54,13 +58,15 @@ public class Login implements Serializable {
         
         private java.lang.String providerKey;
 
+
     /**
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false, referencedColumnName = "id", insertable = true, updatable = true, foreignKey = @ForeignKey(name = "LOGIN_USER_ID_USER_ID", foreignKeyDefinition = "FOREIGN KEY (user_id) REFERENCES USER (id) ON DELETE CASCADE"))
+    @JoinColumn(name="user_id", nullable = false, referencedColumnName = "id", insertable=true, updatable=true, foreignKey = @ForeignKey(name = "LOGIN_USER_ID_USER_ID", foreignKeyDefinition = "FOREIGN KEY (user_id) REFERENCES USER (id) ON DELETE CASCADE"))
         
         private User user;
+
 
     /**
     * Construtor
@@ -74,8 +80,7 @@ public class Login implements Serializable {
     * return id
     * @generated
     */
-    
-    public java.lang.String getId(){
+    public java.lang.String getId() {
         return this.id;
     }
 
@@ -84,7 +89,7 @@ public class Login implements Serializable {
     * @param id id
     * @generated
     */
-    public Login setId(java.lang.String id){
+    public Login setId(java.lang.String id) {
         this.id = id;
         return this;
     }
@@ -93,8 +98,7 @@ public class Login implements Serializable {
     * return loginProvider
     * @generated
     */
-    
-    public java.lang.String getLoginProvider(){
+    public java.lang.String getLoginProvider() {
         return this.loginProvider;
     }
 
@@ -103,7 +107,7 @@ public class Login implements Serializable {
     * @param loginProvider loginProvider
     * @generated
     */
-    public Login setLoginProvider(java.lang.String loginProvider){
+    public Login setLoginProvider(java.lang.String loginProvider) {
         this.loginProvider = loginProvider;
         return this;
     }
@@ -112,8 +116,7 @@ public class Login implements Serializable {
     * return providerDisplayName
     * @generated
     */
-    
-    public java.lang.String getProviderDisplayName(){
+    public java.lang.String getProviderDisplayName() {
         return this.providerDisplayName;
     }
 
@@ -122,7 +125,7 @@ public class Login implements Serializable {
     * @param providerDisplayName providerDisplayName
     * @generated
     */
-    public Login setProviderDisplayName(java.lang.String providerDisplayName){
+    public Login setProviderDisplayName(java.lang.String providerDisplayName) {
         this.providerDisplayName = providerDisplayName;
         return this;
     }
@@ -131,8 +134,7 @@ public class Login implements Serializable {
     * return providerKey
     * @generated
     */
-    
-    public java.lang.String getProviderKey(){
+    public java.lang.String getProviderKey() {
         return this.providerKey;
     }
 
@@ -141,7 +143,7 @@ public class Login implements Serializable {
     * @param providerKey providerKey
     * @generated
     */
-    public Login setProviderKey(java.lang.String providerKey){
+    public Login setProviderKey(java.lang.String providerKey) {
         this.providerKey = providerKey;
         return this;
     }
@@ -150,8 +152,7 @@ public class Login implements Serializable {
     * return user
     * @generated
     */
-    
-    public User getUser(){
+    public User getUser() {
         return this.user;
     }
 
@@ -160,7 +161,7 @@ public class Login implements Serializable {
     * @param user user
     * @generated
     */
-    public Login setUser(User user){
+    public Login setUser(User user) {
         this.user = user;
         return this;
     }
