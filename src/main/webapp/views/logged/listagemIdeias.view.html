@@ -1,4 +1,4 @@
-<div ng-init="cronapi.client('js.blockly.ListaApi.GetApi.GetApi').run()" ng-model="vars.listaVotos"> 
+<div ng-init="cronapi.client('js.blockly.ListaApi.GetApi.GetApi').run()"> 
   <div class="votacao-lado-esquerdo col-md-7"> 
     <div class="component-holder ng-scope  col-md-12" data-component="crn-textinput" id="crn-textinput-545907"> 
       <div class="form-group"> 
@@ -6,7 +6,7 @@
         <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input158" class="form-control k-textbox" id="input158" placeholder=""> 
       </div> 
     </div> 
-    <div class="component-holder ng-scope col-md-12" data-component="crn-accordion" id="crn-accordion-325904" crn-skin="css/skins/IdVisualAccordion.css"> 
+    <div class="component-holder ng-scope col-md-12" data-component="crn-accordion" id="crn-accordion-325904" crn-skin="css/skins/IdVisualAccordion.css" ng-model="vars.listaVotos"> 
       <div class="panel-group" id="accordion-1372{{$index}}" role="tablist" aria-multiselectable="true"> 
         <div class="panel panel-default" ng-repeat="ideia in vars.listaIdeias track by $index"> 
           <div style="display: flex; flex-direction: row;"> 
@@ -80,52 +80,63 @@
     <div> 
       <p style="font-weight: bold; text-align: left; padding-left: 2rem; padding-top:2rem;">Meus Votos</p> 
     </div> 
-    <!--tela 1--> 
+    
+    <!--tela-regras--> 
     <div id="div-tela-regras-id" style="text-align: left; padding-left: 2rem; padding-right: 2rem;"> 
       <div>
          REGRAS Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. 
       </div> 
       <div style="padding-top: 2rem; padding-bottom: 2rem;"> 
-        <input class="check-voto-selecao" type="checkbox" id="check-aceitar-regras" ng-model="vars.checkAceitarRegras" ng-initial-value="false" crn-allow-null-values="false" ng-false-value="false" ng-true-value="true"> 
+        <input class="check-voto-selecao" type="checkbox" id="check-aceitar-regras" ng-model="vars.checkAceitarRegras"> 
         <label for="check-aceitar-regras">aceito regras</label> 
       </div> 
+      
       <!--DEIXAR CLICAR EM INICIAR VOTAÇÃO APENAS SE O CHECK ACIMA ESTIVER MARCADO--> 
       <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-477481"> 
-        <button class="btn k-button btn-block btn-default" ng-click="conteudoVisivel = vars.checkAceitarRegras === 'true'; cronapi.client('js.blockly.Votacao.Voto.IniciarVotacao').names('b8644fae').run(vars.checkAceitarRegras)"> <i class="glyphicon glyphicon-pencil" icon-theme=""></i> <span class="" text-theme="">Iniciar Votação</span> </button> 
+        <button class="btn k-button btn-block btn-default" ng-click="conteudoVisivel = vars.checkAceitarRegras == true; cronapi.client('js.blockly.Votacao.Voto.IniciarVotacao').names('b8644fae').run(vars.checkAceitarRegras)"> <i class="glyphicon glyphicon-pencil" icon-theme=""></i> <span class="" text-theme="">Iniciar Votação</span> </button> 
       </div> 
     </div> 
 
-    <!--tela 2 -- EXIBIR SOMENTE APÓS INICIAR VOTAÇÃO TIVER SIDO CLICADA--> 
+    <!--tela-espera-voto--> 
     <div class="hidden" id="div-tela-espera-voto-id" style="text-align: left; padding-left: 2rem; padding-right: 2rem;"> 
       <div>
          Escolha até 2 projetos 
       </div> 
     </div> 
-    <!--tela 3 e 4--> 
+    
+    <!--tela-votados--> 
     <div class="hidden" id="div-tela-votados-id" style="text-align: left; padding-left: 2rem; padding-right: 2rem;"> 
-      <!--tela 3 e 4--> 
       <div style="padding-bottom: 2rem;">
          Vote em até 2 projetos 
       </div> 
-      <!--tela 3 e 4 -- LISTAGEM DE PROJETO MARCADOS NO CHECKBOX--> 
-      <div> 
-        <div style="background: rgb(255, 255, 255); border-radius: 6px; border: 1px solid rgb(140, 140, 140); padding:1rem"> 
-          <div style="font-size: 2rem; text-height: bold">
-             Nome do Projeto 
-          </div> 
-          <div>
-             Secondary Text 
-          </div> 
+      
+      <!--LISTAGEM DE PROJETO MARCADOS NO CHECKBOX--> 
+      <div>
+        <div style="background: rgb(255, 255, 255); border-radius: 6px; border: 1px solid rgb(140, 140, 140); padding:1rem; margin-bottom:1rem" ng-repeat="voto in vars.listaVotos"> 
+            <div ng-repeat="ideia in vars.listaIdeias">
+                <div ng-if="voto == ideia.id">
+                    <div style="font-size: 2rem; text-height: bold">
+                        {{ideia.fields.Projeto}}
+                    </div>
+                    <div>    
+                        {{ideia.fields.Responsavel}} 
+                    </div>   
+                </div>
+            </div>
         </div> 
       </div> 
-      <!--tela 4 -- SE TIVER APENAS UM PROJETO E ESTE ESTIVER MARCADO, DEVERÁ DEIXAR FINALIZAR--> 
-      <div style="padding-top: 2rem; padding-bottom: 2rem;"> 
-        <input class="check-voto-selecao" type="checkbox" id="check-unico-voto" ng-model="vars.checkUnicoVoto" ng-initial-value="false" crn-allow-null-values="false" ng-false-value="true" ng-true-value="false" ng-click=""> 
+      
+      <!--SE TIVER APENAS UM PROJETO E ESTE ESTIVER MARCADO, DEVERÁ DEIXAR FINALIZAR--> 
+      <div id="div-unico-voto" style="padding-top: 2rem"> 
+        <input class="check-voto-selecao" type="checkbox" id="check-unico-voto" ng-model="vars.checkUnicoVoto"> 
         <label for="check-unico-voto">meu voto será em apenas 1 projeto</label> 
       </div> 
-      <!--tela 3 e 4--> 
-      <div class="component-holder ng-scope col-md-12" data-component="crn-button" id="crn-button-71994"> 
-        <button class="btn k-button btn-block btn-default" ng-click="" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled=""> <i class="glyphicon glyphicon-ok" icon-theme=""></i> <span class="" text-theme="">Finalizar</span> </button> 
+ 
+      <div class="component-holder ng-scope col-md-12" data-component="crn-button" id="crn-button-71994" style="padding-top: 2rem"> 
+        <button class="btn k-button btn-block btn-default" ng-click="cronapi.client('js.blockly.Votacao.Voto.FinalizarVotacao').names('8e5f7fd0').run(vars.checkUnicoVoto)" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled=""> 
+            <i class="glyphicon glyphicon-ok" icon-theme=""></i> 
+            <span class="" text-theme="">Finalizar</span> 
+        </button> 
       </div> 
     </div> 
     <script>
