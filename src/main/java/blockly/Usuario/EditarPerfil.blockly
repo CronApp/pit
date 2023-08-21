@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="JAVA" bpmnAble="false" formTarget="src/main/webapp/views/logged/home.view.html" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JAVA" ruleDescription="EditarPerfil" ruleName="EditarPerfil" ruleSynchronous="false" ruleTimeout="300" ruleType="I" showAsFunction="false" soap="false" swagger="false">
-  <metadata scale="1" scrollx="480.9" scrolly="-56.60000000000019" target="Anb:u5+^,0vLkL9QIqn5"/>
+  <metadata scale="1" scrollx="538.8999999999999" scrolly="-85.60000000000008" target="Anb:u5+^,0vLkL9QIqn5"/>
   <block asynccall="false" colour="#995ba5" datasourcetype="" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" rest-consumes="*/*" rest-method="GET" rest-path="/api/cronapi/rest/Usuario.EditarPerfil:SalvarAlteracoes" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-412" y="83">
     <mutation>
       <arg id="aa4ae81c" name="nome"/>
@@ -105,95 +105,6 @@
             </next>
           </block>
         </statement>
-      </block>
-    </statement>
-  </block>
-  <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="l~Pk]Z3ATb#h6+kb@~3k" origintype="controls_if" output="false" tooltip="function () { [native code] }" type="controls_if" x="128" y="518">
-    <mutation else="1" elseif="1"/>
-    <value name="IF0">
-      <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="h),{2L17ev4aV([$iNhS" id="Z78l4WOG(tO~OHfNyIb`" inline="true" multilayer="false" namespace="cronapi.logic.Operations.isNullOrEmpty" origintype="procedures_callreturn" output="true" returntype="ObjectType.BOOLEAN" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3E%C3%A9%20nulo%20ou%20vazio?%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20verifica%20se%20a%20var%C3%ADavel%20%C3%A9%20nula%20ou%20vazia%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Par%C3%A2metro%20:%20Objeto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20L%C3%B3gico%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.logic.Operations.isNullOrEmpty','cronapi.logic.Operations.isNullOrEmpty')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
-        <mutation name="{{cronapi.logic.Operations.isNullOrEmpty}}" return-raw-type="cronapi.Var">
-          <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.OBJECT" name="Parâmetro"/>
-        </mutation>
-        <value name="ARG0">
-          <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="h),{2L17ev4aV([$iNhS" id="-Q@]4pB]@7j`fy;AYra{" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
-            <field customattributes="" name="VAR">senhaAntiga</field>
-          </block>
-        </value>
-      </block>
-    </value>
-    <statement name="DO0">
-      <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="h),{2L17ev4aV([$iNhS" id="YQ[B4wvGFlyrlaB:9%@]" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.screen.notify','cronapi.screen.notify')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
-        <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
-        <field customattributes="" name="SELECT">error</field>
-        <value name="MESSAGE">
-          <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="h),{2L17ev4aV([$iNhS" id="TdZ{DMloE-K/R[PZRtvb" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-            <field customattributes="" name="TEXT">Digite seu nome</field>
-          </shadow>
-        </value>
-      </block>
-    </statement>
-    <value name="IF1">
-      <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="h),{2L17ev4aV([$iNhS" id="p[pmzX*NB?|`G`g~@3Cg" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
-        <field customattributes="" name="OP">LTE</field>
-        <value name="A">
-          <block asynccall="false" colour="#5ba58c" datasourcetype="" dependencyby="h),{2L17ev4aV([$iNhS" id="}XaMf?,JQjT;4#5`co[w" origintype="text_length" output="true" tooltip="Retorna o número de letras (incluindo espaços) no texto fornecido." type="text_length">
-            <value name="VALUE">
-              <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Xv#@tATp:}-;lv)/x)1k" origintype="text" output="true" tooltip="function () { [native code] }" type="text" xmlns="">
-                <field customattributes="" name="TEXT">abc</field>
-              </shadow>
-              <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="h),{2L17ev4aV([$iNhS" id="=~2W%Ap5dp.PM/1U$Ew+" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
-                <field customattributes="" name="VAR">senhaAntiga</field>
-              </block>
-            </value>
-          </block>
-        </value>
-        <value name="B">
-          <block asynccall="false" colour="#5b67a5" datasourcetype="" dependencyby="h),{2L17ev4aV([$iNhS" id="ViYkp6-cSPJw=)CEZL8_" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
-            <field customattributes="" name="NUM">3</field>
-          </block>
-        </value>
-      </block>
-    </value>
-    <statement name="DO1">
-      <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="h),{2L17ev4aV([$iNhS" id="i-/NXENc]m0$`t=)^/yU" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.screen.notify','cronapi.screen.notify')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
-        <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
-        <field customattributes="" name="SELECT">error</field>
-        <value name="MESSAGE">
-          <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="h),{2L17ev4aV([$iNhS" id="-KGVY#/E};OD^5cEU+iv" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-            <field customattributes="" name="TEXT">Seu nome deve haver mais de 3 caracteres</field>
-          </shadow>
-        </value>
-      </block>
-    </statement>
-    <statement name="ELSE">
-      <block asynccall="false" colour="#aa2f00" datasourcetype="" dependencyby="h),{2L17ev4aV([$iNhS" id="O=|xA*9OpjgaE_bdjStM" multilayer="false" namespace="cronapi.database.Operations.update" origintype="procedures_sql_update_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EAtualizar%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20atualiza%20um%20registro%20no%20banco%20de%20dados%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Tabela%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Entidade%20:%20Objeto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.database.Operations.update','cronapi.database.Operations.update')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_update_callnoreturn">
-        <mutation data="%7B%22queryBuilderJson%22:%7B%22isValid%22:true,%22isEmpty%22:false,%22operationType%22:%22field%22,%22isNativeQuery%22:false,%22namespace%22:%22%22,%22type%22:%22update%22,%22rulesEntity%22:%5B%7B%22entity%22:%22User%22,%22namespace%22:%22app.entity.User%22,%22dataSourceOptions%22:%7B%22id%22:%22app.User%22,%22customId%22:%22User%22,%22customQueryName%22:%22app.User%22,%22paramValues%22:%5B%5D,%22entityFullName%22:%22app.entity.User%22,%22schemaFields%22:%5B%7B%22name%22:%22id%22,%22type%22:%22String%22,%22nullable%22:false,%22key%22:false%7D,%7B%22name%22:%22accessFailedCount%22,%22type%22:%22Int32%22,%22nullable%22:false,%22key%22:false%7D,%7B%22name%22:%22email%22,%22type%22:%22String%22,%22nullable%22:false,%22key%22:false%7D,%7B%22name%22:%22emailConfirmed%22,%22type%22:%22Boolean%22,%22nullable%22:false,%22key%22:false%7D,%7B%22name%22:%22lockoutEnabled%22,%22type%22:%22Boolean%22,%22nullable%22:false,%22key%22:false%7D,%7B%22name%22:%22lockoutEnd%22,%22type%22:%22DateTime%22,%22nullable%22:true,%22key%22:false%7D,%7B%22name%22:%22name%22,%22type%22:%22String%22,%22nullable%22:false,%22key%22:false%7D,%7B%22name%22:%22normalizedEmail%22,%22type%22:%22String%22,%22nullable%22:false,%22key%22:false%7D,%7B%22name%22:%22normalizedUserName%22,%22type%22:%22String%22,%22nullable%22:false,%22key%22:false%7D,%7B%22name%22:%22password%22,%22type%22:%22String%22,%22nullable%22:false,%22key%22:false%7D,%7B%22name%22:%22phoneNumber%22,%22type%22:%22String%22,%22nullable%22:true,%22key%22:false%7D,%7B%22name%22:%22phoneNumberConfirmed%22,%22type%22:%22Boolean%22,%22nullable%22:false,%22key%22:false%7D,%7B%22name%22:%22securityStamp%22,%22type%22:%22String%22,%22nullable%22:false,%22key%22:false%7D,%7B%22name%22:%22twoFactorEnabled%22,%22type%22:%22Boolean%22,%22nullable%22:false,%22key%22:false%7D,%7B%22name%22:%22userName%22,%22type%22:%22String%22,%22nullable%22:false,%22key%22:false%7D,%7B%22name%22:%22theme%22,%22type%22:%22String%22,%22nullable%22:true,%22key%22:false%7D,%7B%22name%22:%22picture%22,%22type%22:%22Binary%22,%22nullable%22:true,%22key%22:false%7D,%7B%22name%22:%22_objectKey%22,%22type%22:%22String%22,%22nullable%22:false,%22key%22:true%7D%5D,%22type%22:%22entity%22,%22hasError%22:false,%22customName%22:%22User%22,%22fullName%22:%22app.entity.User%22,%22labelName%22:%22app.entity.User%20(User)%22%7D,%22alias%22:%22%22%7D%5D,%22rulesSelect%22:%5B%7B%22operator%22:%22equal%22,%22field%22:%22name%22,%22value%22:%22:name%22,%22type%22:%22string%22%7D%5D,%22rulesJoin%22:%5B%5D,%22rulesGroupBy%22:%5B%5D,%22rulesHaving%22:%5B%5D,%22rulesOrderBy%22:%5B%5D,%22rules%22:%7B%22condition%22:%22AND%22,%22rules%22:%5B%7B%22id%22:%22userName%22,%22field%22:%22userName%22,%22type%22:%22string%22,%22input%22:%22text%22,%22operator%22:%22equal%22,%22value%22:%22:userName%22,%22valueIsField%22:false%7D%5D,%22not%22:false,%22valid%22:true%7D,%22isRawSql%22:false,%22multiTenant%22:false,%22paginatorAutomatic%22:false,%22pagination%22:false,%22isDatasource%22:false%7D,%22filter%22:%22update%20%5Cn%5CtUser%20%20%5Cnset%20%5Cn%5Ctname%20=%20:name%20%5Cnwhere%20%5Cn%5CtuserName%20=%20:userName%22,%22entity%22:%22User%22,%22entityFullName%22:%22app.entity.User%22,%22type%22:%22F%22,%22params%22:%22%5B%5C%22name%5C%22,%5C%22userName%5C%22%5D%22,%22wizardType%22:%22UPDATE%22%7D" name="{{cronapi.database.Operations.update}}">
-          <arg name="name"/>
-          <arg name="userName"/>
-        </mutation>
-        <value name="ARG0">
-          <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="h),{2L17ev4aV([$iNhS" id="OGw6,DPjbZyQLg=g%jT[" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
-            <field customattributes="" name="VAR">senhaAntiga</field>
-          </block>
-        </value>
-        <value name="ARG1">
-          <block asynccall="false" colour="#487f7f" datasourcetype="" dependencyby="h),{2L17ev4aV([$iNhS" id="Z/Iz`W/NO(MjC5e1Cp;{" multilayer="false" namespace="cronapi.util.Operations.getCurrentUserName" origintype="procedures_callreturn" output="true" returntype="ObjectType.STRING" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20login%20do%20usu%C3%A1rio%20logado%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20o%20login%20do%20usu%C3%A1rio%20logado.%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Texto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.util.Operations.getCurrentUserName','cronapi.util.Operations.getCurrentUserName')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
-            <mutation name="{{cronapi.util.Operations.getCurrentUserName}}" return-raw-type="cronapi.Var"/>
-          </block>
-        </value>
-        <next>
-          <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="h),{2L17ev4aV([$iNhS" id="v7$/VgQ3BTBz9-NA*qGx" multilayer="true" namespace="cronapi.screen.hideModal" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EEsconder%20modal%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20esconde%20um%20modal%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Identificador%20:%20Objeto%3C/span%3E%3Cdiv%3E%20Identificador%20do%20componente%20a%20ser%20modificado%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.screen.hideModal','cronapi.screen.hideModal')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
-            <mutation name="{{cronapi.screen.hideModal}}" return-raw-type="undefined">
-              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Identificador"/>
-            </mutation>
-            <value name="ARG0">
-              <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="h),{2L17ev4aV([$iNhS" id="*i;7N0|#_6^(d9o{)2Cu" origintype="ids_from_screen" output="true" type="ids_from_screen">
-                <field customattributes="" name="SELECT">modalEdicaoPerfil</field>
-              </block>
-            </value>
-          </block>
-        </next>
       </block>
     </statement>
   </block>
