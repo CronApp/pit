@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="JAVA" bpmnAble="false" formTarget="" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JAVA" ruleDescription="Votos" ruleName="Votos" ruleSynchronous="false" ruleTimeout="" ruleType="I" showAsFunction="false" soap="false" swagger="false">
-  <metadata scale="1" scrollx="-313.4687499999998" scrolly="-564.6000000000001" target="h55yimXJR#{~[)xYB8lt"/>
+  <metadata scale="1" scrollx="47.89999999999998" scrolly="-609.5999999999999" target="1JlkFrL;g{(S:(BpqNx$"/>
   <block asynccall="false" colour="#fca03b" datasourcetype="" id="S-7wDt.WK;F1h^/L@Jot" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-187" y="424">
     <mutation>
       <arg id="fb0d967d" name="listaIdItemVoto"/>
@@ -251,6 +251,18 @@
             </value>
           </block>
         </value>
+        <next>
+          <block asynccall="false" colour="#5ba58c" datasourcetype="" dependencyby="1JlkFrL;g{(S:(BpqNx$" id="BEgACf]06!/N:VA;n]6m" origintype="text_print" output="false" tooltip="Imprime o texto, número ou valor especificado." type="text_print">
+            <value name="TEXT">
+              <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="1JlkFrL;g{(S:(BpqNx$" id="E}_vWVO$oR(93z4#-SY1" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field customattributes="" name="TEXT">abc</field>
+              </shadow>
+              <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="1JlkFrL;g{(S:(BpqNx$" id="d4pN+roxrYW[@Qd-cgYC" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                <field customattributes="" name="VAR">votou</field>
+              </block>
+            </value>
+          </block>
+        </next>
       </block>
     </statement>
     <value name="RETURN">

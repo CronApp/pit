@@ -13,8 +13,8 @@ public static final int TIMEOUT = 300;
 
 /**
  *
- * @author Wesley Miranda De Oliveira
- * @since 10/08/2023, 09:23:56
+ * @author José Zay
+ * @since 21/08/2023, 13:36:05
  *
  */
 public static Var GetApi() throws Exception {
@@ -56,8 +56,8 @@ Var.valueOf("BODY")));
 
 /**
  *
- * @author Wesley Miranda De Oliveira
- * @since 10/08/2023, 09:23:56
+ * @author José Zay
+ * @since 21/08/2023, 13:36:05
  *
  */
 public static Var airtableApi() throws Exception {
@@ -71,10 +71,6 @@ public static Var airtableApi() throws Exception {
     Var.valueOf(
     Var.valueOf("Bearer ").getObjectAsString() +
     Var.valueOf("patQD4h9Gs9PqWnSY.0053f319b8c4017d22f43f800b7eb918ca97f05d34c21a4df18f98df4ea1a664").getObjectAsString())));
-    System.out.println(
-    Var.valueOf("1111111111111111111111").getObjectAsString());
-    System.out.println(
-    Var.valueOf("abc").getObjectAsString());
     return item;
    }
  }.call();
