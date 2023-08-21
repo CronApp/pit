@@ -133,8 +133,8 @@
           <button class="btn k-button btn-block btn-default" ng-click="cronapi.client('js.blockly.Votacao.Voto.FinalizarVotacao').names('8e5f7fd0').run(vars.checkUnicoVoto)" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled=""> <i class="glyphicon glyphicon-ok" icon-theme=""></i> <span class="" text-theme="">Finalizar</span> </button> 
         </div> 
       </div> 
-    </div>
-    <div class="hidden" id="div-grupo-tela-visualizacao-id">
+    </div> 
+    <div class="hidden" id="div-grupo-tela-visualizacao-id"> 
       <!--tela-resultado--> 
       <div id="div-tela-resultado-voto-id" style="text-align: left; padding-left: 2rem; padding-right: 2rem;"> 
         <div> 
@@ -143,6 +143,15 @@
           </div> 
           <div> 
             <p>Votos computados: {{vars.votosComputados}}</p> 
+          </div> 
+          <div ng-model="vars.resultadoVotos"> 
+            <div ng-repeat="resultadoRank in vars.resultadoVotos"> 
+              <div ng-repeat="ideia in vars.listaIdeias"> 
+                <div ng-if="resultadoRank.voto == ideia.id">
+                   {{ideia.fields.Projeto}} | {{resultadoRank.numeroVotos}} 
+                </div> 
+              </div> 
+            </div> 
           </div> 
         </div> 
       </div> 
