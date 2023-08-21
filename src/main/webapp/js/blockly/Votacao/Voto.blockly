@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="WEB" bpmnAble="false" formTarget="src/main/webapp/views/logged/listagemIdeias.view.html" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JS" ruleDescription="Voto" ruleName="Voto" ruleSynchronous="false" ruleTimeout="" ruleType="I" showAsFunction="false" soap="false" swagger="false">
-  <metadata scale="1" scrollx="-387.10000000000014" scrolly="-339.6" target="ZbVoo?=doJRSaPX$Uf9]"/>
+  <metadata scale="1" scrollx="-383.10000000000036" scrolly="-543.4000000000002" target="ZbVoo?=doJRSaPX$Uf9]"/>
   <block asynccall="false" colour="#fca03b" datasourcetype="" id=":Tnds-9Z:~Q_57/2.?{*" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-177" y="37">
     <mutation>
       <arg id="b8644fae" name="checkAceitarRegras"/>

@@ -11,8 +11,8 @@ window.blockly.js.blockly.Votacao.Voto = window.blockly.js.blockly.Votacao.Voto 
  *
  * @param checkAceitarRegras
  *
- * @author José Zay
- * @since 18/08/2023, 14:21:27
+ * @author Wesley Miranda De Oliveira
+ * @since 21/08/2023, 09:24:19
  *
  */
 window.blockly.js.blockly.Votacao.Voto.IniciarVotacaoArgs = [{ description: 'checkAceitarRegras', id: 'b8644fae' }];
@@ -41,8 +41,8 @@ window.blockly.js.blockly.Votacao.Voto.IniciarVotacao = async function(checkAcei
  * @param idIdeiaVotada
  * @param checado
  *
- * @author José Zay
- * @since 18/08/2023, 14:21:27
+ * @author Wesley Miranda De Oliveira
+ * @since 21/08/2023, 09:24:19
  *
  */
 window.blockly.js.blockly.Votacao.Voto.ObtemVotoArgs = [{ description: 'idIdeiaVotada', id: '66436263' }, { description: 'checado', id: '7b36cee4' }];
@@ -114,8 +114,8 @@ window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada,
  *
  * @param checkUnicoVoto
  *
- * @author José Zay
- * @since 18/08/2023, 14:21:27
+ * @author Wesley Miranda De Oliveira
+ * @since 21/08/2023, 09:24:19
  *
  */
 window.blockly.js.blockly.Votacao.Voto.FinalizarVotacaoArgs = [{ description: 'checkUnicoVoto', id: '8e5f7fd0' }];
