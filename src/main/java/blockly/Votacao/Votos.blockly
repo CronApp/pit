@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="JAVA" bpmnAble="false" formTarget="" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JAVA" ruleDescription="Votos" ruleName="Votos" ruleSynchronous="false" ruleTimeout="" ruleType="I" showAsFunction="false" soap="false" swagger="false">
-  <metadata scale="1" scrollx="-492.1" scrolly="-894.6" target="Z+jA^dND;WAn,yB0#)*k"/>
+  <metadata scale="1" scrollx="-342.9999999999998" scrolly="-894.6" target="Z+jA^dND;WAn,yB0#)*k"/>
   <block asynccall="false" colour="#fca03b" datasourcetype="" id="S-7wDt.WK;F1h^/L@Jot" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-187" y="424">
     <mutation>
       <arg id="fb0d967d" name="listaIdItemVoto"/>
@@ -298,8 +298,15 @@
       </block>
     </statement>
     <value name="RETURN">
-      <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="Z+jA^dND;WAn,yB0#)*k" id="{D0C_tR+x!d9P6W[@tT)" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
-        <field customattributes="" name="VAR">votosComputados</field>
+      <block asynccall="false" colour="#745ba5" datasourcetype="" dependencyby="Z+jA^dND;WAn,yB0#)*k" id="U{VBWDnooPcx61EztWi#" origintype="lists_getIndex" output="true" tooltip="function(){var mode=thisBlock.getFieldValue(&quot;MODE&quot;),where=thisBlock.getFieldValue(&quot;WHERE&quot;),tooltip=&quot;&quot;;switch(mode+&quot; &quot;+where){case&quot;GET FROM_START&quot;:case&quot;GET FROM_END&quot;:tooltip=Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_FROM;break;case&quot;GET FIRST&quot;:tooltip=Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_FIRST;break;case&quot;GET LAST&quot;:tooltip=Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_LAST;break;case&quot;GET RANDOM&quot;:tooltip=Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_RANDOM;break;case&quot;GET_REMOVE FROM_START&quot;:case&quot;GET_REMOVE FROM_END&quot;:tooltip=Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_REMOVE_FROM;break;case&quot;GET_REMOVE FIRST&quot;:tooltip=Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_REMOVE_FIRST;break;case&quot;GET_REMOVE LAST&quot;:tooltip=Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_REMOVE_LAST;break;case&quot;GET_REMOVE RANDOM&quot;:tooltip=Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_REMOVE_RANDOM;break;case&quot;REMOVE FROM_START&quot;:case&quot;REMOVE FROM_END&quot;:tooltip=Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_FROM;break;case&quot;REMOVE FIRST&quot;:tooltip=Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_FIRST;break;case&quot;REMOVE LAST&quot;:tooltip=Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_LAST;break;case&quot;REMOVE RANDOM&quot;:tooltip=Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_REMOVE_RANDOM;}if(&quot;FROM_START&quot;==where||&quot;FROM_END&quot;==where){var msg=&quot;FROM_START&quot;==where?Blockly.Msg.LISTS_INDEX_FROM_START_TOOLTIP:Blockly.Msg.LISTS_INDEX_FROM_END_TOOLTIP;tooltip+=&quot;  &quot;+msg.replace(&quot;%1&quot;,thisBlock.workspace.options.oneBasedIndex?&quot;#1&quot;:&quot;#0&quot;)}return tooltip}" type="lists_getIndex">
+        <mutation at="false" statement="false"/>
+        <field customattributes="" name="MODE">GET</field>
+        <field customattributes="" name="WHERE">FIRST</field>
+        <value name="VALUE">
+          <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="Z+jA^dND;WAn,yB0#)*k" id="{D0C_tR+x!d9P6W[@tT)" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+            <field customattributes="" name="VAR">votosComputados</field>
+          </block>
+        </value>
       </block>
     </value>
   </block>
