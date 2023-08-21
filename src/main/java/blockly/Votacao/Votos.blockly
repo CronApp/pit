@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="JAVA" bpmnAble="false" formTarget="" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JAVA" ruleDescription="Votos" ruleName="Votos" ruleSynchronous="false" ruleTimeout="" ruleType="I" showAsFunction="false" soap="false" swagger="false">
-  <metadata scale="1" scrollx="-297.4687499999991" scrolly="-596.6000000000004" target="h55yimXJR#{~[)xYB8lt"/>
+  <metadata scale="1" scrollx="-313.4687499999998" scrolly="-564.6000000000001" target="h55yimXJR#{~[)xYB8lt"/>
   <block asynccall="false" colour="#fca03b" datasourcetype="" id="S-7wDt.WK;F1h^/L@Jot" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-187" y="424">
     <mutation>
       <arg id="fb0d967d" name="listaIdItemVoto"/>
@@ -220,17 +220,17 @@
     <field customattributes="" name="NAME">ResultadoRank</field>
     <statement name="STACK">
       <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="h55yimXJR#{~[)xYB8lt" id="2VzG@i-phC|4DR3KVvr2" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
-        <field customattributes="" name="VAR">votosComputados</field>
+        <field customattributes="" name="VAR">resultadoVotacao</field>
         <value name="VALUE">
           <block asynccall="false" colour="#aa2f00" datasourcetype="" dependencyby="h55yimXJR#{~[)xYB8lt" id="Mr$Q,!=Ye4w,JGSbiNXj" multilayer="false" namespace="cronapi.database.Operations.query" origintype="procedures_sql_callreturn" output="true" returntype="ObjectType.DATASET" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EAbrir%20consulta%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20realizar%20consultas%20no%20banco%20de%20dados%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Entidade%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Consulta%20SQL%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Par%C3%A2metros%20para%20consulta%20:%20Lista%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tabela%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.database.Operations.query','cronapi.database.Operations.query')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_callreturn">
-            <mutation data="%7B%22queryBuilderJson%22:%7B%22isEmpty%22:true,%22isRawSql%22:true,%22isNativeQuery%22:false,%22namespace%22:%22%22,%22sqlContent%22:%22select%20%5Cn%5Ctv.voto,%20%5Cn%5CtCOUNT(v.voto)%20as%20numeroVotos%5Cnfrom%20%5Cn%5CtVotos%20v%20%20%20%5Cngroup%20by%20%5Cn%5Ctv.voto%5Cnorder%20by%20numeroVotos%20desc%22,%22multiTenant%22:false,%22paginatorAutomatic%22:false,%22pagination%22:false,%22isDatasource%22:false%7D,%22filter%22:%22select%20%5Cn%5Ctv.voto,%20%5Cn%5CtCOUNT(v.voto)%20as%20numeroVotos%5Cnfrom%20%5Cn%5CtVotos%20v%20%20%20%5Cngroup%20by%20%5Cn%5Ctv.voto%5Cnorder%20by%20numeroVotos%20desc%22,%22entity%22:%22Votos%22,%22entityFullName%22:%22app.entity.Votos%22,%22queryMode%22:%22object%22,%22params%22:%22%5B%5D%22%7D" name="{{cronapi.database.Operations.query}}"/>
+            <mutation data="%7B%22queryBuilderJson%22:%7B%22isEmpty%22:true,%22isRawSql%22:true,%22isNativeQuery%22:false,%22namespace%22:%22%22,%22sqlContent%22:%22select%20%5Cn%5Ctv.voto,%20%5Cn%5CtCOUNT(v.voto)%20as%20numeroVotos%5Cnfrom%20%5Cn%5CtVotos%20v%20%20%20%5Cngroup%20by%20%5Cn%5Ctv.voto%5Cnorder%20by%20numeroVotos%20desc%22,%22multiTenant%22:false,%22paginatorAutomatic%22:false,%22pagination%22:false,%22isDatasource%22:false%7D,%22filter%22:%22select%20%5Cn%5Ctv.voto,%20%5Cn%5CtCOUNT(v.voto)%20as%20numeroVotos%5Cnfrom%20%5Cn%5CtVotos%20v%20%20%20%5Cngroup%20by%20%5Cn%5Ctv.voto%5Cnorder%20by%20numeroVotos%20desc%22,%22entity%22:%22Votos%22,%22entityFullName%22:%22app.entity.Votos%22,%22queryMode%22:%22object%22,%22params%22:%22%5B%5D%22,%22wizardType%22:%22SELECT%22%7D" name="{{cronapi.database.Operations.query}}"/>
           </block>
         </value>
       </block>
     </statement>
     <value name="RETURN">
-      <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="h55yimXJR#{~[)xYB8lt" id="sP58]*cAdS?nYl|,}?mm" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
-        <field customattributes="" name="VAR">votosComputados</field>
+      <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="h55yimXJR#{~[)xYB8lt" id=".3:}Ut`i+GP~][N=V=d?" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+        <field customattributes="" name="VAR">resultadoVotacao</field>
       </block>
     </value>
   </block>
