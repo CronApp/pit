@@ -12,12 +12,12 @@ window.blockly.js.blockly.Votacao.Voto = window.blockly.js.blockly.Votacao.Voto 
  * @param checkAceitarRegras
  *
  * @author José Zay
- * @since 21/08/2023, 11:39:07
+ * @since 21/08/2023, 13:21:07
  *
  */
 window.blockly.js.blockly.Votacao.Voto.IniciarVotacaoArgs = [{ description: 'checkAceitarRegras', id: 'b8644fae' }];
 window.blockly.js.blockly.Votacao.Voto.IniciarVotacao = async function(checkAceitarRegras) {
-
+ var retorno;
   //
   checkAceitarRegras = this.cronapi.conversion.toBoolean(checkAceitarRegras);
   //
@@ -42,7 +42,7 @@ window.blockly.js.blockly.Votacao.Voto.IniciarVotacao = async function(checkAcei
  * @param checado
  *
  * @author José Zay
- * @since 21/08/2023, 11:39:07
+ * @since 21/08/2023, 13:21:07
  *
  */
 window.blockly.js.blockly.Votacao.Voto.ObtemVotoArgs = [{ description: 'idIdeiaVotada', id: '66436263' }, { description: 'checado', id: '7b36cee4' }];
@@ -115,12 +115,12 @@ window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada,
  * @param checkUnicoVoto
  *
  * @author José Zay
- * @since 21/08/2023, 11:39:07
+ * @since 21/08/2023, 13:21:07
  *
  */
 window.blockly.js.blockly.Votacao.Voto.FinalizarVotacaoArgs = [{ description: 'checkUnicoVoto', id: '8e5f7fd0' }];
 window.blockly.js.blockly.Votacao.Voto.FinalizarVotacao = async function(checkUnicoVoto) {
-
+ var retorno;
   //
   console.log('abc');
   //
@@ -155,68 +155,75 @@ window.blockly.js.blockly.Votacao.Voto.FinalizarVotacao = async function(checkUn
  *
  *
  * @author José Zay
- * @since 21/08/2023, 11:39:07
+ * @since 21/08/2023, 13:21:07
  *
  */
 window.blockly.js.blockly.Votacao.Voto.UsuarioVotouArgs = [];
 window.blockly.js.blockly.Votacao.Voto.UsuarioVotou = async function() {
- var item;
+ var retorno, item;
+  //
+  retorno = false;
   //
   this.cronapi.util.callServerBlocklyAsynchronous('blockly.Votacao.Votos:UsuarioVotou', async function(sender_item) {
       item = sender_item;
     //
     // Se o usuário já votou.
     //
-    console.log(item);
-    //
-    if (item) {
+    if (retorno) {
+      //
+      item = true;
       //
       console.log('votou');
       //
       this.cronapi.screen.removeClass("div-grupo-tela-visualizacao-id", 'hidden');
     } else {
       //
+      retorno = false;
+      //
       console.log('não votou');
       //
       this.cronapi.screen.removeClass("div-grupo-tela-votacao-id", 'hidden');
     }
   }.bind(this));
+  return retorno;
 }
 
 /**
- * @function ObtemVotosComputados
+ * @function VotosComputados
  *
  *
  *
  *
  * @author José Zay
- * @since 21/08/2023, 11:39:07
+ * @since 21/08/2023, 13:21:07
  *
  */
-window.blockly.js.blockly.Votacao.Voto.ObtemVotosComputadosArgs = [];
-window.blockly.js.blockly.Votacao.Voto.ObtemVotosComputados = async function() {
- var item;
+window.blockly.js.blockly.Votacao.Voto.VotosComputadosArgs = [];
+window.blockly.js.blockly.Votacao.Voto.VotosComputados = async function() {
+ var retorno, item;
+  //
+  console.log('votos computados');
   //
   this.cronapi.util.callServerBlocklyAsynchronous('blockly.Votacao.Votos:VotosComputados', async function(sender_item) {
       item = sender_item;
     //
-    this.cronapi.screen.changeValueOfField("vars.votosComputados", item);
+    console.log(item);
   }.bind(this));
 }
 
 /**
- * @function ObtemResultado
+ * @function VotosResultadoRank
  *
  *
  *
  *
  * @author José Zay
- * @since 21/08/2023, 11:39:07
+ * @since 21/08/2023, 13:21:07
  *
  */
-window.blockly.js.blockly.Votacao.Voto.ObtemResultadoArgs = [];
-window.blockly.js.blockly.Votacao.Voto.ObtemResultado = async function() {
- var item;
+window.blockly.js.blockly.Votacao.Voto.VotosResultadoRankArgs = [];
+window.blockly.js.blockly.Votacao.Voto.VotosResultadoRank = async function() {
+ var retorno, item;
   //
   this.cronapi.util.callServerBlocklyAsynchronous('blockly.Votacao.Votos:ResultadoRank', async function(sender_item) {
       item = sender_item;
@@ -232,16 +239,19 @@ window.blockly.js.blockly.Votacao.Voto.ObtemResultado = async function() {
  *
  *
  * @author José Zay
- * @since 21/08/2023, 11:39:07
+ * @since 21/08/2023, 13:21:07
  *
  */
 window.blockly.js.blockly.Votacao.Voto.InicializarStatusVotacaoUserArgs = [];
 window.blockly.js.blockly.Votacao.Voto.InicializarStatusVotacaoUser = async function() {
- var item;
+ var retorno, item;
   //
-  console.log('abc');
+  console.log('inicializar');
   //
-  (await this.cronapi.client('blockly.js.blockly.Votacao.Voto.UsuarioVotou').run());
-  //
-  (await this.cronapi.client('blockly.js.blockly.Votacao.Voto.ObtemVotosComputados').run());
+  if ((await this.cronapi.client('blockly.js.blockly.Votacao.Voto.UsuarioVotou').run())) {
+    //
+    console.log('inicializarDentro');
+    //
+    (await this.cronapi.client('blockly.js.blockly.Votacao.Voto.VotosComputados').run());
+  }
 }
