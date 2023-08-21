@@ -17,7 +17,7 @@ public static final int TIMEOUT = 300;
  * @param listaIdItemVoto
  *
  * @author José Zay
- * @since 21/08/2023, 09:50:15
+ * @since 21/08/2023, 11:28:09
  *
  */
 public static Var FinalizarVoto(@ParamMetaData(description = "listaIdItemVoto", id = "fb0d967d") Var listaIdItemVoto) throws Exception {
@@ -62,7 +62,26 @@ Var.VAR_TRUE;
 /**
  *
  * @author José Zay
- * @since 21/08/2023, 09:50:15
+ * @since 21/08/2023, 11:28:09
+ *
+ */
+public static Var ResultadoRank() throws Exception {
+ return new Callable<Var>() {
+
+   private Var votosComputados = Var.VAR_NULL;
+
+   public Var call() throws Exception {
+    votosComputados =
+    cronapi.database.Operations.query(Var.valueOf("app.entity.Votos"),Var.valueOf("select \n	v.voto, \n	COUNT(v.voto) as numeroVotos\nfrom \n	Votos v   \ngroup by \n	v.voto\norder by numeroVotos desc"));
+    return votosComputados;
+   }
+ }.call();
+}
+
+/**
+ *
+ * @author José Zay
+ * @since 21/08/2023, 11:28:09
  *
  */
 public static Var UsuarioVotou() throws Exception {
@@ -74,14 +93,26 @@ public static Var UsuarioVotou() throws Exception {
     votou =
     cronapi.database.Operations.query(Var.valueOf("app.entity.User"),Var.valueOf("select \n	u.votou \nfrom \n	User u  \nwhere \n	u.normalizedUserName = :normalizedUserName"),Var.valueOf("normalizedUserName",
     cronapi.util.Operations.getCurrentUserName()));
-    if (votou.getObjectAsBoolean()) {
-        return Var.valueOf(
-        Var.VAR_TRUE);
-    } else {
-        return Var.valueOf(
-        Var.VAR_FALSE);
-    }
-    return Var.VAR_NULL;
+    return votou;
+   }
+ }.call();
+}
+
+/**
+ *
+ * @author José Zay
+ * @since 21/08/2023, 11:28:09
+ *
+ */
+public static Var VotosComputados() throws Exception {
+ return new Callable<Var>() {
+
+   private Var votosComputados = Var.VAR_NULL;
+
+   public Var call() throws Exception {
+    votosComputados =
+    cronapi.database.Operations.query(Var.valueOf("app.entity.Votos"),Var.valueOf("select \n	COUNT(v) \nfrom \n	Votos v"));
+    return votosComputados;
    }
  }.call();
 }
