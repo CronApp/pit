@@ -11,13 +11,13 @@ window.blockly.js.blockly.Votacao.Voto = window.blockly.js.blockly.Votacao.Voto 
  *
  * @param checkAceitarRegras
  *
- * @author Wesley Miranda De Oliveira
- * @since 21/08/2023, 09:24:19
+ * @author José Zay
+ * @since 21/08/2023, 10:00:21
  *
  */
 window.blockly.js.blockly.Votacao.Voto.IniciarVotacaoArgs = [{ description: 'checkAceitarRegras', id: 'b8644fae' }];
 window.blockly.js.blockly.Votacao.Voto.IniciarVotacao = async function(checkAceitarRegras) {
- var checkUnicoVoto, lista;
+
   //
   checkAceitarRegras = this.cronapi.conversion.toBoolean(checkAceitarRegras);
   //
@@ -41,13 +41,13 @@ window.blockly.js.blockly.Votacao.Voto.IniciarVotacao = async function(checkAcei
  * @param idIdeiaVotada
  * @param checado
  *
- * @author Wesley Miranda De Oliveira
- * @since 21/08/2023, 09:24:19
+ * @author José Zay
+ * @since 21/08/2023, 10:00:21
  *
  */
 window.blockly.js.blockly.Votacao.Voto.ObtemVotoArgs = [{ description: 'idIdeiaVotada', id: '66436263' }, { description: 'checado', id: '7b36cee4' }];
 window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada, checado) {
- var checkUnicoVoto;
+
   //
   lista = this.cronapi.screen.getValueOfField("vars.listaVotos");
   //
@@ -114,13 +114,13 @@ window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada,
  *
  * @param checkUnicoVoto
  *
- * @author Wesley Miranda De Oliveira
- * @since 21/08/2023, 09:24:19
+ * @author José Zay
+ * @since 21/08/2023, 10:00:21
  *
  */
 window.blockly.js.blockly.Votacao.Voto.FinalizarVotacaoArgs = [{ description: 'checkUnicoVoto', id: '8e5f7fd0' }];
 window.blockly.js.blockly.Votacao.Voto.FinalizarVotacao = async function(checkUnicoVoto) {
- var lista, item;
+
   //
   console.log('abc');
   //
@@ -146,4 +146,33 @@ window.blockly.js.blockly.Votacao.Voto.FinalizarVotacao = async function(checkUn
       }
     }.bind(this), lista);
   }
+}
+
+/**
+ * @function UsuarioVotou
+ *
+ *
+ *
+ *
+ * @author José Zay
+ * @since 21/08/2023, 10:00:21
+ *
+ */
+window.blockly.js.blockly.Votacao.Voto.UsuarioVotouArgs = [];
+window.blockly.js.blockly.Votacao.Voto.UsuarioVotou = async function() {
+ var item;
+  //
+  this.cronapi.util.callServerBlocklyAsynchronous('blockly.Votacao.Votos:UsuarioVotou', async function(sender_item) {
+      item = sender_item;
+    //
+    // Se o usuário já votou.
+    //
+    if (item) {
+      //
+      this.cronapi.screen.removeClass("div-grupo-tela-visualizacao-id", 'hidden');
+    } else {
+      //
+      this.cronapi.screen.removeClass("div-grupo-tela-votacao-id", 'hidden');
+    }
+  }.bind(this));
 }
