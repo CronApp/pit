@@ -15,20 +15,20 @@ public static final int TIMEOUT = 300;
 /**
  *
  * @author Wesley Miranda De Oliveira
- * @since 21/08/2023, 16:57:24
+ * @since 22/08/2023, 08:50:09
  *
  */
 public static Var BackResultadoRank() throws Exception {
  return new Callable<Var>() {
 
+   private Var item = Var.VAR_NULL;
    private Var resultadoVotacao = Var.VAR_NULL;
 
    public Var call() throws Exception {
-    if (
-    cronapi.util.Operations.callBlockly(Var.valueOf("blockly.TratamentoData.TratamentoData:ResultadoData")).getObjectAsBoolean()) {
-        resultadoVotacao =
-        cronapi.database.Operations.query(Var.valueOf("app.entity.Votos"),Var.valueOf("select \n	v.voto, \n	COUNT(v.voto) as numeroVotos\nfrom \n	Votos v   \ngroup by \n	v.voto\norder by numeroVotos desc"));
-    }
+    item =
+    cronapi.util.Operations.callBlockly(Var.valueOf("blockly.TratamentoData.TratamentoData:ResultadoData"));
+    resultadoVotacao =
+    cronapi.database.Operations.query(Var.valueOf("app.entity.Votos"),Var.valueOf("select \n	v.voto, \n	COUNT(v.voto) as numeroVotos\nfrom \n	Votos v   \ngroup by \n	v.voto\norder by numeroVotos desc"));
     return
 cronapi.json.Operations.toJson(resultadoVotacao);
    }
@@ -38,7 +38,7 @@ cronapi.json.Operations.toJson(resultadoVotacao);
 /**
  *
  * @author Wesley Miranda De Oliveira
- * @since 21/08/2023, 16:57:24
+ * @since 22/08/2023, 08:50:09
  *
  */
 public static Var BackUsuarioVotou() throws Exception {
@@ -61,7 +61,7 @@ cronapi.list.Operations.getFirst(votou);
 /**
  *
  * @author Wesley Miranda De Oliveira
- * @since 21/08/2023, 16:57:24
+ * @since 22/08/2023, 08:50:09
  *
  */
 public static Var BackVotosComputados() throws Exception {
@@ -83,7 +83,7 @@ cronapi.list.Operations.getFirst(votosComputados);
  * @param listaIdItemVoto
  *
  * @author Wesley Miranda De Oliveira
- * @since 21/08/2023, 16:57:24
+ * @since 22/08/2023, 08:50:09
  *
  */
 public static Var FinalizarVoto(@ParamMetaData(description = "listaIdItemVoto", id = "fb0d967d") Var listaIdItemVoto) throws Exception {
