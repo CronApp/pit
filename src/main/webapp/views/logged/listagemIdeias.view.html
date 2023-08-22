@@ -6,8 +6,8 @@
         <input ng-model="searchKeyword" placeholder="Pesquisar" class="form-control k-textbox"> 
       </div> 
     </div> 
-    <div class="col-md-12" style="overflow: scroll; height: 800px;">
-    <div style="margin-top: 6.8vh;" class="component-holder ng-scope col-md-12" data-component="crn-accordion" id="crn-accordion-325904" crn-skin="css/skins/IdVisualAccordion.css" ng-model="vars.listaVotos"> 
+    <div class="col-md-12 customiza-overflow-left" style="overflow: scroll; height: 800px; margin-top: 6.8vh;">
+    <div style="" class="component-holder ng-scope col-md-12" data-component="crn-accordion" id="crn-accordion-325904" crn-skin="css/skins/IdVisualAccordion.css" ng-model="vars.listaVotos"> 
       <div class="panel-group" id="accordion-1372{{$index}}" role="tablist" aria-multiselectable="true"> 
         <div class="panel panel-default" ng-repeat="ideia in vars.listaIdeias track by $index" ng-hide="searchKeyword &amp;&amp; (!ideia.fields.Projeto.toLowerCase().includes(searchKeyword.toLowerCase()) &amp;&amp; !ideia.fields.Responsavel.toLowerCase().includes(searchKeyword.toLowerCase()))"> 
           <div style="display: flex; flex-direction: row;" ng-hidden="filter:searchKeyword"> 
@@ -153,7 +153,7 @@
             <p>Votos computados: {{vars.votosComputados}}</p> 
           </div> 
           <div ng-model="vars.resultadoVotos" style="margin-top: 10vh;"> 
-            <div id="id-resultado-info-data" class="class-resultado-info"> 
+            <div id="id-resultado-info-data" class="class-resultado-info hidden"> 
               <div style="font-size: 18px; font-weight: 700;">
                  Resultado em 25/11 
               </div> 
