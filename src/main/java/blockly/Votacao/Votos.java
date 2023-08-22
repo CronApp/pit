@@ -17,7 +17,7 @@ public static final int TIMEOUT = 300;
  * @param listaIdItemVoto
  *
  * @author José Zay
- * @since 22/08/2023, 15:24:13
+ * @since 22/08/2023, 16:41:53
  *
  */
 public static Var BackFinalizarVoto(@ParamMetaData(description = "listaIdItemVoto", id = "fb0d967d") Var listaIdItemVoto) throws Exception {
@@ -62,7 +62,7 @@ Var.VAR_TRUE;
 /**
  *
  * @author José Zay
- * @since 22/08/2023, 15:24:13
+ * @since 22/08/2023, 16:41:53
  *
  */
 public static Var BackResultadoRank() throws Exception {
@@ -71,8 +71,13 @@ public static Var BackResultadoRank() throws Exception {
    private Var resultadoVotacao = Var.VAR_NULL;
 
    public Var call() throws Exception {
-    resultadoVotacao =
-    cronapi.database.Operations.query(Var.valueOf("app.entity.Votos"),Var.valueOf("select \n	v.voto, \n	COUNT(v.voto) as numeroVotos\nfrom \n	Votos v   \ngroup by \n	v.voto\norder by numeroVotos desc"));
+    if (
+    cronapi.util.Operations.callBlockly(Var.valueOf("blockly.TratamentoData.TratamentoData:ResultadoData")).getObjectAsBoolean()) {
+        System.out.println(
+        Var.valueOf("depois do prazo").getObjectAsString());
+        resultadoVotacao =
+        cronapi.database.Operations.query(Var.valueOf("app.entity.Votos"),Var.valueOf("select \n	v.voto, \n	COUNT(v.voto) as numeroVotos\nfrom \n	Votos v   \ngroup by \n	v.voto\norder by numeroVotos desc"));
+    }
     return
 cronapi.json.Operations.toJson(resultadoVotacao);
    }
@@ -82,7 +87,7 @@ cronapi.json.Operations.toJson(resultadoVotacao);
 /**
  *
  * @author José Zay
- * @since 22/08/2023, 15:24:13
+ * @since 22/08/2023, 16:41:53
  *
  */
 public static Var BackUsuarioVotou() throws Exception {
@@ -105,7 +110,7 @@ cronapi.list.Operations.getFirst(votou);
 /**
  *
  * @author José Zay
- * @since 22/08/2023, 15:24:13
+ * @since 22/08/2023, 16:41:53
  *
  */
 public static Var BackVotosComputados() throws Exception {
@@ -129,7 +134,7 @@ cronapi.database.Operations.query(Var.valueOf("app.entity.Votos"),Var.valueOf("s
 /**
  *
  * @author José Zay
- * @since 22/08/2023, 15:24:13
+ * @since 22/08/2023, 16:41:53
  *
  */
 public static Var BackVotosUsuario() throws Exception {

@@ -11,7 +11,7 @@
         <div class="panel-group" id="accordion-1372{{$index}}" role="tablist" aria-multiselectable="true"> 
           <div class="panel panel-default" ng-repeat="ideia in vars.listaIdeias track by $index" ng-hide="searchKeyword &amp;&amp; (!ideia.fields.Projeto.toLowerCase().includes(searchKeyword.toLowerCase()) &amp;&amp; !ideia.fields.Responsavel.toLowerCase().includes(searchKeyword.toLowerCase()))"> 
             <div style="display: flex; flex-direction: row;" ng-hidden="filter:searchKeyword"> 
-              <div class="div-voto-selecao-class" style="margin-top: 46px; margin-right: 20px; margin-left: 12px;" ng-if="conteudoVisivel"> 
+              <div class="div-voto-selecao-class" style="margin-top: 46px; margin-right: 20px; margin-left: 12px;" ng-if="checkboxProjetosVisivel"> 
                 <input class="check-voto-selecao" onclick="checkCount(this)" type="checkbox" id="checkbox1233[$index]" ng-model="vars.checkbox[$index]" ng-initial-value="false" crn-allow-null-values="false" ng-false-value="true" ng-true-value="false" ng-click="cronapi.client('js.blockly.Votacao.Voto.ObtemVoto').names('66436263', '7b36cee4').run(ideia.id, vars.checkbox[$index])"> 
               </div> 
               <div style="width: 100%;"> 
@@ -96,8 +96,8 @@
           <label for="check-aceitar-regras">aceito regras</label> 
         </div> 
         <!--DEIXAR CLICAR EM INICIAR VOTAÇÃO APENAS SE O CHECK ACIMA ESTIVER MARCADO--> 
-        <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-477481"> 
-          <button class="btn k-button btn-block btn-default" ng-click="conteudoVisivel = vars.checkAceitarRegras == true; cronapi.client('js.blockly.Votacao.Voto.IniciarVotacao').names('b8644fae').run(vars.checkAceitarRegras)"> <i class="glyphicon glyphicon-pencil" icon-theme=""></i> <span class="" text-theme="">Iniciar Votação</span> </button> 
+        <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-477481" ng-model="checkboxProjetosVisivel"> 
+          <button class="btn k-button btn-block btn-default" ng-click="checkboxProjetosVisivel = vars.checkAceitarRegras == true; cronapi.client('js.blockly.Votacao.Voto.IniciarVotacao').names('b8644fae').run(vars.checkAceitarRegras)"> <i class="glyphicon glyphicon-pencil" icon-theme=""></i> <span class="" text-theme="">Iniciar Votação</span> </button> 
         </div> 
       </div> 
       <!--tela-espera-voto--> 
@@ -132,7 +132,7 @@
           <label for="check-unico-voto">meu voto será em apenas 1 projeto</label> 
         </div> 
         <div class="component-holder ng-scope col-md-12" data-component="crn-button" id="crn-button-71994" style="padding-top: 2rem"> 
-          <button class="btn k-button btn-block btn-default" ng-click="cronapi.client('js.blockly.Votacao.Voto.FinalizarVotacao').names('8e5f7fd0').run(vars.checkUnicoVoto)" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled=""> <i class="glyphicon glyphicon-ok" icon-theme=""></i> <span class="" text-theme="">Finalizar</span> </button> 
+          <button class="btn k-button btn-block btn-default" ng-click="checkboxProjetosVisivel = false; cronapi.client('js.blockly.Votacao.Voto.FinalizarVotacao').names('8e5f7fd0').run(vars.checkUnicoVoto)" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled=""> <i class="glyphicon glyphicon-ok" icon-theme=""></i> <span class="" text-theme="">Finalizar</span> </button> 
         </div> 
       </div> 
     </div> 

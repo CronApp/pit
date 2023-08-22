@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="WEB" bpmnAble="false" formTarget="src/main/webapp/views/logged/listagemIdeias.view.html" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JS" ruleDescription="Voto" ruleName="Voto" ruleSynchronous="false" ruleTimeout="" ruleType="I" showAsFunction="false" soap="false" swagger="false">
-  <metadata scale="1.0749542399999998" scrollx="-448.75406250708147" scrolly="-694.6379796164858" target="ZbVoo?=doJRSaPX$Uf9]"/>
+  <metadata scale="1" scrollx="-1497.1" scrolly="-1314.6" target="dS9]Qbg+Xm7/7(60Rsp*"/>
   <block asynccall="false" colour="#fca03b" datasourcetype="" id=":Tnds-9Z:~Q_57/2.?{*" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-177" y="37">
     <mutation>
       <arg id="b8644fae" name="checkAceitarRegras"/>
@@ -800,7 +800,7 @@
       </block>
     </statement>
   </block>
-  <block asynccall="false" colour="#fca03b" datasourcetype="" id="dS9]Qbg+Xm7/7(60Rsp*" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="1553" y="1373">
+  <block asynccall="false" colour="#fca03b" datasourcetype="" id="dS9]Qbg+Xm7/7(60Rsp*" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="1628" y="1388">
     <field customattributes="" name="NAME">InicializarStatusVotacaoUser</field>
     <statement name="STACK">
       <block asynccall="false" colour="#33ff33" datasourcetype="" dependencyby="dS9]Qbg+Xm7/7(60Rsp*" id="S`A!E6-c#c1R1p}SDjPi" multilayer="false" namespace="cronapi.organizers.comment" origintype="util_comment" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3Ecomment%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EcommentDesc%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.organizers.comment','cronapi.organizers.comment')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="util_comment">
@@ -811,7 +811,7 @@
             <field customattributes="" name="VAR">ehComite</field>
             <value name="VALUE">
               <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="dS9]Qbg+Xm7/7(60Rsp*" id="Cm3CK,E3K0#,*U_K;e%8" origintype="logic_boolean" output="true" tooltip="Retorna verdadeiro ou falso." type="logic_boolean">
-                <field customattributes="" name="BOOL">FALSE</field>
+                <field customattributes="" name="BOOL">TRUE</field>
               </block>
             </value>
             <next>
@@ -877,15 +877,6 @@
                                 <field customattributes="" name="TEXT">hidden</field>
                               </shadow>
                             </value>
-                            <next>
-                              <block asynccall="false" colour="#5ba58c" datasourcetype="" dependencyby="dS9]Qbg+Xm7/7(60Rsp*" id="*~-^7!Jk5H%FV=e*!~?d" origintype="text_print" output="false" tooltip="Imprime o texto, número ou valor especificado." type="text_print">
-                                <value name="TEXT">
-                                  <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="dS9]Qbg+Xm7/7(60Rsp*" id="GVzw?[+u$mO2%fy91C13" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                                    <field customattributes="" name="TEXT">votou</field>
-                                  </shadow>
-                                </value>
-                              </block>
-                            </next>
                           </block>
                         </next>
                       </block>
@@ -906,15 +897,6 @@
                             <field customattributes="" name="TEXT">hidden</field>
                           </shadow>
                         </value>
-                        <next>
-                          <block asynccall="false" colour="#5ba58c" datasourcetype="" dependencyby="dS9]Qbg+Xm7/7(60Rsp*" id="leSmJ8+J/;_ePhySStk;" origintype="text_print" output="false" tooltip="Imprime o texto, número ou valor especificado." type="text_print">
-                            <value name="TEXT">
-                              <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="dS9]Qbg+Xm7/7(60Rsp*" id="5@|Gxr-YCz4d{wID)hx|" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                                <field customattributes="" name="TEXT">não votou</field>
-                              </shadow>
-                            </value>
-                          </block>
-                        </next>
                       </block>
                     </statement>
                   </block>
