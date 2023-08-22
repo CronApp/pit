@@ -12,12 +12,12 @@ window.blockly.js.blockly.Votacao.Voto = window.blockly.js.blockly.Votacao.Voto 
  * @param checkAceitarRegras
  *
  * @author José Zay
- * @since 22/08/2023, 11:52:20
+ * @since 22/08/2023, 13:56:01
  *
  */
 window.blockly.js.blockly.Votacao.Voto.IniciarVotacaoArgs = [{ description: 'checkAceitarRegras', id: 'b8644fae' }];
 window.blockly.js.blockly.Votacao.Voto.IniciarVotacao = async function(checkAceitarRegras) {
- var checkUnicoVoto, lista;
+
   //
   checkAceitarRegras = this.cronapi.conversion.toBoolean(checkAceitarRegras);
   //
@@ -42,12 +42,12 @@ window.blockly.js.blockly.Votacao.Voto.IniciarVotacao = async function(checkAcei
  * @param checado
  *
  * @author José Zay
- * @since 22/08/2023, 11:52:20
+ * @since 22/08/2023, 13:56:01
  *
  */
 window.blockly.js.blockly.Votacao.Voto.ObtemVotoArgs = [{ description: 'idIdeiaVotada', id: '66436263' }, { description: 'checado', id: '7b36cee4' }];
 window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada, checado) {
- var checkUnicoVoto;
+
   //
   lista = this.cronapi.screen.getValueOfField("vars.listaVotos");
   //
@@ -115,12 +115,12 @@ window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada,
  * @param checkUnicoVoto
  *
  * @author José Zay
- * @since 22/08/2023, 11:52:20
+ * @since 22/08/2023, 13:56:01
  *
  */
 window.blockly.js.blockly.Votacao.Voto.FinalizarVotacaoArgs = [{ description: 'checkUnicoVoto', id: '8e5f7fd0' }];
 window.blockly.js.blockly.Votacao.Voto.FinalizarVotacao = async function(checkUnicoVoto) {
- var lista, item;
+
   //
   console.log('abc');
   //
@@ -155,12 +155,12 @@ window.blockly.js.blockly.Votacao.Voto.FinalizarVotacao = async function(checkUn
  *
  *
  * @author José Zay
- * @since 22/08/2023, 11:52:20
+ * @since 22/08/2023, 13:56:01
  *
  */
 window.blockly.js.blockly.Votacao.Voto.UsuarioVotouArgs = [];
 window.blockly.js.blockly.Votacao.Voto.UsuarioVotou = async function() {
- var checkUnicoVoto, lista, item;
+ var votosUsuario;
   //
   item = (await this.cronapi.server('blockly.Votacao.Votos.BackUsuarioVotou').toPromise().run());
   //
@@ -187,12 +187,12 @@ window.blockly.js.blockly.Votacao.Voto.UsuarioVotou = async function() {
  *
  *
  * @author José Zay
- * @since 22/08/2023, 11:52:20
+ * @since 22/08/2023, 13:56:01
  *
  */
 window.blockly.js.blockly.Votacao.Voto.VotosComputadosArgs = [];
 window.blockly.js.blockly.Votacao.Voto.VotosComputados = async function() {
- var checkUnicoVoto, lista, item;
+ var votosUsuario;
   //
   item = (await this.cronapi.server('blockly.Votacao.Votos.BackVotosComputados').toPromise().run());
   //
@@ -206,16 +206,14 @@ window.blockly.js.blockly.Votacao.Voto.VotosComputados = async function() {
  *
  *
  * @author José Zay
- * @since 22/08/2023, 11:52:20
+ * @since 22/08/2023, 13:56:01
  *
  */
 window.blockly.js.blockly.Votacao.Voto.VotosResultadoRankArgs = [];
 window.blockly.js.blockly.Votacao.Voto.VotosResultadoRank = async function() {
- var checkUnicoVoto, lista, item;
+ var votosUsuario;
   //
   item = (await this.cronapi.server('blockly.Votacao.Votos.BackResultadoRank').toPromise().run());
-  //
-  console.log(item);
   //
   this.cronapi.screen.changeValueOfField("vars.resultadoVotos", item);
 }
@@ -227,17 +225,36 @@ window.blockly.js.blockly.Votacao.Voto.VotosResultadoRank = async function() {
  *
  *
  * @author José Zay
- * @since 22/08/2023, 11:52:20
+ * @since 22/08/2023, 13:56:01
  *
  */
 window.blockly.js.blockly.Votacao.Voto.InicializarStatusVotacaoUserArgs = [];
 window.blockly.js.blockly.Votacao.Voto.InicializarStatusVotacaoUser = async function() {
- var checkUnicoVoto, lista, item;
+ var votosUsuario;
   //
   if ((await this.cronapi.client('blockly.js.blockly.Votacao.Voto.UsuarioVotou').run())) {
     //
     (await this.cronapi.client('blockly.js.blockly.Votacao.Voto.VotosComputados').run());
     //
-    (await this.cronapi.client('blockly.js.blockly.Votacao.Voto.VotosResultadoRank').run());
+    (await this.cronapi.client('blockly.js.blockly.Votacao.Voto.VotosUsuario').run());
   }
+}
+
+/**
+ * @function VotosUsuario
+ *
+ *
+ *
+ *
+ * @author José Zay
+ * @since 22/08/2023, 13:56:01
+ *
+ */
+window.blockly.js.blockly.Votacao.Voto.VotosUsuarioArgs = [];
+window.blockly.js.blockly.Votacao.Voto.VotosUsuario = async function() {
+ var votosUsuario;
+  //
+  votosUsuario = (await this.cronapi.server('blockly.Votacao.Votos.BackVotosUsuario').toPromise().run());
+  //
+  this.cronapi.screen.changeValueOfField("vars.votosUsuario", votosUsuario);
 }
