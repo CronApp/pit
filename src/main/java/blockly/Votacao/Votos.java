@@ -17,7 +17,7 @@ public static final int TIMEOUT = 300;
  * @param listaIdItemVoto
  *
  * @author José Zay
- * @since 22/08/2023, 14:50:12
+ * @since 22/08/2023, 15:24:13
  *
  */
 public static Var BackFinalizarVoto(@ParamMetaData(description = "listaIdItemVoto", id = "fb0d967d") Var listaIdItemVoto) throws Exception {
@@ -62,7 +62,7 @@ Var.VAR_TRUE;
 /**
  *
  * @author José Zay
- * @since 22/08/2023, 14:50:12
+ * @since 22/08/2023, 15:24:13
  *
  */
 public static Var BackResultadoRank() throws Exception {
@@ -82,7 +82,7 @@ cronapi.json.Operations.toJson(resultadoVotacao);
 /**
  *
  * @author José Zay
- * @since 22/08/2023, 14:50:12
+ * @since 22/08/2023, 15:24:13
  *
  */
 public static Var BackUsuarioVotou() throws Exception {
@@ -105,19 +105,23 @@ cronapi.list.Operations.getFirst(votou);
 /**
  *
  * @author José Zay
- * @since 22/08/2023, 14:50:12
+ * @since 22/08/2023, 15:24:13
  *
  */
 public static Var BackVotosComputados() throws Exception {
  return new Callable<Var>() {
 
-   private Var votosComputados = Var.VAR_NULL;
+   private Var user = Var.VAR_NULL;
+   private Var listaIdItemVoto = Var.VAR_NULL;
+   private Var j = Var.VAR_NULL;
+   private Var item = Var.VAR_NULL;
+   private Var votou = Var.VAR_NULL;
+   private Var resultadoVotacao = Var.VAR_NULL;
 
    public Var call() throws Exception {
-    votosComputados =
-    cronapi.database.Operations.query(Var.valueOf("app.entity.Votos"),Var.valueOf("select \n	COUNT(v) \nfrom \n	Votos v"));
     return
-cronapi.list.Operations.getFirst(votosComputados);
+cronapi.list.Operations.getFirst((
+cronapi.database.Operations.query(Var.valueOf("app.entity.Votos"),Var.valueOf("select \n	COUNT(v) \nfrom \n	Votos v"))));
    }
  }.call();
 }
@@ -125,19 +129,23 @@ cronapi.list.Operations.getFirst(votosComputados);
 /**
  *
  * @author José Zay
- * @since 22/08/2023, 14:50:12
+ * @since 22/08/2023, 15:24:13
  *
  */
 public static Var BackVotosUsuario() throws Exception {
  return new Callable<Var>() {
 
-   private Var votosUsuario = Var.VAR_NULL;
+   private Var user = Var.VAR_NULL;
+   private Var listaIdItemVoto = Var.VAR_NULL;
+   private Var j = Var.VAR_NULL;
+   private Var item = Var.VAR_NULL;
+   private Var votou = Var.VAR_NULL;
+   private Var resultadoVotacao = Var.VAR_NULL;
 
    public Var call() throws Exception {
-    votosUsuario =
-    cronapi.database.Operations.query(Var.valueOf("app.entity.Votos"),Var.valueOf("select \n	v.id, \n	v.voto \nfrom \n	Votos v  \nwhere \n	v.user.normalizedUserName = :userNormalizedUserName"),Var.valueOf("userNormalizedUserName",
-    cronapi.util.Operations.getCurrentUserName()));
-    return votosUsuario;
+    return
+cronapi.database.Operations.query(Var.valueOf("app.entity.Votos"),Var.valueOf("select \n	v.id, \n	v.voto \nfrom \n	Votos v  \nwhere \n	v.user.normalizedUserName = :userNormalizedUserName"),Var.valueOf("userNormalizedUserName",
+cronapi.util.Operations.getCurrentUserName()));
    }
  }.call();
 }
