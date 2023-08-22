@@ -1,12 +1,13 @@
-<div ng-init="cronapi.client('js.blockly.ListaApi.GetApi.GetApi').run(); cronapi.client('js.blockly.Votacao.Voto.InicializarStatusVotacaoUser').run();"> 
+<div ng-init="cronapi.client('js.blockly.ListaApi.GetApi.GetApi').run(); cronapi.client('js.blockly.Votacao.Voto.InicializarStatusVotacaoUser').run();" style="height: 100vh"> 
   <div class="votacao-lado-esquerdo col-md-7"> 
     <div class="component-holder ng-scope  col-md-12" data-component="crn-textinput" id="crn-textinput-545907"> 
       <div class="form-group"> 
         <label for="input158">Pesquisar</label> 
-        <input ng-model="searchKeyword" placeholder="Pesquisar"> 
+        <input ng-model="searchKeyword" placeholder="Pesquisar" class="form-control k-textbox"> 
       </div> 
     </div> 
-    <div class="component-holder ng-scope col-md-12" data-component="crn-accordion" id="crn-accordion-325904" crn-skin="css/skins/IdVisualAccordion.css" ng-model="vars.listaVotos"> 
+    <div class="col-md-12" style="overflow: scroll; height: 800px;">
+    <div style="margin-top: 6.8vh;" class="component-holder ng-scope col-md-12" data-component="crn-accordion" id="crn-accordion-325904" crn-skin="css/skins/IdVisualAccordion.css" ng-model="vars.listaVotos"> 
       <div class="panel-group" id="accordion-1372{{$index}}" role="tablist" aria-multiselectable="true"> 
         <div class="panel panel-default" ng-repeat="ideia in vars.listaIdeias track by $index" ng-hide="searchKeyword &amp;&amp; (!ideia.fields.Projeto.toLowerCase().includes(searchKeyword.toLowerCase()) &amp;&amp; !ideia.fields.Responsavel.toLowerCase().includes(searchKeyword.toLowerCase()))"> 
           <div style="display: flex; flex-direction: row;" ng-hidden="filter:searchKeyword"> 
@@ -18,15 +19,15 @@
                 <div class="lead" data-component="crn-title" xattr-position=""> 
                   <h1 class="title h3 col-md-12 text-left" xattr-position="text-left" xattr-type="h3" data-component="crn-text-component">{{ideia.fields.Projeto}}</h1> 
                   <div class="col-md-12"> 
-                    <div class="campoDadosProjeto col-md-3"> 
+                    <div class="campoDadosProjeto col-md-6"> 
                       <span>Responsável: </span> 
-                      <div class="cardsRetorno">
+                      <div class="cardsRetorno" style="color: #40BED4;">
                          {{ideia.fields.Responsavel}} 
                       </div> 
                     </div> 
-                    <div class="col-md-6 campoDadosProjeto"> 
+                    <div class="col-md-6 campoDadosProjeto campoDadosProjetoRight"> 
                       <span>Linha de negócio: </span> 
-                      <div class="cardsRetorno">
+                      <div class="cardsRetorno " style="color: #40BED4;">
                          {{ideia.fields.LN}} 
                       </div> 
                     </div> 
@@ -74,9 +75,16 @@
           </div> 
         </div> 
       </div> 
-    </div> 
+    </div>
+    </div>
   </div> 
-  <div class="col-md-4" style="margin-right: 0px; height: 100rem; background: #F4F4FF; top: 0px; right: 0px; position: relative; float: right;"> 
+  <div class="col-md-4" style="margin-right: 0px;
+  height: 100%;
+  background: #F4F4FF;
+  top: 0px;
+  right: 0px;
+  position: relative;
+  float: right;"> 
     <div class="hidden" id="div-grupo-tela-votacao-id"> 
       <div> 
         <p style="font-weight: bold; text-align: left; padding-left: 2rem; padding-top:2rem;">Meus Votos</p> 
@@ -114,10 +122,10 @@
           <div style="background: rgb(255, 255, 255); border-radius: 6px; border: 1px solid rgb(140, 140, 140); padding:1rem; margin-bottom:1rem" ng-repeat="voto in vars.listaVotos"> 
             <div ng-repeat="ideia in vars.listaIdeias"> 
               <div ng-if="voto == ideia.id"> 
-                <div style="font-size: 2rem; text-height: bold">
+                <div style="font-size: 2rem; text-height: bold;">
                    {{ideia.fields.Projeto}} 
                 </div> 
-                <div>
+                <div style="color: #40BED4;">
                    {{ideia.fields.Responsavel}} 
                 </div> 
               </div> 
@@ -137,18 +145,47 @@
     <div class="hidden" id="div-grupo-tela-visualizacao-id"> 
       <!--tela-resultado--> 
       <div id="div-tela-resultado-voto-id" style="text-align: left; padding-left: 2rem; padding-right: 2rem;"> 
-        <div> 
+        <div style="margin-top: 2vh;"> 
           <div> 
-            <span>Quantidade de votos</span> 
+            <span style="font-weight: 700;">Quantidade de Votos</span> 
           </div> 
           <div> 
             <p>Votos computados: {{vars.votosComputados}}</p> 
           </div> 
-          <div ng-model="vars.resultadoVotos"> 
-            <div ng-repeat="resultadoRank in vars.resultadoVotos"> 
-              <div ng-repeat="ideia in vars.listaIdeias"> 
-                <div ng-if="resultadoRank.voto == ideia.id">
-                   {{ideia.fields.Projeto}} | {{resultadoRank.numeroVotos}} 
+          <div ng-model="vars.resultadoVotos" style="margin-top: 10vh;"> 
+            <div id="id-resultado-info-data" class="class-resultado-info"> 
+              <div style="font-size: 18px; font-weight: 700;">
+                 Resultado em 25/11 
+              </div> 
+            </div> 
+            <div id="div-resultado-rank-id"> 
+              <div ng-repeat="(index, resultadoRank) in vars.resultadoVotos"> 
+                <div ng-repeat="ideia in vars.listaIdeias" ng-if="resultadoRank.voto === ideia.id" style="display: flex; justify-content: center;"> 
+                  <div class="card gold"> 
+                    <div class="project-info"> 
+                      <div class="project-name">
+                         {{ ideia.fields.Projeto }} 
+                      </div> 
+                      <div class="vote-count" style="font-size: 14px; color: #40BED4;">
+                         {{ideia.fields.Responsavel}} 
+                      </div> 
+                    </div> 
+                    <div class="project-color"></div> 
+                    <div class="vote-label" style="justify-content: center;"> 
+                      <div class="medal" ng-if="index === 0">
+                         🥇 
+                      </div> 
+                      <div class="medal" ng-if="index === 1">
+                         🥈 
+                      </div> 
+                      <div class="medal" ng-if="index === 2">
+                         🥉 
+                      </div> 
+                      <div>
+                         {{ resultadoRank.numeroVotos }} Votos 
+                      </div> 
+                    </div> 
+                  </div> 
                 </div> 
               </div> 
             </div> 
@@ -156,7 +193,8 @@
         </div> 
       </div> 
     </div> 
-    <script>
+  </div> 
+  <script>
         function checkCount(checkbox) {
             var checkboxes = document.querySelectorAll(".div-voto-selecao-class .check-voto-selecao");
             var checkedCount = 0;
@@ -179,5 +217,4 @@
             }
         }
     </script> 
-  </div> 
 </div>
