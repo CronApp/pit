@@ -138,7 +138,7 @@
     </div> 
     <div class="hidden" id="div-grupo-tela-visualizacao-id"> 
       <!--tela-resultado--> 
-      <div id="div-tela-resultado-voto-id" style="text-align: left; padding-left: 2rem; padding-right: 2rem;"> 
+      <div class="hidden" id="div-tela-resultado-voto-id" style="text-align: left; padding-left: 2rem; padding-right: 2rem;"> 
         <div style="margin-top: 2vh;"> 
           <div> 
             <span style="font-weight: 700;">Quantidade de Votos</span> 
@@ -186,6 +186,25 @@
           </div> 
         </div> 
       </div> 
+      <div id="div-tela-votos-usuario-id" style="text-align: left; padding-left: 2rem; padding-right: 2rem;">
+        <div> 
+          <p style="font-weight: bold; text-align: left; padding-left: 2rem; padding-top:2rem;">Meus Votos</p> 
+        </div> 
+        <div ng-model="vars.votosUsuario"> 
+          <div style="background: rgb(255, 255, 255); border-radius: 6px; border: 1px solid rgb(140, 140, 140); padding:1rem; margin-bottom:1rem" ng-repeat="voto in vars.votosUsuario"> 
+            <div ng-repeat="ideia in vars.listaIdeias"> 
+              <div ng-if="voto.voto == ideia.id"> 
+                <div style="font-size: 2rem; text-height: bold;">
+                   {{ideia.fields.Projeto}} 
+                </div> 
+                <div style="color: #40BED4;">
+                   {{ideia.fields.Responsavel}} 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div>
     </div> 
   </div> 
   <script>
