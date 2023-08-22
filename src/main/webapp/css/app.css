@@ -19,5 +19,7 @@
 
 /*Fonte*/
 body {
-      font-family: 'New Rubric', sans-serif;
+    font-family: new-rubrik, sans-serif;
+    font-style: normal;
+    font-weight: 400;
 }
