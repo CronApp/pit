@@ -16,7 +16,7 @@ public static final int TIMEOUT = 300;
 /**
  *
  * @author Wesley Miranda De Oliveira
- * @since 22/08/2023, 08:49:49
+ * @since 22/08/2023, 09:30:21
  *
  */
 @RequestMapping(path = "/api/cronapi/rest/TratamentoData.TratamentoData:ResultadoData", method = RequestMethod.GET, consumes = "*/*")
@@ -24,9 +24,6 @@ public static Var ResultadoData() throws Exception {
  return new Callable<Var>() {
 
    public Var call() throws Exception {
-    cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.setVisibility"),
-    Var.valueOf("id-resultado-info-data"),
-    Var.valueOf("false"));
     return Var.VAR_NULL;
    }
  }.call();
