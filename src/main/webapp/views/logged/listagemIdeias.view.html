@@ -166,12 +166,12 @@
           <p>Votos computados: {{vars.votosComputados}}</p> 
         </div> 
         <div ng-model="vars.resultadoVotos" style="margin-top: 10vh;"> 
-          <div id="id-resultado-info-data" class="class-resultado-info hidden"> 
+          <div class="class-resultado-info hidden" id="id-resultado-info-data"> 
             <div style="font-size: 18px; font-weight: 700;">
-               Resultado em 25/11 
+               Resultado em 25/11 <i class="fa fa-calendar" style="color:#8C69D4"></i>
             </div> 
           </div> 
-          <div id="div-resultado-rank-id"> 
+          <div class="hidden" id="div-resultado-rank-id"> 
             <div ng-repeat="(index, resultadoRank) in vars.resultadoVotos"> 
               <div ng-repeat="ideia in vars.listaIdeias" ng-if="resultadoRank.voto === ideia.id" style="display: flex; justify-content: center;"> 
                 <div class="card gold"> 

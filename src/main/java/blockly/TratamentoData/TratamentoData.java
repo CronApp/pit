@@ -16,7 +16,7 @@ public static final int TIMEOUT = 300;
 /**
  *
  * @author José Zay
- * @since 23/08/2023, 10:31:59
+ * @since 23/08/2023, 11:11:53
  *
  */
 @RequestMapping(path = "/api/cronapi/rest/TratamentoData.TratamentoData:ResultadoData", method = RequestMethod.GET, consumes = "*/*")
@@ -33,7 +33,7 @@ Var.valueOf(11),
 Var.valueOf(25),
 Var.VAR_NULL,
 Var.VAR_NULL,
-Var.VAR_NULL)) > 0);
+Var.VAR_NULL)) >= 0);
    }
  }.call();
 }
