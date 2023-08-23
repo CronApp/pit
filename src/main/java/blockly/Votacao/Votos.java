@@ -17,7 +17,7 @@ public static final int TIMEOUT = 300;
  * @param listaIdItemVoto
  *
  * @author José Zay
- * @since 23/08/2023, 10:16:58
+ * @since 23/08/2023, 10:23:18
  *
  */
 public static Var BackFinalizarVoto(@ParamMetaData(description = "listaIdItemVoto", id = "fb0d967d") Var listaIdItemVoto) throws Exception {
@@ -62,7 +62,7 @@ Var.VAR_TRUE;
 /**
  *
  * @author José Zay
- * @since 23/08/2023, 10:16:58
+ * @since 23/08/2023, 10:23:18
  *
  */
 public static Var BackResultadoRank() throws Exception {
@@ -76,8 +76,6 @@ public static Var BackResultadoRank() throws Exception {
         resultadoVotacao =
         cronapi.database.Operations.query(Var.valueOf("app.entity.Votos"),Var.valueOf("select \n	v.voto, \n	COUNT(v.voto) as numeroVotos\nfrom \n	Votos v   \ngroup by \n	v.voto\norder by numeroVotos desc"));
     }
-    System.out.println(
-    Var.valueOf("resultadoRank").getObjectAsString());
     return
 cronapi.json.Operations.toJson(resultadoVotacao);
    }
@@ -87,7 +85,7 @@ cronapi.json.Operations.toJson(resultadoVotacao);
 /**
  *
  * @author José Zay
- * @since 23/08/2023, 10:16:58
+ * @since 23/08/2023, 10:23:18
  *
  */
 public static Var BackUsuarioVotou() throws Exception {
@@ -110,7 +108,7 @@ cronapi.list.Operations.getFirst(votou);
 /**
  *
  * @author José Zay
- * @since 23/08/2023, 10:16:58
+ * @since 23/08/2023, 10:23:18
  *
  */
 public static Var BackVotosComputados() throws Exception {
@@ -134,7 +132,7 @@ cronapi.database.Operations.query(Var.valueOf("app.entity.Votos"),Var.valueOf("s
 /**
  *
  * @author José Zay
- * @since 23/08/2023, 10:16:58
+ * @since 23/08/2023, 10:23:18
  *
  */
 public static Var BackVotosUsuario() throws Exception {

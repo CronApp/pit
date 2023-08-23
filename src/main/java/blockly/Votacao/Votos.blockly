@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="JAVA" bpmnAble="false" formTarget="" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JAVA" ruleDescription="Votos" ruleName="Votos" ruleSynchronous="false" ruleTimeout="" ruleType="I" showAsFunction="false" soap="false" swagger="false">
-  <metadata scale="1" scrollx="-669.0999999999999" scrolly="-719.6" target="h55yimXJR#{~[)xYB8lt"/>
+  <metadata scale="1" scrollx="-669.0999999999999" scrolly="-719.5999999999999" target="h55yimXJR#{~[)xYB8lt"/>
   <block asynccall="false" colour="#fca03b" datasourcetype="" id="S-7wDt.WK;F1h^/L@Jot" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-187" y="424">
     <mutation>
       <arg id="fb0d967d" name="listaIdItemVoto"/>
@@ -286,15 +286,6 @@
             </value>
           </block>
         </statement>
-        <next>
-          <block asynccall="false" colour="#5ba58c" datasourcetype="" dependencyby="h55yimXJR#{~[)xYB8lt" id="$$NQ4nd)6FuA6YJ#zR]v" origintype="text_print" output="false" tooltip="Imprime o texto, número ou valor especificado." type="text_print">
-            <value name="TEXT">
-              <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="h55yimXJR#{~[)xYB8lt" id="MOGX=j%71tM)isAT@T43" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                <field customattributes="" name="TEXT">resultadoRank</field>
-              </shadow>
-            </value>
-          </block>
-        </next>
       </block>
     </statement>
     <value name="RETURN">
@@ -338,6 +329,20 @@
           </block>
         </value>
       </block>
+    </value>
+  </block>
+  <block asynccall="false" colour="#5ba58c" datasourcetype="" dependencyby="h55yimXJR#{~[)xYB8lt" id="ESh$#|IT:5DT@+ArTE4_" origintype="text_print" output="false" tooltip="Imprime o texto, número ou valor especificado." type="text_print" x="1283" y="1103">
+    <value name="TEXT">
+      <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="h55yimXJR#{~[)xYB8lt" id="3EQbNAs7t:j4bjRE778E" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+        <field customattributes="" name="TEXT">Dentro da data</field>
+      </shadow>
+    </value>
+  </block>
+  <block asynccall="false" colour="#5ba58c" datasourcetype="" dependencyby="h55yimXJR#{~[)xYB8lt" id="$$NQ4nd)6FuA6YJ#zR]v" origintype="text_print" output="false" tooltip="Imprime o texto, número ou valor especificado." type="text_print" x="1223" y="1193">
+    <value name="TEXT">
+      <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="h55yimXJR#{~[)xYB8lt" id="MOGX=j%71tM)isAT@T43" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+        <field customattributes="" name="TEXT">resultadoRank</field>
+      </shadow>
     </value>
   </block>
 </blockly>
