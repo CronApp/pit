@@ -80,20 +80,21 @@
   </div> 
   <div class="col-md-4" style="margin-right: 0px; height: 100%; background: #F4F4FF; top: 0px; right: 0px; position: relative; float: right;"> 
     <div class="hidden" id="div-grupo-tela-votacao-id"> 
-      <div> 
-        <p style="font-weight: bold; text-align: left; padding-left: 2rem; padding-top:2rem;">Meus Votos</p> 
-      </div> 
       <!--tela-regras--> 
       <div id="div-tela-regras-id" style="text-align: left; padding-left: 2rem; padding-right: 2rem;"> 
+        <div> 
+          <p style="font-weight: bold; text-align: left; padding-top:2rem;">Regras para votação:</p> 
+        </div> 
         <div>
-           - Ter a visão do total dos votos computados durante o processo de votação. 
-          <br> - A visualização do resultado final estará disponível apenas após o período de votação, mostrando em ordem de colocação cada projeto e seus votos. 
-          <br> - Não terá direito ao voto. 
-          <br> 
+            <ul style="list-style: none; padding: 0">
+                <li>1ª Escolher até 02 projetos para realizar a votação;</li>
+                <li>2ª A votação não poderá ser alterada;</li>
+                <li>3ª A votação poderá ser realizada até a data: 24/11/2023.</li>
+            </ul>
         </div> 
         <div style="padding-top: 2rem; padding-bottom: 2rem;"> 
           <input class="check-voto-selecao" type="checkbox" id="check-aceitar-regras" ng-model="vars.checkAceitarRegras"> 
-          <label for="check-aceitar-regras">aceito regras</label> 
+          <label for="check-aceitar-regras">Aceito Regras</label> 
         </div> 
         <!--DEIXAR CLICAR EM INICIAR VOTAÇÃO APENAS SE O CHECK ACIMA ESTIVER MARCADO--> 
         <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-477481" ng-model="checkboxProjetosVisivel"> 
@@ -102,6 +103,9 @@
       </div> 
       <!--tela-espera-voto--> 
       <div class="hidden" id="div-tela-espera-voto-id" style="text-align: left; padding-left: 2rem; padding-right: 2rem;"> 
+        <div> 
+          <p style="font-weight: bold; text-align: left; padding-left: 2rem; padding-top:2rem;">Meus Votos</p> 
+        </div> 
         <div>
            Escolha até 2 projetos 
         </div> 
@@ -113,7 +117,7 @@
         </div> 
         <!--LISTAGEM DE PROJETO MARCADOS NO CHECKBOX--> 
         <div> 
-          <div style="background: rgb(255, 255, 255); border-radius: 6px; border: 1px solid rgb(140, 140, 140); padding:1rem; margin-bottom:1rem" ng-repeat="voto in vars.listaVotos">
+          <div style="background: rgb(255, 255, 255); border-radius: 6px; border: 1px solid rgb(140, 140, 140); padding:1rem; margin-bottom:1rem" ng-repeat="voto in vars.listaVotos"> 
             <div ng-repeat="ideia in vars.listaIdeias"> 
               <div ng-if="voto == ideia.id"> 
                 <div style="font-size: 2rem; text-height: bold;">
@@ -132,8 +136,8 @@
           <label for="check-unico-voto">meu voto será em apenas 1 projeto</label> 
         </div> 
         <div class="component-holder ng-scope col-md-12" data-component="crn-button" id="crn-button-71994" style="padding-top: 2rem"> 
-          <!--AO CLICAR NO BOTAO, OCULTA OS CHECKBOXES DE VOTOS SE, OUVER UM PROJETO MARCADO E O CHECKBOX DE VOTO ÚNICO ESTIVER CHECADO, OU SE OUVEREM DOIS VOTOS MARCADOS-->
-          <button class="btn-block btn-primary" ng-click="checkboxProjetosVisivel = !((vars.listaVotos.length == 1 && vars.checkUnicoVoto) || vars.listaVotos.length == 2); cronapi.client('js.blockly.Votacao.Voto.FinalizarVotacao').names('8e5f7fd0').run(vars.checkUnicoVoto)" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled=""> <i class="glyphicon glyphicon-ok" icon-theme=""></i> <span class="" text-theme="">Finalizar</span> </button> 
+          <!--AO CLICAR NO BOTAO, OCULTA OS CHECKBOXES DE VOTOS SE, OUVER UM PROJETO MARCADO E O CHECKBOX DE VOTO ÚNICO ESTIVER CHECADO, OU SE OUVEREM DOIS VOTOS MARCADOS--> 
+          <button class="btn-block btn-primary" ng-click="checkboxProjetosVisivel = !((vars.listaVotos.length == 1 &amp;&amp; vars.checkUnicoVoto) || vars.listaVotos.length == 2); cronapi.client('js.blockly.Votacao.Voto.FinalizarVotacao').names('8e5f7fd0').run(vars.checkUnicoVoto)" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled=""> <i class="glyphicon glyphicon-ok" icon-theme=""></i> <span class="" text-theme="">Finalizar</span> </button> 
         </div> 
       </div> 
     </div> 
