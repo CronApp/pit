@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="JAVA" bpmnAble="false" formTarget="" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JAVA" ruleDescription="UsuarioComite" ruleName="UsuarioComite" ruleSynchronous="false" ruleTimeout="" ruleType="I" showAsFunction="false" soap="false" swagger="false">
+  <metadata scale="1" scrollx="374.0999999999999" scrolly="-118.09999999999998" target="A$J?ru1F{]*hSiFFWhlF"/>
+  <block asynccall="false" colour="#fca03b" datasourcetype="" id="A$J?ru1F{]*hSiFFWhlF" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-247" y="188">
+    <field customattributes="" name="NAME">RetornaUsarioPertenceComite</field>
+    <statement name="STACK">
+      <block asynccall="false" colour="#5ba58c" datasourcetype="" dependencyby="A$J?ru1F{]*hSiFFWhlF" id="xgoCUVmhT(S_DxN^XWX%" origintype="text_print" output="false" tooltip="Imprime o texto, número ou valor especificado." type="text_print">
+        <value name="TEXT">
+          <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="A$J?ru1F{]*hSiFFWhlF" id="4bD0|#%(YwXhgVs1fBuA" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+            <field customattributes="" name="TEXT">Oiiiii</field>
+          </shadow>
+        </value>
+        <next>
+          <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="A$J?ru1F{]*hSiFFWhlF" id="q{S3LiyHqTVwGow?uB:x" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+            <field customattributes="" name="VAR">usuarioPertenceComite</field>
+            <value name="VALUE">
+              <block asynccall="false" colour="#aa2f00" datasourcetype="" dependencyby="A$J?ru1F{]*hSiFFWhlF" id="Mr$Q,!=Ye4w,JGSbiNXj" multilayer="false" namespace="cronapi.database.Operations.query" origintype="procedures_sql_callreturn" output="true" returntype="ObjectType.DATASET" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EAbrir%20consulta%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20realizar%20consultas%20no%20banco%20de%20dados%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Entidade%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Consulta%20SQL%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Par%C3%A2metros%20para%20consulta%20:%20Lista%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tabela%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.database.Operations.query','cronapi.database.Operations.query')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_callreturn">
+                <mutation data="%7B%22queryBuilderJson%22:%7B%22isValid%22:true,%22isEmpty%22:false,%22operationType%22:%22object%22,%22isNativeQuery%22:false,%22namespace%22:%22%22,%22type%22:%22select%22,%22rulesEntity%22:%5B%7B%22entity%22:%22Securable%22,%22namespace%22:%22app.entity.Securable%22,%22dataSourceOptions%22:%7B%22id%22:%22app.Securable%22,%22customId%22:%22Securable%22,%22customQueryName%22:%22app.Securable%22,%22paramValues%22:%5B%5D,%22entityFullName%22:%22app.entity.Securable%22,%22schemaFields%22:%5B%7B%22name%22:%22id%22,%22type%22:%22String%22,%22nullable%22:false,%22key%22:false%7D,%7B%22name%22:%22name%22,%22type%22:%22String%22,%22nullable%22:false,%22key%22:false%7D,%7B%22name%22:%22application%22,%22type%22:%22String%22,%22nullable%22:true,%22key%22:false%7D,%7B%22name%22:%22_objectKey%22,%22type%22:%22String%22,%22nullable%22:false,%22key%22:true%7D,%7B%22name%22:%22application_name%22,%22type%22:%22String%22,%22nullable%22:true,%22key%22:false%7D%5D,%22type%22:%22entity%22,%22hasError%22:false,%22customName%22:%22Securable%22,%22fullName%22:%22app.entity.Securable%22,%22labelName%22:%22app.entity.Securable%20(Securable)%22%7D,%22alias%22:%22s%22%7D%5D,%22rulesSelect%22:%5B%7B%22func%22:%22get%22,%22field%22:%22s.name%22,%22type%22:%22string%22%7D,%7B%22func%22:%22get%22,%22field%22:%22u.user.normalizedUserName%22,%22type%22:%22string%22%7D%5D,%22rulesJoin%22:%5B%7B%22entity%22:%22UserSecurable%22,%22namespace%22:%22app.entity.UserSecurable%22,%22dataSourceOptions%22:%7B%22id%22:%22app.UserSecurable%22,%22customId%22:%22UserSecurable%22,%22customQueryName%22:%22app.UserSecurable%22,%22paramValues%22:%5B%5D,%22entityFullName%22:%22app.entity.UserSecurable%22,%22schemaFields%22:%5B%7B%22name%22:%22id%22,%22type%22:%22String%22,%22nullable%22:false,%22key%22:false%7D,%7B%22name%22:%22securable%22,%22type%22:%22String%22,%22nullable%22:true,%22key%22:false%7D,%7B%22name%22:%22user%22,%22type%22:%22String%22,%22nullable%22:true,%22key%22:false%7D,%7B%22name%22:%22_objectKey%22,%22type%22:%22String%22,%22nullable%22:false,%22key%22:true%7D,%7B%22name%22:%22securable_name%22,%22type%22:%22String%22,%22nullable%22:true,%22key%22:false%7D,%7B%22name%22:%22user_name%22,%22type%22:%22String%22,%22nullable%22:true,%22key%22:false%7D%5D,%22type%22:%22entity%22,%22hasError%22:false,%22customName%22:%22UserSecurable%22,%22fullName%22:%22app.entity.UserSecurable%22,%22labelName%22:%22app.entity.UserSecurable%20(UserSecurable)%22%7D,%22alias%22:%22u%22,%22joinType%22:%22join%22,%22joinField%22:%22s.id%22,%22joinOperator%22:%22equal%22,%22joinTargetField%22:%22u.securable.id%22%7D%5D,%22rulesGroupBy%22:%5B%5D,%22rulesHaving%22:%5B%5D,%22rulesOrderBy%22:%5B%5D,%22rules%22:%7B%22condition%22:%22AND%22,%22rules%22:%5B%7B%22id%22:%22u.user.normalizedUserName%22,%22field%22:%22u.user.normalizedUserName%22,%22type%22:%22string%22,%22input%22:%22text%22,%22operator%22:%22equal%22,%22value%22:%22:userNormalizedUserName%22,%22valueIsField%22:false%7D%5D,%22not%22:false,%22valid%22:true%7D,%22isRawSql%22:false,%22multiTenant%22:false,%22paginatorAutomatic%22:false,%22pagination%22:false,%22isDatasource%22:false%7D,%22filter%22:%22select%20%5Cn%5Cts.name,%20%5Cn%5Ctu.user.normalizedUserName%20%5Cnfrom%20%5Cn%5CtSecurable%20s%20%5Cnjoin%5Cn%5CtUserSecurable%20u%20on%20(s.id%20=%20u.securable.id)%20%5Cnwhere%20%5Cn%5Ctu.user.normalizedUserName%20=%20:userNormalizedUserName%22,%22entity%22:%22User%22,%22entityFullName%22:%22app.entity.Securable%22,%22queryMode%22:%22object%22,%22params%22:%22%5B%5C%22userNormalizedUserName%5C%22%5D%22%7D" name="{{cronapi.database.Operations.query}}">
+                  <arg name="userNormalizedUserName"/>
+                </mutation>
+                <value name="ARG0">
+                  <block asynccall="false" colour="#487f7f" datasourcetype="" dependencyby="A$J?ru1F{]*hSiFFWhlF" id="@jPFtYvKXg8;1r9}Gv;`" multilayer="false" namespace="cronapi.util.Operations.getCurrentUserName" origintype="procedures_callreturn" output="true" returntype="ObjectType.STRING" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20login%20do%20usu%C3%A1rio%20logado%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20o%20login%20do%20usu%C3%A1rio%20logado.%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Texto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.util.Operations.getCurrentUserName','cronapi.util.Operations.getCurrentUserName')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                    <mutation name="{{cronapi.util.Operations.getCurrentUserName}}" return-raw-type="cronapi.Var"/>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block asynccall="false" colour="#5ba58c" datasourcetype="" dependencyby="A$J?ru1F{]*hSiFFWhlF" id="BXHPX~b[cKy3Z=)5v%Q]" origintype="text_print" output="false" tooltip="Imprime o texto, número ou valor especificado." type="text_print">
+                <value name="TEXT">
+                  <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="A$J?ru1F{]*hSiFFWhlF" id="4bD0|#%(YwXhgVs1fBuA" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field customattributes="" name="TEXT">abc</field>
+                  </shadow>
+                  <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="A$J?ru1F{]*hSiFFWhlF" id="u3n_P.t5^A)(uVO5}`vr" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                    <field customattributes="" name="VAR">usuarioPertenceComite</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="A$J?ru1F{]*hSiFFWhlF" id="X~4=zZWJBDxvW!@9Haol" origintype="logic_boolean" output="true" tooltip="Retorna verdadeiro ou falso." type="logic_boolean">
+        <field customattributes="" name="BOOL">TRUE</field>
+      </block>
+    </value>
+  </block>
+</blockly>
