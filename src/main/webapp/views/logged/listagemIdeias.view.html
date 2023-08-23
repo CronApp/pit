@@ -113,7 +113,7 @@
         </div> 
         <!--LISTAGEM DE PROJETO MARCADOS NO CHECKBOX--> 
         <div> 
-          <div style="background: rgb(255, 255, 255); border-radius: 6px; border: 1px solid rgb(140, 140, 140); padding:1rem; margin-bottom:1rem" ng-repeat="voto in vars.listaVotos"> 
+          <div style="background: rgb(255, 255, 255); border-radius: 6px; border: 1px solid rgb(140, 140, 140); padding:1rem; margin-bottom:1rem" ng-repeat="voto in vars.listaVotos">
             <div ng-repeat="ideia in vars.listaIdeias"> 
               <div ng-if="voto == ideia.id"> 
                 <div style="font-size: 2rem; text-height: bold;">
@@ -126,13 +126,15 @@
             </div> 
           </div> 
         </div> 
+        
+          {{((vars.listaVotos.length == 1 && vars.checkUnicoVoto == true) || vars.listaVotos.length == 2)}}
         <!--SE TIVER APENAS UM PROJETO E ESTE ESTIVER MARCADO, DEVERÁ DEIXAR FINALIZAR--> 
         <div id="div-unico-voto" style="padding-top: 2rem"> 
           <input class="check-voto-selecao" type="checkbox" id="check-unico-voto" ng-model="vars.checkUnicoVoto"> 
           <label for="check-unico-voto">meu voto será em apenas 1 projeto</label> 
         </div> 
         <div class="component-holder ng-scope col-md-12" data-component="crn-button" id="crn-button-71994" style="padding-top: 2rem"> 
-          <button class="btn-block btn-primary" ng-click="checkboxProjetosVisivel = false; cronapi.client('js.blockly.Votacao.Voto.FinalizarVotacao').names('8e5f7fd0').run(vars.checkUnicoVoto)" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled=""> <i class="glyphicon glyphicon-ok" icon-theme=""></i> <span class="" text-theme="">Finalizar</span> </button> 
+          <button class="btn-block btn-primary" ng-click="checkboxProjetosVisivel = !((vars.listaVotos.length == 1 && vars.checkUnicoVoto == true) || vars.listaVotos.length == 2); cronapi.client('js.blockly.Votacao.Voto.FinalizarVotacao').names('8e5f7fd0').run(vars.checkUnicoVoto)" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled=""> <i class="glyphicon glyphicon-ok" icon-theme=""></i> <span class="" text-theme="">Finalizar</span> </button> 
         </div> 
       </div> 
     </div> 

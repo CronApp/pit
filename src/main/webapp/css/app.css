@@ -27,7 +27,6 @@
     box-shadow: 0px 8px 0px 0px rgba(45, 49, 165, 1); /* Sombra na parte de baixo */
 }
 
-
 /*Remocao Padding Padrao da Main Cronapp*/
 .main-view.container-fluid {
     padding: 0px !important;
