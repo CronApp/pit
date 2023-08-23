@@ -12,7 +12,7 @@ window.blockly.js.blockly.Votacao.Voto = window.blockly.js.blockly.Votacao.Voto 
  * @param checkAceitarRegras
  *
  * @author José Zay
- * @since 23/08/2023, 10:04:10
+ * @since 23/08/2023, 10:18:25
  *
  */
 window.blockly.js.blockly.Votacao.Voto.IniciarVotacaoArgs = [{ description: 'checkAceitarRegras', id: 'b8644fae' }];
@@ -40,7 +40,7 @@ window.blockly.js.blockly.Votacao.Voto.IniciarVotacao = async function(checkAcei
  * @param checado
  *
  * @author José Zay
- * @since 23/08/2023, 10:04:10
+ * @since 23/08/2023, 10:18:25
  *
  */
 window.blockly.js.blockly.Votacao.Voto.ObtemVotoArgs = [{ description: 'idIdeiaVotada', id: '66436263' }, { description: 'checado', id: '7b36cee4' }];
@@ -113,7 +113,7 @@ window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada,
  * @param checkUnicoVoto
  *
  * @author José Zay
- * @since 23/08/2023, 10:04:10
+ * @since 23/08/2023, 10:18:25
  *
  */
 window.blockly.js.blockly.Votacao.Voto.FinalizarVotacaoArgs = [{ description: 'checkUnicoVoto', id: '8e5f7fd0' }];
@@ -157,7 +157,7 @@ window.blockly.js.blockly.Votacao.Voto.FinalizarVotacao = async function(checkUn
  *
  *
  * @author José Zay
- * @since 23/08/2023, 10:04:10
+ * @since 23/08/2023, 10:18:25
  *
  */
 window.blockly.js.blockly.Votacao.Voto.UsuarioVotouArgs = [];
@@ -173,7 +173,7 @@ window.blockly.js.blockly.Votacao.Voto.UsuarioVotou = async function() {
  *
  *
  * @author José Zay
- * @since 23/08/2023, 10:04:10
+ * @since 23/08/2023, 10:18:25
  *
  */
 window.blockly.js.blockly.Votacao.Voto.VotosComputadosArgs = [];
@@ -190,7 +190,7 @@ window.blockly.js.blockly.Votacao.Voto.VotosComputados = async function() {
  *
  *
  * @author José Zay
- * @since 23/08/2023, 10:04:10
+ * @since 23/08/2023, 10:18:25
  *
  */
 window.blockly.js.blockly.Votacao.Voto.VotosResultadoRankArgs = [];
@@ -207,7 +207,7 @@ window.blockly.js.blockly.Votacao.Voto.VotosResultadoRank = async function() {
  *
  *
  * @author José Zay
- * @since 23/08/2023, 10:04:10
+ * @since 23/08/2023, 10:18:25
  *
  */
 window.blockly.js.blockly.Votacao.Voto.InicializarStatusVotacaoUserArgs = [];
@@ -216,7 +216,7 @@ window.blockly.js.blockly.Votacao.Voto.InicializarStatusVotacaoUser = async func
   //
   // HARDCODED
   //
-  ehComite = false;
+  ehComite = true;
   //
   if (ehComite) {
     //
@@ -246,7 +246,7 @@ window.blockly.js.blockly.Votacao.Voto.InicializarStatusVotacaoUser = async func
  *
  *
  * @author José Zay
- * @since 23/08/2023, 10:04:10
+ * @since 23/08/2023, 10:18:25
  *
  */
 window.blockly.js.blockly.Votacao.Voto.VotosUsuarioArgs = [];
