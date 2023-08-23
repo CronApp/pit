@@ -14,7 +14,7 @@ public static final int TIMEOUT = 300;
 /**
  *
  * @author José Zay
- * @since 23/08/2023, 10:19:43
+ * @since 23/08/2023, 10:20:19
  *
  */
 public static Var GetApi() throws Exception {
@@ -57,7 +57,7 @@ Var.valueOf("BODY")));
 /**
  *
  * @author José Zay
- * @since 23/08/2023, 10:19:43
+ * @since 23/08/2023, 10:20:19
  *
  */
 public static Var airtableApi() throws Exception {

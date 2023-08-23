@@ -205,20 +205,4 @@
       </block>
     </value>
   </block>
-  <block asynccall="false" colour="#5ba58c" datasourcetype="" dependencyby="ZBDSMjo9r%]~67Udh|JQ" id="7a8V?]).dzJldUHWewOf" origintype="text_print" output="false" tooltip="Imprime o texto, número ou valor especificado." type="text_print" x="816" y="662">
-    <value name="TEXT">
-      <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="ZBDSMjo9r%]~67Udh|JQ" id="L=J+VqE@%cJSR~Us#tR=" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-        <field customattributes="" name="TEXT">1111111111111111111111</field>
-      </shadow>
-    </value>
-    <next>
-      <block asynccall="false" colour="#5ba58c" datasourcetype="" dependencyby="ZBDSMjo9r%]~67Udh|JQ" id="cd%mgu2rflY}V/2uIgu;" origintype="text_print" output="false" tooltip="Imprime o texto, número ou valor especificado." type="text_print">
-        <value name="TEXT">
-          <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="ZBDSMjo9r%]~67Udh|JQ" id="k].JD5FW67=kk4rFX20~" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-            <field customattributes="" name="TEXT">abc</field>
-          </shadow>
-        </value>
-      </block>
-    </next>
-  </block>
 </blockly>
