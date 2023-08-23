@@ -904,7 +904,7 @@
             <field customattributes="" name="VAR">ehComite</field>
             <value name="VALUE">
               <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="dS9]Qbg+Xm7/7(60Rsp*" id="Cm3CK,E3K0#,*U_K;e%8" origintype="logic_boolean" output="true" tooltip="Retorna verdadeiro ou falso." type="logic_boolean">
-                <field customattributes="" name="BOOL">TRUE</field>
+                <field customattributes="" name="BOOL">FALSE</field>
               </block>
             </value>
             <next>
