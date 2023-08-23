@@ -13,11 +13,6 @@
     transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-.btn-primary:active {
-    background-color: #FFFFFF;
-    box-shadow: none; /* Sombra na parte de baixo */
-}
-
 .btn-primary:focus {
     background-color: #4A50CF; /* Cor para o botão */
 }
