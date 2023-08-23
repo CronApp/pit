@@ -17,15 +17,7 @@
     padding: 0px !important;
 }
 
-/* .btn-primary::after {
-     content: "";
-    position: absolute;
-    width: 100%;
-    height: 8px; /* Altura da sombra */
-    /*background: rgba(127, 133, 245, 0.5); /* Cor roxa com transparência para a sombra */
-   /* bottom: -8px; /* Coloca a sombra abaixo do botão */
- /*  left: 0;
-    z-index: -1; /* Coloca a sombra atrás do botão */
-/*} */
-
-/*@media ()*/
+/*Fonte*/
+body {
+      font-family: 'New Rubric', sans-serif;
+}

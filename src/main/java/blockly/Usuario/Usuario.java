@@ -18,7 +18,7 @@ public static final int TIMEOUT = 300;
  * @param nome
  *
  * @author Wesley Miranda De Oliveira
- * @since 10/08/2023, 09:13:39
+ * @since 23/08/2023, 09:05:35
  *
  */
 public static Var CadastrarUsuario(@ParamMetaData(description = "email", id = "53b42e7f") Var email, @ParamMetaData(description = "param_senha", id = "2bc04d37") Var param_senha, @ParamMetaData(description = "nome", id = "fca923a9") Var nome) throws Exception {
@@ -128,7 +128,7 @@ public static Var CadastrarUsuario(@ParamMetaData(description = "email", id = "5
  * @param email
  *
  * @author Wesley Miranda De Oliveira
- * @since 10/08/2023, 09:13:39
+ * @since 23/08/2023, 09:05:35
  *
  */
 public static void ResetSenha(@ParamMetaData(description = "email", id = "ae582bec") Var email) throws Exception {
@@ -154,7 +154,7 @@ public static void ResetSenha(@ParamMetaData(description = "email", id = "ae582b
  * @param password
  *
  * @author Wesley Miranda De Oliveira
- * @since 10/08/2023, 09:13:39
+ * @since 23/08/2023, 09:05:35
  *
  */
 public static Var login(@ParamMetaData(description = "username", id = "eb4f9fa9") Var username, @ParamMetaData(description = "password", id = "59713897") Var password) throws Exception {

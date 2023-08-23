@@ -10,13 +10,13 @@ window.blockly.js.blockly.privacy.Cookies = window.blockly.js.blockly.privacy.Co
  * Descreva esta função...
  *
  *
- * @author Root
- * @since 04/08/2022 10:42:20
+ * @author Wesley Miranda De Oliveira
+ * @since 23/08/2023, 09:06:17
  *
  */
 window.blockly.js.blockly.privacy.Cookies.openPreferencesArgs = [];
 window.blockly.js.blockly.privacy.Cookies.openPreferences = async function() {
- var isChecked, value;
+ var haveCookies;
   //
   this.cronapi.screen.showModal("modalCookies");
 }
@@ -27,13 +27,13 @@ window.blockly.js.blockly.privacy.Cookies.openPreferences = async function() {
  * Descreva esta função...
  *
  *
- * @author Root
- * @since 04/08/2022 10:42:20
+ * @author Wesley Miranda De Oliveira
+ * @since 23/08/2023, 09:06:17
  *
  */
 window.blockly.js.blockly.privacy.Cookies.checkCookieMarketingArgs = [];
 window.blockly.js.blockly.privacy.Cookies.checkCookieMarketing = async function() {
- var isChecked, value;
+ var haveCookies;
   //
   value = this.cronapi.util.getCookie('cookieMarketing');
   //
@@ -53,13 +53,13 @@ window.blockly.js.blockly.privacy.Cookies.checkCookieMarketing = async function(
  * Cookies
  *
  *
- * @author Root
- * @since 04/08/2022 10:42:20
+ * @author Wesley Miranda De Oliveira
+ * @since 23/08/2023, 09:06:17
  *
  */
 window.blockly.js.blockly.privacy.Cookies.setPreferenceArgs = [];
 window.blockly.js.blockly.privacy.Cookies.setPreference = async function() {
- var isChecked, value;
+ var haveCookies;
   //
   this.cronapi.screen.hideModal("modalCookies");
   //
@@ -82,13 +82,13 @@ window.blockly.js.blockly.privacy.Cookies.setPreference = async function() {
  * Descreva esta função...
  *
  *
- * @author Root
- * @since 04/08/2022 10:42:20
+ * @author Wesley Miranda De Oliveira
+ * @since 23/08/2023, 09:06:17
  *
  */
 window.blockly.js.blockly.privacy.Cookies.checkCookieAnalyticsArgs = [];
 window.blockly.js.blockly.privacy.Cookies.checkCookieAnalytics = async function() {
- var isChecked, value;
+ var haveCookies;
   //
   value = this.cronapi.util.getCookie('cookieAnalytics');
   //
@@ -108,13 +108,13 @@ window.blockly.js.blockly.privacy.Cookies.checkCookieAnalytics = async function(
  * Descreva esta função...
  *
  *
- * @author Root
- * @since 04/08/2022 10:42:20
+ * @author Wesley Miranda De Oliveira
+ * @since 23/08/2023, 09:06:17
  *
  */
 window.blockly.js.blockly.privacy.Cookies.checkCookieEssencialsArgs = [];
 window.blockly.js.blockly.privacy.Cookies.checkCookieEssencials = async function() {
- var isChecked, value;
+ var haveCookies;
   //
   value = this.cronapi.util.getCookie('cookieEssencial');
   //
@@ -134,8 +134,8 @@ window.blockly.js.blockly.privacy.Cookies.checkCookieEssencials = async function
  *
  *
  *
- * @author Root
- * @since 29/08/2022 14:21:06
+ * @author Wesley Miranda De Oliveira
+ * @since 23/08/2023, 09:06:17
  *
  */
 window.blockly.js.blockly.privacy.Cookies.checkCookiesArgs = [];

@@ -18,7 +18,7 @@ public static final int TIMEOUT = 300;
  * @param nome
  *
  * @author Wesley Miranda De Oliveira
- * @since 11/08/2023, 08:44:12
+ * @since 23/08/2023, 09:05:22
  *
  */
 @RequestMapping(path = "/api/cronapi/rest/Usuario.EditarPerfil:SalvarAlteracoes", method = RequestMethod.GET, consumes = "*/*")

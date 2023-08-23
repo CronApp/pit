@@ -11,7 +11,7 @@ window.blockly.js.blockly.EditarPerfil.EditarPerfil = window.blockly.js.blockly.
  *
  *
  * @author Wesley Miranda De Oliveira
- * @since 11/08/2023, 08:50:32
+ * @since 23/08/2023, 09:05:56
  *
  */
 window.blockly.js.blockly.EditarPerfil.EditarPerfil.NotificacaoLoginArgs = [];
@@ -28,7 +28,7 @@ window.blockly.js.blockly.EditarPerfil.EditarPerfil.NotificacaoLogin = async fun
  *
  *
  * @author Wesley Miranda De Oliveira
- * @since 11/08/2023, 08:50:32
+ * @since 23/08/2023, 09:05:56
  *
  */
 window.blockly.js.blockly.EditarPerfil.EditarPerfil.PreencheCampoNomeArgs = [];
@@ -47,7 +47,7 @@ window.blockly.js.blockly.EditarPerfil.EditarPerfil.PreencheCampoNome = async fu
  *
  *
  * @author Wesley Miranda De Oliveira
- * @since 11/08/2023, 08:50:32
+ * @since 23/08/2023, 09:05:56
  *
  */
 window.blockly.js.blockly.EditarPerfil.EditarPerfil.FecharModalEditarPerfilArgs = [];
@@ -64,7 +64,7 @@ window.blockly.js.blockly.EditarPerfil.EditarPerfil.FecharModalEditarPerfil = as
  *
  *
  * @author Wesley Miranda De Oliveira
- * @since 11/08/2023, 08:50:32
+ * @since 23/08/2023, 09:05:56
  *
  */
 window.blockly.js.blockly.EditarPerfil.EditarPerfil.IniciarModalEditarArgs = [];
@@ -81,7 +81,7 @@ window.blockly.js.blockly.EditarPerfil.EditarPerfil.IniciarModalEditar = async f
  *
  *
  * @author Wesley Miranda De Oliveira
- * @since 11/08/2023, 08:50:32
+ * @since 23/08/2023, 09:05:56
  *
  */
 window.blockly.js.blockly.EditarPerfil.EditarPerfil.IniciarModalEditarSenhaArgs = [];

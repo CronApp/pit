@@ -1,3 +1,5 @@
+
+/*Acordeao*/
 .campoDadosProjeto span{
     font-size: 14px;
     font-weight: 700;
@@ -15,6 +17,12 @@
 .campoDadosProjeto {
     display:flex;
     align-items: center;
+}
+.campoDadosProjetoRight {
+    padding-left: 2vh;
+}
+.panel-heading {
+    border-radius: 10px 10px 0px 0px;
 }
 
 .cardsRetorno a{
@@ -79,3 +87,62 @@
     padding-left: none !important;
     width: 100% !important;
 }
+
+
+/* Cards Rank*/
+.card {
+  display: flex;
+  align-items: center;
+  background-color: #200F43;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #F4F4FF;
+  width: 80%;
+  margin: 10px;
+  position: relative;
+  justify-content: center;
+  height: 110px;
+}
+
+.project-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.project-name {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.vote-count {
+  font-size: 24px;
+}
+
+
+
+.vote-label {
+  font-size: 14px;
+  color: #7F85F5;
+  text-align: right;
+  margin-left: 8px;
+}
+
+.medal {
+  display:flex;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.class-resultado-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    
+}
+
