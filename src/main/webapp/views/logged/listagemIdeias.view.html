@@ -135,6 +135,26 @@
           <button class="btn k-button btn-block btn-default" ng-click="checkboxProjetosVisivel = false; cronapi.client('js.blockly.Votacao.Voto.FinalizarVotacao').names('8e5f7fd0').run(vars.checkUnicoVoto)" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled=""> <i class="glyphicon glyphicon-ok" icon-theme=""></i> <span class="" text-theme="">Finalizar</span> </button> 
         </div> 
       </div> 
+    </div>
+    <!--tela de votos do usuário--> 
+    <div class="hidden" id="div-grupo-tela-votos-usuario-id" style="text-align: left; padding-left: 2rem; padding-right: 2rem;"> 
+      <div> 
+        <p style="font-weight: bold; text-align: left; padding-left: 2rem; padding-top:2rem;">Meus Votos</p> 
+      </div> 
+      <div ng-model="vars.votosUsuario"> 
+        <div style="background: rgb(255, 255, 255); border-radius: 6px; border: 1px solid rgb(140, 140, 140); padding:1rem; margin-bottom:1rem" ng-repeat="voto in vars.votosUsuario"> 
+          <div ng-repeat="ideia in vars.listaIdeias"> 
+            <div ng-if="voto.voto == ideia.id"> 
+              <div style="font-size: 2rem; text-height: bold;">
+                 {{ideia.fields.Projeto}} 
+              </div> 
+              <div style="color: #40BED4;">
+                 {{ideia.fields.Responsavel}} 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
     </div> 
     <!--tela-resultado--> 
     <div class="hidden" id="div-grupo-tela-resultado-voto-id" style="text-align: left; padding-left: 2rem; padding-right: 2rem;"> 
@@ -184,26 +204,7 @@
           </div> 
         </div> 
       </div> 
-    </div> 
-    <div class="hidden" id="div-grupo-tela-votos-usuario-id" style="text-align: left; padding-left: 2rem; padding-right: 2rem;"> 
-      <div> 
-        <p style="font-weight: bold; text-align: left; padding-left: 2rem; padding-top:2rem;">Meus Votos</p> 
-      </div> 
-      <div ng-model="vars.votosUsuario"> 
-        <div style="background: rgb(255, 255, 255); border-radius: 6px; border: 1px solid rgb(140, 140, 140); padding:1rem; margin-bottom:1rem" ng-repeat="voto in vars.votosUsuario"> 
-          <div ng-repeat="ideia in vars.listaIdeias"> 
-            <div ng-if="voto.voto == ideia.id"> 
-              <div style="font-size: 2rem; text-height: bold;">
-                 {{ideia.fields.Projeto}} 
-              </div> 
-              <div style="color: #40BED4;">
-                 {{ideia.fields.Responsavel}} 
-              </div> 
-            </div> 
-          </div> 
-        </div> 
-      </div> 
-    </div> 
+    </div>
   </div> 
   <script>
         function checkCount(checkbox) {
