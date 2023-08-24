@@ -91,7 +91,7 @@
             <li>2ª A votação não poderá ser alterada;</li> 
             <li>3ª A votação poderá ser realizada até a data: 24/11/2023.</li> 
           </ul> 
-        </div>
+        </div> 
         <div style="padding-top: 2rem; padding-bottom: 2rem; display: flex; align-items: center;"> 
           <input class="check-voto-selecao" type="checkbox" id="check-aceitar-regras" ng-model="vars.checkAceitarRegras" style="margin: 0;"> 
           <label for="check-aceitar-regras" style="margin-left: 0.5rem;">Aceito Regras</label> 
@@ -114,7 +114,7 @@
       <div class="hidden" id="div-tela-votados-id" style="text-align: left; padding-left: 2rem; padding-right: 2rem;"> 
         <div> 
           <p style="font-weight: bold; text-align: left; padding-top:2rem;">Meus Votos</p> 
-        </div>
+        </div> 
         <div style="padding-bottom: 2rem;">
            Vote em até 2 Projetos 
         </div> 
@@ -133,7 +133,6 @@
             </div> 
           </div> 
         </div> 
-
         <!--SE TIVER APENAS UM PROJETO E ESTE ESTIVER MARCADO, DEVERÁ DEIXAR FINALIZAR--> 
         <div id="div-unico-voto" style="padding-top: 2rem; padding-bottom: 2rem; display: flex; align-items: center;"> 
           <input class="check-voto-selecao" type="checkbox" id="check-unico-voto" ng-model="vars.checkUnicoVoto" style="margin: 0;"> 
@@ -147,6 +146,12 @@
     </div> 
     <!--tela de votos do usuário--> 
     <div class="hidden" id="div-grupo-tela-votos-usuario-id" style="text-align: left; padding-left: 2rem; padding-right: 2rem;"> 
+      <div> 
+        <span style="font-weight: 700;">Quantidade de Votos</span> 
+      </div> 
+      <div> 
+        <p>Votos computados: {{vars.votosComputados}}</p> 
+      </div> 
       <div> 
         <p style="font-weight: bold; text-align: left; padding-top:2rem;">Meus Votos</p> 
       </div> 
