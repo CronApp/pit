@@ -3,8 +3,10 @@
 @import "webkit.css";
 
 /*Remocao Padding Padrao da Main Cronapp*/
-.main-view.container-fluid {
+.main-view.container-fluid.main-view-horizontal {
     padding: 0px !important;
+    margin: 0;
+    width: 100%;
 }
 
 /*Fonte*/
