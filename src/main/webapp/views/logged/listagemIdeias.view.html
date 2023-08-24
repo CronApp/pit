@@ -174,7 +174,7 @@
         <div> 
           <p>Votos computados: {{vars.votosComputados}}</p> 
         </div> 
-        <div ng-model="vars.resultadoVotos" style="margin-top: 5vh;"> 
+        <div ng-model="vars.resultadoVotos" style="margin-top: 4vh;"> 
           <div class="class-resultado-info hidden" id="id-resultado-info-data"> 
             <div style="font-size: 18px; font-weight: 700;">
                Resultado em 25/11 
@@ -182,6 +182,9 @@
             </div> 
           </div> 
           <div class="hidden" id="div-resultado-rank-id"> 
+            <div> 
+              <span style="font-weight: 700;">Resultado</span> 
+            </div> 
             <div style="overflow-x: scroll; height:800px; position:relative;"> 
               <div ng-repeat="(index, resultadoRank) in vars.resultadoVotos"> 
                 <div ng-repeat="ideia in vars.listaIdeias" ng-if="resultadoRank.voto === ideia.id" style="display: flex; justify-content: center;"> 
