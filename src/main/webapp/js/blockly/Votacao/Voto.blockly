@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="WEB" bpmnAble="false" formTarget="src/main/webapp/views/logged/listagemIdeias.view.html" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JS" ruleDescription="Voto" ruleName="Voto" ruleSynchronous="false" ruleTimeout="" ruleType="I" showAsFunction="false" soap="false" swagger="false">
-  <metadata scale="1" scrollx="-1497.1" scrolly="-1314.6" target="dS9]Qbg+Xm7/7(60Rsp*"/>
+  <metadata scale="1" scrollx="-1497.1" scrolly="-1314.6000000000004" target="dS9]Qbg+Xm7/7(60Rsp*"/>
   <block asynccall="false" colour="#fca03b" datasourcetype="" id=":Tnds-9Z:~Q_57/2.?{*" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-177" y="37">
     <mutation>
       <arg id="b8644fae" name="checkAceitarRegras"/>
@@ -932,11 +932,11 @@
                       </shadow>
                     </value>
                     <next>
-                      <block asynccall="false" colour="#fca03b" datasourcetype="" dependencyby="dS9]Qbg+Xm7/7(60Rsp*" id="2Nz7vbp9e(kROY+MX%LF" origintype="procedures_callnoreturn" output="false" tooltip="Executa a função definida pelo usuário &quot;VotosComputados&quot;." type="procedures_callnoreturn">
-                        <mutation name="VotosComputados" return-raw-type="undefined"/>
+                      <block asynccall="false" colour="#fca03b" datasourcetype="" dependencyby="dS9]Qbg+Xm7/7(60Rsp*" id="5%w/Te^`gtgA%F`|jQ.M" origintype="procedures_callnoreturn" output="false" tooltip="Executa a função definida pelo usuário &quot;VotosResultadoRank&quot;." type="procedures_callnoreturn">
+                        <mutation name="VotosResultadoRank" return-raw-type="undefined"/>
                         <next>
-                          <block asynccall="false" colour="#fca03b" datasourcetype="" dependencyby="dS9]Qbg+Xm7/7(60Rsp*" id="5%w/Te^`gtgA%F`|jQ.M" origintype="procedures_callnoreturn" output="false" tooltip="Executa a função definida pelo usuário &quot;VotosResultadoRank&quot;." type="procedures_callnoreturn">
-                            <mutation name="VotosResultadoRank" return-raw-type="undefined"/>
+                          <block asynccall="false" colour="#fca03b" datasourcetype="" dependencyby="dS9]Qbg+Xm7/7(60Rsp*" id="2Nz7vbp9e(kROY+MX%LF" origintype="procedures_callnoreturn" output="false" tooltip="Executa a função definida pelo usuário &quot;VotosComputados&quot;." type="procedures_callnoreturn">
+                            <mutation name="VotosComputados" return-raw-type="undefined"/>
                           </block>
                         </next>
                       </block>
@@ -952,24 +952,29 @@
                       </block>
                     </value>
                     <statement name="DO0">
-                      <block asynccall="false" colour="#fca03b" datasourcetype="" dependencyby="dS9]Qbg+Xm7/7(60Rsp*" id="g^5siXOmRn6jp+#YaBFd" origintype="procedures_callnoreturn" output="false" tooltip="Executa a função definida pelo usuário &quot;VotosUsuario&quot;." type="procedures_callnoreturn">
-                        <mutation name="VotosUsuario" return-raw-type="undefined"/>
+                      <block asynccall="false" colour="#fca03b" datasourcetype="" dependencyby="dS9]Qbg+Xm7/7(60Rsp*" id="bJWTmBWHAt9CEW!zw/0I" origintype="procedures_callnoreturn" output="false" tooltip="Executa a função definida pelo usuário &quot;VotosComputados&quot;." type="procedures_callnoreturn">
+                        <mutation name="VotosComputados" return-raw-type="undefined"/>
                         <next>
-                          <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="dS9]Qbg+Xm7/7(60Rsp*" id="L]ycPW!-JDPVZ60R0XqG" multilayer="true" namespace="cronapi.screen.removeClass" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3ERemover%20classe%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20remover%20classe%20do%20elemento%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Obter%20identificador%20:%20Objeto%3C/span%3E%3Cdiv%3E%20Identificador%20(id)%20a%20ser%20obtido%20do%20Formul%C3%A1rio%20selecionado%3C/div%3E%3Cspan%3E%20-%20Valor%20do%20atributo%20:%20Texto%3C/span%3E%3Cdiv%3E%20Valor%20do%20atributo%20contido%20no%20Identificador.%20Exemplo:%20%20src='teste'%20retorna%20teste%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.screen.removeClass','cronapi.screen.removeClass')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
-                            <mutation name="{{cronapi.screen.removeClass}}" return-raw-type="undefined">
-                              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Obter identificador"/>
-                              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Valor do atributo"/>
-                            </mutation>
-                            <value name="ARG0">
-                              <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="dS9]Qbg+Xm7/7(60Rsp*" id="8AnKaDyPBxCtuXm2vSP." origintype="ids_from_screen" output="true" type="ids_from_screen">
-                                <field customattributes="" name="SELECT">div-grupo-tela-votos-usuario-id</field>
+                          <block asynccall="false" colour="#fca03b" datasourcetype="" dependencyby="dS9]Qbg+Xm7/7(60Rsp*" id="g^5siXOmRn6jp+#YaBFd" origintype="procedures_callnoreturn" output="false" tooltip="Executa a função definida pelo usuário &quot;VotosUsuario&quot;." type="procedures_callnoreturn">
+                            <mutation name="VotosUsuario" return-raw-type="undefined"/>
+                            <next>
+                              <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="dS9]Qbg+Xm7/7(60Rsp*" id="L]ycPW!-JDPVZ60R0XqG" multilayer="true" namespace="cronapi.screen.removeClass" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3ERemover%20classe%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20remover%20classe%20do%20elemento%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Obter%20identificador%20:%20Objeto%3C/span%3E%3Cdiv%3E%20Identificador%20(id)%20a%20ser%20obtido%20do%20Formul%C3%A1rio%20selecionado%3C/div%3E%3Cspan%3E%20-%20Valor%20do%20atributo%20:%20Texto%3C/span%3E%3Cdiv%3E%20Valor%20do%20atributo%20contido%20no%20Identificador.%20Exemplo:%20%20src='teste'%20retorna%20teste%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.screen.removeClass','cronapi.screen.removeClass')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+                                <mutation name="{{cronapi.screen.removeClass}}" return-raw-type="undefined">
+                                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Obter identificador"/>
+                                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Valor do atributo"/>
+                                </mutation>
+                                <value name="ARG0">
+                                  <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="dS9]Qbg+Xm7/7(60Rsp*" id="8AnKaDyPBxCtuXm2vSP." origintype="ids_from_screen" output="true" type="ids_from_screen">
+                                    <field customattributes="" name="SELECT">div-grupo-tela-votos-usuario-id</field>
+                                  </block>
+                                </value>
+                                <value name="ARG1">
+                                  <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="dS9]Qbg+Xm7/7(60Rsp*" id="0$_y~LFvsLO:;qZ|qxcK" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                    <field customattributes="" name="TEXT">hidden</field>
+                                  </shadow>
+                                </value>
                               </block>
-                            </value>
-                            <value name="ARG1">
-                              <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="dS9]Qbg+Xm7/7(60Rsp*" id="0$_y~LFvsLO:;qZ|qxcK" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                                <field customattributes="" name="TEXT">hidden</field>
-                              </shadow>
-                            </value>
+                            </next>
                           </block>
                         </next>
                       </block>
