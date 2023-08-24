@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="WEB" bpmnAble="false" formTarget="src/main/webapp/views/logged/listagemIdeias.view.html" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JS" ruleDescription="Voto" ruleName="Voto" ruleSynchronous="false" ruleTimeout="" ruleType="I" showAsFunction="false" soap="false" swagger="false">
-  <metadata scale="1" scrollx="-1496.1000000000004" scrolly="-1314.6" target="dS9]Qbg+Xm7/7(60Rsp*"/>
+  <metadata scale="1" scrollx="-1497.1" scrolly="-1314.6" target="dS9]Qbg+Xm7/7(60Rsp*"/>
   <block asynccall="false" colour="#fca03b" datasourcetype="" id=":Tnds-9Z:~Q_57/2.?{*" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-177" y="37">
     <mutation>
       <arg id="b8644fae" name="checkAceitarRegras"/>
@@ -904,7 +904,7 @@
             <field customattributes="" name="VAR">ehComite</field>
             <value name="VALUE">
               <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="dS9]Qbg+Xm7/7(60Rsp*" id="Cm3CK,E3K0#,*U_K;e%8" origintype="logic_boolean" output="true" tooltip="Retorna verdadeiro ou falso." type="logic_boolean">
-                <field customattributes="" name="BOOL">TRUE</field>
+                <field customattributes="" name="BOOL">FALSE</field>
               </block>
             </value>
             <next>
