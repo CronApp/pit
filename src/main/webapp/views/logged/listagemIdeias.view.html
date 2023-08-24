@@ -9,7 +9,7 @@
     <div class="col-md-12 customiza-overflow-left" style="overflow-x: scroll; height: 800px; margin-top: 6.8vh;"> 
       <div style="" class="component-holder ng-scope col-md-12" data-component="crn-accordion" id="crn-accordion-325904" crn-skin="css/skins/IdVisualAccordion.css" ng-model="vars.listaVotos"> 
         <div class="panel-group" id="accordion-1372{{$index}}" role="tablist" aria-multiselectable="true"> 
-          <div class="panel panel-default" ng-repeat="ideia in vars.listaIdeias track by $index" ng-hide="searchKeyword &amp;&amp; (!ideia.fields.Projeto.toLowerCase().includes(searchKeyword.toLowerCase()) &amp;&amp; !ideia.fields.Responsavel.toLowerCase().includes(searchKeyword.toLowerCase()))"> 
+          <div class="panel panel-default" ng-repeat="ideia in vars.listaIdeias track by $index" ng-hide="searchKeyword &amp;&amp; (!ideia.fields.Projeto.toLowerCase().includes(searchKeyword.toLowerCase()) && !ideia.fields.Responsavel.toLowerCase().includes(searchKeyword.toLowerCase()))"> 
             <div style="display: flex; flex-direction: row;" ng-hidden="filter:searchKeyword"> 
               <div class="div-voto-selecao-class" style="margin-top: 46px; margin-right: 20px; margin-left: 12px;" ng-if="checkboxProjetosVisivel"> 
                 <input class="check-voto-selecao" onclick="checkCount(this)" type="checkbox" id="checkbox1233[$index]" ng-model="vars.checkbox[$index]" ng-initial-value="false" crn-allow-null-values="false" ng-false-value="true" ng-true-value="false" ng-click="cronapi.client('js.blockly.Votacao.Voto.ObtemVoto').names('66436263', '7b36cee4').run(ideia.id, vars.checkbox[$index])"> 
@@ -21,13 +21,13 @@
                     <div class="col-md-12"> 
                       <div class="campoDadosProjeto col-md-6"> 
                         <span>Responsável: </span> 
-                        <div class="cardsRetorno" style="color: #40BED4;">
+                        <div class="cardsRetorno" style="color: #F4F4FF;">
                            {{ideia.fields.Responsavel}} 
                         </div> 
                       </div> 
                       <div class="col-md-6 campoDadosProjeto campoDadosProjetoRight"> 
                         <span>Linha de negócio: </span> 
-                        <div class="cardsRetorno " style="color: #40BED4;">
+                        <div class="cardsRetorno " style="color: #F4F4FF;">
                            {{ideia.fields.LN}} 
                         </div> 
                       </div> 
@@ -146,7 +146,7 @@
     </div> 
     <!--tela de votos do usuário--> 
     <div class="hidden" id="div-grupo-tela-votos-usuario-id" style="text-align: left; padding-left: 2rem; padding-right: 2rem;"> 
-      <div> 
+      <div style="margin-top: 2vh;"> 
         <span style="font-weight: 700;">Quantidade de Votos</span> 
       </div> 
       <div> 
