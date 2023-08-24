@@ -14,7 +14,7 @@ public static final int TIMEOUT = 300;
 /**
  *
  * @author Silvio De Oliveira Carlos
- * @since 23/08/2023, 16:33:50
+ * @since 24/08/2023, 08:55:06
  *
  */
 public static Var RetornaUsarioPertenceComite() throws Exception {
@@ -23,14 +23,15 @@ public static Var RetornaUsarioPertenceComite() throws Exception {
    private Var usuarioPertenceComite = Var.VAR_NULL;
 
    public Var call() throws Exception {
-    System.out.println(
-    Var.valueOf("Oiiiii").getObjectAsString());
     usuarioPertenceComite =
-    cronapi.database.Operations.query(Var.valueOf("app.entity.Securable"),Var.valueOf("select \n	s.name, \n	u.user.normalizedUserName \nfrom \n	Securable s \njoin\n	UserSecurable u on (s.id = u.securable.id) \nwhere \n	u.user.normalizedUserName = :userNormalizedUserName"),Var.valueOf("userNormalizedUserName",
+    cronapi.database.Operations.query(Var.valueOf("app"),Var.valueOf("SELECT \n	SEC.NAME, COUNT(SEC.NAME)\nFROM \n	SECURABLE sec \nLEFT JOIN USER_SECURABLE usec ON (sec.id = usec.securable_id) \nLEFT JOIN USER us ON (us.id = usec.user_id)\nWHERE normalized_user_name = :userName\nAND (SEC.NAME = \'Administrators\' OR SEC.NAME = \'Comite\')\nGROUP BY SEC.NAME"),Var.valueOf("userName",
     cronapi.util.Operations.getCurrentUserName()));
-    System.out.println(usuarioPertenceComite.getObjectAsString());
+    System.out.println(
+    cronapi.logic.Operations.isNullOrEmpty(usuarioPertenceComite)
+    .negate().getObjectAsString());
     return
-Var.VAR_TRUE;
+cronapi.logic.Operations.isNullOrEmpty(usuarioPertenceComite)
+.negate();
    }
  }.call();
 }
