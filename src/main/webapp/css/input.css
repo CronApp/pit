@@ -18,6 +18,25 @@
     }
 }
 
+.btn-danger {
+    background-color: #E5584C; /* Cor roxa para o botão */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    position: relative; /* Define o contexto para a sombra */
+    box-shadow: 0px 8px 0px 0px rgba(166, 64, 55, 1); /* Sombra roxa na parte de baixo */
+    border-radius: 24px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    &:hover {
+        background-color: #BA483D;
+        box-shadow: 0px 8px 0px 0px rgba(122, 47, 40, 1);
+    }
+    &:focus {
+        background-color: #BA483D;
+    }
+}
+
 
 /*Checkbox*/
 .check-voto-selecao {
