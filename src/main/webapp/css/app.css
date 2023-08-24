@@ -1,26 +1,6 @@
 @import "ajustesCards.css";
-
-/*botoes*/
-.btn-primary {
-    background-color: #5D64E4; /* Cor roxa para o botão */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    position: relative; /* Define o contexto para a sombra */
-    box-shadow: 0px 8px 0px 0px rgba(62, 69, 201, 1); /* Sombra roxa na parte de baixo */
-    border-radius: 24px;
-    transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-.btn-primary:focus {
-    background-color: #4A50CF; /* Cor para o botão */
-}
-
-.btn-primary:hover {
-    background-color: #4A50CF; /* Cor para o botão */
-    box-shadow: 0px 8px 0px 0px rgba(45, 49, 165, 1); /* Sombra na parte de baixo */
-}
+@import "input.css";
+@import "webkit.css";
 
 /*Remocao Padding Padrao da Main Cronapp*/
 .main-view.container-fluid {
@@ -30,27 +10,4 @@
 /*Fonte*/
 body {
     font-family: new-rubrik, sans-serif;
-}
-
-::-webkit-scrollbar {
-  width: 20px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #d6dee1;
-  border-radius: 20px;
-  border: 6px solid transparent;
-  background-clip: content-box;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #a8bbbf;
-}
-
-::-webkit-scrollbar-corner {
-  background-color: transparent;
 }

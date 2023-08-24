@@ -1,0 +1,57 @@
+/*botoes*/
+.btn-primary {
+    background-color: #5D64E4; /* Cor roxa para o botão */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    position: relative; /* Define o contexto para a sombra */
+    box-shadow: 0px 8px 0px 0px rgba(62, 69, 201, 1); /* Sombra roxa na parte de baixo */
+    border-radius: 24px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+    .btn-primary:focus {
+        background-color: #4A50CF; /* Cor para o botão */
+    }
+
+    .btn-primary:hover {
+        background-color: #4A50CF; /* Cor para o botão */
+        box-shadow: 0px 8px 0px 0px rgba(45, 49, 165, 1); /* Sombra na parte de baixo */
+    }
+
+/*Checkbox*/
+.check-voto-selecao {
+      display: inline-block;
+      position: relative;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%; /* Torna o checkbox redondo */
+      background-color: #ccc; /* Cor de fundo do checkbox */
+      margin-right: 20px;
+    }
+
+    /* Escondendo o checkbox padrão */
+    .check-voto-selecao input[type="checkbox"] {
+        opacity: 0;
+        position: absolute;
+    }
+
+    /* Estilizando o indicador do checkbox (o círculo interno) */
+    .check-voto-selecao input[type="checkbox"] + .checkmark {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 12px;
+        height: 12px;
+        border-radius: 50% !important;
+        background-color: #F4F4FF; /* Cor do círculo interno quando não marcado */
+        display: none;
+    }
+
+    /* Mostrando o círculo interno quando o checkbox está marcado */
+    .check-voto-selecao input[type="checkbox"]:checked + .checkmark {
+        display: block;
+        background-color: #200F43; /* Cor do círculo interno quando marcado */
+    }
