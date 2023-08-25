@@ -89,3 +89,14 @@
         background-color: #F4F4FF; /* Cor do círculo interno quando não marcado */
         display: none;
     }
+
+/*listas*/
+.ul_regra {
+    list-style-type: '\2726';
+    padding-left: 1rem;
+    margin-top: 2rem;
+}
+
+.li_regra {
+  padding: 10px;
+}
