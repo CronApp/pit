@@ -14,7 +14,7 @@ public static final int TIMEOUT = 300;
 /**
  *
  * @author Silvio De Oliveira Carlos
- * @since 25/08/2023, 11:59:41
+ * @since 25/08/2023, 12:00:40
  *
  */
 public static Var RetornaUsarioPertenceComite() throws Exception {
