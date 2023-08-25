@@ -2,6 +2,16 @@
 @import "input.css";
 @import "webkit.css";
 
+@font-face {
+  font-family: defaultFont;
+  src: url("font/rubrik.otf");
+}
+
+@font-face {
+  font-family: defaultFontSemiBold;
+  src: url("font/rubrikSemiBold.otf");
+}
+
 /*Remocao Padding Padrao da Main Cronapp*/
 .main-view.container-fluid.main-view-horizontal {
     padding: 0px !important;
@@ -11,5 +21,5 @@
 
 /*Fonte*/
 body {
-    font-family: new-rubrik, sans-serif;
+    font-family: defaultFont, new-rubrik, sans-serif;
 }
