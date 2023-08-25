@@ -1,23 +1,25 @@
 @import "ajustesCards.css";
+@import "input.css";
+@import "webkit.css";
 
-/*botoes*/
-.btn-primary {
-    background-color: #7F85F5; /* Cor roxa para o botão */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    position: relative; /* Define o contexto para a sombra */
-    box-shadow: 0px 8px 0px 0px rgba(127, 133, 245, 0.5); /* Sombra roxa na parte de baixo */
-    border-radius: 24px;
+@font-face {
+  font-family: defaultFont;
+  src: url("font/rubrik.otf");
+}
+
+@font-face {
+  font-family: defaultFontSemiBold;
+  src: url("font/rubrikSemiBold.otf");
 }
 
 /*Remocao Padding Padrao da Main Cronapp*/
-.main-view.container-fluid {
+.main-view.container-fluid.main-view-horizontal {
     padding: 0px !important;
+    margin: 0;
+    width: 100%;
 }
 
 /*Fonte*/
 body {
-    font-family: new-rubrik, sans-serif;
+    font-family: defaultFont, new-rubrik, sans-serif;
 }

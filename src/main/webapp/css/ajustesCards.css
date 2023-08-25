@@ -1,6 +1,5 @@
-
 /*Acordeao*/
-.campoDadosProjeto span{
+.campoDadosProjeto span {
     font-size: 14px;
     font-weight: 700;
     white-space: nowrap;
@@ -18,14 +17,16 @@
     display:flex;
     align-items: center;
 }
+
 .campoDadosProjetoRight {
     padding-left: 2vh;
 }
+
 .panel-heading {
     border-radius: 10px 10px 0px 0px;
 }
 
-.cardsRetorno a{
+.cardsRetorno a {
     z-index: 3;
 }
 
@@ -38,56 +39,17 @@
     border: none;
 }
 
-/*Checkbox*/
-.check-voto-selecao {
-      display: inline-block;
-      position: relative;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%; /* Torna o checkbox redondo */
-      background-color: #ccc; /* Cor de fundo do checkbox */
-      margin-right: 20px;
-    }
-
-/* Escondendo o checkbox padrão */
-.check-voto-selecao input[type="checkbox"] {
-    opacity: 0;
-    position: absolute;
-}
-
-/* Estilizando o indicador do checkbox (o círculo interno) */
-.check-voto-selecao input[type="checkbox"] + .checkmark {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 12px;
-    height: 12px;
-    border-radius: 50% !important;
-    background-color: #F4F4FF; /* Cor do círculo interno quando não marcado */
-    display: none;
-}
-
 .votacao-lado-esquerdo {
     margin-left: 10px;
     margin-top: 15px;
 }
 
-/* Mostrando o círculo interno quando o checkbox está marcado */
-.check-voto-selecao input[type="checkbox"]:checked + .checkmark {
-    display: block;
-    background-color: #200F43; /* Cor do círculo interno quando marcado */
-}
-
-
 /* Ajuste Colunas */
-
 .coluna-2-votacao {
     padding-right: none !important;
     padding-left: none !important;
     width: 100% !important;
 }
-
 
 /* Cards Rank*/
 .card {
@@ -109,7 +71,6 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-
 }
 
 .project-name {
@@ -120,8 +81,6 @@
 .vote-count {
   font-size: 24px;
 }
-
-
 
 .vote-label {
   font-size: 14px;
@@ -142,7 +101,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
-    
+    height: 50vh; 
 }
-
