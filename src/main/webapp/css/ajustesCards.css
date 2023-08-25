@@ -61,16 +61,19 @@
 .card {
   display: flex;
   align-items: center;
-  background-color: #200F43;
+  /*background-color: #3E45C9;*/
+  background-color: #26114F;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   color: #F4F4FF;
-  width: 80%;
-  margin: 10px;
+  width: 100%;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
   position: relative;
   justify-content: center;
-  height: 110px;
+  height: 120px;
 }
 
 .project-info {
