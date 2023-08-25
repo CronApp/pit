@@ -1,4 +1,3 @@
-/*Acordeao*/
 .campoDadosProjeto span {
     font-size: 14px;
     font-weight: 700;
@@ -22,8 +21,13 @@
     padding-left: 2vh;
 }
 
+/*acordion*/
+.panel {
+    border: none;
+}
+
 .panel-heading {
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 10px;
 }
 
 .cardsRetorno a {
@@ -35,9 +39,6 @@
     grid-template-columns: 2fr 1fr !important;
 }
 
-.panel {
-    border: none;
-}
 
 .votacao-lado-esquerdo {
     margin-left: 10px;

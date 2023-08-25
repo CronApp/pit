@@ -53,13 +53,13 @@
                       <div class="col-md-12"> 
                         <div class="campoDadosProjeto col-md-6"> 
                           <span>Responsável: </span> 
-                          <div class="cardsRetorno" style="color: #F4F4FF;">
+                          <div class="cardsRetorno" style="color: #3E45C9;">
                              {{ideia.fields.Responsavel}} 
                           </div> 
                         </div> 
                         <div class="col-md-6 campoDadosProjeto campoDadosProjetoRight"> 
                           <span>Linha de negócio: </span> 
-                          <div class="cardsRetorno " style="color: #F4F4FF;">
+                          <div class="cardsRetorno " style="color: #3E45C9;">
                              {{ideia.fields.LN}} 
                           </div> 
                         </div> 
@@ -136,7 +136,7 @@
             <label for="check-aceitar-regras" style="margin-left: 0.5rem;">Li e concordo com as regras.</label> 
           </div> 
           <!--DEIXAR CLICAR EM INICIAR VOTAÇÃO APENAS SE O CHECK ACIMA ESTIVER MARCADO--> 
-          <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-477481" ng-model="checkboxProjetosVisivel"> 
+          <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-477481" ng-model="checkboxProjetosVisivel" style="padding-top: 2rem;"> 
             <button class="btn-primary btn-block" ng-click="checkboxProjetosVisivel = vars.checkAceitarRegras; cronapi.client('js.blockly.Votacao.Voto.IniciarVotacao').names('b8644fae').run(vars.checkAceitarRegras)"> <i class="glyphicon glyphicon-pencil" icon-theme=""></i> <span class="" text-theme="">Iniciar Votação</span> </button> 
           </div> 
         </div> 
