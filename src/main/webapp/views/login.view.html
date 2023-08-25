@@ -20,13 +20,13 @@
               <div class="component-holder ng-binding ng-scope col-xs-12 col-md-12" data-component="crn-textinput" id="crn-textinput-loginusername"> 
                 <div class="form-group"> 
                   <label for="input-login-username">E-mail</label> 
-                  <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="username.value" class="form-control k-textbox" id="input-login-username" placeholder="" autocomplete="username" autocorrect="off" autocapitalize="off"> 
+                  <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="username.value" class="form-control k-textbox inputPersonalizado" id="input-login-username" placeholder="" autocomplete="username" autocorrect="off" autocapitalize="off"> 
                 </div> 
               </div> 
               <div class="component-holder ng-binding ng-scope col-xs-12 col-md-12" data-component="crn-textinput" id="crn-textinput-loginpassword" style="margin-bottom: 1px;"> 
                 <div class="form-group"> 
                   <label for="input-login-password">Senha</label> 
-                  <input type="password" mask="" mask-placeholder="" ng-required="false" ng-model="password.value" class="form-control k-textbox" id="input-login-password" autocomplete="current-password" placeholder=""> 
+                  <input type="password" mask="" mask-placeholder="" ng-required="false" ng-model="password.value" class="form-control k-textbox inputPersonalizado" id="input-login-password" autocomplete="current-password" placeholder=""> 
                 </div> 
               </div> 
               <a ng-click="cronapi.screen.showModal('forgotPasswordModal')" class="reset-password cron-link text-right component-holder col-xs-12  col-md-12" target="_self" data-replace="true" data-component="crn-anchor" id="crn-botao-cadastre">Esqueceu a senha?</a> 
@@ -57,7 +57,7 @@
           <div class="list-group list-group-sm"> 
             <div class=""> 
               <label for="forgotPasswordEmail"> {{'ForgotPasswordEmail' | translate}} </label> 
-              <input type="email" class="form-control k-textbox" id="forgotPasswordEmail" aria-label="{{'ForgotPasswordEmail' | translate}}" ng-required="true" ng-model="forgotPasswordEmail.value"> 
+              <input type="email" class="form-control k-textbox inputPersonalizado" id="forgotPasswordEmail" aria-label="{{'ForgotPasswordEmail' | translate}}" ng-required="true" ng-model="forgotPasswordEmail.value"> 
             </div> 
           </div> 
         </form> 
