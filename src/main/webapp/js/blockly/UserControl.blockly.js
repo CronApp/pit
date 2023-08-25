@@ -11,7 +11,7 @@ window.blockly.js.blockly.UserControl = window.blockly.js.blockly.UserControl ||
  * @param email
  *
  * @author Silvio De Oliveira Carlos
- * @since 25/08/2023, 16:30:27
+ * @since 25/08/2023, 16:53:09
  *
  */
 window.blockly.js.blockly.UserControl.resetPasswordArgs = [{ description: 'email', id: '7afdf898' }];
@@ -57,7 +57,7 @@ window.blockly.js.blockly.UserControl.resetPassword = async function(email) {
  * @param confirmPassword
  *
  * @author Silvio De Oliveira Carlos
- * @since 25/08/2023, 16:30:27
+ * @since 25/08/2023, 16:53:09
  *
  */
 window.blockly.js.blockly.UserControl.signUpValidationArgs = [{ description: 'name2', id: '73abfb6a' }, { description: 'cpf', id: 'c2d32391' }, { description: 'email', id: '9ef5ba82' }, { description: 'password', id: '22aabdb1' }, { description: 'confirmPassword', id: '7318fb73' }];
@@ -113,7 +113,7 @@ window.blockly.js.blockly.UserControl.signUpValidation = async function(name2, c
  * @param signupConfirmPassword
  *
  * @author Silvio De Oliveira Carlos
- * @since 25/08/2023, 16:30:27
+ * @since 25/08/2023, 16:53:09
  *
  */
 window.blockly.js.blockly.UserControl.isValidSignupArgs = [{ description: 'signupUsername', id: 'abf7b641' }, { description: 'signupEmail', id: '38708282' }, { description: 'signupPassword', id: 'daf1486e' }, { description: 'signupConfirmPassword', id: '3f9f5d23' }];
@@ -133,7 +133,7 @@ window.blockly.js.blockly.UserControl.isValidSignup = async function(signupUsern
  * @param signupConfirmPassword
  *
  * @author Silvio De Oliveira Carlos
- * @since 25/08/2023, 16:30:27
+ * @since 25/08/2023, 16:53:09
  *
  */
 window.blockly.js.blockly.UserControl.signUpArgs = [{ description: 'signupUsername', id: 'ec5dbe32' }, { description: 'signupEmail', id: '62cce53e' }, { description: 'signupPassword', id: 'd42229ad' }, { description: 'signupConfirmPassword', id: 'a49023f3' }];
@@ -153,8 +153,6 @@ window.blockly.js.blockly.UserControl.signUp = async function(signupUsername, si
     //
     this.cronapi.util.callServerBlocklyAsynchronous('blockly.Usuario.Usuario:CadastrarUsuario', async function(sender_response) {
         response = sender_response;
-      //
-      console.log(response);
       //
       if (this.cronapi.json.getProperty(response, 'sucesso')) {
         //
@@ -176,7 +174,7 @@ window.blockly.js.blockly.UserControl.signUp = async function(signupUsername, si
  *
  *
  * @author Silvio De Oliveira Carlos
- * @since 25/08/2023, 16:30:27
+ * @since 25/08/2023, 16:53:09
  *
  */
 window.blockly.js.blockly.UserControl.VerificaResetSenhaArgs = [];
@@ -208,7 +206,7 @@ window.blockly.js.blockly.UserControl.VerificaResetSenha = async function() {
  *
  *
  * @author Silvio De Oliveira Carlos
- * @since 25/08/2023, 16:30:27
+ * @since 25/08/2023, 16:53:09
  *
  */
 window.blockly.js.blockly.UserControl.SalvarSenhaArgs = [];
@@ -248,7 +246,7 @@ window.blockly.js.blockly.UserControl.SalvarSenha = async function() {
  * @param nome
  *
  * @author Silvio De Oliveira Carlos
- * @since 25/08/2023, 16:30:27
+ * @since 25/08/2023, 16:53:09
  *
  */
 window.blockly.js.blockly.UserControl.verificaAbreviacaoArgs = [{ description: 'nome', id: '8fd49ed5' }];

@@ -18,7 +18,7 @@ public static final int TIMEOUT = 300;
  * @param nome
  *
  * @author Silvio De Oliveira Carlos
- * @since 25/08/2023, 16:30:49
+ * @since 25/08/2023, 16:53:00
  *
  */
 public static Var CadastrarUsuario(@ParamMetaData(description = "email", id = "53b42e7f") Var email, @ParamMetaData(description = "param_senha", id = "2bc04d37") Var param_senha, @ParamMetaData(description = "nome", id = "fca923a9") Var nome) throws Exception {
@@ -98,7 +98,6 @@ public static Var CadastrarUsuario(@ParamMetaData(description = "email", id = "5
             cronapi.database.Operations.beginTransaction(Var.valueOf("app"));
             usr =
             cronapi.database.Operations.insert(Var.valueOf("app.entity.User"),Var.valueOf("email",email),Var.valueOf("name",nome),Var.valueOf("normalizedEmail",email),Var.valueOf("normalizedUserName",email),Var.valueOf("password",senha),Var.valueOf("userName",email),Var.valueOf("id",id_usuario));
-            System.out.println(usr.getObjectAsString());
             cronapi.database.Operations.commitTransaction(Var.valueOf("app"));
             appl =
             cronapi.database.Operations.insert(Var.valueOf("app.entity.ApplicationUser"),Var.valueOf("application",
@@ -129,7 +128,7 @@ public static Var CadastrarUsuario(@ParamMetaData(description = "email", id = "5
  * @param email
  *
  * @author Silvio De Oliveira Carlos
- * @since 25/08/2023, 16:30:49
+ * @since 25/08/2023, 16:53:00
  *
  */
 public static void ResetSenha(@ParamMetaData(description = "email", id = "ae582bec") Var email) throws Exception {
@@ -155,7 +154,7 @@ public static void ResetSenha(@ParamMetaData(description = "email", id = "ae582b
  * @param password
  *
  * @author Silvio De Oliveira Carlos
- * @since 25/08/2023, 16:30:49
+ * @since 25/08/2023, 16:53:00
  *
  */
 public static Var login(@ParamMetaData(description = "username", id = "eb4f9fa9") Var username, @ParamMetaData(description = "password", id = "59713897") Var password) throws Exception {
