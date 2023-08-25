@@ -31,7 +31,7 @@
 </div> 
 <div ui-view="" id="main-view" tabindex="-1" role="main" class="container-fluid main-view main-view-horizontal"> 
   <div ng-init="cronapi.client('js.blockly.ListaApi.GetApi.GetApi').run(); cronapi.client('js.blockly.Votacao.Voto.InicializarStatusVotacaoUser').run();" style="height: 100vh"> 
-    <div class="votacao-lado-esquerdo col-md-7"> 
+    <div class="votacao-lado-esquerdo col-md-8"> 
       <div class="component-holder ng-scope  col-md-12" data-component="crn-textinput" id="crn-textinput-545907"> 
         <div class="form-group"> 
           <label for="input158">Pesquisar</label> 
@@ -47,19 +47,19 @@
                   <input class="check-voto-selecao" onclick="checkCount(this)" type="checkbox" id="checkbox1233[$index]" ng-model="vars.checkbox[$index]" ng-initial-value="false" crn-allow-null-values="false" ng-false-value="true" ng-true-value="false" ng-click="cronapi.client('js.blockly.Votacao.Voto.ObtemVoto').names('66436263', '7b36cee4').run(ideia.id, vars.checkbox[$index])"> 
                 </div> 
                 <div style="width: 100%;"> 
-                  <div class="panel-heading heading-arrow" role="tab" id="headingOne{{$index}}" data-toggle="collapse" data-parent="#accordion-1372" href="#collapseOne-1372{{$index}}" aria-expanded="true" aria-controls="collapseOne-1372{{$index}}" heading-arrow="heading-arrow"> 
+                  <div class="panel-heading heading-arrow collapsed" role="tab" id="headingOne{{$index}}" data-toggle="collapse" data-parent="#accordion-1372" href="#collapseOne-1372{{$index}}" aria-expanded="true" aria-controls="collapseOne-1372{{$index}}" heading-arrow="heading-arrow"> 
                     <div class="lead" data-component="crn-title" xattr-position=""> 
                       <h1 class="title h3 col-md-12 text-left" xattr-position="text-left" xattr-type="h3" data-component="crn-text-component">{{ideia.fields.Projeto}}</h1> 
                       <div class="col-md-12"> 
                         <div class="campoDadosProjeto col-md-6"> 
                           <span>Responsável: </span> 
-                          <div class="cardsRetorno" style="color: #F4F4FF;">
+                          <div class="cardsRetorno" style="color: #3E45C9;">
                              {{ideia.fields.Responsavel}} 
                           </div> 
                         </div> 
                         <div class="col-md-6 campoDadosProjeto campoDadosProjetoRight"> 
                           <span>Linha de negócio: </span> 
-                          <div class="cardsRetorno " style="color: #F4F4FF;">
+                          <div class="cardsRetorno " style="color: #3E45C9;">
                              {{ideia.fields.LN}} 
                           </div> 
                         </div> 
@@ -136,7 +136,7 @@
             <label for="check-aceitar-regras" style="margin-left: 0.5rem;">Li e concordo com as regras.</label> 
           </div> 
           <!--DEIXAR CLICAR EM INICIAR VOTAÇÃO APENAS SE O CHECK ACIMA ESTIVER MARCADO--> 
-          <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-477481" ng-model="checkboxProjetosVisivel"> 
+          <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-477481" ng-model="checkboxProjetosVisivel" style="padding-top: 2rem;"> 
             <button class="btn-primary btn-block" ng-click="checkboxProjetosVisivel = vars.checkAceitarRegras; cronapi.client('js.blockly.Votacao.Voto.IniciarVotacao').names('b8644fae').run(vars.checkAceitarRegras)"> <i class="glyphicon glyphicon-pencil" icon-theme=""></i> <span class="" text-theme="">Iniciar Votação</span> </button> 
           </div> 
         </div> 
