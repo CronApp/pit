@@ -30,6 +30,10 @@
     border-radius: 10px;
 }
 
+.panel.panel-default {
+    margin-bottom: 2rem;
+}
+
 .cardsRetorno a {
     z-index: 3;
 }
