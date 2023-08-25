@@ -110,7 +110,14 @@
         </div> 
       </div> 
     </div> 
-    <div class="col-md-4" style="margin-right: 0px; height: 100%; background: #F4F4FF; top: 0px; right: 0px; position: relative; float: right;"> 
+    <div class="col-md-4" style="margin-right: 0px;
+  height: 100%;
+  background:#200F43;
+  top: 0px;
+  right: 0px;
+  position: relative;
+  float: right;
+  color:#F4F4FF"> 
       <div class="hidden" id="div-grupo-tela-votacao-id"> 
         <!--tela-regras--> 
         <div id="div-tela-regras-id" style="text-align: left; padding-left: 2rem; padding-right: 2rem;"> 
@@ -118,15 +125,15 @@
             <p style="font-weight: bold; text-align: left; padding-top:2rem;">Regras para Votação:</p> 
           </div> 
           <div> 
-            <ul style="list-style: none; padding: 0"> 
-              <li>1ª Escolher até 02 projetos para realizar a votação;</li> 
-              <li>2ª A votação não poderá ser alterada;</li> 
-              <li>3ª A votação poderá ser realizada até a data: 24/11/2023.</li> 
+            <ul class="ul_regra"> 
+              <li class="li_regra">Escolher até 02 projetos para realizar a votação;</li> 
+              <li class="li_regra">A votação não poderá ser alterada;</li> 
+              <li class="li_regra">A votação poderá ser realizada até a data: 24/11/2023.</li> 
             </ul> 
           </div> 
           <div style="padding-top: 2rem; padding-bottom: 2rem; display: flex; align-items: center;"> 
             <input class="check-voto-selecao" type="checkbox" id="check-aceitar-regras" ng-model="vars.checkAceitarRegras" style="margin: 0;"> 
-            <label for="check-aceitar-regras" style="margin-left: 0.5rem;">Aceito Regras</label> 
+            <label for="check-aceitar-regras" style="margin-left: 0.5rem;">Li e concordo com as regras.</label> 
           </div> 
           <!--DEIXAR CLICAR EM INICIAR VOTAÇÃO APENAS SE O CHECK ACIMA ESTIVER MARCADO--> 
           <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-477481" ng-model="checkboxProjetosVisivel"> 
@@ -152,7 +159,7 @@
           </div> 
           <!--LISTAGEM DE PROJETO MARCADOS NO CHECKBOX--> 
           <div> 
-            <div style="background: rgb(255, 255, 255); border-radius: 6px; border: 1px solid rgb(140, 140, 140); padding:1rem; margin-bottom:1rem" ng-repeat="voto in vars.listaVotos"> 
+            <div style="background: rgb(255, 255, 255); border-radius: 6px; border: 1px solid rgb(140, 140, 140); padding:1rem; margin-bottom:1rem; color:#200F43" ng-repeat="voto in vars.listaVotos"> 
               <div ng-repeat="ideia in vars.listaIdeias"> 
                 <div ng-if="voto == ideia.id"> 
                   <div style="font-size: 2rem; text-height: bold;">
@@ -168,7 +175,7 @@
           <!--SE TIVER APENAS UM PROJETO E ESTE ESTIVER MARCADO, DEVERÁ DEIXAR FINALIZAR--> 
           <div id="div-unico-voto" style="padding-top: 2rem; padding-bottom: 2rem; display: flex; align-items: center;"> 
             <input class="check-voto-selecao" type="checkbox" id="check-unico-voto" ng-model="vars.checkUnicoVoto" style="margin: 0;"> 
-            <label for="check-unico-voto" style="margin-left: 0.5rem;">Meu Voto será em apenas 1 Projeto</label> 
+            <label for="check-unico-voto" style="margin-left: 0.5rem;">Meu voto será em apenas 1 projeto</label> 
           </div> 
           <div class="component-holder ng-scope col-md-12" data-component="crn-button" id="crn-button-71994" style="padding-top: 2rem"> 
             <!--AO CLICAR NO BOTAO, OCULTA OS CHECKBOXES DE VOTOS SE, OUVER UM PROJETO MARCADO E O CHECKBOX DE VOTO ÚNICO ESTIVER CHECADO, OU SE OUVEREM DOIS VOTOS MARCADOS--> 
