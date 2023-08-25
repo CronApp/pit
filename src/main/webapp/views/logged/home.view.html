@@ -33,12 +33,14 @@
   <div ng-init="cronapi.client('js.blockly.ListaApi.GetApi.GetApi').run(); cronapi.client('js.blockly.Votacao.Voto.InicializarStatusVotacaoUser').run();" style="height: 100vh"> 
     <div class="votacao-lado-esquerdo col-md-8"> 
       <div class="component-holder ng-scope  col-md-12" data-component="crn-textinput" id="crn-textinput-545907"> 
-        <div class="form-group"> 
-          <label for="input158">Pesquisar</label> 
-          <input ng-model="searchKeyword" placeholder="Pesquisar" class="form-control k-textbox"> 
+        <div class="form-group" style="background: rgb(255, 255, 255); border-radius: 6px; border: 0px; color:#200F43; display: flex; align-items: center; margin-right: 2rem"> 
+          <div class="component-holder ng-scope col-md-12" data-component="crn-icon" id="crn-icon-956746" style="margin-right: 10px; flex: 1; padding-left: 1rem"> 
+            <i class="font-size-default glyphicon glyphicon-search color-royal" icon-size="font-size-default" icon-theme="color-royal" style="-webkit-text-stroke: 2px white;"></i> 
+          </div> 
+          <input ng-model="searchKeyword" placeholder="Pesquisar Projeto" class="form-control k-textbox" style="border:0px; flex: none"> 
         </div> 
       </div> 
-      <div class="col-md-12 customiza-overflow-left" style="overflow-x: scroll; height: 800px; margin-top: 6.8vh;"> 
+      <div class="col-md-12 customiza-overflow-left" style="overflow-x: scroll; height: 800px; margin-top: 2vh;"> 
         <div style="" class="component-holder ng-scope col-md-12" data-component="crn-accordion" id="crn-accordion-325904" crn-skin="css/skins/IdVisualAccordion.css" ng-model="vars.listaVotos"> 
           <div class="panel-group" id="accordion-1372{{$index}}" role="tablist" aria-multiselectable="true"> 
             <div class="panel panel-default" ng-repeat="ideia in vars.listaIdeias track by $index" ng-hide="searchKeyword &amp;&amp; (!ideia.fields.Projeto.toLowerCase().includes(searchKeyword.toLowerCase()) &amp;&amp; !ideia.fields.Responsavel.toLowerCase().includes(searchKeyword.toLowerCase()))"> 
@@ -212,10 +214,10 @@
       <!--tela-resultado--> 
       <div class="hidden" id="div-grupo-tela-resultado-voto-id" style="text-align: left; padding-left: 2rem; padding-right: 2rem;"> 
         <div style="margin-top: 2vh;"> 
-          <div> 
-            <span style="font-weight: 700;">Quantidade de Votos</span> 
+          <div style="margin-left: 1rem;"> 
+            <span style="font-weight: 700; font-family: defaultFontSemiBold;">Quantidade de Votos</span> 
           </div> 
-          <div> 
+          <div style="margin-left: 1rem;"> 
             <p>Votos computados: {{vars.votosComputados}}</p> 
           </div> 
           <div ng-model="vars.resultadoVotos" style="margin-top: 4vh;"> 
@@ -226,10 +228,10 @@
               </div> 
             </div> 
             <div class="hidden" id="div-resultado-rank-id"> 
-              <div> 
-                <span style="font-weight: 700;">Resultado</span> 
+              <div style="margin-left: 1rem;"> 
+                <span style="font-weight: 700; font-family: defaultFontSemiBold;">Resultado</span> 
               </div> 
-              <div style="overflow-x: scroll; height:800px; position:relative;"> 
+              <div style="overflow-x: scroll; height: 800px; position:relative;"> 
                 <div ng-repeat="(index, resultadoRank) in vars.resultadoVotos"> 
                   <div ng-repeat="ideia in vars.listaIdeias" ng-if="resultadoRank.voto === ideia.id" style="display: flex; justify-content: center;"> 
                     <div class="card gold"> 
