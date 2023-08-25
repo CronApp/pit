@@ -104,3 +104,12 @@
     align-items: center;
     height: 50vh; 
 }
+
+/* Cor do ícode do acorddion */
+.panel-heading.heading-arrow.collapsed::after {
+  color:#200F43;
+}
+
+.panel-group .heading-arrow.panel-heading::after {
+  color:#200F43;
+}

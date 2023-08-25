@@ -24,6 +24,3 @@
 body {
   font-family: defaultFont, new-rubrik, sans-serif;
 }
-
-$accordion-icon-active-color: "#666666"; // your new color code
-@import "bootstrap/variables";
