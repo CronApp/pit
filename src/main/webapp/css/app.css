@@ -24,9 +24,3 @@
 body {
   font-family: defaultFont, new-rubrik, sans-serif;
 }
-
-/* Faz com que todas as notificações padrões do cronnap fiquem na parte inferior direita.*/
-.ui-notification.ng-scope.error.clickable {
-  bottom: 20px !important;
-  top: unset !important;
-}

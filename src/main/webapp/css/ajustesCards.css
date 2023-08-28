@@ -121,3 +121,10 @@
 .panel-group .heading-arrow.panel-heading::after {
   color:#200F43;
 }
+
+
+/* Faz com que todas as notificações padrões do cronnap fiquem na parte inferior direita.*/
+.ui-notification.ng-scope.clickable {
+  bottom: 20px !important;
+  top: unset !important;
+}
