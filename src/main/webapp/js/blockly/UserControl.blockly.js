@@ -10,8 +10,8 @@ window.blockly.js.blockly.UserControl = window.blockly.js.blockly.UserControl ||
  *
  * @param email
  *
- * @author Silvio De Oliveira Carlos
- * @since 25/08/2023, 16:53:09
+ * @author José Zay
+ * @since 28/08/2023, 15:41:22
  *
  */
 window.blockly.js.blockly.UserControl.resetPasswordArgs = [{ description: 'email', id: '7afdf898' }];
@@ -48,7 +48,7 @@ window.blockly.js.blockly.UserControl.resetPassword = async function(email) {
 /**
  * @function signUpValidation
  *
- * Descreva esta função...
+ * É sequer utilizada?
  *
  * @param name
  * @param cpf
@@ -56,8 +56,8 @@ window.blockly.js.blockly.UserControl.resetPassword = async function(email) {
  * @param password
  * @param confirmPassword
  *
- * @author Silvio De Oliveira Carlos
- * @since 25/08/2023, 16:53:09
+ * @author José Zay
+ * @since 28/08/2023, 15:41:22
  *
  */
 window.blockly.js.blockly.UserControl.signUpValidationArgs = [{ description: 'name2', id: '73abfb6a' }, { description: 'cpf', id: 'c2d32391' }, { description: 'email', id: '9ef5ba82' }, { description: 'password', id: '22aabdb1' }, { description: 'confirmPassword', id: '7318fb73' }];
@@ -103,26 +103,6 @@ window.blockly.js.blockly.UserControl.signUpValidation = async function(name2, c
 }
 
 /**
- * @function isValidSignup
- *
- * Descreva esta função...
- *
- * @param signupUsername
- * @param signupEmail
- * @param signupPassword
- * @param signupConfirmPassword
- *
- * @author Silvio De Oliveira Carlos
- * @since 25/08/2023, 16:53:09
- *
- */
-window.blockly.js.blockly.UserControl.isValidSignupArgs = [{ description: 'signupUsername', id: 'abf7b641' }, { description: 'signupEmail', id: '38708282' }, { description: 'signupPassword', id: 'daf1486e' }, { description: 'signupConfirmPassword', id: '3f9f5d23' }];
-window.blockly.js.blockly.UserControl.isValidSignup = async function(signupUsername, signupEmail, signupPassword, signupConfirmPassword) {
- var response;
-  return this.cronapi.authentication.isValidSignup(signupUsername, signupEmail, signupPassword, signupConfirmPassword);
-}
-
-/**
  * @function signUp
  *
  * Signup
@@ -132,8 +112,8 @@ window.blockly.js.blockly.UserControl.isValidSignup = async function(signupUsern
  * @param signupPassword
  * @param signupConfirmPassword
  *
- * @author Silvio De Oliveira Carlos
- * @since 25/08/2023, 16:53:09
+ * @author José Zay
+ * @since 28/08/2023, 15:41:22
  *
  */
 window.blockly.js.blockly.UserControl.signUpArgs = [{ description: 'signupUsername', id: 'ec5dbe32' }, { description: 'signupEmail', id: '62cce53e' }, { description: 'signupPassword', id: 'd42229ad' }, { description: 'signupConfirmPassword', id: 'a49023f3' }];
@@ -142,13 +122,16 @@ window.blockly.js.blockly.UserControl.signUp = async function(signupUsername, si
   //
   if (this.cronapi.logic.isNullOrEmpty(signupUsername)) {
     //
-    this.cronapi.notification.customNotify('error', 'Digite seu nome', 'fade', 'top', 'center', 'true');
+    this.cronapi.notification.customNotify('error', 'Digite seu nome.', 'fade', 'top', 'center', 'true');
+  } else if (signupUsername.length <= 3) {
+    //
+    this.cronapi.notification.customNotify('error', 'Seu nome deve ter mais de 3 caracteres.', 'fade', 'top', 'center', 'true');
   } else if (this.cronapi.logic.isNullOrEmpty(signupEmail)) {
     //
-    this.cronapi.notification.customNotify('error', 'Digite um e-mail válido', 'fade', 'top', 'center', 'true');
+    this.cronapi.notification.customNotify('error', 'Digite um e-mail válido.', 'fade', 'top', 'center', 'true');
   } else if (signupPassword != signupConfirmPassword) {
     //
-    this.cronapi.notification.customNotify('error', 'Verifique se o campo Senha e Confirmar senha estão iguais', 'fade', 'top', 'center', 'true');
+    this.cronapi.notification.customNotify('error', 'O campo Senha e Confirmar Senha não correspondem.', 'fade', 'top', 'center', 'true');
   } else {
     //
     this.cronapi.util.callServerBlocklyAsynchronous('blockly.Usuario.Usuario:CadastrarUsuario', async function(sender_response) {
@@ -168,13 +151,33 @@ window.blockly.js.blockly.UserControl.signUp = async function(signupUsername, si
 }
 
 /**
+ * @function isValidSignup
+ *
+ * Descreva esta função...
+ *
+ * @param signupUsername
+ * @param signupEmail
+ * @param signupPassword
+ * @param signupConfirmPassword
+ *
+ * @author José Zay
+ * @since 28/08/2023, 15:41:22
+ *
+ */
+window.blockly.js.blockly.UserControl.isValidSignupArgs = [{ description: 'signupUsername', id: 'abf7b641' }, { description: 'signupEmail', id: '38708282' }, { description: 'signupPassword', id: 'daf1486e' }, { description: 'signupConfirmPassword', id: '3f9f5d23' }];
+window.blockly.js.blockly.UserControl.isValidSignup = async function(signupUsername, signupEmail, signupPassword, signupConfirmPassword) {
+ var response;
+  return this.cronapi.authentication.isValidSignup(signupUsername, signupEmail, signupPassword, signupConfirmPassword);
+}
+
+/**
  * @function VerificaResetSenha
  *
  * Descreva esta função...
  *
  *
- * @author Silvio De Oliveira Carlos
- * @since 25/08/2023, 16:53:09
+ * @author José Zay
+ * @since 28/08/2023, 15:41:22
  *
  */
 window.blockly.js.blockly.UserControl.VerificaResetSenhaArgs = [];
@@ -205,8 +208,8 @@ window.blockly.js.blockly.UserControl.VerificaResetSenha = async function() {
  * Descreva esta função...
  *
  *
- * @author Silvio De Oliveira Carlos
- * @since 25/08/2023, 16:53:09
+ * @author José Zay
+ * @since 28/08/2023, 15:41:22
  *
  */
 window.blockly.js.blockly.UserControl.SalvarSenhaArgs = [];
@@ -245,8 +248,8 @@ window.blockly.js.blockly.UserControl.SalvarSenha = async function() {
  *
  * @param nome
  *
- * @author Silvio De Oliveira Carlos
- * @since 25/08/2023, 16:53:09
+ * @author José Zay
+ * @since 28/08/2023, 15:41:22
  *
  */
 window.blockly.js.blockly.UserControl.verificaAbreviacaoArgs = [{ description: 'nome', id: '8fd49ed5' }];
