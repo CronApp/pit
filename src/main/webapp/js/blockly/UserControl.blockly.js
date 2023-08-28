@@ -10,21 +10,25 @@ window.blockly.js.blockly.UserControl = window.blockly.js.blockly.UserControl ||
  *
  * @param email
  *
- * @author Matheus Portugal Ribeiro
- * @since 15/02/2023, 11:44:31
+ * @author Silvio De Oliveira Carlos
+ * @since 25/08/2023, 16:53:09
  *
  */
 window.blockly.js.blockly.UserControl.resetPasswordArgs = [{ description: 'email', id: '7afdf898' }];
 window.blockly.js.blockly.UserControl.resetPassword = async function(email) {
-
+ var signupUsername, signupEmail, signupPassword, signupConfirmPassword;
   //
   if (this.cronapi.logic.isNullOrEmpty(email)) {
     //
-    this.cronapi.screen.notify('info','O campo e-mail é obrigatório');
+    this.cronapi.screen.notify('info','O campo e-mail é obrigatório!!');
   } else {
+    //
+    console.log('resetPassword');
     //
     this.cronapi.util.callServerBlocklyAsynchronous('blockly.Emails.ResetarSenha:ResetarSenha', async function(sender_res) {
         res = sender_res;
+      //
+      console.log('foi pro lado servidor');
       //
       if (this.cronapi.json.getProperty(res, 'sucesso')) {
         //
@@ -52,8 +56,8 @@ window.blockly.js.blockly.UserControl.resetPassword = async function(email) {
  * @param password
  * @param confirmPassword
  *
- * @author Matheus Portugal Ribeiro
- * @since 15/02/2023, 11:44:31
+ * @author Silvio De Oliveira Carlos
+ * @since 25/08/2023, 16:53:09
  *
  */
 window.blockly.js.blockly.UserControl.signUpValidationArgs = [{ description: 'name2', id: '73abfb6a' }, { description: 'cpf', id: 'c2d32391' }, { description: 'email', id: '9ef5ba82' }, { description: 'password', id: '22aabdb1' }, { description: 'confirmPassword', id: '7318fb73' }];
@@ -99,6 +103,26 @@ window.blockly.js.blockly.UserControl.signUpValidation = async function(name2, c
 }
 
 /**
+ * @function isValidSignup
+ *
+ * Descreva esta função...
+ *
+ * @param signupUsername
+ * @param signupEmail
+ * @param signupPassword
+ * @param signupConfirmPassword
+ *
+ * @author Silvio De Oliveira Carlos
+ * @since 25/08/2023, 16:53:09
+ *
+ */
+window.blockly.js.blockly.UserControl.isValidSignupArgs = [{ description: 'signupUsername', id: 'abf7b641' }, { description: 'signupEmail', id: '38708282' }, { description: 'signupPassword', id: 'daf1486e' }, { description: 'signupConfirmPassword', id: '3f9f5d23' }];
+window.blockly.js.blockly.UserControl.isValidSignup = async function(signupUsername, signupEmail, signupPassword, signupConfirmPassword) {
+ var response;
+  return this.cronapi.authentication.isValidSignup(signupUsername, signupEmail, signupPassword, signupConfirmPassword);
+}
+
+/**
  * @function signUp
  *
  * Signup
@@ -108,53 +132,38 @@ window.blockly.js.blockly.UserControl.signUpValidation = async function(name2, c
  * @param signupPassword
  * @param signupConfirmPassword
  *
- * @author Matheus Portugal Ribeiro
- * @since 15/02/2023, 11:44:31
+ * @author Silvio De Oliveira Carlos
+ * @since 25/08/2023, 16:53:09
  *
  */
 window.blockly.js.blockly.UserControl.signUpArgs = [{ description: 'signupUsername', id: 'ec5dbe32' }, { description: 'signupEmail', id: '62cce53e' }, { description: 'signupPassword', id: 'd42229ad' }, { description: 'signupConfirmPassword', id: 'a49023f3' }];
 window.blockly.js.blockly.UserControl.signUp = async function(signupUsername, signupEmail, signupPassword, signupConfirmPassword) {
-
+ var response;
   //
-  (await this.cronapi.authentication.signup(signupUsername, signupEmail, signupPassword, signupConfirmPassword));
-}
-
-/**
- * @function SalvarSenha
- *
- * Descreva esta função...
- *
- *
- * @author Matheus Portugal Ribeiro
- * @since 15/02/2023, 11:44:31
- *
- */
-window.blockly.js.blockly.UserControl.SalvarSenhaArgs = [];
-window.blockly.js.blockly.UserControl.SalvarSenha = async function() {
- var nome;
-  //
-  reset = this.cronapi.screen.getParam('reset');
-  //
-  if (this.cronapi.screen.getValueOfField("vars.senha") != this.cronapi.screen.getValueOfField("vars.confirmaSenha")) {
+  if (this.cronapi.logic.isNullOrEmpty(signupUsername)) {
     //
-    this.cronapi.screen.notify('error','Os campos de nova senha e confirma nova senha não correspondem');
+    this.cronapi.notification.customNotify('error', 'Digite seu nome', 'fade', 'top', 'center', 'true');
+  } else if (this.cronapi.logic.isNullOrEmpty(signupEmail)) {
+    //
+    this.cronapi.notification.customNotify('error', 'Digite um e-mail válido', 'fade', 'top', 'center', 'true');
+  } else if (signupPassword != signupConfirmPassword) {
+    //
+    this.cronapi.notification.customNotify('error', 'Verifique se o campo Senha e Confirmar senha estão iguais', 'fade', 'top', 'center', 'true');
   } else {
     //
-    this.cronapi.util.callServerBlocklyAsynchronous('blockly.Emails.ResetarSenha:SalvarResetSenha', async function(sender_retorno) {
-        retorno = sender_retorno;
+    this.cronapi.util.callServerBlocklyAsynchronous('blockly.Usuario.Usuario:CadastrarUsuario', async function(sender_response) {
+        response = sender_response;
       //
-      if (this.cronapi.json.getProperty(retorno, 'sucesso')) {
+      if (this.cronapi.json.getProperty(response, 'sucesso')) {
         //
-        this.cronapi.screen.notify('success',this.cronapi.json.getProperty(retorno, 'mensagem'));
+        this.cronapi.notification.customNotify('success', this.cronapi.json.getProperty(response, 'mensagem'), 'fade', 'top', 'center', 'true');
         //
-        (await this.cronapi.util.sleep(3000));
-        //
-        this.cronapi.screen.changeView("#/home/login",[  ]);
+        this.cronapi.screen.openUrl(this.cronapi.util.getBaseUrl(), null, 0, 0);
       } else {
         //
-        this.cronapi.screen.notify('error',this.cronapi.json.getProperty(retorno, 'mensagem'));
+        this.cronapi.notification.customNotify('error', this.cronapi.json.getProperty(response, 'mensagem'), 'fade', 'top', 'center', 'true');
       }
-    }.bind(this), reset, this.cronapi.screen.getValueOfField("vars.senha"), this.cronapi.screen.getValueOfField("vars.confirmaSenha"));
+    }.bind(this), signupEmail, signupPassword, signupUsername);
   }
 }
 
@@ -164,13 +173,13 @@ window.blockly.js.blockly.UserControl.SalvarSenha = async function() {
  * Descreva esta função...
  *
  *
- * @author Matheus Portugal Ribeiro
- * @since 15/02/2023, 11:44:31
+ * @author Silvio De Oliveira Carlos
+ * @since 25/08/2023, 16:53:09
  *
  */
 window.blockly.js.blockly.UserControl.VerificaResetSenhaArgs = [];
 window.blockly.js.blockly.UserControl.VerificaResetSenha = async function() {
- var nome;
+ var signupUsername, signupEmail, signupPassword, signupConfirmPassword, response;
   //
   reset = this.cronapi.screen.getParam('reset');
   //
@@ -191,23 +200,42 @@ window.blockly.js.blockly.UserControl.VerificaResetSenha = async function() {
 }
 
 /**
- * @function isValidSignup
+ * @function SalvarSenha
  *
  * Descreva esta função...
  *
- * @param signupUsername
- * @param signupEmail
- * @param signupPassword
- * @param signupConfirmPassword
  *
- * @author Matheus Portugal Ribeiro
- * @since 15/02/2023, 11:44:31
+ * @author Silvio De Oliveira Carlos
+ * @since 25/08/2023, 16:53:09
  *
  */
-window.blockly.js.blockly.UserControl.isValidSignupArgs = [{ description: 'signupUsername', id: 'abf7b641' }, { description: 'signupEmail', id: '38708282' }, { description: 'signupPassword', id: 'daf1486e' }, { description: 'signupConfirmPassword', id: '3f9f5d23' }];
-window.blockly.js.blockly.UserControl.isValidSignup = async function(signupUsername, signupEmail, signupPassword, signupConfirmPassword) {
-
-  return this.cronapi.authentication.isValidSignup(signupUsername, signupEmail, signupPassword, signupConfirmPassword);
+window.blockly.js.blockly.UserControl.SalvarSenhaArgs = [];
+window.blockly.js.blockly.UserControl.SalvarSenha = async function() {
+ var signupUsername, signupEmail, signupPassword, signupConfirmPassword, response;
+  //
+  reset = this.cronapi.screen.getParam('reset');
+  //
+  if (this.cronapi.screen.getValueOfField("passwordNew.value") != this.cronapi.screen.getValueOfField("passwordConfirmation.value")) {
+    //
+    this.cronapi.screen.notify('error','Os campos de nova senha e confirma nova senha não correspondem');
+  } else {
+    //
+    this.cronapi.util.callServerBlocklyAsynchronous('blockly.Emails.ResetarSenha:SalvarResetSenha', async function(sender_retorno) {
+        retorno = sender_retorno;
+      //
+      if (this.cronapi.json.getProperty(retorno, 'sucesso')) {
+        //
+        this.cronapi.screen.notify('success',this.cronapi.json.getProperty(retorno, 'mensagem'));
+        //
+        (await this.cronapi.client('cronapi.util.sleep').run(3000));
+        //
+        this.cronapi.screen.changeView("#/home/login",[  ]);
+      } else {
+        //
+        this.cronapi.screen.notify('error',this.cronapi.json.getProperty(retorno, 'mensagem'));
+      }
+    }.bind(this), reset, this.cronapi.screen.getValueOfField("passwordNew.value"), this.cronapi.screen.getValueOfField("passwordConfirmation.value"));
+  }
 }
 
 /**
@@ -217,13 +245,13 @@ window.blockly.js.blockly.UserControl.isValidSignup = async function(signupUsern
  *
  * @param nome
  *
- * @author Matheus Portugal Ribeiro
- * @since 15/02/2023, 11:44:31
+ * @author Silvio De Oliveira Carlos
+ * @since 25/08/2023, 16:53:09
  *
  */
 window.blockly.js.blockly.UserControl.verificaAbreviacaoArgs = [{ description: 'nome', id: '8fd49ed5' }];
 window.blockly.js.blockly.UserControl.verificaAbreviacao = async function(nome) {
-
+ var signupUsername, signupEmail, signupPassword, signupConfirmPassword;
   //
   if (!this.cronapi.logic.isNullOrEmpty(nome)) {
     //
