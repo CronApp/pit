@@ -255,7 +255,7 @@
                            🥉 
                         </div> 
                         <div>
-                           {{ resultadoRank.numeroVotos }} Voto{{ resultadoRank.numeroVotos > 1 ? 's' : ''}}
+                           {{ resultadoRank.numeroVotos }} Voto{{ resultadoRank.numeroVotos &gt; 1 ? 's' : ''}}
                         </div> 
                       </div> 
                     </div> 
@@ -322,7 +322,8 @@
       </div> 
       <div class="modal-footer"> 
         <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-save-logged-home"> 
-          <button class="btn-block btn-success" ng-click="changePassword()" onclick="cronapi.client('js.blockly.EditarPerfil.EditarPerfil.IniciarModalEditar').run()" ng-disabled="form.$invalid || vm.dataLoading" aria-label="{{'Save' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-success" xattr-disabled=""> <i class="k-icon k-i-check" icon-theme="" style="color: white;"></i> </button> 
+          <!-- Implementação Original: <button class="btn-block btn-success" ng-click="changePassword()" onclick="cronapi.client('js.blockly.EditarPerfil.EditarPerfil.IniciarModalEditar').run()" ng-disabled="form.$invalid || vm.dataLoading" aria-label="{{'Save' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-success" xattr-disabled=""> <i class="k-icon k-i-check" icon-theme="" style="color: white;"></i> </button> -->
+          <button class="btn-block btn-success" id="btn-override-salvar-senha" ng-disabled="form.$invalid || vm.dataLoading" aria-label="{{'Save' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-success" xattr-disabled="" ng-click="cronapi.client('js.blockly.EditarPerfil.EditarPerfil.validarAlterarSenha').run()"> <i class="k-icon k-i-check" icon-theme="" style="color: white;"></i> </button> 
         </div> 
         <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-cancel-logged-home"> 
           <button class="btn-block btn-danger" data-dismiss="modal" aria-label="{{'Home.view.Close' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-danger" xattr-disabled=""> <i class="k-icon k-i-close" icon-theme="" style="color: white;"></i> </button> 

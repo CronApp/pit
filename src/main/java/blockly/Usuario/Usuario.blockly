@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="JAVA" bpmnAble="false" formTarget="" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JAVA" ruleDescription="Usuario" ruleName="Usuario" ruleSecurity="{&quot;post&quot;:&quot;Public&quot;,&quot;get&quot;:&quot;Public&quot;,&quot;execute&quot;:&quot;Public&quot;,&quot;delete&quot;:&quot;Public&quot;,&quot;put&quot;:&quot;Public&quot;}" ruleSynchronous="false" ruleTimeout="300" ruleType="I" showAsFunction="false" soap="false" swagger="false">
-  <metadata scale="1" scrollx="321.1" scrolly="-911.0000000000009" target="Lb8b*z%8862D8*J.O=yZ"/>
+  <metadata scale="1" scrollx="324.9000000000011" scrolly="-488.6000000000014" target="Lb8b*z%8862D8*J.O=yZ"/>
   <block asynccall="false" colour="#fca03b" datasourcetype="" id="Lb8b*z%8862D8*J.O=yZ" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-194" y="162">
     <mutation>
       <arg id="53b42e7f" name="email"/>
@@ -350,7 +350,7 @@
                         </value>
                         <value name="ARG1">
                           <block asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="QubU+FA_z1?8%A0FuZbO" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                            <field customattributes="" name="TEXT">O tamanho mínimo da senha deve ser de 8 caracteres</field>
+                            <field customattributes="" name="TEXT">O tamanho da senha deve ser de no mínimo 8 caracteres.</field>
                           </block>
                         </value>
                       </block>
