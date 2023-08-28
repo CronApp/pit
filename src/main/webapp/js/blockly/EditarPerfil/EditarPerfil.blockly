@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="WEB" bpmnAble="false" formTarget="src/main/webapp/views/logged/home.view.html" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JS" ruleDescription="EditarPerfil" ruleName="EditarPerfil" ruleSynchronous="false" ruleTimeout="" ruleType="I" showAsFunction="false" soap="false" swagger="false">
-  <metadata scale="1" scrollx="632.9000000000001" scrolly="35.39999999999998" target="r4jz1%#,$)khom?L_|gD"/>
+  <metadata scale="1" scrollx="631.9" scrolly="35.39999999999998" target="r4jz1%#,$)khom?L_|gD"/>
   <block asynccall="false" colour="#fca03b" datasourcetype="" id="r4jz1%#,$)khom?L_|gD" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-502" y="38">
     <field customattributes="" name="NAME">NotificacaoLogin</field>
     <statement name="STACK">
-      <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="r4jz1%#,$)khom?L_|gD" id="__18Ek`o.Uz`Ddu=8OK]" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.screen.notify','cronapi.screen.notify')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
-        <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
-        <field customattributes="" name="SELECT">success</field>
-        <value name="MESSAGE">
-          <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="r4jz1%#,$)khom?L_|gD" id="s0#e#dl0RZNsEjMRl73^" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-            <field customattributes="" name="TEXT">Seja bem vindo(a) [nome do usuário] ao Sistema de votação PIT (Prêmio de Inovação Techne).</field>
+      <block asynccall="false" colour="#355b25" datasourcetype="" dependencyby="r4jz1%#,$)khom?L_|gD" id="9Rd$eM}*g8B4OB;Lq]xL" multilayer="false" namespace="cronapi.notification.customNotify" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%20simples%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%20simples%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Estado%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3Cspan%3E%20-%20Anima%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Posi%C3%A7%C3%A3o%20vertical%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Posi%C3%A7%C3%A3o%20horizontal%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Ocultar%20notifica%C3%A7%C3%A3o%20automaticamente%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.notification.customNotify','cronapi.notification.customNotify')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+        <mutation name="{{cronapi.notification.customNotify}}" return-raw-type="undefined">
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Estado"/>
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Mensagem"/>
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Animação"/>
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Posição vertical"/>
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Posição horizontal"/>
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Ocultar notificação automaticamente"/>
+        </mutation>
+        <value name="ARG0">
+          <block asynccall="false" colour="#355b25" datasourcetype="" dependencyby="r4jz1%#,$)khom?L_|gD" id="wqf/aihqMK`9TwUk[!BO" origintype="util_dropdown" output="true" type="util_dropdown">
+            <mutation>
+              <arg name="error" value="Erro"/>
+              <arg name="success" value="Sucesso"/>
+              <arg name="warning" value="Aviso"/>
+              <arg name="info" value="Informação"/>
+            </mutation>
+            <field customattributes="" name="SELECT">success</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="r4jz1%#,$)khom?L_|gD" id=",ZyR?.}]WjnrN#|R-.:X" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+            <field customattributes="" name="TEXT"/>
           </shadow>
           <block asynccall="false" colour="#5ba58c" datasourcetype="" dependencyby="r4jz1%#,$)khom?L_|gD" id="W/|Gl`!ab9`2wtr/p%Yp" origintype="text_join" output="true" tooltip="Criar um pedaço de texto juntando qualquer número de itens." type="text_join">
             <mutation items="3"/>
@@ -27,6 +44,44 @@
                 <field customattributes="" name="TEXT">, ao Sistema de Votação PIT (Prêmio de Inovação Techne).</field>
               </block>
             </value>
+          </block>
+        </value>
+        <value name="ARG2">
+          <block asynccall="false" colour="#355b25" datasourcetype="" dependencyby="r4jz1%#,$)khom?L_|gD" id="1=S!g5q=jV3UhXQv@%nM" origintype="util_dropdown" output="true" type="util_dropdown">
+            <mutation>
+              <arg name="fade" value="Desaparecer"/>
+              <arg name="slide" value="Deslizar"/>
+              <arg name="zoom" value="Zoom"/>
+            </mutation>
+            <field customattributes="" name="SELECT">fade</field>
+          </block>
+        </value>
+        <value name="ARG3">
+          <block asynccall="false" colour="#355b25" datasourcetype="" dependencyby="r4jz1%#,$)khom?L_|gD" id="lzgjkvPz;FU.Z)eey|UG" origintype="util_dropdown" output="true" type="util_dropdown">
+            <mutation>
+              <arg name="top" value="Topo"/>
+              <arg name="bottom" value="Embaixo"/>
+            </mutation>
+            <field customattributes="" name="SELECT">bottom</field>
+          </block>
+        </value>
+        <value name="ARG4">
+          <block asynccall="false" colour="#355b25" datasourcetype="" dependencyby="r4jz1%#,$)khom?L_|gD" id="dUsHhi;G$sih.,I+W=Vn" origintype="util_dropdown" output="true" type="util_dropdown">
+            <mutation>
+              <arg name="left" value="Esquerda"/>
+              <arg name="center" value="Central"/>
+              <arg name="right" value="Direita"/>
+            </mutation>
+            <field customattributes="" name="SELECT">right</field>
+          </block>
+        </value>
+        <value name="ARG5">
+          <block asynccall="false" colour="#355b25" datasourcetype="" dependencyby="r4jz1%#,$)khom?L_|gD" id="UTV?S2`?g_~r)$4u+AR?" origintype="util_dropdown" output="true" type="util_dropdown">
+            <mutation>
+              <arg name="true" value="Sim"/>
+              <arg name="false" value="Não"/>
+            </mutation>
+            <field customattributes="" name="SELECT">true</field>
           </block>
         </value>
       </block>

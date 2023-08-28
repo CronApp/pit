@@ -10,15 +10,15 @@ window.blockly.js.blockly.EditarPerfil.EditarPerfil = window.blockly.js.blockly.
  *
  *
  *
- * @author Wesley Miranda De Oliveira
- * @since 11/08/2023, 08:50:32
+ * @author José Zay
+ * @since 28/08/2023, 10:09:07
  *
  */
 window.blockly.js.blockly.EditarPerfil.EditarPerfil.NotificacaoLoginArgs = [];
 window.blockly.js.blockly.EditarPerfil.EditarPerfil.NotificacaoLogin = async function() {
 
   //
-  this.cronapi.screen.notify('success',['Seja bem-vindo(a), ',this.cronapi.util.getUserName(),', ao Sistema de Votação PIT (Prêmio de Inovação Techne).'].join(''));
+  this.cronapi.notification.customNotify('success', ['Seja bem-vindo(a), ',this.cronapi.util.getUserName(),', ao Sistema de Votação PIT (Prêmio de Inovação Techne).'].join(''), 'fade', 'bottom', 'right', 'true');
 }
 
 /**
@@ -27,8 +27,8 @@ window.blockly.js.blockly.EditarPerfil.EditarPerfil.NotificacaoLogin = async fun
  *
  *
  *
- * @author Wesley Miranda De Oliveira
- * @since 11/08/2023, 08:50:32
+ * @author José Zay
+ * @since 28/08/2023, 10:09:07
  *
  */
 window.blockly.js.blockly.EditarPerfil.EditarPerfil.PreencheCampoNomeArgs = [];
@@ -46,8 +46,8 @@ window.blockly.js.blockly.EditarPerfil.EditarPerfil.PreencheCampoNome = async fu
  *
  *
  *
- * @author Wesley Miranda De Oliveira
- * @since 11/08/2023, 08:50:32
+ * @author José Zay
+ * @since 28/08/2023, 10:09:07
  *
  */
 window.blockly.js.blockly.EditarPerfil.EditarPerfil.FecharModalEditarPerfilArgs = [];
@@ -63,8 +63,8 @@ window.blockly.js.blockly.EditarPerfil.EditarPerfil.FecharModalEditarPerfil = as
  *
  *
  *
- * @author Wesley Miranda De Oliveira
- * @since 11/08/2023, 08:50:32
+ * @author José Zay
+ * @since 28/08/2023, 10:09:07
  *
  */
 window.blockly.js.blockly.EditarPerfil.EditarPerfil.IniciarModalEditarArgs = [];
@@ -80,8 +80,8 @@ window.blockly.js.blockly.EditarPerfil.EditarPerfil.IniciarModalEditar = async f
  *
  *
  *
- * @author Wesley Miranda De Oliveira
- * @since 11/08/2023, 08:50:32
+ * @author José Zay
+ * @since 28/08/2023, 10:09:07
  *
  */
 window.blockly.js.blockly.EditarPerfil.EditarPerfil.IniciarModalEditarSenhaArgs = [];
