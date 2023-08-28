@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="WEB" bpmnAble="false" formTarget="src/main/webapp/views/logged/home.view.html" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JS" ruleDescription="EditarPerfil" ruleName="EditarPerfil" ruleSynchronous="false" ruleTimeout="" ruleType="I" showAsFunction="false" soap="false" swagger="false">
-  <metadata scale="1.0749542399999998" scrollx="735.6270284799996" scrolly="-239.73856649661803" target="HdNmtqPLNkOC5}1$.yw["/>
+  <metadata scale="1" scrollx="678.9" scrolly="-233.60000000000002" target="HdNmtqPLNkOC5}1$.yw["/>
   <block asynccall="false" colour="#fca03b" datasourcetype="" id="r4jz1%#,$)khom?L_|gD" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-480" y="57">
     <field customattributes="" name="NAME">NotificacaoLogin</field>
     <statement name="STACK">
@@ -174,7 +174,7 @@
     </statement>
   </block>
   <block asynccall="false" colour="#fca03b" datasourcetype="" id="HdNmtqPLNkOC5}1$.yw[" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-548" y="307">
-    <field customattributes="" name="NAME">validarAlterarSenha</field>
+    <field customattributes="" name="NAME">ValidarAlterarSenha</field>
     <comment h="80" pinned="false" w="400">normalmente, no elemento que chama esta função, deveria ter o seguinte atributo: 'ng-click="changePassword()"' para efetuar validações extras foi removido este elemento, e chamado a partir do javascript pegando o escopo do angular e chamando esta função no bloco Executa javascript desta função, já que não foi possível (por hora) alterar esta função diretamente.</comment>
     <statement name="STACK">
       <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="L*a]!hrS#@9S^S%m{FZh" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
@@ -209,100 +209,192 @@
               </block>
             </value>
             <next>
-              <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="?f18#b=v1`wUH|sqd7Ph" origintype="controls_if" output="false" tooltip="function () { [native code] }" type="controls_if">
-                <mutation else="1" elseif="2"/>
-                <comment h="80" pinned="false" w="400">Aqui são feitas as validações que faltam dentro da chamada changePassword.</comment>
-                <value name="IF0">
-                  <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id=",vB!?MirH0Mmx~^GL]x(" inline="true" multilayer="false" namespace="cronapi.logic.isNullOrEmpty" origintype="procedures_callreturn" output="true" returntype="ObjectType.BOOLEAN" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3E%C3%A9%20nulo%20ou%20vazio?%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20verifique%20se%20a%20vari%C3%A1vel%20%C3%A9%20nula%20ou%20vazia%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20%20:%20Objeto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20L%C3%B3gico%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.logic.isNullOrEmpty','cronapi.logic.isNullOrEmpty')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
-                    <mutation name="{{cronapi.logic.isNullOrEmpty}}" return-raw-type="undefined">
-                      <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name=""/>
+              <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="ZVHS*5r#Nlx3p.1^O2B(" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+                <field customattributes="" name="VAR">newPasswordConfirmation</field>
+                <value name="VALUE">
+                  <block asynccall="false" colour="#487f7f" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="VHm#C2^=H[9C*qMZ~XNw" multilayer="false" namespace="cronapi.util.executeJavascriptReturn" origintype="procedures_callreturn" output="true" returntype="ObjectType.STRING" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExecuta%20javascript%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20executa%20o%20javascript%20e%20retorna%20o%20seu%20valor%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Comando%20:%20Texto%3C/span%3E%3Cdiv%3EComando%20a%20ser%20executado%20(exemplo:%20alert('teste');).%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Texto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.util.executeJavascriptReturn','cronapi.util.executeJavascriptReturn')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                    <mutation name="{{cronapi.util.executeJavascriptReturn}}" return-raw-type="undefined">
+                      <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Comando"/>
                     </mutation>
-                    <comment h="80" pinned="false" w="400">Esta validação é feita pelo changePassword(); mas foi feita novamente aqui para seguir a ordem.</comment>
+                    <comment h="80" pinned="false" w="400">Não consegui acessar pelo bloco Obter valor do Campo (?)</comment>
                     <value name="ARG0">
-                      <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="G%cy`y+_dWK,!47=,S2]" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
-                        <field customattributes="" name="VAR">oldPassword</field>
-                      </block>
-                    </value>
-                  </block>
-                </value>
-                <statement name="DO0">
-                  <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id=",/R-d=^]3v_ym%/y29L9" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.screen.notify','cronapi.screen.notify')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
-                    <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
-                    <field customattributes="" name="SELECT">error</field>
-                    <value name="MESSAGE">
-                      <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="60Zpq;,{pfU6gJ,_*Q}/" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                        <field customattributes="" name="TEXT">Senha Anterior não pode estar vazio.</field>
+                      <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="}c*o#FuD.akZHQ/z3[4a" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                        <field customattributes="" name="TEXT">document.getElementById("newPasswordConfirmation").value</field>
                       </shadow>
                     </value>
                   </block>
-                </statement>
-                <value name="IF1">
-                  <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="KLFPpqN5-g=(-tQSTCjB" inline="true" multilayer="false" namespace="cronapi.logic.isNullOrEmpty" origintype="procedures_callreturn" output="true" returntype="ObjectType.BOOLEAN" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3E%C3%A9%20nulo%20ou%20vazio?%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20verifique%20se%20a%20vari%C3%A1vel%20%C3%A9%20nula%20ou%20vazia%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20%20:%20Objeto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20L%C3%B3gico%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.logic.isNullOrEmpty','cronapi.logic.isNullOrEmpty')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
-                    <mutation name="{{cronapi.logic.isNullOrEmpty}}" return-raw-type="undefined">
-                      <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name=""/>
-                    </mutation>
-                    <comment h="80" pinned="false" w="400">Esta validação é feita pelo changePassword(); mas foi feita novamente aqui para seguir a ordem.</comment>
-                    <value name="ARG0">
-                      <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="97]DPGs^dItmNd]uPJ`A" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
-                        <field customattributes="" name="VAR">newPassword</field>
+                </value>
+                <next>
+                  <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="?f18#b=v1`wUH|sqd7Ph" origintype="controls_if" output="false" tooltip="function () { [native code] }" type="controls_if">
+                    <mutation else="1" elseif="3"/>
+                    <comment h="80" pinned="false" w="400">Aqui são feitas as validações que faltam dentro da chamada changePassword.</comment>
+                    <value name="IF0">
+                      <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id=",vB!?MirH0Mmx~^GL]x(" inline="true" multilayer="false" namespace="cronapi.logic.isNullOrEmpty" origintype="procedures_callreturn" output="true" returntype="ObjectType.BOOLEAN" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3E%C3%A9%20nulo%20ou%20vazio?%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20verifique%20se%20a%20vari%C3%A1vel%20%C3%A9%20nula%20ou%20vazia%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20%20:%20Objeto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20L%C3%B3gico%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.logic.isNullOrEmpty','cronapi.logic.isNullOrEmpty')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                        <mutation name="{{cronapi.logic.isNullOrEmpty}}" return-raw-type="undefined">
+                          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name=""/>
+                        </mutation>
+                        <comment h="80" pinned="false" w="400">Esta validação é feita pelo changePassword(); mas foi feita novamente aqui para seguir a ordem.</comment>
+                        <value name="ARG0">
+                          <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="G%cy`y+_dWK,!47=,S2]" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                            <field customattributes="" name="VAR">oldPassword</field>
+                          </block>
+                        </value>
                       </block>
                     </value>
-                  </block>
-                </value>
-                <statement name="DO1">
-                  <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="FqP^#opfn4sD(+zE$=j*" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.screen.notify','cronapi.screen.notify')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
-                    <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
-                    <field customattributes="" name="SELECT">error</field>
-                    <value name="MESSAGE">
-                      <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="3.v}RHi`8Bra$ea0,]S`" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                        <field customattributes="" name="TEXT">Nova Senha não pode estar vazio.</field>
-                      </shadow>
-                    </value>
-                  </block>
-                </statement>
-                <value name="IF2">
-                  <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="#luZ{y_I|MB|C4s~)E4c" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
-                    <field customattributes="" name="OP">LT</field>
-                    <comment h="80" pinned="false" w="400">Validação que está faltando no changePassword();</comment>
-                    <value name="A">
-                      <block asynccall="false" colour="#745ba5" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="d?!Av5]e{haXgGk^F8@:" origintype="lists_length" output="true" tooltip="Retorna o tamanho de uma lista." type="lists_length">
-                        <value name="VALUE">
-                          <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="|3sX])bO;D0ZFIH,j|2k" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                    <statement name="DO0">
+                      <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id=",/R-d=^]3v_ym%/y29L9" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.screen.notify','cronapi.screen.notify')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                        <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                        <field customattributes="" name="SELECT">error</field>
+                        <value name="MESSAGE">
+                          <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="60Zpq;,{pfU6gJ,_*Q}/" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field customattributes="" name="TEXT">Senha Anterior não pode estar vazio.</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="l8tL_An}yyEF875rsh$B" multilayer="true" namespace="cronapi.screen.focusComponent" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EFocar%20componente%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EfocusComponentDesc*%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20%20id%20:%20Objeto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.screen.focusComponent','cronapi.screen.focusComponent')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+                            <mutation name="{{cronapi.screen.focusComponent}}" return-raw-type="undefined">
+                              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name=" id"/>
+                            </mutation>
+                            <value name="ARG0">
+                              <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id=")K=2Sphc(/MyenJY9*)," origintype="ids_from_screen" output="true" type="ids_from_screen">
+                                <field customattributes="" name="SELECT">oldPassword</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <value name="IF1">
+                      <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="KLFPpqN5-g=(-tQSTCjB" inline="true" multilayer="false" namespace="cronapi.logic.isNullOrEmpty" origintype="procedures_callreturn" output="true" returntype="ObjectType.BOOLEAN" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3E%C3%A9%20nulo%20ou%20vazio?%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20verifique%20se%20a%20vari%C3%A1vel%20%C3%A9%20nula%20ou%20vazia%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20%20:%20Objeto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20L%C3%B3gico%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.logic.isNullOrEmpty','cronapi.logic.isNullOrEmpty')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                        <mutation name="{{cronapi.logic.isNullOrEmpty}}" return-raw-type="undefined">
+                          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name=""/>
+                        </mutation>
+                        <comment h="80" pinned="false" w="400">Esta validação é feita pelo changePassword(); mas foi feita novamente aqui para seguir a ordem.</comment>
+                        <value name="ARG0">
+                          <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="97]DPGs^dItmNd]uPJ`A" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
                             <field customattributes="" name="VAR">newPassword</field>
                           </block>
                         </value>
                       </block>
                     </value>
-                    <value name="B">
-                      <block asynccall="false" colour="#5b67a5" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="GS4H)VGbEi-?@33K#Vkk" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
-                        <field customattributes="" name="NUM">8</field>
+                    <statement name="DO1">
+                      <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="FqP^#opfn4sD(+zE$=j*" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.screen.notify','cronapi.screen.notify')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                        <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                        <field customattributes="" name="SELECT">error</field>
+                        <value name="MESSAGE">
+                          <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="3.v}RHi`8Bra$ea0,]S`" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field customattributes="" name="TEXT">Nova Senha não pode estar vazio.</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="oc/i_N@Ff!WxB?jqy%rL" multilayer="true" namespace="cronapi.screen.focusComponent" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EFocar%20componente%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EfocusComponentDesc*%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20%20id%20:%20Objeto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.screen.focusComponent','cronapi.screen.focusComponent')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+                            <mutation name="{{cronapi.screen.focusComponent}}" return-raw-type="undefined">
+                              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name=" id"/>
+                            </mutation>
+                            <value name="ARG0">
+                              <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="*0_eR1QU=f`~@@4FS2}I" origintype="ids_from_screen" output="true" type="ids_from_screen">
+                                <field customattributes="" name="SELECT">newPassword</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <value name="IF2">
+                      <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="#luZ{y_I|MB|C4s~)E4c" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                        <field customattributes="" name="OP">LT</field>
+                        <comment h="80" pinned="false" w="400">Validação que está faltando no changePassword();</comment>
+                        <value name="A">
+                          <block asynccall="false" colour="#745ba5" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="d?!Av5]e{haXgGk^F8@:" origintype="lists_length" output="true" tooltip="Retorna o tamanho de uma lista." type="lists_length">
+                            <value name="VALUE">
+                              <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="|3sX])bO;D0ZFIH,j|2k" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                <field customattributes="" name="VAR">newPassword</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block asynccall="false" colour="#5b67a5" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="GS4H)VGbEi-?@33K#Vkk" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                            <field customattributes="" name="NUM">8</field>
+                          </block>
+                        </value>
                       </block>
                     </value>
-                  </block>
-                </value>
-                <statement name="DO2">
-                  <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="BRrB=2M%B^-x}4fC?lMg" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.screen.notify','cronapi.screen.notify')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
-                    <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
-                    <field customattributes="" name="SELECT">error</field>
-                    <value name="MESSAGE">
-                      <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="T16k.[0y4+=n;3K}%5}w" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                        <field customattributes="" name="TEXT">O tamanho da senha deve ser de no mínimo 8 caracteres.</field>
-                      </shadow>
+                    <statement name="DO2">
+                      <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="BRrB=2M%B^-x}4fC?lMg" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.screen.notify','cronapi.screen.notify')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                        <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                        <field customattributes="" name="SELECT">error</field>
+                        <value name="MESSAGE">
+                          <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="T16k.[0y4+=n;3K}%5}w" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field customattributes="" name="TEXT">O tamanho da senha deve ser de no mínimo 8 caracteres.</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="X.LVudTqfp0[=5%#;Wnt" multilayer="true" namespace="cronapi.screen.focusComponent" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EFocar%20componente%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EfocusComponentDesc*%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20%20id%20:%20Objeto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.screen.focusComponent','cronapi.screen.focusComponent')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+                            <mutation name="{{cronapi.screen.focusComponent}}" return-raw-type="undefined">
+                              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name=" id"/>
+                            </mutation>
+                            <value name="ARG0">
+                              <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id=",v:W),XlJtMMER?h3r@c" origintype="ids_from_screen" output="true" type="ids_from_screen">
+                                <field customattributes="" name="SELECT">newPassword</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <value name="IF3">
+                      <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="0)QFbLphep[*%iFRvp~2" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                        <field customattributes="" name="OP">NEQ</field>
+                        <value name="A">
+                          <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="H#+]-JCwaH(KOP,ji`O}" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                            <field customattributes="" name="VAR">newPassword</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="EC!G}-xMK;Gaj-*?`2OK" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                            <field customattributes="" name="VAR">newPasswordConfirmation</field>
+                          </block>
+                        </value>
+                      </block>
                     </value>
+                    <statement name="DO3">
+                      <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="30OG8_,b,7^.,?L#hqs1" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.screen.notify','cronapi.screen.notify')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                        <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                        <field customattributes="" name="SELECT">error</field>
+                        <value name="MESSAGE">
+                          <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="`P8Fc^)!ykh[{6fy,*l9" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field customattributes="" name="TEXT">Os campos Nova Senha e Confirmação não coincidem.</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="gv3o/2*G2,XMrkY)^Dj8" multilayer="true" namespace="cronapi.screen.focusComponent" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EFocar%20componente%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EfocusComponentDesc*%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20%20id%20:%20Objeto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.screen.focusComponent','cronapi.screen.focusComponent')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+                            <mutation name="{{cronapi.screen.focusComponent}}" return-raw-type="undefined">
+                              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name=" id"/>
+                            </mutation>
+                            <value name="ARG0">
+                              <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id=".hD;XTsbTk-eHgUhJde2" origintype="ids_from_screen" output="true" type="ids_from_screen">
+                                <field customattributes="" name="SELECT">newPasswordConfirmation</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block asynccall="false" colour="#487f7f" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="0Nn4gFz!~jFvVbWPy%d)" multilayer="true" namespace="cronapi.util.executeJavascriptNoReturn" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExecuta%20javascript%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20executa%20javascript%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Comando%20:%20Texto%3C/span%3E%3Cdiv%3EComando%20a%20ser%20executado%20(exemplo:%20alert('teste');).%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.util.executeJavascriptNoReturn','cronapi.util.executeJavascriptNoReturn')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+                        <mutation name="{{cronapi.util.executeJavascriptNoReturn}}" return-raw-type="undefined">
+                          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Comando"/>
+                        </mutation>
+                        <value name="ARG0">
+                          <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="dh(jyiy$^P?KcG2B4A]^" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field customattributes="" name="TEXT">angular.element(document.getElementById('btn-override-salvar-senha')).scope().changePassword()</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
                   </block>
-                </statement>
-                <statement name="ELSE">
-                  <block asynccall="false" colour="#487f7f" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="0Nn4gFz!~jFvVbWPy%d)" multilayer="true" namespace="cronapi.util.executeJavascriptNoReturn" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExecuta%20javascript%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20executa%20javascript%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Comando%20:%20Texto%3C/span%3E%3Cdiv%3EComando%20a%20ser%20executado%20(exemplo:%20alert('teste');).%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.util.executeJavascriptNoReturn','cronapi.util.executeJavascriptNoReturn')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
-                    <mutation name="{{cronapi.util.executeJavascriptNoReturn}}" return-raw-type="undefined">
-                      <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Comando"/>
-                    </mutation>
-                    <value name="ARG0">
-                      <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="dh(jyiy$^P?KcG2B4A]^" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                        <field customattributes="" name="TEXT">angular.element(document.getElementById('btn-override-salvar-senha')).scope().changePassword()</field>
-                      </shadow>
-                    </value>
-                  </block>
-                </statement>
+                </next>
               </block>
             </next>
           </block>
