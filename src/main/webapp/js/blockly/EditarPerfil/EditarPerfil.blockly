@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="WEB" bpmnAble="false" formTarget="src/main/webapp/views/logged/home.view.html" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JS" ruleDescription="EditarPerfil" ruleName="EditarPerfil" ruleSynchronous="false" ruleTimeout="" ruleType="I" showAsFunction="false" soap="false" swagger="false">
-  <metadata scale="1" scrollx="631.9" scrolly="35.39999999999998" target="r4jz1%#,$)khom?L_|gD"/>
+  <metadata scale="1" scrollx="413.64062500000057" scrolly="-97.5" target="HdNmtqPLNkOC5}1$.yw["/>
   <block asynccall="false" colour="#fca03b" datasourcetype="" id="r4jz1%#,$)khom?L_|gD" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-502" y="38">
     <field customattributes="" name="NAME">NotificacaoLogin</field>
     <statement name="STACK">
@@ -170,6 +170,22 @@
             </value>
           </block>
         </next>
+      </block>
+    </statement>
+  </block>
+  <block asynccall="false" colour="#fca03b" datasourcetype="" id="HdNmtqPLNkOC5}1$.yw[" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-82" y="383">
+    <field customattributes="" name="NAME">validarAlterarSenha</field>
+    <comment h="80" pinned="true" w="400">normalmente, no elemento que chama esta função, deveria ter o seguinte atributo: 'ng-click="changePassword()"' para efetuar validações extras foi removido este elemento, e chamado a partir do javascript pegando o escopo do angular e chamando esta função no bloco Executa javascript desta função.</comment>
+    <statement name="STACK">
+      <block asynccall="false" colour="#487f7f" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="0Nn4gFz!~jFvVbWPy%d)" multilayer="true" namespace="cronapi.util.executeJavascriptNoReturn" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExecuta%20javascript%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20executa%20javascript%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Comando%20:%20Texto%3C/span%3E%3Cdiv%3EComando%20a%20ser%20executado%20(exemplo:%20alert('teste');).%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.util.executeJavascriptNoReturn','cronapi.util.executeJavascriptNoReturn')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+        <mutation name="{{cronapi.util.executeJavascriptNoReturn}}" return-raw-type="undefined">
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Comando"/>
+        </mutation>
+        <value name="ARG0">
+          <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="dh(jyiy$^P?KcG2B4A]^" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+            <field customattributes="" name="TEXT">angular.element(document.getElementById('btn-override-salvar-senha')).scope().changePassword()</field>
+          </shadow>
+        </value>
       </block>
     </statement>
   </block>
