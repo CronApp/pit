@@ -12,12 +12,12 @@ window.blockly.js.blockly.Votacao.Voto = window.blockly.js.blockly.Votacao.Voto 
  * @param checkAceitarRegras
  *
  * @author José Zay
- * @since 29/08/2023, 15:14:14
+ * @since 29/08/2023, 15:18:04
  *
  */
 window.blockly.js.blockly.Votacao.Voto.IniciarVotacaoArgs = [{ description: 'checkAceitarRegras', id: 'b8644fae' }];
 window.blockly.js.blockly.Votacao.Voto.IniciarVotacao = async function(checkAceitarRegras) {
- var k, m, n, x, checkUnicoVoto, lista;
+ var k, m, n, x, listaIdeias, listaVotos, i, desabilitar;
   //
   if (this.cronapi.conversion.toBoolean(checkAceitarRegras)) {
     //
@@ -40,12 +40,12 @@ window.blockly.js.blockly.Votacao.Voto.IniciarVotacao = async function(checkAcei
  * @param checado
  *
  * @author José Zay
- * @since 29/08/2023, 15:14:14
+ * @since 29/08/2023, 15:18:04
  *
  */
 window.blockly.js.blockly.Votacao.Voto.ObtemVotoArgs = [{ description: 'idIdeiaVotada', id: '66436263' }, { description: 'checado', id: '7b36cee4' }];
 window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada, checado) {
- var k, m, n, x, checkUnicoVoto;
+ var k, m, n, x, listaIdeias, listaVotos, i;
   //
   lista = this.cronapi.screen.getValueOfField("vars.listaVotos");
   //
@@ -76,12 +76,12 @@ window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada,
       //
       this.cronapi.screen.addClass("div-unico-voto", 'hidden');
       //
-      (await this.cronapi.client('blockly.js.blockly.Votacao.Voto.DesabilitaCheckboxes').run());
+      (await this.cronapi.client('blockly.js.blockly.Votacao.Voto.CheckboxDesabilita').run());
     } else {
       //
       this.cronapi.notification.customNotify('error', 'Selecione no máximo 2 caixas de seleção', 'fade', 'bottom', 'right', 'true');
       //
-      (await this.cronapi.client('blockly.js.blockly.Votacao.Voto.DesabilitaCheckboxes').run());
+      (await this.cronapi.client('blockly.js.blockly.Votacao.Voto.CheckboxDesabilita').run());
     }
   } else {
     //
@@ -105,7 +105,7 @@ window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada,
       //
       this.cronapi.screen.removeClass("div-unico-voto", 'hidden');
       //
-      (await this.cronapi.client('blockly.js.blockly.Votacao.Voto.HabilitaCheckboxes').run());
+      (await this.cronapi.client('blockly.js.blockly.Votacao.Voto.CheckBoxHabilita').run());
     }
   }
 }
@@ -119,12 +119,12 @@ window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada,
  * @param checkUnicoVoto
  *
  * @author José Zay
- * @since 29/08/2023, 15:14:14
+ * @since 29/08/2023, 15:18:04
  *
  */
 window.blockly.js.blockly.Votacao.Voto.FinalizarVotacaoArgs = [{ description: 'checkUnicoVoto', id: '8e5f7fd0' }];
 window.blockly.js.blockly.Votacao.Voto.FinalizarVotacao = async function(checkUnicoVoto) {
- var k, m, n, x, lista, item;
+ var k, m, n, x, listaIdeias, listaVotos, i, desabilitar;
   //
   lista = this.cronapi.screen.getValueOfField("vars.listaVotos");
   //
@@ -159,18 +159,18 @@ window.blockly.js.blockly.Votacao.Voto.FinalizarVotacao = async function(checkUn
 }
 
 /**
- * @function DesabilitaCheckboxes
+ * @function CheckboxDesabilita
  *
  *
  *
  *
  * @author José Zay
- * @since 29/08/2023, 15:14:14
+ * @since 29/08/2023, 15:18:04
  *
  */
-window.blockly.js.blockly.Votacao.Voto.DesabilitaCheckboxesArgs = [];
-window.blockly.js.blockly.Votacao.Voto.DesabilitaCheckboxes = async function() {
- var k, m, n, x, checkUnicoVoto, lista, item;
+window.blockly.js.blockly.Votacao.Voto.CheckboxDesabilitaArgs = [];
+window.blockly.js.blockly.Votacao.Voto.CheckboxDesabilita = async function() {
+ var k, m, n, x, listaIdeias, listaVotos, i, desabilitar, j;
   //
   listaIdeias = this.cronapi.screen.getValueOfField("vars.listaIdeias");
   //
@@ -185,10 +185,6 @@ window.blockly.js.blockly.Votacao.Voto.DesabilitaCheckboxes = async function() {
       j = listaVotos[j_index];
       //
       if (this.cronapi.object.getObjectField(i, 'id') == j) {
-        //
-        console.log(this.cronapi.object.getObjectField(i, 'id'));
-        //
-        console.log(j);
         //
         desabilitar = false;
       }
@@ -208,12 +204,12 @@ window.blockly.js.blockly.Votacao.Voto.DesabilitaCheckboxes = async function() {
  *
  *
  * @author José Zay
- * @since 29/08/2023, 15:14:14
+ * @since 29/08/2023, 15:18:04
  *
  */
 window.blockly.js.blockly.Votacao.Voto.UsuarioVotouArgs = [];
 window.blockly.js.blockly.Votacao.Voto.UsuarioVotou = async function() {
- var k, m, n, x, checkUnicoVoto, lista, item;
+ var k, m, n, x, listaIdeias, listaVotos, i, desabilitar, j;
   return (await this.cronapi.server('blockly.Votacao.Votos.BackUsuarioVotou').toPromise().run());
 }
 
@@ -224,12 +220,12 @@ window.blockly.js.blockly.Votacao.Voto.UsuarioVotou = async function() {
  *
  *
  * @author José Zay
- * @since 29/08/2023, 15:14:14
+ * @since 29/08/2023, 15:18:04
  *
  */
 window.blockly.js.blockly.Votacao.Voto.VotosComputadosArgs = [];
 window.blockly.js.blockly.Votacao.Voto.VotosComputados = async function() {
- var k, m, n, x, checkUnicoVoto, lista, item;
+ var k, m, n, x, listaIdeias, listaVotos, i, desabilitar, j;
   //
   this.cronapi.screen.changeValueOfField("vars.votosComputados", (await this.cronapi.server('blockly.Votacao.Votos.BackVotosComputados').toPromise().run()));
 }
@@ -241,12 +237,12 @@ window.blockly.js.blockly.Votacao.Voto.VotosComputados = async function() {
  *
  *
  * @author José Zay
- * @since 29/08/2023, 15:14:14
+ * @since 29/08/2023, 15:18:04
  *
  */
 window.blockly.js.blockly.Votacao.Voto.VotosResultadoRankArgs = [];
 window.blockly.js.blockly.Votacao.Voto.VotosResultadoRank = async function() {
- var k, m, n, x, checkUnicoVoto, lista, item;
+ var k, m, n, x, listaIdeias, listaVotos, i, desabilitar, j;
   //
   if (this.cronapi.dateTime.getNow() >= this.cronapi.dateTime.newDate(2023, 8, 25, 0, 0, 0)) {
     //
@@ -266,12 +262,12 @@ window.blockly.js.blockly.Votacao.Voto.VotosResultadoRank = async function() {
  *
  *
  * @author José Zay
- * @since 29/08/2023, 15:14:14
+ * @since 29/08/2023, 15:18:04
  *
  */
 window.blockly.js.blockly.Votacao.Voto.InicializarStatusVotacaoUserArgs = [];
 window.blockly.js.blockly.Votacao.Voto.InicializarStatusVotacaoUser = async function() {
- var k, m, n, x, checkUnicoVoto, lista, item;
+ var k, m, n, x, listaIdeias, listaVotos, i, desabilitar, j;
   //
   if ((await this.cronapi.server('blockly.Usuario.UsuarioComite.RetornaUsarioPertenceComite').toPromise().run())) {
     //
@@ -303,12 +299,12 @@ window.blockly.js.blockly.Votacao.Voto.InicializarStatusVotacaoUser = async func
  *
  *
  * @author José Zay
- * @since 29/08/2023, 15:14:14
+ * @since 29/08/2023, 15:18:04
  *
  */
 window.blockly.js.blockly.Votacao.Voto.VotosUsuarioArgs = [];
 window.blockly.js.blockly.Votacao.Voto.VotosUsuario = async function() {
- var k, m, n, x, checkUnicoVoto, lista, item;
+ var k, m, n, x, listaIdeias, listaVotos, i, desabilitar, j;
   //
   this.cronapi.screen.changeValueOfField("vars.votosUsuario", (await this.cronapi.server('blockly.Votacao.Votos.BackVotosUsuario').toPromise().run()));
 }
@@ -322,12 +318,12 @@ window.blockly.js.blockly.Votacao.Voto.VotosUsuario = async function() {
  * @param voto
  *
  * @author José Zay
- * @since 29/08/2023, 15:14:14
+ * @since 29/08/2023, 15:18:04
  *
  */
 window.blockly.js.blockly.Votacao.Voto.RemoveVotoArgs = [{ description: 'ideia', id: '6b26f1a1' }, { description: 'voto', id: 'e3ae01c3' }];
 window.blockly.js.blockly.Votacao.Voto.RemoveVoto = async function(ideia, voto) {
- var k, m, n, x, checkUnicoVoto;
+ var k, m, n, x, listaIdeias, listaVotos, i;
   //
   listaVotos = this.cronapi.screen.getValueOfField("vars.listaVotos");
   //
@@ -356,22 +352,22 @@ window.blockly.js.blockly.Votacao.Voto.RemoveVoto = async function(ideia, voto) 
     this.cronapi.screen.removeClass("div-unico-voto", 'hidden');
   }
   //
-  (await this.cronapi.client('blockly.js.blockly.Votacao.Voto.HabilitaCheckboxes').run());
+  (await this.cronapi.client('blockly.js.blockly.Votacao.Voto.CheckBoxHabilita').run());
 }
 
 /**
- * @function HabilitaCheckboxes
+ * @function CheckBoxHabilita
  *
  *
  *
  *
  * @author José Zay
- * @since 29/08/2023, 15:14:14
+ * @since 29/08/2023, 15:18:04
  *
  */
-window.blockly.js.blockly.Votacao.Voto.HabilitaCheckboxesArgs = [];
-window.blockly.js.blockly.Votacao.Voto.HabilitaCheckboxes = async function() {
- var k, m, n, x, checkUnicoVoto, lista, item;
+window.blockly.js.blockly.Votacao.Voto.CheckBoxHabilitaArgs = [];
+window.blockly.js.blockly.Votacao.Voto.CheckBoxHabilita = async function() {
+ var k, m, n, x, listaIdeias, listaVotos, i, desabilitar, j;
   //
   listaIdeias = this.cronapi.screen.getValueOfField("vars.listaIdeias");
   //

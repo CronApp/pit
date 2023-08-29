@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="WEB" bpmnAble="false" formTarget="src/main/webapp/views/logged/home.view.html" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JS" ruleDescription="Voto" ruleName="Voto" ruleSynchronous="false" ruleTimeout="" ruleType="I" showAsFunction="false" soap="false" swagger="false">
-  <metadata scale="1.0749542399999998" scrollx="41.75009152000007" scrolly="-698.82486272" target="q%t7Ajoi2xn~}pF3uY^2"/>
+  <metadata scale="1.0749542399999998" scrollx="54.75009151999984" scrolly="-639.8248627200003" target="q%t7Ajoi2xn~}pF3uY^2"/>
   <block asynccall="false" colour="#fca03b" datasourcetype="" id=":Tnds-9Z:~Q_57/2.?{*" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-177" y="37">
     <mutation>
       <arg id="b8644fae" name="checkAceitarRegras"/>
@@ -351,8 +351,8 @@ Está inverso porque aparentemente aqui chega o valor anterior ao clique</commen
                                   </shadow>
                                 </value>
                                 <next>
-                                  <block asynccall="false" colour="#fca03b" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="=;4$y4mZ_*zyM(CoNAO!" origintype="procedures_callnoreturn" output="false" tooltip="Executa a função definida pelo usuário &quot;DesabilitaCheckboxes&quot;." type="procedures_callnoreturn">
-                                    <mutation name="DesabilitaCheckboxes" return-raw-type="undefined"/>
+                                  <block asynccall="false" colour="#fca03b" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="=;4$y4mZ_*zyM(CoNAO!" origintype="procedures_callnoreturn" output="false" tooltip="Executa a função definida pelo usuário &quot;CheckboxDesabilita&quot;." type="procedures_callnoreturn">
+                                    <mutation name="CheckboxDesabilita" return-raw-type="undefined"/>
                                   </block>
                                 </next>
                               </block>
@@ -422,8 +422,8 @@ Está inverso porque aparentemente aqui chega o valor anterior ao clique</commen
                                   </block>
                                 </value>
                                 <next>
-                                  <block asynccall="false" colour="#fca03b" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="4(QH#a|DOsS}66Fs`~!C" origintype="procedures_callnoreturn" output="false" tooltip="Executa a função definida pelo usuário &quot;DesabilitaCheckboxes&quot;." type="procedures_callnoreturn">
-                                    <mutation name="DesabilitaCheckboxes" return-raw-type="undefined"/>
+                                  <block asynccall="false" colour="#fca03b" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="4(QH#a|DOsS}66Fs`~!C" origintype="procedures_callnoreturn" output="false" tooltip="Executa a função definida pelo usuário &quot;CheckboxDesabilita&quot;." type="procedures_callnoreturn">
+                                    <mutation name="CheckboxDesabilita" return-raw-type="undefined"/>
                                   </block>
                                 </next>
                               </block>
@@ -597,8 +597,8 @@ Está inverso porque aparentemente aqui chega o valor anterior ao clique</commen
                               </shadow>
                             </value>
                             <next>
-                              <block asynccall="false" colour="#fca03b" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="1bwNBFj.4x4hg(^0[mm+" origintype="procedures_callnoreturn" output="false" tooltip="Executa a função definida pelo usuário &quot;HabilitaCheckboxes&quot;." type="procedures_callnoreturn">
-                                <mutation name="HabilitaCheckboxes" return-raw-type="undefined"/>
+                              <block asynccall="false" colour="#fca03b" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="1bwNBFj.4x4hg(^0[mm+" origintype="procedures_callnoreturn" output="false" tooltip="Executa a função definida pelo usuário &quot;CheckBoxHabilita&quot;." type="procedures_callnoreturn">
+                                <mutation name="CheckBoxHabilita" return-raw-type="undefined"/>
                               </block>
                             </next>
                           </block>
@@ -1041,7 +1041,7 @@ Está inverso porque aparentemente aqui chega o valor anterior ao clique</commen
     </statement>
   </block>
   <block asynccall="false" colour="#fca03b" datasourcetype="" id="q%t7Ajoi2xn~}pF3uY^2" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="83" y="532">
-    <field customattributes="" name="NAME">DesabilitaCheckboxes</field>
+    <field customattributes="" name="NAME">CheckboxDesabilita</field>
     <statement name="STACK">
       <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="q%t7Ajoi2xn~}pF3uY^2" id="=1W#q!yX}ai#o+^Y7(Ll" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
         <field customattributes="" name="VAR">listaIdeias</field>
@@ -1127,50 +1127,13 @@ Está inverso porque aparentemente aqui chega o valor anterior ao clique</commen
                               </block>
                             </value>
                             <statement name="DO0">
-                              <block asynccall="false" colour="#5ba58c" datasourcetype="" dependencyby="q%t7Ajoi2xn~}pF3uY^2" id="d5;e3NJpLT:{BE$OTL)7" origintype="text_print" output="false" tooltip="Imprime o texto, número ou valor especificado." type="text_print">
-                                <value name="TEXT">
-                                  <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="q%t7Ajoi2xn~}pF3uY^2" id="_z2-t?9;V/*`WH%negl;" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                                    <field customattributes="" name="TEXT">abc</field>
-                                  </shadow>
-                                  <block asynccall="false" colour="#c88330" datasourcetype="" dependencyby="q%t7Ajoi2xn~}pF3uY^2" id="+~+wHYY{aXo~L%eGc#]b" multilayer="false" namespace="cronapi.object.getObjectField" origintype="procedures_get_field" output="true" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20campo%20do%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20campo%20do%20objeto%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%20:%20Objeto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Campo%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.object.getObjectField','cronapi.object.getObjectField')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_get_field">
-                                    <mutation name="{{cronapi.object.getObjectField}}">
-                                      <arg name="Objeto"/>
-                                      <arg name="Campo"/>
-                                    </mutation>
-                                    <value name="PARAM0">
-                                      <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="q%t7Ajoi2xn~}pF3uY^2" id="C5/jO6!?Hd/$;+c)7D;y" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
-                                        <field customattributes="" name="VAR">i</field>
-                                      </block>
-                                    </value>
-                                    <value name="PARAM1">
-                                      <block asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="q%t7Ajoi2xn~}pF3uY^2" id="A[jI,/blixvu5h4JiMny" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                                        <field customattributes="" name="TEXT">id</field>
-                                      </block>
-                                    </value>
+                              <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="q%t7Ajoi2xn~}pF3uY^2" id="hhac4#z$?J#NJ59Zp(ch" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+                                <field customattributes="" name="VAR">desabilitar</field>
+                                <value name="VALUE">
+                                  <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="q%t7Ajoi2xn~}pF3uY^2" id="Xc92YhlfqxMiwDR+jP[W" origintype="logic_boolean" output="true" tooltip="Retorna verdadeiro ou falso." type="logic_boolean">
+                                    <field customattributes="" name="BOOL">FALSE</field>
                                   </block>
                                 </value>
-                                <next>
-                                  <block asynccall="false" colour="#5ba58c" datasourcetype="" dependencyby="q%t7Ajoi2xn~}pF3uY^2" id="Wqj9~WfD-akLN#B`g5zZ" origintype="text_print" output="false" tooltip="Imprime o texto, número ou valor especificado." type="text_print">
-                                    <value name="TEXT">
-                                      <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="q%t7Ajoi2xn~}pF3uY^2" id="c6XyR{N%65O]uaQ;1IAy" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                                        <field customattributes="" name="TEXT">abc</field>
-                                      </shadow>
-                                      <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="q%t7Ajoi2xn~}pF3uY^2" id="tm_*X/n5d5V?2Cit4s/R" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
-                                        <field customattributes="" name="VAR">j</field>
-                                      </block>
-                                    </value>
-                                    <next>
-                                      <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="q%t7Ajoi2xn~}pF3uY^2" id="hhac4#z$?J#NJ59Zp(ch" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
-                                        <field customattributes="" name="VAR">desabilitar</field>
-                                        <value name="VALUE">
-                                          <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="q%t7Ajoi2xn~}pF3uY^2" id="Xc92YhlfqxMiwDR+jP[W" origintype="logic_boolean" output="true" tooltip="Retorna verdadeiro ou falso." type="logic_boolean">
-                                            <field customattributes="" name="BOOL">FALSE</field>
-                                          </block>
-                                        </value>
-                                      </block>
-                                    </next>
-                                  </block>
-                                </next>
                               </block>
                             </statement>
                           </block>
@@ -1740,8 +1703,8 @@ Está inverso porque aparentemente aqui chega o valor anterior ao clique</commen
                               </block>
                             </statement>
                             <next>
-                              <block asynccall="false" colour="#fca03b" datasourcetype="" dependencyby="[DKJKbl~Fx+,+,_``kNA" id="jntA*pYz79;LW6/o@`Jc" origintype="procedures_callnoreturn" output="false" tooltip="Executa a função definida pelo usuário &quot;HabilitaCheckboxes&quot;." type="procedures_callnoreturn">
-                                <mutation name="HabilitaCheckboxes" return-raw-type="undefined"/>
+                              <block asynccall="false" colour="#fca03b" datasourcetype="" dependencyby="[DKJKbl~Fx+,+,_``kNA" id="jntA*pYz79;LW6/o@`Jc" origintype="procedures_callnoreturn" output="false" tooltip="Executa a função definida pelo usuário &quot;CheckBoxHabilita&quot;." type="procedures_callnoreturn">
+                                <mutation name="CheckBoxHabilita" return-raw-type="undefined"/>
                               </block>
                             </next>
                           </block>
@@ -1758,7 +1721,7 @@ Está inverso porque aparentemente aqui chega o valor anterior ao clique</commen
     </statement>
   </block>
   <block asynccall="false" colour="#fca03b" datasourcetype="" id="dm=qy;Mx/KCp!]CfwYWX" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="2392" y="2333">
-    <field customattributes="" name="NAME">HabilitaCheckboxes</field>
+    <field customattributes="" name="NAME">CheckBoxHabilita</field>
     <statement name="STACK">
       <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="dm=qy;Mx/KCp!]CfwYWX" id="A8M#VY[2XSK9004Tc+e9" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
         <field customattributes="" name="VAR">listaIdeias</field>
