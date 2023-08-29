@@ -10,7 +10,8 @@
       <div class="container-fluid" id="container-fluid"> 
         <div class="row component-holder login-panel-1" id="component-holder"> 
           <div id="responsive-component" class="col-md-9 col-lg-7 col-sm-10  col-xs-11"> 
-            <form class="form-validation ng-pristine ng-valid ng-valid-required" autocomplete="off" name="form" ng-submit="login()" role="form"> 
+            <!--<form class="form-validation ng-pristine ng-valid ng-valid-required" autocomplete="off" name="form" ng-submit="login()" role="form"> -->
+            <form class="form-validation ng-pristine ng-valid ng-valid-required" autocomplete="off" name="form" role="form"> 
               <input type="hidden" name="csrf_token" value="CIwNZNlR4XbisJF39I8yWnWX9wX4WFoz" class="col-md-12"> 
               <h1 class="title component-holder col-xs-12 col-md-12 text-left" xattr-position="text-left" xattr-type="h3" data-component="crn-text-component" id="crn-text-component-login" style="font-family: defaultFontSemiBold">LOGIN</h1> 
               <div class="login-signup"> 
@@ -31,7 +32,7 @@
               </div> 
               <a ng-click="cronapi.screen.showModal('forgotPasswordModal')" class="reset-password cron-link text-right component-holder col-xs-12  col-md-12" target="_self" data-replace="true" data-component="crn-anchor" id="crn-botao-cadastre">Esqueceu a senha?</a> 
               <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-login"> 
-                <button aria-label="{{'Login.view.Login' | translate}}" class="btn-block btn-primary" type="submit" ng-disabled="form.$invalid || vm.dataLoading" xattr-fullsize="btn-block" xattr-theme="btn-primary" xattr-disabled=""> <span class="" text-theme="">Entrar</span> </button> 
+                <button aria-label="{{'Login.view.Login' | translate}}" class="btn-block btn-primary" type="submit" ng-disabled="form.$invalid || vm.dataLoading" xattr-fullsize="btn-block" xattr-theme="btn-primary" xattr-disabled="" ng-click="cronapi.client('js.blockly.Login.Login').run()"> <span class="" text-theme="">Entrar</span> </button> 
               </div> 
             </form> 
             <div> 
