@@ -12,7 +12,7 @@ window.blockly.js.blockly.Votacao.Voto = window.blockly.js.blockly.Votacao.Voto 
  * @param checkAceitarRegras
  *
  * @author José Zay
- * @since 29/08/2023, 13:25:24
+ * @since 29/08/2023, 13:34:44
  *
  */
 window.blockly.js.blockly.Votacao.Voto.IniciarVotacaoArgs = [{ description: 'checkAceitarRegras', id: 'b8644fae' }];
@@ -40,7 +40,7 @@ window.blockly.js.blockly.Votacao.Voto.IniciarVotacao = async function(checkAcei
  * @param checado
  *
  * @author José Zay
- * @since 29/08/2023, 13:25:24
+ * @since 29/08/2023, 13:34:44
  *
  */
 window.blockly.js.blockly.Votacao.Voto.ObtemVotoArgs = [{ description: 'idIdeiaVotada', id: '66436263' }, { description: 'checado', id: '7b36cee4' }];
@@ -113,7 +113,7 @@ window.blockly.js.blockly.Votacao.Voto.ObtemVoto = async function(idIdeiaVotada,
  * @param checkUnicoVoto
  *
  * @author José Zay
- * @since 29/08/2023, 13:25:24
+ * @since 29/08/2023, 13:34:44
  *
  */
 window.blockly.js.blockly.Votacao.Voto.FinalizarVotacaoArgs = [{ description: 'checkUnicoVoto', id: '8e5f7fd0' }];
@@ -159,7 +159,7 @@ window.blockly.js.blockly.Votacao.Voto.FinalizarVotacao = async function(checkUn
  *
  *
  * @author José Zay
- * @since 29/08/2023, 13:25:24
+ * @since 29/08/2023, 13:34:44
  *
  */
 window.blockly.js.blockly.Votacao.Voto.UsuarioVotouArgs = [];
@@ -175,7 +175,7 @@ window.blockly.js.blockly.Votacao.Voto.UsuarioVotou = async function() {
  *
  *
  * @author José Zay
- * @since 29/08/2023, 13:25:24
+ * @since 29/08/2023, 13:34:44
  *
  */
 window.blockly.js.blockly.Votacao.Voto.VotosComputadosArgs = [];
@@ -192,7 +192,7 @@ window.blockly.js.blockly.Votacao.Voto.VotosComputados = async function() {
  *
  *
  * @author José Zay
- * @since 29/08/2023, 13:25:24
+ * @since 29/08/2023, 13:34:44
  *
  */
 window.blockly.js.blockly.Votacao.Voto.VotosResultadoRankArgs = [];
@@ -217,7 +217,7 @@ window.blockly.js.blockly.Votacao.Voto.VotosResultadoRank = async function() {
  *
  *
  * @author José Zay
- * @since 29/08/2023, 13:25:24
+ * @since 29/08/2023, 13:34:44
  *
  */
 window.blockly.js.blockly.Votacao.Voto.InicializarStatusVotacaoUserArgs = [];
@@ -254,7 +254,7 @@ window.blockly.js.blockly.Votacao.Voto.InicializarStatusVotacaoUser = async func
  *
  *
  * @author José Zay
- * @since 29/08/2023, 13:25:24
+ * @since 29/08/2023, 13:34:44
  *
  */
 window.blockly.js.blockly.Votacao.Voto.VotosUsuarioArgs = [];
@@ -273,7 +273,7 @@ window.blockly.js.blockly.Votacao.Voto.VotosUsuario = async function() {
  * @param voto
  *
  * @author José Zay
- * @since 29/08/2023, 13:25:24
+ * @since 29/08/2023, 13:34:44
  *
  */
 window.blockly.js.blockly.Votacao.Voto.RemoveVotoArgs = [{ description: 'ideia', id: '6b26f1a1' }, { description: 'voto', id: 'e3ae01c3' }];
@@ -289,4 +289,25 @@ window.blockly.js.blockly.Votacao.Voto.RemoveVoto = async function(ideia, voto) 
   listaVotos.splice(((listaVotos.indexOf(voto) + 1) - 1), 1);
   //
   checkboxes[((listaIdeias.indexOf(ideia) + 1) - 1)] = 'true';
+  // Controla visualizações da tela de votações efetuadas
+  // (da direita) conforme número de votos selecionados.
+  // -Com nenhum voto, deve aparecer uma tela 'vazia' esperando algo.
+  // -Com um voto, deve aparecer o voto selecionado e uma checkbox
+  // de confirmação se o votante irá apenas efetuar um voto.
+  // -Com dois votos deve aparecer apenas os votos e os botões para finalizar.
+  if (listaVotos.length <= 0) {
+    //
+    this.cronapi.screen.removeClass("div-tela-espera-voto-id", 'hidden');
+    //
+    this.cronapi.screen.addClass("div-tela-votados-id", 'hidden');
+    //
+    this.cronapi.screen.addClass("div-unico-voto", 'hidden');
+  } else if (listaVotos.length == 1) {
+    //
+    this.cronapi.screen.removeClass("div-unico-voto", 'hidden');
+  }
+  //
+  (await this.cronapi.client('cronapi.util.sleep').run(100));
+  //
+  this.cronapi.util.executeJavascriptNoReturn('checkCount();');
 }
