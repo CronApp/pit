@@ -47,7 +47,7 @@
             <div class="panel panel-default" ng-repeat="ideia in vars.listaIdeias track by $index" ng-hide="searchKeyword &amp;&amp; (!ideia.fields.Projeto.toLowerCase().includes(searchKeyword.toLowerCase()) &amp;&amp; !ideia.fields.Responsavel.toLowerCase().includes(searchKeyword.toLowerCase()))"> 
               <div style="display: flex; flex-direction: row;" ng-hidden="filter:searchKeyword"> 
                 <div class="div-voto-selecao-class" style="margin-top: 46px; margin-right: 20px; margin-left: 12px;" ng-if="checkboxProjetosVisivel"> 
-                  <input class="check-voto-selecao" onclick="checkCount(this)" type="checkbox" id="checkbox1233[$index]" ng-model="vars.checkbox[$index]" ng-initial-value="false" crn-allow-null-values="false" ng-false-value="true" ng-true-value="false" ng-click="cronapi.client('js.blockly.Votacao.Voto.ObtemVoto').names('66436263', '7b36cee4').run(ideia.id, vars.checkbox[$index])"> 
+                  <input class="check-voto-selecao" onclick="checkCount(this)" type="checkbox" id="checkbox{{$index}}" ng-model="vars.checkbox[$index]" ng-initial-value="false" crn-allow-null-values="false" ng-false-value="true" ng-true-value="false" ng-click="cronapi.client('js.blockly.Votacao.Voto.ObtemVoto').names('66436263', '7b36cee4').run(ideia.id, vars.checkbox[$index])"> 
                 </div> 
                 <div style="width: 100%;"> 
                   <div class="panel-heading heading-arrow collapsed" role="tab" id="headingOne{{$index}}" data-toggle="collapse" data-parent="#accordion-1372" href="#collapseOne-1372{{$index}}" aria-expanded="true" aria-controls="collapseOne-1372{{$index}}" heading-arrow="heading-arrow"> 
