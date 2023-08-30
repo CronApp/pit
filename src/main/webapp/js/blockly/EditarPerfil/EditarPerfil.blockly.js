@@ -11,7 +11,7 @@ window.blockly.js.blockly.EditarPerfil.EditarPerfil = window.blockly.js.blockly.
  *
  *
  * @author José Zay
- * @since 30/08/2023, 10:57:21
+ * @since 30/08/2023, 16:53:48
  *
  */
 window.blockly.js.blockly.EditarPerfil.EditarPerfil.NotificacaoLoginArgs = [];
@@ -28,7 +28,7 @@ window.blockly.js.blockly.EditarPerfil.EditarPerfil.NotificacaoLogin = async fun
  *
  *
  * @author José Zay
- * @since 30/08/2023, 10:57:21
+ * @since 30/08/2023, 16:53:48
  *
  */
 window.blockly.js.blockly.EditarPerfil.EditarPerfil.PreencheCampoNomeArgs = [];
@@ -47,7 +47,7 @@ window.blockly.js.blockly.EditarPerfil.EditarPerfil.PreencheCampoNome = async fu
  *
  *
  * @author José Zay
- * @since 30/08/2023, 10:57:21
+ * @since 30/08/2023, 16:53:48
  *
  */
 window.blockly.js.blockly.EditarPerfil.EditarPerfil.FecharModalEditarPerfilArgs = [];
@@ -64,7 +64,7 @@ window.blockly.js.blockly.EditarPerfil.EditarPerfil.FecharModalEditarPerfil = as
  *
  *
  * @author José Zay
- * @since 30/08/2023, 10:57:21
+ * @since 30/08/2023, 16:53:48
  *
  */
 window.blockly.js.blockly.EditarPerfil.EditarPerfil.IniciarModalEditarArgs = [];
@@ -81,7 +81,7 @@ window.blockly.js.blockly.EditarPerfil.EditarPerfil.IniciarModalEditar = async f
  *
  *
  * @author José Zay
- * @since 30/08/2023, 10:57:21
+ * @since 30/08/2023, 16:53:48
  *
  */
 window.blockly.js.blockly.EditarPerfil.EditarPerfil.IniciarModalEditarSenhaArgs = [];
@@ -105,7 +105,7 @@ window.blockly.js.blockly.EditarPerfil.EditarPerfil.IniciarModalEditarSenha = as
  *
  *
  * @author José Zay
- * @since 30/08/2023, 10:57:21
+ * @since 30/08/2023, 16:53:48
  *
  */
 window.blockly.js.blockly.EditarPerfil.EditarPerfil.ValidarAlterarSenhaArgs = [];
@@ -130,7 +130,7 @@ window.blockly.js.blockly.EditarPerfil.EditarPerfil.ValidarAlterarSenha = async 
     this.cronapi.screen.focusComponent("newPassword");
   } else if (newPassword.length < 8) {
     //
-    this.cronapi.screen.notify('error','O tamanho da senha deve ser de no mínimo 8 caracteres.');
+    this.cronapi.screen.notify('error','O tamanho da senha deve possuir ao menos 8 caracteres.');
     //
     this.cronapi.screen.focusComponent("newPassword");
   } else if (!this.cronapi.regex.validateTextWithRegex(newPassword, '^(?=.*[a-zA-Z])(?=.*\\d).+$', '-')) {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="WEB" bpmnAble="false" formTarget="src/main/webapp/views/logged/home.view.html" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JS" ruleDescription="EditarPerfil" ruleName="EditarPerfil" ruleSynchronous="false" ruleTimeout="" ruleType="I" showAsFunction="false" soap="false" swagger="false">
-  <metadata scale="1" scrollx="658.9000000000001" scrolly="-1150.5000000000002" target="HdNmtqPLNkOC5}1$.yw["/>
+  <metadata scale="1" scrollx="638.9" scrolly="-270.4" target="HdNmtqPLNkOC5}1$.yw["/>
   <block asynccall="false" colour="#fca03b" datasourcetype="" id="r4jz1%#,$)khom?L_|gD" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-480" y="57">
     <field customattributes="" name="NAME">NotificacaoLogin</field>
     <statement name="STACK">
@@ -326,7 +326,7 @@
                         <field customattributes="" name="SELECT">error</field>
                         <value name="MESSAGE">
                           <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="HdNmtqPLNkOC5}1$.yw[" id="T16k.[0y4+=n;3K}%5}w" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                            <field customattributes="" name="TEXT">O tamanho da senha deve ser de no mínimo 8 caracteres.</field>
+                            <field customattributes="" name="TEXT">O tamanho da senha deve possuir ao menos 8 caracteres.</field>
                           </shadow>
                         </value>
                         <next>
