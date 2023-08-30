@@ -10,7 +10,7 @@
                 <label for="signupUsername" class="ng-binding">{{'Nome' | translate}}</label> 
                 <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="signupUsername.value" id="signupUsername" class="inputPersonalizado form-control k-textbox ng-pristine ng-untouched ng-valid ng-empty ng-valid-required" placeholder="" autocomplete="username" autocorrect="off" autocapitalize="off"> 
               </div> 
-            </div>
+            </div> 
             <div class="component-holder ng-binding ng-scope col-xs-12 col-md-12" data-component="crn-textinput" id="crn-textinput-signupemail"> 
               <div class="form-group"> 
                 <label for="signupEmail" class="ng-binding">{{'Signup.view.Email' | translate}}</label> 
@@ -20,7 +20,15 @@
             <div class="component-holder ng-binding ng-scope col-xs-12 col-md-12" data-component="crn-textinput" id="crn-textinput-signuppassword" ng-controller="CheckSenhaValida"> 
               <div class="form-group"> 
                 <label for="signupPassword" class="ng-binding"> {{'Users.view.Senha' | translate}} </label> 
-                <input type="password" mask="" mask-placeholder="" ng-required="false" ng-model="signupPassword.value" id="signupPassword" class="inputPersonalizado form-control k-textbox ng-pristine ng-untouched ng-valid ng-empty ng-valid-required" placeholder="" autocomplete="password" autocorrect="off" autocapitalize="off"> 
+                <input type="password" mask="" mask-placeholder="" ng-required="false" ng-model="signupPassword.value" ng-change="checkPasswordRequirements()" ng-focus="showPasswordRequirements()" ng-blur="hidePasswordRequirements()" id="signupPassword" class="inputPersonalizado form-control k-textbox ng-pristine ng-untouched ng-valid ng-empty ng-valid-required" placeholder="" autocomplete="password" autocorrect="off" autocapitalize="off"> 
+                <div id="passwordRequirements" class="password-requirements" ng-show="passwordRequirementsVisible"> 
+                  <ul style="list-style-type: none;"> 
+                    <li><span ng-class="{ 'icon-ok': isLengthValid, 'icon-x': !isLengthValid }"></span>Senha possui ao menos 8 caracteres</li> 
+                    <li><span ng-class="{ 'icon-ok': isAlphaNumericValid, 'icon-x': !isAlphaNumericValid }"></span>Senha possui letras e números</li> 
+                    <li><span ng-class="{ 'icon-ok': isUpperCaseValid, 'icon-x': !isUpperCaseValid }"></span>Senha possui ao menos um caractere maiúsculo</li> 
+                    <li><span ng-class="{ 'icon-ok': isSpecialCharValid, 'icon-x': !isSpecialCharValid }"></span>Senha possui ao menos um caractere especial</li> 
+                  </ul> 
+                </div> 
               </div> 
             </div> 
             <div class="component-holder ng-binding ng-scope col-xs-12 col-md-12" data-component="crn-textinput" id="crn-textinput-signupconfirmpassword"> 
