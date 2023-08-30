@@ -24,3 +24,24 @@
 body {
   font-family: defaultFont, new-rubrik, sans-serif;
 }
+
+.password-requirements {
+  position: absolute;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: white;
+  padding: 1rem;
+  z-index: 1;
+}
+
+.icon-ok::before {
+  font-family: FontAwesome;
+  content: "\f00c";
+  color: #40BED4;
+}
+
+.icon-x::before {
+  font-family: FontAwesome;
+  content: "\f00d";
+  color: #E5584C;
+}
