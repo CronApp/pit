@@ -17,7 +17,7 @@
                 <input type="email" mask="" mask-placeholder="" ng-required="false" ng-model="signupEmail.value" id="signupEmail" class="inputPersonalizado form-control k-textbox ng-pristine ng-untouched ng-valid ng-empty ng-valid-required" placeholder="" autocomplete="email" autocorrect="off" autocapitalize="off"> 
               </div> 
             </div> 
-            <div class="component-holder ng-binding ng-scope col-xs-12 col-md-12" data-component="crn-textinput" id="crn-textinput-signuppassword"> 
+            <div class="component-holder ng-binding ng-scope col-xs-12 col-md-12" data-component="crn-textinput" id="crn-textinput-signuppassword" ng-controller="CheckSenhaValida"> 
               <div class="form-group"> 
                 <label for="signupPassword" class="ng-binding"> {{'Users.view.Senha' | translate}} </label> 
                 <input type="password" mask="" mask-placeholder="" ng-required="false" ng-model="signupPassword.value" id="signupPassword" class="inputPersonalizado form-control k-textbox ng-pristine ng-untouched ng-valid ng-empty ng-valid-required" placeholder="" autocomplete="password" autocorrect="off" autocapitalize="off"> 

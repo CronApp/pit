@@ -291,15 +291,15 @@
               <label for="oldPassword">{{"Home.view.Old Password" | translate}}</label> 
               <input type="password" class="form-control k-textbox inputPersonalizado" id="oldPassword" placeholder="{{'Home.view.Old Password' | translate}}" aria-label="{{'Home.view.Old Password' | translate}}" ng-required="true"> 
             </div> 
-            <div class="list-group-item"> 
+            <div class="list-group-item" ng-controller="CheckSenhaValida"> 
               <label for="newPassword">{{"Home.view.New Password" | translate}}</label> 
               <input type="password" class="form-control k-textbox inputPersonalizado" id="newPassword" placeholder="{{'Home.view.New Password' | translate}}" aria-label="{{'Home.view.New Password' | translate}}" ng-model="password" ng-required="true" ng-change="checkPasswordRequirements()" ng-focus="showPasswordRequirements()" ng-blur="hidePasswordRequirements()"> 
               <div id="passwordRequirements" class="password-requirements" ng-show="passwordRequirementsVisible"> 
                 <ul style="list-style-type: none;"> 
-                  <li><span ng-class="{ 'icon-ok': isLengthValid, 'icon-x': !isLengthValid }"></span>Senha possui mais de 8 caracteres</li> 
+                  <li><span ng-class="{ 'icon-ok': isLengthValid, 'icon-x': !isLengthValid }"></span>Senha possui ao menos 8 caracteres</li> 
                   <li><span ng-class="{ 'icon-ok': isAlphaNumericValid, 'icon-x': !isAlphaNumericValid }"></span>Senha possui letras e números</li> 
-                  <li><span ng-class="{ 'icon-ok': isUpperCaseValid, 'icon-x': !isUpperCaseValid }"></span>Senha possui um caractere maiúsculo</li> 
-                  <li><span ng-class="{ 'icon-ok': isSpecialCharValid, 'icon-x': !isSpecialCharValid }"></span>Senha possui um caractere especial</li> 
+                  <li><span ng-class="{ 'icon-ok': isUpperCaseValid, 'icon-x': !isUpperCaseValid }"></span>Senha possui ao menos um caractere maiúsculo</li> 
+                  <li><span ng-class="{ 'icon-ok': isSpecialCharValid, 'icon-x': !isSpecialCharValid }"></span>Senha possui ao menos um caractere especial</li> 
                 </ul> 
               </div> 
             </div> 
