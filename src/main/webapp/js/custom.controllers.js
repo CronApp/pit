@@ -18,7 +18,7 @@ app.controller('CheckSenhaValida', function($scope) {
     $scope.isSpecialCharValid = false;
 
     $scope.checkPasswordRequirements = function() {
-        const password = $scope.password || $scope.signupPassword.value;
+        const password = $scope.password || ($scope.signupPassword && $scope.signupPassword.value);
 
         if (password) {
             $scope.isLengthValid = password.length >= 8;
