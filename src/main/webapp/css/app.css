@@ -24,3 +24,19 @@
 body {
   font-family: defaultFont, new-rubrik, sans-serif;
 }
+
+.password-requirements {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 1;
+}
+
+.icon-ok::before {
+  content: "✔️";
+}
+
+.icon-x::before {
+  content: "❌";
+}
