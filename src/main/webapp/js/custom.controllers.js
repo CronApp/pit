@@ -43,8 +43,9 @@ app.controller('AfterPageController', function($scope) {
 //     };
 // });
 
-function showPasswordRequirements() {
+function showPasswordRequirements(password) {
     document.getElementById("passwordRequirements").classList.remove('hidden');
+    checkPasswordRequirements(password);
 }
 
 function hidePasswordRequirements() {
@@ -67,6 +68,8 @@ function checkPasswordRequirements(password) {
         upperCaseIconValid &&
         specialCharIconValid) {
             document.getElementById("passwordRequirements").classList.add('hidden');
+        } else {
+            document.getElementById("passwordRequirements").classList.remove('hidden');
         }
 
     lengthIcon.className = lengthIconValid ? "icon-ok" : "icon-x";

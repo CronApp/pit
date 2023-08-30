@@ -291,17 +291,17 @@
               <label for="oldPassword">{{"Home.view.Old Password" | translate}}</label> 
               <input type="password" class="form-control k-textbox inputPersonalizado" id="oldPassword" placeholder="{{'Home.view.Old Password' | translate}}" aria-label="{{'Home.view.Old Password' | translate}}" ng-required="true"> 
             </div> 
-            <div class="list-group-item" ng-controller="CheckSenhaValida"> 
+            <div class="list-group-item"> 
               <label for="newPassword">{{"Home.view.New Password" | translate}}</label> 
-              <input type="password" class="form-control k-textbox inputPersonalizado" id="newPassword" placeholder="{{'Home.view.New Password' | translate}}" aria-label="{{'Home.view.New Password' | translate}}" ng-model="password" ng-required="true" ng-change="checkPasswordRequirements()" ng-focus="showPasswordRequirements()" ng-blur="hidePasswordRequirements()"> 
-              <div id="passwordRequirements" class="password-requirements" ng-show="passwordRequirementsVisible"> 
-                <ul style="list-style-type: none;"> 
-                  <li><span ng-class="{ 'icon-ok': isLengthValid, 'icon-x': !isLengthValid }"></span>Senha possui ao menos 8 caracteres</li> 
-                  <li><span ng-class="{ 'icon-ok': isAlphaNumericValid, 'icon-x': !isAlphaNumericValid }"></span>Senha possui letras e números</li> 
-                  <li><span ng-class="{ 'icon-ok': isUpperCaseValid, 'icon-x': !isUpperCaseValid }"></span>Senha possui ao menos um caractere maiúsculo</li> 
-                  <li><span ng-class="{ 'icon-ok': isSpecialCharValid, 'icon-x': !isSpecialCharValid }"></span>Senha possui ao menos um caractere especial</li> 
-                </ul> 
-              </div> 
+              <input type="password" class="form-control k-textbox inputPersonalizado" id="newPassword" placeholder="{{'Home.view.New Password' | translate}}" aria-label="{{'Home.view.New Password' | translate}}" ng-model="password" ng-required="true" oninput="checkPasswordRequirements(this.value)" onfocus="showPasswordRequirements(this.value)" onblur="hidePasswordRequirements()"> 
+                 <div id="passwordRequirements" class="password-requirements hidden"> 
+                  <ul style="list-style-type: none; padding-left:1rem;"> 
+                    <li><span id="lengthIcon" ng-class="{ 'icon-ok': isLengthValid, 'icon-x': !isLengthValid }"></span>Senha possui ao menos 8 caracteres</li> 
+                    <li><span id="alphaNumericIcon" ng-class="{ 'icon-ok': isAlphaNumericValid, 'icon-x': !isAlphaNumericValid }"></span>Senha possui números e letras</li> 
+                    <li><span id="upperCaseIcon" ng-class="{ 'icon-ok': isUpperCaseValid, 'icon-x': !isUpperCaseValid }"></span>Senha possui ao menos uma letra</li> 
+                    <li><span id="specialCharIcon" ng-class="{ 'icon-ok': isSpecialCharValid, 'icon-x': !isSpecialCharValid }"></span>Senha possui ao menos um caractere especial</li> 
+                  </ul> 
+                </div> 
             </div> 
             <div class="list-group-item"> 
               <label for="newPasswordConfirmation">{{"Home.view.Confirmation" | translate}}</label> 
