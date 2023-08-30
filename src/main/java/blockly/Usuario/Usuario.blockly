@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="JAVA" bpmnAble="false" formTarget="" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JAVA" ruleDescription="Usuario" ruleName="Usuario" ruleSecurity="{&quot;post&quot;:&quot;Public&quot;,&quot;get&quot;:&quot;Public&quot;,&quot;execute&quot;:&quot;Public&quot;,&quot;delete&quot;:&quot;Public&quot;,&quot;put&quot;:&quot;Public&quot;}" ruleSynchronous="false" ruleTimeout="300" ruleType="I" showAsFunction="false" soap="false" swagger="false">
-  <metadata scale="1" scrollx="324.90000000000384" scrolly="-658.5000000000001" target="Lb8b*z%8862D8*J.O=yZ"/>
+  <metadata scale="1" scrollx="324.90000000000384" scrolly="-887.6000000000013" target="Lb8b*z%8862D8*J.O=yZ"/>
   <block asynccall="false" colour="#fca03b" datasourcetype="" id="Lb8b*z%8862D8*J.O=yZ" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-194" y="162">
     <mutation>
       <arg id="53b42e7f" name="email"/>
@@ -20,7 +20,7 @@
             </value>
             <next>
               <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id=";W|Hhyk{iyAYPc{@acZ0" origintype="controls_if" output="false" tooltip="function () { [native code] }" type="controls_if">
-                <mutation else="1" elseif="6"/>
+                <mutation else="1" elseif="7"/>
                 <value name="IF0">
                   <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="@^@SA+Q4LJ]?w?:+n;_@" origintype="logic_operation" output="true" tooltip="Retorna verdadeiro se ambas as entradas forem iguais." type="logic_operation">
                     <mutation items="1"/>
@@ -423,9 +423,9 @@
                   </block>
                 </statement>
                 <value name="IF6">
-                  <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="--s~P#`QeG,%hZ^Q`950" origintype="logic_negate" output="true" tooltip="Retorna verdadeiro se a entrada for falsa.  Retorna falsa se a entrada for verdadeira." type="logic_negate">
+                  <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="ES_2HL_HERBy[;+=|6RY" origintype="logic_negate" output="true" tooltip="Retorna verdadeiro se a entrada for falsa.  Retorna falsa se a entrada for verdadeira." type="logic_negate">
                     <value name="BOOL">
-                      <block asynccall="false" colour="#995ba5" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="yj](dXL,bN7VBpF|b,E@" multilayer="false" namespace="cronapi.regex.Operations.validateTextWithRegexUnscape" origintype="procedures_callreturn" output="true" returntype="ObjectType.BOOLEAN" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EValidar%20texto%20com%20Exp.%20Regular%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20valida%20texto%20com%20Exp.%20Regular.%20Retorna%20verdadeiro%20caso%20encontre%20ou%20falso%20caso%20n%C3%A3o%20encontre%20o%20texto%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Texto%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Express%C3%A3o%20Regular%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Flag%20:%20Objeto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20L%C3%B3gico%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.regex.Operations.validateTextWithRegexUnscape','cronapi.regex.Operations.validateTextWithRegexUnscape')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                      <block asynccall="false" colour="#995ba5" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="`=|,CKyMny/zl?WYZqQh" multilayer="false" namespace="cronapi.regex.Operations.validateTextWithRegexUnscape" origintype="procedures_callreturn" output="true" returntype="ObjectType.BOOLEAN" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EValidar%20texto%20com%20Exp.%20Regular%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20valida%20texto%20com%20Exp.%20Regular.%20Retorna%20verdadeiro%20caso%20encontre%20ou%20falso%20caso%20n%C3%A3o%20encontre%20o%20texto%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Texto%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Express%C3%A3o%20Regular%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Flag%20:%20Objeto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20L%C3%B3gico%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.regex.Operations.validateTextWithRegexUnscape','cronapi.regex.Operations.validateTextWithRegexUnscape')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
                         <mutation name="{{cronapi.regex.Operations.validateTextWithRegexUnscape}}" return-raw-type="cronapi.Var">
                           <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Texto"/>
                           <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Expressão Regular"/>
@@ -435,17 +435,17 @@
                           <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="[.6gT?1OjD5GN,`rP[mP" origintype="text" output="true" tooltip="function () { [native code] }" type="text" xmlns="">
                             <field customattributes="" name="TEXT"/>
                           </shadow>
-                          <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="k7093G5_j8uzi]l/rd`f" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                          <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="n+@n6}(*b0][_(yPM0hc" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
                             <field customattributes="" name="VAR">senha</field>
                           </block>
                         </value>
                         <value name="ARG1">
-                          <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="t+GbH;WUs}B#KMGk=!NS" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                          <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="^,qJrfT3QCyUz8:VMhx=" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
                             <field customattributes="" name="TEXT">^(?=.*[A-Z]).+$</field>
                           </shadow>
                         </value>
                         <value name="ARG2">
-                          <block asynccall="false" colour="#995ba5" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="qytd9?g-tX,xl/HLGx^(" origintype="util_dropdown" output="true" type="util_dropdown">
+                          <block asynccall="false" colour="#995ba5" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="w1#vm?[pD=/9o2L.]D?w" origintype="util_dropdown" output="true" type="util_dropdown">
                             <mutation>
                               <arg name="CASE_INSENSITIVE" value="CASE_INSENSITIVE"/>
                               <arg name="MULTILINE" value="MULTILINE"/>
@@ -465,6 +465,71 @@
                   </block>
                 </value>
                 <statement name="DO6">
+                  <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="8iMdW#Aj|eYRD7kM,r!t" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+                    <field customattributes="" name="VAR">response</field>
+                    <value name="VALUE">
+                      <block asynccall="false" colour="#917731" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="`)7#pS)HtK^i+7r/iQ?(" multilayer="false" namespace="cronapi.map.Operations.createObjectMapWith" origintype="maps_create_with" output="true" returntype="ObjectType.MAP" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3ECriar%20objeto%20mapa%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20cria%20um%20objeto%20mapa%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Valor(es)%20:%20Objeto%3C/span%3E%3Cdiv%3E%20Valores%20a%20serem%20adicionados%20na%20cria%C3%A7%C3%A3o%20do%20mapa%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Mapa%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.map.Operations.createObjectMapWith%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="maps_create_with">
+                        <mutation name="{{cronapi.map.Operations.createObjectMapWith}}">
+                          <arg name="sucesso"/>
+                          <arg name="mensagem"/>
+                        </mutation>
+                        <value name="ARG0">
+                          <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="kU(foP=y5b7HH7ORp*g$" origintype="logic_boolean" output="true" tooltip="Retorna verdadeiro ou falso." type="logic_boolean">
+                            <field customattributes="" name="BOOL">FALSE</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="rd](S?7q9O3XU!7J#80U" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field customattributes="" name="TEXT">A senha deve conter ao menos uma letra maiúscula.</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <value name="IF7">
+                  <block asynccall="false" colour="#5b80a5" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="--s~P#`QeG,%hZ^Q`950" origintype="logic_negate" output="true" tooltip="Retorna verdadeiro se a entrada for falsa.  Retorna falsa se a entrada for verdadeira." type="logic_negate">
+                    <value name="BOOL">
+                      <block asynccall="false" colour="#995ba5" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="yj](dXL,bN7VBpF|b,E@" multilayer="false" namespace="cronapi.regex.Operations.validateTextWithRegexUnscape" origintype="procedures_callreturn" output="true" returntype="ObjectType.BOOLEAN" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EValidar%20texto%20com%20Exp.%20Regular%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20valida%20texto%20com%20Exp.%20Regular.%20Retorna%20verdadeiro%20caso%20encontre%20ou%20falso%20caso%20n%C3%A3o%20encontre%20o%20texto%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Texto%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Express%C3%A3o%20Regular%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Flag%20:%20Objeto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20L%C3%B3gico%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.regex.Operations.validateTextWithRegexUnscape','cronapi.regex.Operations.validateTextWithRegexUnscape')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                        <mutation name="{{cronapi.regex.Operations.validateTextWithRegexUnscape}}" return-raw-type="cronapi.Var">
+                          <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Texto"/>
+                          <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Expressão Regular"/>
+                          <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.OBJECT" name="Flag"/>
+                        </mutation>
+                        <value name="ARG0">
+                          <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="[.6gT?1OjD5GN,`rP[mP" origintype="text" output="true" tooltip="function () { [native code] }" type="text" xmlns="">
+                            <field customattributes="" name="TEXT"/>
+                          </shadow>
+                          <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="k7093G5_j8uzi]l/rd`f" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                            <field customattributes="" name="VAR">senha</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="t+GbH;WUs}B#KMGk=!NS" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field customattributes="" name="TEXT">^(?=.*[\W_]).+$</field>
+                          </shadow>
+                        </value>
+                        <value name="ARG2">
+                          <block asynccall="false" colour="#995ba5" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="qytd9?g-tX,xl/HLGx^(" origintype="util_dropdown" output="true" type="util_dropdown">
+                            <mutation>
+                              <arg name="CASE_INSENSITIVE" value="CASE_INSENSITIVE"/>
+                              <arg name="MULTILINE" value="MULTILINE"/>
+                              <arg name="DOTALL" value="DOTALL"/>
+                              <arg name="UNICODE_CASE" value="UNICODE_CASE"/>
+                              <arg name="CANON_EQ" value="CANON_EQ"/>
+                              <arg name="UNIX_LINES" value="UNIX_LINES"/>
+                              <arg name="LITERAL" value="LITERAL"/>
+                              <arg name="UNICODE_CHARACTER_CLASS" value="UNICODE_CHARACTER_CLASS"/>
+                              <arg name="COMMENTS" value="COMMENTS"/>
+                            </mutation>
+                            <field customattributes="" name="SELECT">CASE_INSENSITIVE</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO7">
                   <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="p_-]DIb7?.$0.-Qn=o6q" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
                     <field customattributes="" name="VAR">response</field>
                     <value name="VALUE">
@@ -480,7 +545,7 @@
                         </value>
                         <value name="ARG1">
                           <block asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="#~[GkBl_+2hhMg,%X-2#" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                            <field customattributes="" name="TEXT">A senha deve conter ao menos uma letra maiúscula.</field>
+                            <field customattributes="" name="TEXT">A senha deve conter ao menos um caractere especial.</field>
                           </block>
                         </value>
                       </block>

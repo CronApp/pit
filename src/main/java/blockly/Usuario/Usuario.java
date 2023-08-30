@@ -18,7 +18,7 @@ public static final int TIMEOUT = 300;
  * @param nome
  *
  * @author José Zay
- * @since 30/08/2023, 10:34:55
+ * @since 30/08/2023, 11:19:03
  *
  */
 public static Var CadastrarUsuario(@ParamMetaData(description = "email", id = "53b42e7f") Var email, @ParamMetaData(description = "param_senha", id = "2bc04d37") Var param_senha, @ParamMetaData(description = "nome", id = "fca923a9") Var nome) throws Exception {
@@ -112,6 +112,15 @@ public static Var CadastrarUsuario(@ParamMetaData(description = "email", id = "5
             cronapi.map.Operations.createObjectMapWith(Var.valueOf("sucesso",
             Var.VAR_FALSE) , Var.valueOf("mensagem",
             Var.valueOf("A senha deve conter ao menos uma letra maiúscula.")));
+        } else if (
+        cronapi.regex.Operations.validateTextWithRegexUnscape(senha,
+        Var.valueOf("^(?=.*[\\W_]).+$"),
+        Var.valueOf("CASE_INSENSITIVE"))
+        .negate().getObjectAsBoolean()) {
+            response =
+            cronapi.map.Operations.createObjectMapWith(Var.valueOf("sucesso",
+            Var.VAR_FALSE) , Var.valueOf("mensagem",
+            Var.valueOf("A senha deve conter ao menos um caractere especial.")));
         } else {
             cronapi.database.Operations.beginTransaction(Var.valueOf("app"));
             usr =
@@ -146,7 +155,7 @@ public static Var CadastrarUsuario(@ParamMetaData(description = "email", id = "5
  * @param email
  *
  * @author José Zay
- * @since 30/08/2023, 10:34:55
+ * @since 30/08/2023, 11:19:03
  *
  */
 public static void ResetSenha(@ParamMetaData(description = "email", id = "ae582bec") Var email) throws Exception {
@@ -171,7 +180,7 @@ public static void ResetSenha(@ParamMetaData(description = "email", id = "ae582b
  * @param password
  *
  * @author José Zay
- * @since 30/08/2023, 10:34:55
+ * @since 30/08/2023, 11:19:03
  *
  */
 public static Var login(@ParamMetaData(description = "username", id = "eb4f9fa9") Var username, @ParamMetaData(description = "password", id = "59713897") Var password) throws Exception {
