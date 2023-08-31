@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="JAVA" bpmnAble="false" formTarget="" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JAVA" ruleDescription="Usuario" ruleName="Usuario" ruleSecurity="{&quot;post&quot;:&quot;Public&quot;,&quot;get&quot;:&quot;Public&quot;,&quot;execute&quot;:&quot;Public&quot;,&quot;delete&quot;:&quot;Public&quot;,&quot;put&quot;:&quot;Public&quot;}" ruleSynchronous="false" ruleTimeout="300" ruleType="I" showAsFunction="false" soap="false" swagger="false">
-  <metadata scale="1" scrollx="324.9000000000011" scrolly="-585.3999999999999" target="Lb8b*z%8862D8*J.O=yZ"/>
+  <metadata scale="1" scrollx="-2443.2445945945933" scrolly="-85.39999999999998" target="Lb8b*z%8862D8*J.O=yZ"/>
   <block asynccall="false" colour="#fca03b" datasourcetype="" id="Lb8b*z%8862D8*J.O=yZ" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-194" y="162">
     <mutation>
       <arg id="53b42e7f" name="email"/>
@@ -88,7 +88,7 @@
                             </value>
                             <value name="FIND">
                               <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="U(CTd(*y)Mr|Gf0?SdQ." origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                                <field customattributes="" name="TEXT">@lyceum.</field>
+                                <field customattributes="" name="TEXT">@lyceum.com.br</field>
                               </shadow>
                             </value>
                           </block>
@@ -113,7 +113,7 @@
                             </value>
                             <value name="FIND">
                               <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="-47ITiRiCkR_J{@Ow[#H" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                                <field customattributes="" name="TEXT">@hygia.</field>
+                                <field customattributes="" name="TEXT">@hygia.com.br</field>
                               </shadow>
                             </value>
                           </block>
@@ -138,7 +138,7 @@
                             </value>
                             <value name="FIND">
                               <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="2_8!,jxd!@`H6d/Znmsy" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                                <field customattributes="" name="TEXT">@ergon.</field>
+                                <field customattributes="" name="TEXT">@ergon.com.br</field>
                               </shadow>
                             </value>
                           </block>
@@ -163,7 +163,7 @@
                             </value>
                             <value name="FIND">
                               <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="X7AE]U*O(g_+.+f/LQX;" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                                <field customattributes="" name="TEXT">@cronapp.</field>
+                                <field customattributes="" name="TEXT">@cronapp.io</field>
                               </shadow>
                             </value>
                           </block>
@@ -188,7 +188,7 @@
                             </value>
                             <value name="FIND">
                               <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="Lb8b*z%8862D8*J.O=yZ" id="qPtRP=hCLJg[xBZScP,J" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-                                <field customattributes="" name="TEXT">@techne.</field>
+                                <field customattributes="" name="TEXT">@techne.com.br</field>
                               </shadow>
                             </value>
                           </block>

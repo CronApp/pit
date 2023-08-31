@@ -18,7 +18,7 @@ public static final int TIMEOUT = 300;
  * @param nome
  *
  * @author José Zay
- * @since 30/08/2023, 16:55:54
+ * @since 31/08/2023, 09:25:30
  *
  */
 public static Var CadastrarUsuario(@ParamMetaData(description = "email", id = "53b42e7f") Var email, @ParamMetaData(description = "param_senha", id = "2bc04d37") Var param_senha, @ParamMetaData(description = "nome", id = "fca923a9") Var nome) throws Exception {
@@ -49,23 +49,23 @@ public static Var CadastrarUsuario(@ParamMetaData(description = "email", id = "5
         Var.valueOf(
         Var.valueOf(
         Var.valueOf(email.getObjectAsString().indexOf(
-        Var.valueOf("@lyceum.").getObjectAsString()) + 1).equals(
+        Var.valueOf("@lyceum.com.br").getObjectAsString()) + 1).equals(
         Var.valueOf(0))).getObjectAsBoolean() &&
         Var.valueOf(
         Var.valueOf(email.getObjectAsString().indexOf(
-        Var.valueOf("@hygia.").getObjectAsString()) + 1).equals(
+        Var.valueOf("@hygia.com.br").getObjectAsString()) + 1).equals(
         Var.valueOf(0))).getObjectAsBoolean() &&
         Var.valueOf(
         Var.valueOf(email.getObjectAsString().indexOf(
-        Var.valueOf("@ergon.").getObjectAsString()) + 1).equals(
+        Var.valueOf("@ergon.com.br").getObjectAsString()) + 1).equals(
         Var.valueOf(0))).getObjectAsBoolean() &&
         Var.valueOf(
         Var.valueOf(email.getObjectAsString().indexOf(
-        Var.valueOf("@cronapp.").getObjectAsString()) + 1).equals(
+        Var.valueOf("@cronapp.io").getObjectAsString()) + 1).equals(
         Var.valueOf(0))).getObjectAsBoolean() &&
         Var.valueOf(
         Var.valueOf(email.getObjectAsString().indexOf(
-        Var.valueOf("@techne.").getObjectAsString()) + 1).equals(
+        Var.valueOf("@techne.com.br").getObjectAsString()) + 1).equals(
         Var.valueOf(0))).getObjectAsBoolean()).getObjectAsBoolean()) {
             response =
             cronapi.map.Operations.createObjectMapWith(Var.valueOf("sucesso",
@@ -155,7 +155,7 @@ public static Var CadastrarUsuario(@ParamMetaData(description = "email", id = "5
  * @param email
  *
  * @author José Zay
- * @since 30/08/2023, 16:55:54
+ * @since 31/08/2023, 09:25:30
  *
  */
 public static void ResetSenha(@ParamMetaData(description = "email", id = "ae582bec") Var email) throws Exception {
@@ -180,7 +180,7 @@ public static void ResetSenha(@ParamMetaData(description = "email", id = "ae582b
  * @param password
  *
  * @author José Zay
- * @since 30/08/2023, 16:55:54
+ * @since 31/08/2023, 09:25:30
  *
  */
 public static Var login(@ParamMetaData(description = "username", id = "eb4f9fa9") Var username, @ParamMetaData(description = "password", id = "59713897") Var password) throws Exception {
