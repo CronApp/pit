@@ -296,10 +296,10 @@
               <input type="password" class="form-control k-textbox inputPersonalizado" id="newPassword" placeholder="{{'Home.view.New Password' | translate}}" aria-label="{{'Home.view.New Password' | translate}}" ng-model="password" ng-required="true" oninput="checkPasswordRequirements(this.value)" onfocus="showPasswordRequirements(this.value)" onblur="hidePasswordRequirements()"> 
                  <div id="passwordRequirements" class="password-requirements hidden"> 
                   <ul style="list-style-type: none; padding-left:1rem;"> 
-                    <li><span id="lengthIcon" ng-class="{ 'icon-ok': isLengthValid, 'icon-x': !isLengthValid }"></span>Senha possui ao menos 8 caracteres</li> 
-                    <li><span id="alphaNumericIcon" ng-class="{ 'icon-ok': isAlphaNumericValid, 'icon-x': !isAlphaNumericValid }"></span>Senha possui números e letras</li> 
-                    <li><span id="upperCaseIcon" ng-class="{ 'icon-ok': isUpperCaseValid, 'icon-x': !isUpperCaseValid }"></span>Senha possui ao menos uma letra maiúscula</li> 
-                    <li><span id="specialCharIcon" ng-class="{ 'icon-ok': isSpecialCharValid, 'icon-x': !isSpecialCharValid }"></span>Senha possui ao menos um caractere especial</li> 
+                    <li><span id="lengthIcon"></span>Senha possui ao menos 8 caracteres</li> 
+                    <li><span id="alphaNumericIcon"></span>Senha possui números e letras</li> 
+                    <li><span id="upperCaseIcon"></span>Senha possui ao menos uma letra maiúscula</li> 
+                    <li><span id="specialCharIcon"></span>Senha possui ao menos um caractere especial</li> 
                   </ul> 
                 </div> 
             </div> 
