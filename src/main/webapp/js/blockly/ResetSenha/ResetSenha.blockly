@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="WEB" bpmnAble="false" formTarget="" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JS" ruleDescription="ResetSenha" ruleName="ResetSenha" ruleSynchronous="false" ruleTimeout="" ruleType="I" showAsFunction="false" soap="false" swagger="false">
+  <metadata scale="1" scrollx="480.9000000000003" scrolly="-53.39999999999975" target="Anb:u5+^,0vLkL9QIqn5"/>
+  <block asynccall="false" colour="#995ba5" datasourcetype="" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-350" y="130">
+    <mutation>
+      <arg id="f6c4f75c" name="reset"/>
+    </mutation>
+    <field customattributes="" name="NAME">Resetar</field>
+    <statement name="STACK">
+      <block asynccall="true" colour="#487f7f" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="pIn;%inl;c*N}K4o^~`?" multilayer="false" namespace="cronapi.util.callServerBlocklyNoReturn" origintype="procedures_callblockly_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EChamar%20Bloco%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20chamar%20bloco%20de%20programa%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Nome%20da%20fun%C3%A7%C3%A3o%20do%20bloco%20que%20dever%C3%A1%20ser%20chamada%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Par%C3%A2metros%20:%20Objeto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.util.callServerBlocklyNoReturn','cronapi.util.callServerBlocklyNoReturn')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callblockly_callnoreturn">
+        <mutation data="%7B%22name%22:%22ResetSenha%22,%22class%22:%22blockly.Usuario.ResetSenha%22,%22function%22:%22Resetar%22,%22oldName%22:%22Resetar%22,%22params%22:%22%5B%5C%22reset%5C%22%5D%22,%22argumentsIds%22:%5B%227b749659%22%5D,%22type%22:%22java%22,%22namespace%22:%22blockly.Usuario.ResetSenha%22,%22jsonBlocklySelected%22:%7B%22library%22:false,%22namespace%22:%22blockly.Usuario.ResetSenha%22,%22sourcePath%22:%22src/main/java/blockly/Usuario/ResetSenha.blockly%22,%22language%22:%22java%22,%22class%22:%22blockly.Usuario.ResetSenha%22,%22methods%22:%5B%7B%22name%22:%22Resetar%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22reset%22%5D,%22paramsMap%22:%7B%22reset%22:%227b749659%22%7D%7D,%7B%22name%22:%22SalvarResetSenha%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22reset%22,%22senha%22,%22confirmaSenha%22%5D,%22paramsMap%22:%7B%22reset%22:%22c10b6d4f%22,%22senha%22:%22131247f2%22,%22confirmaSenha%22:%2281ae3a2e%22%7D%7D%5D%7D%7D" name="{{cronapi.util.callServerBlocklyNoReturn}}">
+          <arg id="7b749659" name="reset"/>
+        </mutation>
+        <value name="ARG0">
+          <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="i-4ykFy4^G`++qE?f@Hn" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+            <field customattributes="" name="VAR">reset</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+</blockly>
