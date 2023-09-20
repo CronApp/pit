@@ -14,7 +14,7 @@ window.blockly.js.blockly.ResetSenha.ResetSenha = window.blockly.js.blockly.Rese
  * @param confirmarSenha
  *
  * @author José Zay
- * @since 20/09/2023, 08:10:04
+ * @since 20/09/2023, 09:45:37
  *
  */
 window.blockly.js.blockly.ResetSenha.ResetSenha.ResetarArgs = [{ description: 'reset', id: 'f6c4f75c' }, { description: 'senha', id: '81971ea4' }, { description: 'confirmarSenha', id: 'cf594f7c' }];
@@ -32,6 +32,4 @@ window.blockly.js.blockly.ResetSenha.ResetSenha.Resetar = async function(reset, 
     //
     this.cronapi.screen.notify('error',this.cronapi.object.getProperty(item, 'mensagem'));
   }
-  //
-  console.log(item);
 }

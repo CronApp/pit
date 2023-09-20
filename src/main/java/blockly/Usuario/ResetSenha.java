@@ -20,7 +20,7 @@ public static final int TIMEOUT = 300;
  * @param confirmarSenha
  *
  * @author José Zay
- * @since 20/09/2023, 09:27:02
+ * @since 20/09/2023, 09:45:25
  *
  */
 @RequestMapping(path = "/api/cronapi/rest/Emails.ResetSenha.ResetSenha:Resetar", method = RequestMethod.GET, consumes = "*/*")
@@ -70,7 +70,6 @@ public static Var Resetar(@ParamMetaData(description = "reset", id = "7b749659")
         retorno =
         Var.valueOf(SalvarResetSenha(reset, senha, confirmarSenha));
     }
-    System.out.println(retorno.getObjectAsString());
     return retorno;
    }
  }.call();
@@ -83,7 +82,7 @@ public static Var Resetar(@ParamMetaData(description = "reset", id = "7b749659")
  * @param confirmaSenha
  *
  * @author José Zay
- * @since 20/09/2023, 09:27:02
+ * @since 20/09/2023, 09:45:25
  *
  */
 public static Var SalvarResetSenha(@ParamMetaData(description = "reset", id = "c10b6d4f") Var reset, @ParamMetaData(description = "param_senha", id = "131247f2") Var param_senha, @ParamMetaData(description = "confirmaSenha", id = "81ae3a2e") Var confirmaSenha) throws Exception {
