@@ -16,22 +16,23 @@ public static final int TIMEOUT = 300;
 /**
  *
  * @param reset
+ * @param senha
+ * @param confirmarSenha
  *
  * @author José Zay
- * @since 19/09/2023, 16:53:21
+ * @since 20/09/2023, 08:04:01
  *
  */
 @RequestMapping(path = "/api/cronapi/rest/Emails.ResetSenha.ResetSenha:Resetar", method = RequestMethod.GET, consumes = "*/*")
-public static Var Resetar(@ParamMetaData(description = "reset", id = "7b749659") Var reset) throws Exception {
+public static Var Resetar(@ParamMetaData(description = "reset", id = "7b749659") Var reset, @ParamMetaData(description = "senha", id = "972945ce") Var senha, @ParamMetaData(description = "confirmarSenha", id = "864be41c") Var confirmarSenha) throws Exception {
  return new Callable<Var>() {
 
    private Var dataBanco = Var.VAR_NULL;
    private Var eValido = Var.VAR_NULL;
+   private Var retorno = Var.VAR_NULL;
    private Var err = Var.VAR_NULL;
 
    public Var call() throws Exception {
-    System.out.println(
-    Var.valueOf("abc").getObjectAsString());
     try {
          dataBanco =
         cronapi.list.Operations.getFirst((
@@ -53,6 +54,10 @@ public static Var Resetar(@ParamMetaData(description = "reset", id = "7b749659")
             } else {
                 eValido =
                 Var.VAR_FALSE;
+                retorno =
+                cronapi.map.Operations.createObjectMapWith(Var.valueOf("sucesso",
+                Var.VAR_FALSE) , Var.valueOf("mensagem",
+                Var.valueOf("Link Expirado")));
             }
         }
      } catch (Exception err_exception) {
@@ -62,13 +67,11 @@ public static Var Resetar(@ParamMetaData(description = "reset", id = "7b749659")
         cronapi.util.Operations.throwException(err);
      }
     if (eValido.getObjectAsBoolean()) {
-        System.out.println(
-        Var.valueOf("valido").getObjectAsString());
-    } else {
-        System.out.println(
-        Var.valueOf("invalido").getObjectAsString());
+        retorno =
+        Var.valueOf(SalvarResetSenha(reset, senha, confirmarSenha));
     }
-    return Var.VAR_NULL;
+    System.out.println(retorno.getObjectAsString());
+    return retorno;
    }
  }.call();
 }
@@ -80,7 +83,7 @@ public static Var Resetar(@ParamMetaData(description = "reset", id = "7b749659")
  * @param confirmaSenha
  *
  * @author José Zay
- * @since 19/09/2023, 16:53:21
+ * @since 20/09/2023, 08:04:01
  *
  */
 public static Var SalvarResetSenha(@ParamMetaData(description = "reset", id = "c10b6d4f") Var reset, @ParamMetaData(description = "param_senha", id = "131247f2") Var param_senha, @ParamMetaData(description = "confirmaSenha", id = "81ae3a2e") Var confirmaSenha) throws Exception {
@@ -89,9 +92,9 @@ public static Var SalvarResetSenha(@ParamMetaData(description = "reset", id = "c
    // param
    private Var senha = param_senha;
    // end
+   private Var retorno = Var.VAR_NULL;
    private Var err = Var.VAR_NULL;
    private Var usuario = Var.VAR_NULL;
-   private Var retorno = Var.VAR_NULL;
 
    public Var call() throws Exception {
     try {
