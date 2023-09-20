@@ -20,7 +20,7 @@ public static final int TIMEOUT = 300;
  * @param confirmarSenha
  *
  * @author José Zay
- * @since 20/09/2023, 08:04:01
+ * @since 20/09/2023, 09:27:02
  *
  */
 @RequestMapping(path = "/api/cronapi/rest/Emails.ResetSenha.ResetSenha:Resetar", method = RequestMethod.GET, consumes = "*/*")
@@ -83,7 +83,7 @@ public static Var Resetar(@ParamMetaData(description = "reset", id = "7b749659")
  * @param confirmaSenha
  *
  * @author José Zay
- * @since 20/09/2023, 08:04:01
+ * @since 20/09/2023, 09:27:02
  *
  */
 public static Var SalvarResetSenha(@ParamMetaData(description = "reset", id = "c10b6d4f") Var reset, @ParamMetaData(description = "param_senha", id = "131247f2") Var param_senha, @ParamMetaData(description = "confirmaSenha", id = "81ae3a2e") Var confirmaSenha) throws Exception {
@@ -107,21 +107,72 @@ public static Var SalvarResetSenha(@ParamMetaData(description = "reset", id = "c
             cronapi.map.Operations.createObjectMapWith(Var.valueOf("sucesso",
             Var.VAR_FALSE) , Var.valueOf("mensagem",
             Var.valueOf("Falha ao resetar senha, se o erro persistir conte um administrador")));
-        } else {
-            if (
-            Var.valueOf(!senha.equals(confirmaSenha)).getObjectAsBoolean()) {
-                retorno =
-                cronapi.map.Operations.createObjectMapWith(Var.valueOf("sucesso",
-                Var.VAR_FALSE) , Var.valueOf("mensagem",
-                Var.valueOf("Os campos de nova senha e confirma nova senha não correspondem")));
-            } else {
-                cronapi.database.Operations.execute(Var.valueOf("app.entity.User"), Var.valueOf("update \n	User  \nset \n	password = :password \nwhere \n	id = :usuarioId"),Var.valueOf("password",senha),Var.valueOf("usuarioId",usuario));
-                retorno =
-                cronapi.map.Operations.createObjectMapWith(Var.valueOf("sucesso",
-                Var.VAR_TRUE) , Var.valueOf("mensagem",
-                Var.valueOf("Senha alterada com sucesso")));
-            }
+            return Var.valueOf(retorno);
         }
+        if (
+        Var.valueOf(!senha.equals(confirmaSenha)).getObjectAsBoolean()) {
+            retorno =
+            cronapi.map.Operations.createObjectMapWith(Var.valueOf("sucesso",
+            Var.VAR_FALSE) , Var.valueOf("mensagem",
+            Var.valueOf("A confirmação não corresponde à senha informada.")));
+            return Var.valueOf(retorno);
+        }
+        if (
+        cronapi.logic.Operations.isNullOrEmpty(senha).getObjectAsBoolean()) {
+            retorno =
+            cronapi.map.Operations.createObjectMapWith(Var.valueOf("sucesso",
+            Var.VAR_FALSE) , Var.valueOf("mensagem",
+            Var.valueOf("Digite uma senha.")));
+            return Var.valueOf(retorno);
+        }
+        if (
+        Var.valueOf(
+        Var.valueOf(senha.length()).compareTo(
+        Var.valueOf(8)) < 0).getObjectAsBoolean()) {
+            retorno =
+            cronapi.map.Operations.createObjectMapWith(Var.valueOf("sucesso",
+            Var.VAR_FALSE) , Var.valueOf("mensagem",
+            Var.valueOf("O tamanho da senha deve possuir ao menos 8 caracteres.")));
+            return Var.valueOf(retorno);
+        }
+        if (
+        cronapi.regex.Operations.validateTextWithRegexUnscape(senha,
+        Var.valueOf("^(?=.*[a-zA-Z])(?=.*\\d).+$"),
+        Var.valueOf("CASE_INSENSITIVE"))
+        .negate().getObjectAsBoolean()) {
+            retorno =
+            cronapi.map.Operations.createObjectMapWith(Var.valueOf("sucesso",
+            Var.VAR_FALSE) , Var.valueOf("mensagem",
+            Var.valueOf("A senha deve conter números e letras.")));
+            return Var.valueOf(retorno);
+        }
+        if (
+        cronapi.regex.Operations.validateTextWithRegexUnscape(senha,
+        Var.valueOf("^(?=.*[A-Z]).+$"),
+        Var.valueOf("UNICODE_CASE"))
+        .negate().getObjectAsBoolean()) {
+            retorno =
+            cronapi.map.Operations.createObjectMapWith(Var.valueOf("sucesso",
+            Var.VAR_FALSE) , Var.valueOf("mensagem",
+            Var.valueOf("A senha deve conter ao menos uma letra maiúscula.")));
+            return Var.valueOf(retorno);
+        }
+        if (
+        cronapi.regex.Operations.validateTextWithRegexUnscape(senha,
+        Var.valueOf("^(?=.*[\\W_]).+$"),
+        Var.valueOf("CASE_INSENSITIVE"))
+        .negate().getObjectAsBoolean()) {
+            retorno =
+            cronapi.map.Operations.createObjectMapWith(Var.valueOf("sucesso",
+            Var.VAR_FALSE) , Var.valueOf("mensagem",
+            Var.valueOf("A senha deve conter ao menos um caractere especial.")));
+            return Var.valueOf(retorno);
+        }
+        cronapi.database.Operations.execute(Var.valueOf("app.entity.User"), Var.valueOf("update \n	User  \nset \n	password = :password \nwhere \n	id = :usuarioId"),Var.valueOf("password",senha),Var.valueOf("usuarioId",usuario));
+        retorno =
+        cronapi.map.Operations.createObjectMapWith(Var.valueOf("sucesso",
+        Var.VAR_TRUE) , Var.valueOf("mensagem",
+        Var.valueOf("Senha alterada com sucesso")));
      } catch (Exception err_exception) {
           err = Var.valueOf(err_exception);
          retorno =
