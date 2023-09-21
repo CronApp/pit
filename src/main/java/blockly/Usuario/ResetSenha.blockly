@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="JAVA" bpmnAble="false" formTarget="" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JAVA" ruleDescription="ResetSenha" ruleName="ResetSenha" ruleSecurity="{&quot;post&quot;:&quot;Public&quot;,&quot;get&quot;:&quot;Public&quot;,&quot;execute&quot;:&quot;Public&quot;,&quot;put&quot;:&quot;Public&quot;}" ruleSynchronous="false" ruleTimeout="300" ruleType="I" showAsFunction="false" soap="false" swagger="false">
-  <metadata scale="1.0749542399999998" scrollx="424.13398399999994" scrolly="-432.1440511999998" target="Anb:u5+^,0vLkL9QIqn5"/>
+  <metadata scale="1" scrollx="33.89999999999998" scrolly="-1985.4000000000024" target="RJAtlTq.@EW*.5B7,E3w"/>
   <block asynccall="false" colour="#995ba5" datasourcetype="" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" rest-consumes="*/*" rest-method="GET" rest-path="/api/cronapi/rest/Emails.ResetSenha.ResetSenha:Resetar" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-350" y="130">
     <mutation>
       <arg id="7b749659" name="reset"/>
@@ -711,8 +711,18 @@
                                               <arg name="usuarioId"/>
                                             </mutation>
                                             <value name="ARG0">
-                                              <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="RJAtlTq.@EW*.5B7,E3w" id="Rz^IG*cneg+!vx;BFl6y" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
-                                                <field customattributes="" name="VAR">senha</field>
+                                              <block asynccall="false" colour="#487f7f" datasourcetype="" dependencyby="RJAtlTq.@EW*.5B7,E3w" id="@dvvj|_XcijL6+gly(_+" multilayer="false" namespace="cronapi.util.Operations.encryptPassword" origintype="procedures_callreturn" output="true" returntype="ObjectType.STRING" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3ECriptografa%20senha%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20recebe%20uma%20senha%20e%20criptografa%20usando%20BCryptPasswordEncoder%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Senha%20:%20Texto%3C/span%3E%3Cdiv%3ESenha%20a%20ser%20criptografada%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Texto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.util.Operations.encryptPassword','cronapi.util.Operations.encryptPassword')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                                                <mutation name="{{cronapi.util.Operations.encryptPassword}}" return-raw-type="cronapi.Var">
+                                                  <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Senha"/>
+                                                </mutation>
+                                                <value name="ARG0">
+                                                  <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="RJAtlTq.@EW*.5B7,E3w" id="WGZM}2N[Y,|Cj4}ETpo]" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                                    <field customattributes="" name="TEXT"/>
+                                                  </shadow>
+                                                  <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="RJAtlTq.@EW*.5B7,E3w" id="Rz^IG*cneg+!vx;BFl6y" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                                    <field customattributes="" name="VAR">senha</field>
+                                                  </block>
+                                                </value>
                                               </block>
                                             </value>
                                             <value name="ARG1">
