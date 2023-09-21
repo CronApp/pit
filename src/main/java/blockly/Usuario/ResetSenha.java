@@ -20,7 +20,7 @@ public static final int TIMEOUT = 300;
  * @param confirmarSenha
  *
  * @author José Zay
- * @since 20/09/2023, 09:45:25
+ * @since 21/09/2023, 10:37:15
  *
  */
 @RequestMapping(path = "/api/cronapi/rest/Emails.ResetSenha.ResetSenha:Resetar", method = RequestMethod.GET, consumes = "*/*")
@@ -82,7 +82,7 @@ public static Var Resetar(@ParamMetaData(description = "reset", id = "7b749659")
  * @param confirmaSenha
  *
  * @author José Zay
- * @since 20/09/2023, 09:45:25
+ * @since 21/09/2023, 10:37:15
  *
  */
 public static Var SalvarResetSenha(@ParamMetaData(description = "reset", id = "c10b6d4f") Var reset, @ParamMetaData(description = "param_senha", id = "131247f2") Var param_senha, @ParamMetaData(description = "confirmaSenha", id = "81ae3a2e") Var confirmaSenha) throws Exception {
@@ -167,7 +167,8 @@ public static Var SalvarResetSenha(@ParamMetaData(description = "reset", id = "c
             Var.valueOf("A senha deve conter ao menos um caractere especial.")));
             return Var.valueOf(retorno);
         }
-        cronapi.database.Operations.execute(Var.valueOf("app.entity.User"), Var.valueOf("update \n	User  \nset \n	password = :password \nwhere \n	id = :usuarioId"),Var.valueOf("password",senha),Var.valueOf("usuarioId",usuario));
+        cronapi.database.Operations.execute(Var.valueOf("app.entity.User"), Var.valueOf("update \n	User  \nset \n	password = :password \nwhere \n	id = :usuarioId"),Var.valueOf("password",
+        cronapi.util.Operations.encryptPassword(senha)),Var.valueOf("usuarioId",usuario));
         retorno =
         cronapi.map.Operations.createObjectMapWith(Var.valueOf("sucesso",
         Var.VAR_TRUE) , Var.valueOf("mensagem",
