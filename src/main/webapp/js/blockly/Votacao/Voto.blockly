@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="WEB" bpmnAble="false" formTarget="src/main/webapp/views/logged/home.view.html" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JS" ruleDescription="Voto" ruleName="Voto" ruleSynchronous="false" ruleTimeout="" ruleType="I" showAsFunction="false" soap="false" swagger="false">
-  <metadata scale="1" scrollx="-1257.1" scrolly="-1209.6" target="a.e$*G4mfbIxP:q%^EBE"/>
+  <metadata scale="1" scrollx="-1738" scrolly="-2061.4000000000005" target="[DKJKbl~Fx+,+,_``kNA"/>
   <block asynccall="false" colour="#fca03b" datasourcetype="" id=":Tnds-9Z:~Q_57/2.?{*" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-177" y="37">
     <mutation>
       <arg id="b8644fae" name="checkAceitarRegras"/>
@@ -1819,28 +1819,6 @@
         </next>
       </block>
     </statement>
-  </block>
-  <block asynccall="true" colour="#487f7f" datasourcetype="" dependencyby="[DKJKbl~Fx+,+,_``kNA" id="V-~`smB7$9!/}N%jPW[R" multilayer="false" namespace="cronapi.util.sleep" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EDormir%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EInterrompe%20a%20execu%C3%A7%C3%A3o%20do%20bloco%20pelo%20intervalo%20informado%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Intervalo%20em%20milisegundos%20:%20Inteiro%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.util.sleep','cronapi.util.sleep')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn" x="2377" y="2377">
-    <mutation name="{{cronapi.util.sleep}}" return-raw-type="undefined">
-      <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.LONG" name="Intervalo em milisegundos"/>
-    </mutation>
-    <value name="ARG0">
-      <shadow asynccall="false" colour="#5b67a5" datasourcetype="" dependencyby="[DKJKbl~Fx+,+,_``kNA" id="IS66|YC}q7.)!mo)`W{;" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
-        <field customattributes="" name="NUM">100</field>
-      </shadow>
-    </value>
-    <next>
-      <block asynccall="false" colour="#487f7f" datasourcetype="" dependencyby="[DKJKbl~Fx+,+,_``kNA" id="5#Eud9hnoN01s%{YQr8," multilayer="true" namespace="cronapi.util.executeJavascriptNoReturn" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExecuta%20javascript%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20executa%20javascript%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Comando%20:%20Texto%3C/span%3E%3Cdiv%3EComando%20a%20ser%20executado%20(exemplo:%20alert('teste');).%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('https://ide.cronapp.io/help?type=blockly&amp;amp;id=cronapi.util.executeJavascriptNoReturn','cronapi.util.executeJavascriptNoReturn')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
-        <mutation name="{{cronapi.util.executeJavascriptNoReturn}}" return-raw-type="undefined">
-          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Comando"/>
-        </mutation>
-        <value name="ARG0">
-          <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="[DKJKbl~Fx+,+,_``kNA" id="3KyG2H6tt3_SAm-`Y%EW" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
-            <field customattributes="" name="TEXT">checkCount();</field>
-          </shadow>
-        </value>
-      </block>
-    </next>
   </block>
   <block asynccall="false" colour="#fca03b" datasourcetype="" dependencyby="ZbVoo?=doJRSaPX$Uf9]" id="cy*sxp5cq!S:L:$%q;0C" origintype="procedures_callnoreturn" output="false" tooltip="Executa a função definida pelo usuário &quot;VotosUsuario&quot;." type="procedures_callnoreturn" x="4238" y="2842">
     <mutation name="VotosUsuario" return-raw-type="undefined"/>
