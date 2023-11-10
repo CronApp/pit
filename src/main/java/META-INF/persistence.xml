@@ -13,8 +13,10 @@
         <class>app.entity.Securable</class>
         <class>app.entity.UserSecurable</class>
         <class>app.entity.Votos</class>
+        <class>app.entity.ConfiguracaoAmbiente</class>
         <class>app.entity.Device</class>
         <class>app.entity.Role</class>
+        <class>app.entity.ResetSenha</class>
         <class>app.entity.Application</class>
         <properties>
             <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>

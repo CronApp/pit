@@ -10,8 +10,8 @@ window.blockly.js.blockly.ListaApi.GetApi = window.blockly.js.blockly.ListaApi.G
  *
  *
  *
- * @author Wesley Miranda De Oliveira
- * @since 10/08/2023, 09:02:45
+ * @author José Zay
+ * @since 23/08/2023, 09:52:15
  *
  */
 window.blockly.js.blockly.ListaApi.GetApi.GetApiArgs = [];
@@ -20,8 +20,6 @@ window.blockly.js.blockly.ListaApi.GetApi.GetApi = async function() {
   //
   this.cronapi.util.callServerBlocklyAsynchronous('blockly.Airtable.Airtable:GetApi', async function(sender_item) {
       item = sender_item;
-    //
-    console.log(item);
     //
     this.cronapi.screen.changeValueOfField("vars.listaIdeias", this.cronapi.json.getProperty(item, 'records'));
   }.bind(this));

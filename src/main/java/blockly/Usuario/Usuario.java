@@ -17,8 +17,8 @@ public static final int TIMEOUT = 300;
  * @param senha
  * @param nome
  *
- * @author Wesley Miranda De Oliveira
- * @since 10/08/2023, 09:13:39
+ * @author José Zay
+ * @since 09/11/2023, 13:41:34
  *
  */
 public static Var CadastrarUsuario(@ParamMetaData(description = "email", id = "53b42e7f") Var email, @ParamMetaData(description = "param_senha", id = "2bc04d37") Var param_senha, @ParamMetaData(description = "nome", id = "fca923a9") Var nome) throws Exception {
@@ -49,28 +49,28 @@ public static Var CadastrarUsuario(@ParamMetaData(description = "email", id = "5
         Var.valueOf(
         Var.valueOf(
         Var.valueOf(email.getObjectAsString().indexOf(
-        Var.valueOf("@lyceum.").getObjectAsString()) + 1).equals(
+        Var.valueOf("@lyceum.com.br").getObjectAsString()) + 1).equals(
         Var.valueOf(0))).getObjectAsBoolean() &&
         Var.valueOf(
         Var.valueOf(email.getObjectAsString().indexOf(
-        Var.valueOf("@hygia.").getObjectAsString()) + 1).equals(
+        Var.valueOf("@hygia.com.br").getObjectAsString()) + 1).equals(
         Var.valueOf(0))).getObjectAsBoolean() &&
         Var.valueOf(
         Var.valueOf(email.getObjectAsString().indexOf(
-        Var.valueOf("@ergon.").getObjectAsString()) + 1).equals(
+        Var.valueOf("@ergon.com.br").getObjectAsString()) + 1).equals(
         Var.valueOf(0))).getObjectAsBoolean() &&
         Var.valueOf(
         Var.valueOf(email.getObjectAsString().indexOf(
-        Var.valueOf("@cronapp.").getObjectAsString()) + 1).equals(
+        Var.valueOf("@cronapp.io").getObjectAsString()) + 1).equals(
         Var.valueOf(0))).getObjectAsBoolean() &&
         Var.valueOf(
         Var.valueOf(email.getObjectAsString().indexOf(
-        Var.valueOf("@techne.").getObjectAsString()) + 1).equals(
+        Var.valueOf("@techne.com.br").getObjectAsString()) + 1).equals(
         Var.valueOf(0))).getObjectAsBoolean()).getObjectAsBoolean()) {
             response =
             cronapi.map.Operations.createObjectMapWith(Var.valueOf("sucesso",
             Var.VAR_FALSE) , Var.valueOf("mensagem",
-            Var.valueOf("É necessário que seja um e-mail corporativo techne para participar")));
+            Var.valueOf("O domínio do e-mail não faz parte da Techne.")));
         } else if (
         Var.valueOf(
         cronapi.list.Operations.getFirst((
@@ -79,13 +79,13 @@ public static Var CadastrarUsuario(@ParamMetaData(description = "email", id = "5
             response =
             cronapi.map.Operations.createObjectMapWith(Var.valueOf("sucesso",
             Var.VAR_FALSE) , Var.valueOf("mensagem",
-            Var.valueOf("E-mail já cadastrado")));
+            Var.valueOf("E-mail já cadastrado.")));
         } else if (
         cronapi.logic.Operations.isNullOrEmpty(senha).getObjectAsBoolean()) {
             response =
             cronapi.map.Operations.createObjectMapWith(Var.valueOf("sucesso",
             Var.VAR_FALSE) , Var.valueOf("mensagem",
-            Var.valueOf("Digite uma senha")));
+            Var.valueOf("Digite uma senha.")));
         } else if (
         Var.valueOf(
         Var.valueOf(senha.length()).compareTo(
@@ -93,7 +93,34 @@ public static Var CadastrarUsuario(@ParamMetaData(description = "email", id = "5
             response =
             cronapi.map.Operations.createObjectMapWith(Var.valueOf("sucesso",
             Var.VAR_FALSE) , Var.valueOf("mensagem",
-            Var.valueOf("O tamanho mínimo da senha deve ser de 8 caracteres")));
+            Var.valueOf("O tamanho da senha deve possuir ao menos 8 caracteres.")));
+        } else if (
+        cronapi.regex.Operations.validateTextWithRegexUnscape(senha,
+        Var.valueOf("^(?=.*[a-zA-Z])(?=.*\\d).+$"),
+        Var.valueOf("CASE_INSENSITIVE"))
+        .negate().getObjectAsBoolean()) {
+            response =
+            cronapi.map.Operations.createObjectMapWith(Var.valueOf("sucesso",
+            Var.VAR_FALSE) , Var.valueOf("mensagem",
+            Var.valueOf("A senha deve conter números e letras.")));
+        } else if (
+        cronapi.regex.Operations.validateTextWithRegexUnscape(senha,
+        Var.valueOf("^(?=.*[A-Z]).+$"),
+        Var.valueOf("UNICODE_CASE"))
+        .negate().getObjectAsBoolean()) {
+            response =
+            cronapi.map.Operations.createObjectMapWith(Var.valueOf("sucesso",
+            Var.VAR_FALSE) , Var.valueOf("mensagem",
+            Var.valueOf("A senha deve conter ao menos uma letra maiúscula.")));
+        } else if (
+        cronapi.regex.Operations.validateTextWithRegexUnscape(senha,
+        Var.valueOf("^(?=.*[\\W_]).+$"),
+        Var.valueOf("CASE_INSENSITIVE"))
+        .negate().getObjectAsBoolean()) {
+            response =
+            cronapi.map.Operations.createObjectMapWith(Var.valueOf("sucesso",
+            Var.VAR_FALSE) , Var.valueOf("mensagem",
+            Var.valueOf("A senha deve conter ao menos um caractere especial.")));
         } else {
             cronapi.database.Operations.beginTransaction(Var.valueOf("app"));
             usr =
@@ -127,8 +154,8 @@ public static Var CadastrarUsuario(@ParamMetaData(description = "email", id = "5
  *
  * @param email
  *
- * @author Wesley Miranda De Oliveira
- * @since 10/08/2023, 09:13:39
+ * @author José Zay
+ * @since 09/11/2023, 13:41:34
  *
  */
 public static void ResetSenha(@ParamMetaData(description = "email", id = "ae582bec") Var email) throws Exception {
@@ -142,7 +169,6 @@ public static void ResetSenha(@ParamMetaData(description = "email", id = "ae582b
     Var.valueOf("https://acesso.cronapp.io/img/layers.png"),
     Var.valueOf("https://acesso.cronapp.io/img/layers.png"),
     Var.VAR_FALSE);
-    System.out.println(item.getObjectAsString());
    return Var.VAR_NULL;
    }
  }.call();
@@ -153,8 +179,8 @@ public static void ResetSenha(@ParamMetaData(description = "email", id = "ae582b
  * @param username
  * @param password
  *
- * @author Wesley Miranda De Oliveira
- * @since 10/08/2023, 09:13:39
+ * @author José Zay
+ * @since 09/11/2023, 13:41:34
  *
  */
 public static Var login(@ParamMetaData(description = "username", id = "eb4f9fa9") Var username, @ParamMetaData(description = "password", id = "59713897") Var password) throws Exception {

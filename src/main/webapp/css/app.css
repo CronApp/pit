@@ -1,31 +1,47 @@
 @import "ajustesCards.css";
+@import "input.css";
+@import "webkit.css";
 
-/*botoes*/
-.btn-primary {
-    background-color: #7F85F5; /* Cor roxa para o botão */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    position: relative; /* Define o contexto para a sombra */
-    box-shadow: 0px 8px 0px 0px rgba(127, 133, 245, 0.5); /* Sombra roxa na parte de baixo */
-    border-radius: 24px;
+@font-face {
+  font-family: defaultFont;
+  src: url("font/rubrik.otf");
+}
+
+@font-face {
+  font-family: defaultFontSemiBold;
+  src: url("font/rubrikSemiBold.otf");
 }
 
 /*Remocao Padding Padrao da Main Cronapp*/
-.main-view.container-fluid {
+.main-view.container-fluid.main-view-horizontal {
     padding: 0px !important;
+    margin: 0;
+    width: 100%;
+    background-color: #F4F4FF;
 }
 
-/* .btn-primary::after {
-     content: "";
-    position: absolute;
-    width: 100%;
-    height: 8px; /* Altura da sombra */
-    /*background: rgba(127, 133, 245, 0.5); /* Cor roxa com transparência para a sombra */
-   /* bottom: -8px; /* Coloca a sombra abaixo do botão */
- /*  left: 0;
-    z-index: -1; /* Coloca a sombra atrás do botão */
-/*} */
+/*Fonte*/
+body {
+  font-family: defaultFont, new-rubrik, sans-serif;
+}
 
-/*@media ()*/
+.password-requirements {
+  position: absolute;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: white;
+  padding: 1rem;
+  z-index: 1;
+}
+
+.icon-ok::before {
+  font-family: FontAwesome;
+  content: "\f00c";
+  color: #40BED4;
+}
+
+.icon-x::before {
+  font-family: FontAwesome;
+  content: "\f00d";
+  color: #E5584C;
+}

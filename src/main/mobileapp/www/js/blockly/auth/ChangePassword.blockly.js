@@ -10,15 +10,15 @@ window.blockly.js.blockly.auth.ChangePassword = window.blockly.js.blockly.auth.C
  * ChangePassword
  *
  *
- * @author Root
- * @since 23/05/2022 16:28:42
+ * @author José Zay
+ * @since 28/08/2023, 14:40:53
  *
  */
 window.blockly.js.blockly.auth.ChangePassword.openModalArgs = [];
 window.blockly.js.blockly.auth.ChangePassword.openModal = async function() {
 
-    //
-    this.cronapi.screen.showIonicModal("changePassword");
+  //
+  this.cronapi.screen.showIonicModal("changePassword");
 }
 
 /**
@@ -27,15 +27,15 @@ window.blockly.js.blockly.auth.ChangePassword.openModal = async function() {
  * Descreva esta função...
  *
  *
- * @author Root
- * @since 23/05/2022 16:28:42
+ * @author José Zay
+ * @since 28/08/2023, 14:40:53
  *
  */
 window.blockly.js.blockly.auth.ChangePassword.changePasswordArgs = [];
 window.blockly.js.blockly.auth.ChangePassword.changePassword = async function() {
 
-    //
-    this.cronapi.authentication.changePassword();
+  //
+  this.cronapi.authentication.changePassword();
 }
 
 /**
@@ -44,13 +44,13 @@ window.blockly.js.blockly.auth.ChangePassword.changePassword = async function() 
  * Descreva esta função...
  *
  *
- * @author Root
- * @since 23/05/2022 16:28:42
+ * @author José Zay
+ * @since 28/08/2023, 14:40:53
  *
  */
 window.blockly.js.blockly.auth.ChangePassword.closeModalArgs = [];
 window.blockly.js.blockly.auth.ChangePassword.closeModal = async function() {
 
-    //
-    this.cronapi.screen.hideIonicModal("changePassword");
+  //
+  this.cronapi.screen.hideIonicModal("changePassword");
 }

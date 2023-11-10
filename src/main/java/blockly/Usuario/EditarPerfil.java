@@ -17,8 +17,8 @@ public static final int TIMEOUT = 300;
  *
  * @param nome
  *
- * @author Wesley Miranda De Oliveira
- * @since 11/08/2023, 08:44:12
+ * @author José Zay
+ * @since 28/08/2023, 15:38:07
  *
  */
 @RequestMapping(path = "/api/cronapi/rest/Usuario.EditarPerfil:SalvarAlteracoes", method = RequestMethod.GET, consumes = "*/*")
@@ -33,13 +33,13 @@ public static Var SalvarAlteracoes(@ParamMetaData(description = "param_nome", id
     if (
     cronapi.logic.Operations.isNullOrEmpty(nome).getObjectAsBoolean()) {
         cronapi.util.Operations.callClientFunction( Var.valueOf("cronapi.screen.notify"), Var.valueOf("error"),
-        Var.valueOf("Digite seu nome"));
+        Var.valueOf("Digite seu nome."));
     } else if (
     Var.valueOf(
     Var.valueOf(nome.length()).compareTo(
     Var.valueOf(3)) <= 0).getObjectAsBoolean()) {
         cronapi.util.Operations.callClientFunction( Var.valueOf("cronapi.screen.notify"), Var.valueOf("error"),
-        Var.valueOf("Seu nome deve haver mais de 3 caracteres"));
+        Var.valueOf("Seu nome deve ter mais de 3 caracteres."));
     } else {
         cronapi.database.Operations.execute(Var.valueOf("app.entity.User"), Var.valueOf("update \n	User  \nset \n	name = :name \nwhere \n	userName = :userName"),Var.valueOf("name",nome),Var.valueOf("userName",
         cronapi.util.Operations.getCurrentUserName()));

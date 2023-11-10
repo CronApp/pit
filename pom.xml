@@ -16,6 +16,15 @@
     <build>
         <resources>
             <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**</include>
+                </includes>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
                 <directory>src/main/resources</directory>
                 <includes>
                     <include>**</include>
@@ -26,15 +35,6 @@
             </resource>
             <resource>
                 <directory>src/test/java</directory>
-                <includes>
-                    <include>**</include>
-                </includes>
-                <excludes>
-                    <exclude>**/*.java</exclude>
-                </excludes>
-            </resource>
-            <resource>
-                <directory>src/main/java</directory>
                 <includes>
                     <include>**</include>
                 </includes>
@@ -105,6 +105,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
+                <configuration/>
             </plugin>
         </plugins>
     </build>

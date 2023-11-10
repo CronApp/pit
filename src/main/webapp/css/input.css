@@ -1,0 +1,117 @@
+/*botoes*/
+.btn-primary {
+    background-color: #5D64E4; /* Cor roxa para o botão */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    position: relative; /* Define o contexto para a sombra */
+    box-shadow: 0px 8px 0px 0px rgba(62, 69, 201, 1); /* Sombra roxa na parte de baixo */
+    border-radius: 24px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    &:hover {
+        background-color: #4A50CF;
+        box-shadow: 0px 8px 0px 0px rgba(45, 49, 165, 1);
+    }
+    &:focus {
+        background-color: #4A50CF;
+        box-shadow: 0px 8px 0px 0px rgba(45, 49, 165, 1);
+    }
+}
+
+.btn-danger {
+    background-color: #E5584C; /* Cor roxa para o botão */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    position: relative; /* Define o contexto para a sombra */
+    box-shadow: 0px 8px 0px 0px rgba(166, 64, 55, 1); /* Sombra roxa na parte de baixo */
+    border-radius: 24px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    &:hover {
+        background-color: #BA483D;
+        box-shadow: 0px 8px 0px 0px rgba(122, 47, 40, 1);
+    }
+    &:focus {
+        background-color: #BA483D;
+        box-shadow: 0px 8px 0px 0px rgba(122, 47, 40, 1);
+    }
+}
+
+.btn-success {
+    background-color: #40BED4; /* Cor roxa para o botão */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    position: relative; /* Define o contexto para a sombra */
+    box-shadow: 0px 8px 0px 0px rgba(44, 132, 148, 1); /* Sombra roxa na parte de baixo */
+    border-radius: 24px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    &:hover {
+        background-color: #359DB0;
+        box-shadow: 0px 8px 0px 0px rgba(34, 100, 112, 1);
+    }
+    &:focus {
+        background-color: #359DB0;
+        box-shadow: 0px 8px 0px 0px rgba(34, 100, 112, 1);
+    }
+}
+
+
+/*Checkbox*/
+.check-voto-selecao {
+      display: inline-block;
+      position: relative;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%; /* Torna o checkbox redondo */
+      background-color: #ccc; /* Cor de fundo do checkbox */
+      margin-right: 20px;
+    }
+
+    /* Escondendo o checkbox padrão */
+    .check-voto-selecao input[type="checkbox"] {
+        opacity: 0;
+        position: absolute;
+    }
+
+    /* Estilizando o indicador do checkbox (o círculo interno) */
+    .check-voto-selecao input[type="checkbox"] + .checkmark {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 12px;
+        height: 12px;
+        border-radius: 50% !important;
+        background-color: #F4F4FF; /* Cor do círculo interno quando não marcado */
+        display: none;
+    }
+
+/*listas*/
+.ul_regra {
+    list-style-type: '\2726';
+    padding-left: 1rem;
+    margin-top: 2rem;
+}
+
+.li_regra {
+  padding: 10px;
+}
+
+input.k-textbox.inputPersonalizado {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 2px 2px;
+  color: #333;
+  background-color: #fff;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input.k-textbox.inputPersonalizado:focus {
+  border-color: #200F43;
+  outline: none;
+  box-shadow: 0 1px 4px rgba(32, 15, 67, 0.2);
+}
