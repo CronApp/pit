@@ -16,7 +16,7 @@ public static final int TIMEOUT = 300;
 /**
  *
  * @author José Zay
- * @since 30/08/2023, 09:06:30
+ * @since 10/11/2023, 16:52:54
  *
  */
 @RequestMapping(path = "/api/cronapi/rest/TratamentoData.TratamentoData:ResultadoData", method = RequestMethod.GET, consumes = "*/*")
@@ -29,8 +29,8 @@ Var.valueOf(
 cronapi.dateTime.Operations.getNowNoHour().compareTo(
 cronapi.dateTime.Operations.newDate(
 Var.valueOf(2023),
-Var.valueOf(11),
-Var.valueOf(25),
+Var.valueOf(12),
+Var.valueOf(1),
 Var.VAR_NULL,
 Var.VAR_NULL,
 Var.VAR_NULL)) >= 0);
