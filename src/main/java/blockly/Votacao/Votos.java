@@ -17,7 +17,7 @@ public static final int TIMEOUT = 300;
  * @param listaIdItemVoto
  *
  * @author José Zay
- * @since 24/08/2023, 11:36:59
+ * @since 13/11/2023, 09:06:22
  *
  */
 public static Var BackFinalizarVoto(@ParamMetaData(description = "listaIdItemVoto", id = "fb0d967d") Var listaIdItemVoto) throws Exception {
@@ -37,6 +37,11 @@ public static Var BackFinalizarVoto(@ParamMetaData(description = "listaIdItemVot
         Var.VAR_FALSE);
     }
     if (cronapi.list.Operations.isEmpty(listaIdItemVoto).getObjectAsBoolean()) {
+        return Var.valueOf(
+        Var.VAR_FALSE);
+    }
+    if (
+    cronapi.util.Operations.callBlockly(Var.valueOf("blockly.TratamentoData.TratamentoData:ResultadoData")).getObjectAsBoolean()) {
         return Var.valueOf(
         Var.VAR_FALSE);
     }
@@ -65,7 +70,7 @@ Var.VAR_TRUE;
  * Se a data atual for maior do que a data de divulgação dos resultados, então manda os dados dos resultados pro front.
  *
  * @author José Zay
- * @since 24/08/2023, 11:36:59
+ * @since 13/11/2023, 09:06:22
  *
  */
 public static Var BackResultadoRank() throws Exception {
@@ -88,7 +93,7 @@ cronapi.json.Operations.toJson(resultadoVotacao);
 /**
  *
  * @author José Zay
- * @since 24/08/2023, 11:36:59
+ * @since 13/11/2023, 09:06:22
  *
  */
 public static Var BackUsuarioVotou() throws Exception {
@@ -111,7 +116,7 @@ cronapi.util.Operations.getCurrentUserName()))));
 /**
  *
  * @author José Zay
- * @since 24/08/2023, 11:36:59
+ * @since 13/11/2023, 09:06:22
  *
  */
 public static Var BackVotosComputados() throws Exception {
@@ -134,7 +139,7 @@ cronapi.database.Operations.query(Var.valueOf("app.entity.Votos"),Var.valueOf("s
 /**
  *
  * @author José Zay
- * @since 24/08/2023, 11:36:59
+ * @since 13/11/2023, 09:06:22
  *
  */
 public static Var BackVotosUsuario() throws Exception {
