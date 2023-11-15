@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><Context>
+    <Resource accessToUnderlyingConnectionAllowed="true" driverClassName="org.h2.Driver" logAbandoned="true" name="jdbc/main" password="root" profile="DEV" removeAbandoned="false" removeAbandonedTimeout="60" type="javax.sql.DataSource" url="jdbc:h2:file:~/791acba6c87d48599fd8c76a989db21a;ALIAS_COLUMN_NAME=true;AUTO_SERVER=TRUE" username="root"/>
     <Parameter name="baseId" value="appv3oU8pw6zwPloY"/>
     <Parameter name="tableId" value="tblBvAruXcbmk7k4Q"/>
     <Parameter name="token_api" value="patQD4h9Gs9PqWnSY.0053f319b8c4017d22f43f800b7eb918ca97f05d34c21a4df18f98df4ea1a664"/>
-    <Resource accessToUnderlyingConnectionAllowed="false" cloudDatabaseKey="" driverClassName="com.mysql.jdbc.Driver" logAbandoned="true" name="jdbc/dbpitMySQL" password="hoaif039n3oo4iHUIU34" profile="DEV" removeAbandoned="false" removeAbandonedTimeout="60" schema="" type="javax.sql.DataSource" url="jdbc:mysql://dbpit.cfdacj6pdovg.us-east-1.rds.amazonaws.com:3306/pit?createDatabaseIfNotExist=true&amp;useTimezone=true&amp;serverTimezone=UTC&amp;useSSL=false" username="root"/>
     <Profile value="DEV"/>
     <Profile value="PROD"/>
 </Context>

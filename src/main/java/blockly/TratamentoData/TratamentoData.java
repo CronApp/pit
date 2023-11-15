@@ -16,7 +16,7 @@ public static final int TIMEOUT = 300;
 /**
  *
  * @author José Zay
- * @since 10/11/2023, 16:52:54
+ * @since 13/11/2023, 09:05:58
  *
  */
 @RequestMapping(path = "/api/cronapi/rest/TratamentoData.TratamentoData:ResultadoData", method = RequestMethod.GET, consumes = "*/*")
