@@ -79,5 +79,5 @@
         <splash height="480" src="res/screen/ios/Default~iphone.png" width="320"/>
         <splash height="2732" src="res/screen/ios/Default@2x~universal~anyany.png" width="2732"/>
     </platform>
-    <plugin name="cordova-plugin-cronapp" spec="2.9.5-SP.11"/>
+    <plugin name="cordova-plugin-cronapp" spec="3.0.0-SP.5"/>
 </widget>

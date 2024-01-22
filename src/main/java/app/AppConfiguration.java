@@ -21,16 +21,16 @@ import java.util.regex.Pattern;
 public class AppConfiguration {
 
   @Primary
-  @Bean(name="app-EntityManagerFactory")
-  public LocalEntityManagerFactoryBean entityManagerFactory() {
+    @Bean(name="app-EntityManagerFactory")
+    public LocalEntityManagerFactoryBean entityManagerFactory() {
     LocalEntityManagerFactoryBean factoryBean = new LocalEntityManagerFactoryBean();
     factoryBean.setPersistenceUnitName("app");
     return factoryBean;
   }
 
   @Primary
-  @Bean(name = "app-TransactionManager")
-  public PlatformTransactionManager transactionManager() {
+    @Bean(name="app-TransactionManager")
+    public PlatformTransactionManager transactionManager() {
     return new JpaTransactionManager(entityManagerFactory().getObject());
   }
 

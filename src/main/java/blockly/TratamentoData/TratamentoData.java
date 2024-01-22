@@ -15,11 +15,11 @@ public static final int TIMEOUT = 300;
 
 /**
  *
- * @author José Zay
- * @since 13/11/2023, 09:05:58
+ * @author Thiago Costa
+ * @since 22/01/2024, 14:32:02
  *
  */
-@RequestMapping(path = "/api/cronapi/rest/TratamentoData.TratamentoData:ResultadoData", method = RequestMethod.GET, consumes = "*/*")
+@RequestMapping(path = { "/api/cronapi/rest/TratamentoData.TratamentoData:ResultadoData", "/ResultadoData" }, method = RequestMethod.GET, consumes = "*/*")
 public static Var ResultadoData() throws Exception {
  return new Callable<Var>() {
 
@@ -28,7 +28,7 @@ public static Var ResultadoData() throws Exception {
 Var.valueOf(
 cronapi.dateTime.Operations.getNowNoHour().compareTo(
 cronapi.dateTime.Operations.newDate(
-Var.valueOf(2023),
+Var.valueOf(2030),
 Var.valueOf(12),
 Var.valueOf(1),
 Var.VAR_NULL,
