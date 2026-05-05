@@ -6,24 +6,7 @@
   "onSessionDestroy": null,
   "afterPageRender": null,
   "afterLoginRender": null,
-  "afterHomeRender": {
-    "type": "client",
-    "blockly": {
-      "namespace": "js.blockly.ListaApi.GetApi",
-      "sourcePath": "src/main/webapp/js/blockly/ListaApi/GetApi.blockly",
-      "language": "js",
-      "methods": [
-        {
-          "name": "GetApi",
-          "hasReturn": "false",
-          "params": []
-        }
-      ]
-    },
-    "blocklyMethod": "GetApi",
-    "blocklyClass": "js.blockly.ListaApi.GetApi",
-    "blocklyParams": []
-  },
+  "afterHomeRender": null,
   "onAuthenticate": null,
   "onGetRoles": null,
   "onGetUserSecurables": null,
