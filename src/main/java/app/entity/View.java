@@ -2,24 +2,28 @@
 package app.entity;
 
 import java.io.*;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.*;
-import javax.xml.bind.annotation.*;
+import jakarta.xml.bind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import cronapi.rest.security.CronappSecurity;
 import cronapi.swagger.CronappSwagger;
 
 
+
+import cronapp.framework.core.persistence.*;
+
 /**
 * Classe que representa a tabela VIEW
 * @generated
 */
-@javax.persistence.Entity
-@javax.persistence.Table(name = "\"VIEW\"")
+@jakarta.persistence.Entity
+@jakarta.persistence.Table(name = "\"VIEW\"")
 @XmlRootElement
 @CronappSecurity(post = "Administrators", get = "Administrators", delete = "Administrators", put = "Administrators")
 @JsonFilter("app.entity.View")
+@CronappTable(role=CronappTableRole.ASSOCIATION_CLASS)
 public class View implements Serializable {
     /**
     * UID da classe, necessário na serialização
@@ -31,6 +35,7 @@ public class View implements Serializable {
     * @generated
     */
     @Id
+    @CronappColumn(attributeType="STRING", label="Id", defaultValue = "UUID.randomUUID().toString().toUpperCase()")
     @Column(name = "id", nullable = false, insertable=true, updatable=true)
         private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
 
@@ -47,6 +52,7 @@ public class View implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Pattern")
     @Column(name = "pattern", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.String pattern;
@@ -55,6 +61,7 @@ public class View implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="BOOLEAN", label="Get Method Allowed")
     @Column(name = "getMethodAllowed", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.Boolean getMethodAllowed;
@@ -63,6 +70,7 @@ public class View implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="BOOLEAN", label="Head Method Allowed")
     @Column(name = "headMethodAllowed", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.Boolean headMethodAllowed;
@@ -71,6 +79,7 @@ public class View implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="BOOLEAN", label="Put Method Allowed")
     @Column(name = "putMethodAllowed", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.Boolean putMethodAllowed;
@@ -79,6 +88,7 @@ public class View implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="BOOLEAN", label="Post Method Allowed")
     @Column(name = "postMethodAllowed", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.Boolean postMethodAllowed;
@@ -87,6 +97,7 @@ public class View implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="BOOLEAN", label="Patch Method Allowed")
     @Column(name = "patchMethodAllowed", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.Boolean patchMethodAllowed;
@@ -95,6 +106,7 @@ public class View implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="BOOLEAN", label="Delete Method Allowed")
     @Column(name = "deleteMethodAllowed", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.Boolean deleteMethodAllowed;
@@ -103,6 +115,7 @@ public class View implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="BOOLEAN", label="Options Method Allowed")
     @Column(name = "optionsMethodAllowed", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.Boolean optionsMethodAllowed;
@@ -111,6 +124,7 @@ public class View implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="BOOLEAN", label="Trace Method Allowed")
     @Column(name = "traceMethodAllowed", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.Boolean traceMethodAllowed;

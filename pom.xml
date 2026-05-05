@@ -3,7 +3,7 @@
     <parent>
         <artifactId>cronapp-framework-spring</artifactId>
         <groupId>io.cronapp</groupId>
-        <version>3.2.1-SP.30</version>
+        <version>4.2.24</version>
         <relativePath></relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -16,7 +16,7 @@
     <build>
         <resources>
             <resource>
-                <directory>src/main/resources</directory>
+                <directory>src/main/java</directory>
                 <includes>
                     <include>**</include>
                 </includes>
@@ -25,7 +25,7 @@
                 </excludes>
             </resource>
             <resource>
-                <directory>src/main/java</directory>
+                <directory>src/main/resources</directory>
                 <includes>
                     <include>**</include>
                 </includes>
@@ -55,7 +55,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            
             <plugin>
                 <groupId>io.cronapp</groupId>
                 <artifactId>cronapp-compile-plugin</artifactId>

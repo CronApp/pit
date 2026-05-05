@@ -10,10 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cronapp/framework-core": "3.2.1-SP.30",
-    "cronapi-js": "3.2.1-SP.30",
+    "@cronapp/framework-core": "4.2.24",
+    "cronapi-js": "4.2.24",
     "cronapp-common-js": "3.2.1-SP.30",
     "cronapp-framework-mobile-js": "3.2.1-SP.30",
-    "cronapp-lib-js": "3.2.1-SP.30"
+    "cronapp-lib-js": "4.2.24"
   }
 }

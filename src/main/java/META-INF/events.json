@@ -1,0 +1,35 @@
+{
+  "onSystemStarts": null,
+  "onLogout": null,
+  "onLogin": null,
+  "onSessionCreate": null,
+  "onSessionDestroy": null,
+  "afterPageRender": null,
+  "afterLoginRender": null,
+  "afterHomeRender": {
+    "type": "client",
+    "blockly": {
+      "namespace": "js.blockly.ListaApi.GetApi",
+      "sourcePath": "src/main/webapp/js/blockly/ListaApi/GetApi.blockly",
+      "language": "js",
+      "methods": [
+        {
+          "name": "GetApi",
+          "hasReturn": "false",
+          "params": []
+        }
+      ]
+    },
+    "blocklyMethod": "GetApi",
+    "blocklyClass": "js.blockly.ListaApi.GetApi",
+    "blocklyParams": []
+  },
+  "onAuthenticate": null,
+  "onGetRoles": null,
+  "onGetUserSecurables": null,
+  "onGetSecurableViews": null,
+  "onGetRoleSecurables": null,
+  "onChangePassword": null,
+  "onResetPassword": null,
+  "onConfigureConnection": null
+}

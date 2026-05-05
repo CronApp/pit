@@ -2,24 +2,28 @@
 package app.entity;
 
 import java.io.*;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.*;
-import javax.xml.bind.annotation.*;
+import jakarta.xml.bind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import cronapi.rest.security.CronappSecurity;
 import cronapi.swagger.CronappSwagger;
 
 
+
+import cronapp.framework.core.persistence.*;
+
 /**
 * Classe que representa a tabela CONFIGURACAO_AMBIENTE
 * @generated
 */
-@javax.persistence.Entity
-@javax.persistence.Table(name = "\"CONFIGURACAO_AMBIENTE\"")
+@jakarta.persistence.Entity
+@jakarta.persistence.Table(name = "\"CONFIGURACAO_AMBIENTE\"")
 @XmlRootElement
 @CronappSecurity
 @JsonFilter("app.entity.ConfiguracaoAmbiente")
+@CronappTable(role=CronappTableRole.CLASS)
 public class ConfiguracaoAmbiente implements Serializable {
     /**
     * UID da classe, necessário na serialização
@@ -31,6 +35,7 @@ public class ConfiguracaoAmbiente implements Serializable {
     * @generated
     */
     @Id
+    @CronappColumn(attributeType="STRING", label="Id", defaultValue = "UUID.randomUUID().toString().toUpperCase()")
     @Column(name = "id", nullable = false, insertable=true, updatable=true)
         private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
 
@@ -38,6 +43,7 @@ public class ConfiguracaoAmbiente implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="BOOLEAN", label="Ativo")
     @Column(name = "ativo", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.Boolean ativo;
@@ -46,6 +52,7 @@ public class ConfiguracaoAmbiente implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Email Host")
     @Column(name = "email_host", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.String emailHost;
@@ -54,6 +61,7 @@ public class ConfiguracaoAmbiente implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Email Porta")
     @Column(name = "email_porta", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.String emailPorta;
@@ -62,6 +70,7 @@ public class ConfiguracaoAmbiente implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Email Remetente")
     @Column(name = "email_remetente", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String emailRemetente;
@@ -70,6 +79,7 @@ public class ConfiguracaoAmbiente implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Login")
     @Column(name = "login", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.String login;
@@ -78,6 +88,7 @@ public class ConfiguracaoAmbiente implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Protocolo")
     @Column(name = "protocolo", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.String protocolo;
@@ -86,6 +97,7 @@ public class ConfiguracaoAmbiente implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Senha")
     @Column(name = "senha", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.String senha;
