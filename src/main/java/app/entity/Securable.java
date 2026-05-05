@@ -2,24 +2,28 @@
 package app.entity;
 
 import java.io.*;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.*;
-import javax.xml.bind.annotation.*;
+import jakarta.xml.bind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import cronapi.rest.security.CronappSecurity;
 import cronapi.swagger.CronappSwagger;
 
 
+
+import cronapp.framework.core.persistence.*;
+
 /**
 * Classe que representa a tabela SECURABLE
 * @generated
 */
-@javax.persistence.Entity
-@javax.persistence.Table(name = "\"SECURABLE\"")
+@jakarta.persistence.Entity
+@jakarta.persistence.Table(name = "\"SECURABLE\"")
 @XmlRootElement
 @CronappSecurity(post = "Administrators", get = "Administrators", delete = "Administrators", put = "Administrators")
 @JsonFilter("app.entity.Securable")
+@CronappTable(role=CronappTableRole.CLASS)
 public class Securable implements Serializable {
     /**
     * UID da classe, necessário na serialização
@@ -31,6 +35,7 @@ public class Securable implements Serializable {
     * @generated
     */
     @Id
+    @CronappColumn(attributeType="STRING", label="Id")
     @Column(name = "id", nullable = false, length=255, insertable=true, updatable=true)
         private java.lang.String id;
 
@@ -38,6 +43,7 @@ public class Securable implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Name")
     @Column(name = "name", nullable = false, unique = false, length=255, insertable=true, updatable=true)
         
         private java.lang.String name;
