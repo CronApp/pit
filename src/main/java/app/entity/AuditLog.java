@@ -2,24 +2,28 @@
 package app.entity;
 
 import java.io.*;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.*;
-import javax.xml.bind.annotation.*;
+import jakarta.xml.bind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import cronapi.rest.security.CronappSecurity;
 import cronapi.swagger.CronappSwagger;
 
 
+
+import cronapp.framework.core.persistence.*;
+
 /**
 * Classe que representa a tabela AUDIT_LOG
 * @generated
 */
-@javax.persistence.Entity
-@javax.persistence.Table(name = "\"AUDIT_LOG\"")
+@jakarta.persistence.Entity
+@jakarta.persistence.Table(name = "\"AUDIT_LOG\"")
 @XmlRootElement
 @CronappSecurity(post = "Administrators", get = "Administrators", delete = "Administrators", put = "Administrators")
 @JsonFilter("app.entity.AuditLog")
+@CronappTable(role=CronappTableRole.CLASS)
 public class AuditLog implements Serializable {
     /**
     * UID da classe, necessário na serialização
@@ -32,6 +36,7 @@ public class AuditLog implements Serializable {
     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @CronappColumn(attributeType="INTEGER", label="Id")
     @Column(name = "id", nullable = false, insertable=true, updatable=true)
         private java.lang.Integer id;
 
@@ -39,6 +44,7 @@ public class AuditLog implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'Type' | translate}}")
     @Column(name = "type", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.String type;
@@ -47,6 +53,7 @@ public class AuditLog implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'Command' | translate}}")
     @Column(name = "command", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.lang.String command;
@@ -56,6 +63,7 @@ public class AuditLog implements Serializable {
     * @generated
     */
     @Temporal(TemporalType.TIMESTAMP)
+    @CronappColumn(attributeType="DATETIME", label="{{'Date' | translate}}")
     @Column(name = "dateCreated", nullable = false, unique = false, insertable=true, updatable=true)
         
         private java.util.Date date;
@@ -64,6 +72,7 @@ public class AuditLog implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="TEXT", label="{{'ObjectData' | translate}}")
     @Column(name = "objectData", nullable = true, unique = false, insertable=true, updatable=true, columnDefinition = "TEXT")
         
         private java.lang.String objectData;
@@ -72,6 +81,7 @@ public class AuditLog implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'User' | translate}}")
     @Column(name = "userName", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String user;
@@ -80,6 +90,7 @@ public class AuditLog implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="Host")
     @Column(name = "host", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String host;
@@ -88,6 +99,7 @@ public class AuditLog implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'Agent' | translate}}")
     @Column(name = "agent", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String agent;
@@ -96,6 +108,7 @@ public class AuditLog implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'Server' | translate}}")
     @Column(name = "server", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String server;
@@ -104,6 +117,7 @@ public class AuditLog implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'AffectedFields' | translate}}")
     @Column(name = "affectedFields", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String affectedFields;
@@ -112,6 +126,7 @@ public class AuditLog implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'Category' | translate}}")
     @Column(name = "category", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String category;
@@ -120,6 +135,7 @@ public class AuditLog implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'Application' | translate}}")
     @Column(name = "application", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String application;
@@ -128,6 +144,7 @@ public class AuditLog implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'Error' | translate}}")
     @Column(name = "error", nullable = true, unique = false, insertable=true, updatable=true)
         
         private java.lang.String error;

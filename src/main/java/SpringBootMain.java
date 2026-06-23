@@ -10,11 +10,9 @@ import cronapp.framework.boot.CronappInitializer;
 
 @SpringBootApplication
 @ComponentScan(basePackages = {
-	
-	"cronapp.framework.authentication.token",
-	"cronapp.framework.authentication.security",
+    "cronapp.framework.core",
+	"cronapp.framework.security",
 	"cronapp.framework.rest",
-  "cronapp.framework.scheduler",
 	"auth.permission",
 	"api.rest.events",
 	"api.rest.webservices",

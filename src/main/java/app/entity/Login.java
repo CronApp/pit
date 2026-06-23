@@ -2,24 +2,28 @@
 package app.entity;
 
 import java.io.*;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.*;
-import javax.xml.bind.annotation.*;
+import jakarta.xml.bind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import cronapi.rest.security.CronappSecurity;
 import cronapi.swagger.CronappSwagger;
 
 
+
+import cronapp.framework.core.persistence.*;
+
 /**
 * Classe que representa a tabela LOGIN
 * @generated
 */
-@javax.persistence.Entity
-@javax.persistence.Table(name = "\"LOGIN\"")
+@jakarta.persistence.Entity
+@jakarta.persistence.Table(name = "\"LOGIN\"")
 @XmlRootElement
 @CronappSecurity(post = "Administrators", get = "Administrators", delete = "Administrators", put = "Administrators")
 @JsonFilter("app.entity.Login")
+@CronappTable(role=CronappTableRole.CLASS)
 public class Login implements Serializable {
     /**
     * UID da classe, necessário na serialização
@@ -31,6 +35,7 @@ public class Login implements Serializable {
     * @generated
     */
     @Id
+    @CronappColumn(attributeType="STRING", label="{{'Id' | translate}}")
     @Column(name = "id", nullable = false, length=255, insertable=true, updatable=true)
         private java.lang.String id;
 
@@ -38,6 +43,7 @@ public class Login implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'LoginProvider' | translate}}")
     @Column(name = "login_provider", nullable = false, unique = false, length=255, insertable=true, updatable=true)
         
         private java.lang.String loginProvider;
@@ -46,6 +52,7 @@ public class Login implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'ProviderDisplayName' | translate}}")
     @Column(name = "provider_display_name", nullable = false, unique = false, length=255, insertable=true, updatable=true)
         
         private java.lang.String providerDisplayName;
@@ -54,6 +61,7 @@ public class Login implements Serializable {
     /**
     * @generated
     */
+    @CronappColumn(attributeType="STRING", label="{{'ProviderKey' | translate}}")
     @Column(name = "provider_key", nullable = false, unique = false, length=255, insertable=true, updatable=true)
         
         private java.lang.String providerKey;
