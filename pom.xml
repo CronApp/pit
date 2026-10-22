@@ -3,7 +3,7 @@
     <parent>
         <artifactId>cronapp-framework-spring</artifactId>
         <groupId>io.cronapp</groupId>
-        <version>4.2.24</version>
+        <version>4.4.17</version>
         <relativePath></relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
